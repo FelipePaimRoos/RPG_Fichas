@@ -1,0 +1,384 @@
+[
+    {
+        "nome": "Guerreiro",
+        "atributos": "Força + Vigor",
+        "perfil": "Combatente de linha de frente focado em combate corpo a corpo consistente. Combina força bruta para causar dano elevado a uma alta capacidade física de absorção de impacto.",
+        "buffs": "+2 PV Inicial e por Nível | +2 Espaços de Carga",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "carga": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo ou Proteção.",
+        "habilidades": [    
+            {
+                "nome": "Técnica Letal",
+                "nivel": 1,
+                "prereq": "Treinado em Luta",
+                "efeito": "Golpe Devastador: Você recebe +2 na Rolagem de Dano em todos os seus ataques corpo a corpo."
+            },
+            {
+                "nome": "Revidar",
+                "nivel": 2,
+                "prereq": "Treinado em Luta",
+                "custo": "1 SAN",
+                "gatilho": "Quando você Bloquear com sucesso um ataque corpo a corpo de um inimigo.",
+                "efeito": "Você recebe imediatamente 1 Reação Adicional para realizar uma ação de Contra-Ataque contra o inimigo que o atacou."
+            },
+            {
+                "nome": "Força Opressora",
+                "nivel": 3,
+                "prereq": "Treinado em Luta",
+                "custo": "1 SAN (Manobra) + 1 SAN opcional (Ataque Extra)",
+                "gatilho": "Ao acertar um ataque corpo a corpo contra um alvo.",
+                "efeito": "Manobra Devastadora: Realize manobra de combate como Ação Livre. Inércia do Impacto: +2 no teste por 5 de dano. Pressionar o Caído: Gasta +1 SAN para ataque extra se derrubado."
+            },
+            {
+                "nome": "Potência Máxima",
+                "nivel": 4,
+                "prereq": "Treinado em Luta",
+                "custo": "3 SAN",
+                "acao": "Parte de uma ação de ataque corpo a corpo",
+                "efeito": "Inabalável: Ignora penalidades/desvantagens no ataque. Conversão de Supremacia: Vantagem convertida em +2 no Teste de Ataque ou +2 na Rolagem de Dano."
+            }
+        ]
+    },
+    {
+        "nome": "Batedor",
+        "atributos": "Vigor + Agilidade",
+        "perfil": "Mestre da mobilidade e do reposicionamento constante em campo de batalha. Especialista em travessia de terreno hostil, esquiva e em desferir múltiplos ataques em sequência.",
+        "buffs": "+2 PV Inicial e por Nível | +2 de Defesa",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "defesa": 2},
+        "pp_tematico": "Escolhe entre Proteção, Corpo a Corpo (Ágil), Armas de Disparo ou Armas de Fogo.",
+        "habilidades": [
+            {
+                "nome": "Adepto do Escuro",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Visão nas Sombras: Ignora penalidades de camuflagem por escuridão. Atenção no Escuro: +2 em Percepção e Procurar em ambientes escuros."
+            },
+            {
+                "nome": "Resistir à Pressão",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Ganho de Tempo: Urgência/rodadas estendida em +1. Foco Sob Tensão: +2 em perícias para aliados em alcance curto."
+            },
+            {
+                "nome": "Fuga Obstinada",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Mobilidade Fluida: Ignora Terreno Difícil, sem ataques de oportunidade ao mover, +3m deslocamento. Superar Restrições: Rompe agarros como Ação Livre."
+            },
+            {
+                "nome": "Só Mais um Passo...",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Arrancada de Emergência: Movimento imediato ao quase cair. Inviolabilidade em Trânsito: Atravessa inimigos e +4 Defesa/Esquiva."
+            }
+        ]
+    },
+    {
+        "nome": "Bastião",
+        "atributos": "Vigor + Presença",
+        "perfil": "O escudo físico e mental da equipe. Combina resiliência corporal com determinação inquebrável, contendo entidades e reduzindo o impacto do choque paranormal nos aliados.",
+        "buffs": "+2 PV Inicial e por Nível | +2 SAN Inicial e por Nível",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "sanidade_inicial": 2, "sanidade_por_nivel": 2},
+        "pp_tematico": "Escolhe entre Proteção ou Ferramentas de Ocultismo.",
+        "habilidades": [
+            {
+                "nome": "Aura de Confiança",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Aliados em alcance médio recebem +2 em Iniciativa e testes de resistência contra Presença Perturbadora e medo."
+            },
+            {
+                "nome": "Vitalidade Sofrida",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Aumenta PV ou SAN máximo em valor igual ao Nível de Personagem (máx +20)."
+            },
+            {
+                "nome": "Inabalável",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Fortaleza Mental: Recebe 3 de RD contra dano mental/paranormal. Mente Inabalável: Anula dano paranormal com sucesso em Vontade."
+            },
+            {
+                "nome": "A Sanidade Está Lá Fora",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "3 SAN",
+                "efeito": "Purificação Psíquica: Remove condições mentais/medo em si ou aliado. Barreira Emocional: Imunidade a novas condições mentais até o próximo turno."
+            }
+        ]
+    },
+    {
+        "nome": "Médico de Combate",
+        "atributos": "Vigor + Intelecto",
+        "perfil": "Suporte biológico e científico de emergência sob fogo cruzado. Estabiliza aliados traumatizados, trata ferimentos severos e concede socorro rápido em campo.",
+        "buffs": "+2 PV Inicial e por Nível | +1 Perícia Treinada",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Proteção ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Paramédico",
+                "nivel": 1,
+                "prereq": "Intelecto 2 ou Presença 2",
+                "custo": "1 SAN (escalonável)",
+                "efeito": "Restaura PV de si ou aliado adjacente (escala de 10 a 25 PV conforme o nível)."
+            },
+            {
+                "nome": "Médico da Salvação",
+                "nivel": 2,
+                "prereq": "Paramédico",
+                "custo": "1 SAN (para agilizar)",
+                "efeito": "Cura Ampliada: Dados de cura aumentados. Socorro Agilizado: Realiza Paramédico como Ação de Movimento."
+            },
+            {
+                "nome": "Resgatar da Morte",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Intervenção Crítica: Sucesso automático em testes de Medicina para estabilizar aliados (1x por cena por alvo)."
+            },
+            {
+                "nome": "Veterano da Equipe de Trauma",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Tratamento Avançado: Remove todas as condições negativas (incluindo morrendo) ao prestar atendimento de emergência."
+            }
+        ]
+    },
+    {
+        "nome": "Assassino",
+        "atributos": "Força + Agilidade",
+        "perfil": "Combatente ágil de alto impacto ofensivo. Focado em eliminações rápidas, flanqueamento e dano massivo em um estilo de jogo de alto risco e alta recompensa.",
+        "buffs": "+2 Espaços de Carga | +2 de Defesa",
+        "bonus": {"carga": 2, "defesa": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo ou Armas de Fogo.",
+        "habilidades": [
+            {
+                "nome": "Ataque Furtivo",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "1 SAN (escalonável)",
+                "efeito": "Causa dano adicional contra alvos desprevenidos ou flanqueados (escala de +1d6 até +4d6)."
+            },
+            {
+                "nome": "Gatuno",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Especialização Prática: +2 em Atletismo e Crime. Movimentação Silenciosa: Move-se normalmente furtivo."
+            },
+            {
+                "nome": "Assassinato Furtivo",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Precisão Ampliada: Aumenta dados de furtivo e eleva categoria de dano da arma. Perfuração de Armadura: Ignora RD física."
+            },
+            {
+                "nome": "Assassinar",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Golpe de Misericórdia: Transforma emboscada em execução. Dobra o dano final e exige teste de Fortitude do alvo."
+            }
+        ]
+    },
+    {
+        "nome": "Algoz",
+        "atributos": "Força + Presença",
+        "perfil": "Focado em confrontos curtos, agressivos e aterrorizantes. Une a força física à intimidação e canalização paranormal para quebrar a vontade dos alvos.",
+        "buffs": "+2 Espaços de Carga | +2 SAN Inicial e por Nível",
+        "bonus": {"carga": 2, "sanidade_inicial": 2, "sanidade_por_nivel": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo ou Ferramentas de Ocultismo.",
+        "habilidades": [
+            {
+                "nome": "Valentão",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "1 SAN (Ativo)",
+                "efeito": "Imposição Física: Usa Força no lugar de Presença em Intimidação. Grito de Ameaça: Aterroriza inimigo como Ação Livre."
+            },
+            {
+                "nome": "Eloquência",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN por alvo",
+                "efeito": "Usa lábia para aplicar a condição Fascinado em alvos através de testes opostos."
+            },
+            {
+                "nome": "O Sorriso",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo/ativo)",
+                "efeito": "Máscara Inabalável: +2 e Vantagem em Diplomacia/Enganação e Vontade. Desarmar Hostilidade e Compostura Contagiosa."
+            },
+            {
+                "nome": "Multifacetado",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "3 SAN",
+                "efeito": "Mente Plural: Considerado treinado em 3 perícias. Maestria Improvisada: Recebe temporariamente Poder Geral de Tier III."
+            }
+        ]
+    },
+    {
+        "nome": "Caçador",
+        "atributos": "Força + Intelecto",
+        "perfil": "Adapta armamentos, calcula trajetórias e ataca os pontos fracos da armadura inimiga ou de estruturas.",
+        "buffs": "+2 Espaços de Carga | +1 Perícia Treinada",
+        "bonus": {"carga": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo, Armas de Fogo ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Estudar Fraquezas",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (Interlúdio)",
+                "efeito": "Revela informações vitais sobre criaturas e concede Vantagem Tática para o grupo."
+            },
+            {
+                "nome": "Análise Combativa",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "+2 em testes de ataque e Defesa contra ameaça visível analisada em tempo real."
+            },
+            {
+                "nome": "Estudar a Presa",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Marca um alvo como Presa: Vantagem em ataques, +4 dano, ignora 5 de RD e recupera SAN ao derrotá-lo."
+            },
+            {
+                "nome": "Predador Perfeito",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Perseguição Absoluta: Triplica deslocamento ao mover em direção ao alvo e desfere Bote de Sangue-Frio."
+            }
+        ]
+    },
+    {
+        "nome": "Atirador",
+        "atributos": "Agilidade + Intelecto",
+        "perfil": "Especialista em disparos de precisão e combate à distância tático.",
+        "buffs": "+2 de Defesa | +1 Perícia Treinada",
+        "bonus": {"defesa": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Corpo a Corpo (Ágil), Armas de Disparo, Armas de Fogo ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Sombra Fugaz",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Ao realizar um ataque ou executar uma ação chamativa/ruidosa, você pode gastar 1 SAN para realizar um teste de Furtividade imediatamente para tentar se esconder (ou permanecer escondido) sem sofrer as penalidades normais por ter revelado sua posição."
+            },
+            {
+                "nome": "Disparo Letal",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Mira Cirúrgica: +2 ataque e +4 dano, ignorando coberturas leves e reduzindo RD."
+            },
+            {
+                "nome": "Especialista em Matar",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Reduz custo de ação de Mirar e Fintar. Golpe Meticuloso com bônus de dano ou multiplicador crítico."
+            },
+            {
+                "nome": "Atirar para Matar",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Dano Maximizado e Impacto Perfurante que ignora RD e permite disparo livre imediato se derrubar o alvo."
+            }
+        ]
+    },
+    {
+        "nome": "Celerante",
+        "atributos": "Agilidade + Presença",
+        "perfil": "Especialista em infiltração social, disfarces e canalização de rituais sob pressão.",
+        "buffs": "+2 de Defesa | +2 SAN Inicial e por Nível",
+        "bonus": {"defesa": 2, "sanidade_inicial": 2, "sanidade_por_nivel": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo (Ágil), Armas de Disparo, Armas de Fogo ou Ferramentas de Ocultismo.",
+        "habilidades": [
+            {
+                "nome": "Camuflar Ocultismo",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Torna sigilos invisíveis e permite conjuração discreta sem gestos/voz."
+            },
+            {
+                "nome": "Acelerar Ritual",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "+2 SAN",
+                "efeito": "Reduz o tempo de execução de rituais em até 2 turnos."
+            },
+            {
+                "nome": "Presença Poderosa",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Reserva Espiritual: Recebe SAN Temporária igual à Presença no início da cena para pagar rituais."
+            },
+            {
+                "nome": "Truque de Mestre",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "2 SAN + custo original",
+                "efeito": "Replica uma habilidade de classe ou poder utilizado por um aliado na mesma cena."
+            }
+        ]
+    },
+    {
+        "nome": "Erudito",
+        "atributos": "Presença + Intelecto",
+        "perfil": "Especialista no Oculto. Domina a teoria arcaica, decifra marcas e símbolos e canaliza rituais com alta eficiência mental.",
+        "buffs": "+2 SAN Inicial e por Nível | +1 Perícia Treinada",
+        "bonus": {"sanidade_inicial": 2, "sanidade_por_nivel": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Ferramentas de Ocultismo ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Saber Ampliado",
+                "nivel": 1,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Repertório Expandido: Aprende 1 ritual adicional do maior círculo e ganha mais um ao subir de círculo."
+            },
+            {
+                "nome": "Grimório Ritualístico",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Armazena rituais adicionais em um tomo místico consultado em campo."
+            },
+            {
+                "nome": "Rituais Eficientes",
+                "nivel": 3,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Domínio Universal: A Dificuldade (DT) para resistir a qualquer ritual conjurado aumenta em +2."
+            },
+            {
+                "nome": "Reprogramação Mental",
+                "nivel": 4,
+                "prereq": "Nenhum",
+                "custo": "3 SAN",
+                "efeito": "Aptidão Enxertada: Concede temporariamente o uso de 1 Habilidade de Tier I ou II a um aliado voluntário."
+            }
+        ]
+    }
+]
