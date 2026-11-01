@@ -1,0 +1,232 @@
+[
+  {
+    "nome": "Algemas",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Exige empunhar as algemas, agarrar o alvo e vencer teste oposto de agarrar. Ambos os pulsos: sofre -2D em testes com as mãos e impede gesticular/conjurar rituais. Pulso a objeto imóvel: impede deslocamento. Fuga: Acrobacia contra DT 25/30 ou chave[cite: 129]."
+  },
+  {
+    "nome": "Arpéu",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Gancho de aço acoplável a corda. Fixação à distância exige teste de Pontaria (DT 7). Escalar com corda ancorada concede +2 em Atletismo[cite: 129]."
+  },
+  {
+    "nome": "Bandoleira",
+    "tipo": "Item Operacional / Item Vestido",
+    "espaco": 1,
+    "efeito": "Cinto/alça tática. Uma vez por rodada, permite sacar ou guardar qualquer item do inventário como ação livre[cite: 129]."
+  },
+  {
+    "nome": "Binóculos",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Concede +2 em testes de Percepção focados em observar objetos, locais ou alvos distantes[cite: 130]."
+  },
+  {
+    "nome": "Bloqueador de Sinal",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Emite frequências de ruído que impedem qualquer celular ou rádio em alcance Médio (18m) de estabelecer conexão ou ligações[cite: 130]."
+  },
+  {
+    "nome": "Cicatrizante",
+    "tipo": "Item Operacional / Medicamento",
+    "espaco": 1,
+    "efeito": "Gastar ação padrão para aplicar spray sintético em si ou aliado adjacente. Cura 2d8+2 Pontos de Vida (PV)[cite: 130]."
+  },
+  {
+    "nome": "Corda",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Rolo de 10 metros. Concede +2 em Atletismo para subir/descer superfícies verticais e permite imobilizar alvos inconscientes[cite: 130]."
+  },
+  {
+    "nome": "Equipamento de Sobrevivência",
+    "tipo": "Item Operacional",
+    "espaco": 2,
+    "efeito": "Conjunto de acampamento e navegação. Concede +2 em Sobrevivência para acampar e orientar-se, permitindo o teste mesmo sem ser treinado[cite: 130]."
+  },
+  {
+    "nome": "Lanterna Tática",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Projeta facho em cone de 9m. Uso ofensivo: gastar ação de movimento para focar nos olhos de uma criatura em alcance Curto deixa-a Ofuscada por 1 rodada[cite: 130]."
+  },
+  {
+    "nome": "Máscara de Gás",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Máscara vedada com filtro de carvão. Concede +2D (ou +5) em Fortitude contra efeitos que dependam de respiração (gases, lacrimogêneo, anestésicos)[cite: 130, 131]."
+  },
+  {
+    "nome": "Mochila Militar",
+    "tipo": "Item Operacional / Item Vestido",
+    "espaco": 0,
+    "efeito": "Mochila ergonômica vestida. Aumenta a capacidade de carga total em +2 Espaços[cite: 131]."
+  },
+  {
+    "nome": "Óculos de Visão Térmica",
+    "tipo": "Item Operacional / Item Vestido",
+    "espaco": 1,
+    "efeito": "Lentes digitais que destacam assinaturas térmicas. Ignora penalidades em testes e ataques causadas por Camuflagem (fumaça, escuridão, folhagens)[cite: 131]."
+  },
+  {
+    "nome": "Pé de Cabra",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Concede +2 em Força/Atletismo para arrombar portas ou estruturas. Em combate, pode ser usado como arma corpo a corpo com estatísticas de Bastão[cite: 131]."
+  },
+  {
+    "nome": "Pistola de Dardos",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "alcance": "Curto (9m)[cite: 131]",
+    "efeito": "Dispara dardos anestésicos. Ataque à distância (Pontaria). Falha em Fortitude (DT Agi) deixa o alvo Inconsciente até o fim da cena; sucesso reduz para Desprevenido e Lento por 1 rodada. Acompanha 2 dardos[cite: 131]."
+  },
+  {
+    "nome": "Pistola Sinalizadora",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "alcance": "Curto (9m)[cite: 131]",
+    "efeito": "Projeta facho luminoso no céu. Em combate, funciona como arma de disparo leve que causa 2d6 de dano de Fogo. Acompanha 2 cargas[cite: 131, 132]."
+  },
+  {
+    "nome": "Soqueira",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Concede +1 no dano de ataques desarmados e os converte em dano letal. Pode receber modificações e maldições de armas corpo a corpo[cite: 132]."
+  },
+  {
+    "nome": "Spray de Pimenta",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Gastar ação padrão contra alvo adjacente. Causa a condição Cego por 1d4 rodadas (Fortitude - DT Agi evita)[cite: 132]."
+  },
+  {
+    "nome": "Taser",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Gastar ação padrão contra alvo adjacente. Causa 1d6 de dano de Eletricidade e deixa o alvo Atordoado por 1 rodada (Fortitude - DT Agi evita). Possui 2 cargas[cite: 132]."
+  },
+  {
+    "nome": "Traje Hazmat",
+    "tipo": "Item Operacional",
+    "espaco": 2,
+    "efeito": "Traje selado para isolamento contra agentes biológicos e químicos. Concede +2 em testes de resistência contra perigos ambientais e RD 5 contra dano Químico[cite: 132]."
+  },
+  {
+    "nome": "Alarme de Movimento",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Monitora área em cone de 30m. Sensibilidade ajustável. Pode enviar notificação silenciosa (Discreta) ou alarme sonoro (Barulhenta)[cite: 132]."
+  },
+  {
+    "nome": "Alimento Energético",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Gastar ação padrão para consumir. Restaura a clareza mental, recuperando 1d4 de Sanidade[cite: 133]."
+  },
+  {
+    "nome": "Aplicador de Medicamentos",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Comporta até 3 doses de líquidos/injetáveis. Acoplado ao corpo, permite injetar qualquer dose gastando apenas uma ação de movimento[cite: 133]."
+  },
+  {
+    "nome": "Braçadeira Reforçada",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Ao utilizar a ação tática de Bloqueio, a Resistência a Dano (RD) temporária concedida pelo bloqueio aumenta em +2[cite: 133]."
+  },
+  {
+    "nome": "Cão Adestrado",
+    "tipo": "Item Operacional / Acompanhante",
+    "espaco": "N/A[cite: 133]",
+    "efeito": "Exige treinamento em Adestramento. Atua como Aliado de campo para suporte em Percepção, rastreamento ou combate[cite: 133]."
+  },
+  {
+    "nome": "Coldre Saque Rápido",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Uma vez por rodada, permite sacar ou guardar uma arma de fogo leve como uma ação livre[cite: 133]."
+  },
+  {
+    "nome": "Equipamento de Escuta",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Inclui 1 receptor (90m) e 3 microtransmissores (9m). Instalação padrão exige Crime (DT 20); instalação discreta exige Furtividade vs Percepção e aumenta DT para 25[cite: 133]."
+  },
+  {
+    "nome": "Estrepes",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Espalhar em quadrado de 1,5m com ação padrão. Causa 1d4 de dano de Perfuração e condição Lento. Reflexos (DT Agi) evita[cite: 134]."
+  },
+  {
+    "nome": "Faixa de Pregos",
+    "tipo": "Item Operacional",
+    "espaco": 2,
+    "efeito": "Destrói pneus de veículos forçando teste de pilotagem. Contra seres, cobre linha de 4,5m, causando 2d4 de Perfuração e condição Lento (Reflexos DT Agi evita)[cite: 134]."
+  },
+  {
+    "nome": "Isqueiro",
+    "tipo": "Item Operacional",
+    "espaco": 0,
+    "efeito": "Gastar ação de movimento para acender pequena chama. Incendeia materiais inflamáveis e ilumina raio de 3m[cite: 134]."
+  },
+  {
+    "nome": "Óculos Escuros",
+    "tipo": "Item Operacional / Item Vestido",
+    "espaco": 0,
+    "efeito": "Concede imunidade à condição Ofuscado causada por luzes fortes ou flashes convencionais[cite: 134]."
+  },
+  {
+    "nome": "Óculos de Visão Noturna",
+    "tipo": "Item Operacional / Item Vestido",
+    "espaco": 1,
+    "efeito": "Concede Visão no Escuro ao usuário, mas impõe -1D em testes de resistência contra Ofuscado e flashes intensos de luz[cite: 134, 135]."
+  },
+  {
+    "nome": "Pá",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Concede +2 em Força/Atletismo para cavar ou remover entulhos. Em combate, pode ser usada como arma corpo a corpo com estatísticas de Bastão[cite: 135]."
+  },
+  {
+    "nome": "Paraquedas",
+    "tipo": "Item Operacional",
+    "espaco": 2,
+    "efeito": "Anula dano de queda quando acionado corretamente (operado automaticamente por Veteranos em perícias específicas ou teste de Reflexos DT 20)[cite: 135]."
+  },
+  {
+    "nome": "Traje de Mergulho",
+    "tipo": "Item Operacional / Vestimenta",
+    "espaco": 2,
+    "efeito": "Garante 1 hora de oxigênio sob a água. Concede +2 em testes de resistência contra perigos ambientais e RD 3 contra dano Químico[cite: 135]."
+  },
+  {
+    "nome": "Traje Espacial",
+    "tipo": "Item Operacional / Vestimenta",
+    "espaco": 3,
+    "efeito": "Unidade selada com autonomia de 8 horas. Concede +2D (ou +5) em testes de resistência contra perigos extremos (vácuo, radiação, frio/calor estelar) e RD 5 contra dano Químico[cite: 135]."
+  },
+  {
+    "nome": "Bloody Mary Batizada",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Gastar ação padrão para ingerir. Livra imediatamente de uma condição mental e/ou de medo, mas causa 2d4 de dano mental (Sanidade)[cite: 135, 136]."
+  },
+  {
+    "nome": "Paçoca",
+    "tipo": "Item Operacional",
+    "espaco": 1,
+    "efeito": "Refeição/prato rápido. Uma vez por dia (Conforto da Tarde), restaura 1d8+1 PV, 1d8+1 PE e 1d8+1 SAN[cite: 136]."
+  },
+  {
+    "nome": "Aplicador de Adrenalina",
+    "tipo": "Item Operacional / Medicamento",
+    "espaco": 1,
+    "efeito": "Gastar ação padrão para aplicar. Até o fim da cena, aumenta deslocamento em +3m, concede 2d8+2 PV temporários e +2 em perícias de Força, Agilidade e Vigor. Rebote: deixa o alvo Fatigado ao fim da cena[cite: 136]."
+  }
+]

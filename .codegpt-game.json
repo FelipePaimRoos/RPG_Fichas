@@ -1,0 +1,22 @@
+{
+  "name": "rpg-fichas",
+  "engine": "generic",
+  "launch": {
+    "cmd": "C:\\Users\\felip\\AppData\\Local\\Microsoft\\WindowsApps\\py.exe",
+    "args": [
+      "-3.14",
+      "-m",
+      "uvicorn",
+      "main:app",
+      "--port",
+      "8123"
+    ]
+  },
+  "log": {
+    "stdout": true
+  },
+  "ready": "Uvicorn running",
+  "sourceRoots": [
+    "."
+  ]
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "nome": "Emulsificante Químico",
+    "aplicacao": "Medicamentos (incluindo Cicatrizante e aplicadores similares)",
+    "efeito": "Substância estabilizadora que permite a fusão de diferentes compostos ativos em uma única fórmula sem perder a eficácia.",
+    "mecanica_detalhada": "Permite escolher o efeito de outro medicamento de Categoria original menor ou igual à do medicamento base. Ao ministrar a dose, o efeito secundário ativa-se simultaneamente com o principal."
+  },
+  {
+    "nome": "Potencializador Químico",
+    "aplicacao": "Medicamentos (incluindo Cicatrizante e aplicadores similares)",
+    "efeito": "Agente reativo que amplifica a biodisponibilidade e o impacto biológico da fórmula primária.",
+    "mecanica_detalhada": "Conforme o tipo de medicamento, oferece um bônus: se concede Vantagens/Bônus, adiciona +1 Vantagem (+1d6); se concede PV temporários, aumenta em +1d8 PV temporários; se recupera PV, a cura aumenta em +1d8 PV; se possui limitação por cena, passa a poder beneficiar o mesmo personagem até duas vezes por cena."
+  },
+  {
+    "nome": "Antibombas",
+    "aplicacao": "Apenas Proteções Pesadas",
+    "efeito": "A armadura é quimicamente tratada para resistir ao calor e revestida com preenchimentos densos para amortecer estilhaços e ondas de choque, acompanhada por um capacete com viseira e abafadores de ruído.",
+    "mecanica_detalhada": "Concede +2 em testes de resistência contra efeitos e explosões em área."
+  },
+  {
+    "nome": "Blindada",
+    "aplicacao": "Apenas Proteções Pesadas",
+    "efeito": "A estrutura é reforçada internamente com placas rígidas de cerâmica e aço de alta densidade.",
+    "mecanica_detalhada": "A Resistência a Dano (RD) física aumenta para 5 e o item passa a ocupar +1 Espaço."
+  },
+  {
+    "nome": "Discreta",
+    "aplicacao": "Apenas Proteções Leves",
+    "efeito": "Fabricada com malha densa e perfil ultrafino para ocultação sob roupas comuns.",
+    "mecanica_detalhada": "Reduz o Espaço ocupado em 1 (mínimo 1) e concede +2 em testes de Crime para mantê-la oculta, permitindo realizar este teste mesmo sem ser treinado na perícia."
+  },
+  {
+    "nome": "Reforçada",
+    "aplicacao": "Proteções Leves e Pesadas",
+    "efeito": "Camadas estruturais extras e costuras industriais aumentam a proteção oferecida.",
+    "mecanica_detalhada": "Aumenta a Defesa fornecida em +1 e o Espaço ocupado em +1. Nota: Não pode possuir as modificações Reforçada e Discreta simultaneamente."
+  },
+  {
+    "nome": "Adesiva",
+    "aplicacao": "Granadas",
+    "efeito": "A granada é revestida com uma resina tática de altíssima fixação que se adere à primeira superfície ou alvo que atingir.",
+    "mecanica_detalhada": "Para prender num ser, exige teste de ataque à distância (Pontaria) contra a Defesa. Se acertar, o alvo falha automaticamente em qualquer teste de resistência (Reflexos ou Fortitude) contra os efeitos. Se errar, gruda no chão do espaço ocupado. Efeitos contínuos movem-se junto com o alvo até que ele gaste uma ação padrão para desprendê-la."
+  },
+  {
+    "nome": "Dupla",
+    "aplicacao": "Granadas",
+    "efeito": "A granada é modificada com uma câmara dupla de carga para liberar dois efeitos simultâneos ao detonar.",
+    "mecanica_detalhada": "Permite combinar o efeito principal com o de outra granada de categoria original menor ou igual. Ambos os efeitos ativam-se juntos na mesma área e os alvos realizam os testes de resistência para cada efeito separadamente."
+  },
+  {
+    "nome": "Programada",
+    "aplicacao": "Granadas",
+    "efeito": "Equipada com um detonador digital de precisão ou temporizador tático ajustável.",
+    "mecanica_detalhada": "Permite programar exatamente em quantos turnos ou rodadas a granada deverá ser ativada, desde a detonação imediata até um atraso prolongado."
+  },
+  {
+    "nome": "Alongada",
+    "tipo_arma": "Armas de Fogo e de Disparo",
+    "efeito": "O cano estendido e calibrado melhora a estabilidade e a trajetória do projétil.",
+    "mecanica_detalhada": "Concede um bônus de +2 nos testes de ataque."
+  },
+  {
+    "nome": "Calibre Grosso",
+    "tipo_arma": "Armas de Fogo",
+    "efeito": "A arma é alterada para disparar munição de maior potência e calibre.",
+    "mecanica_detalhada": "Aumenta o dano da arma em +1 dado do mesmo tipo (ex.: 2d6 passa a 3d6). Exige o uso exclusivo de pacotes de Munição de Calibre Grosso."
+  },
+  {
+    "nome": "Certeira",
+    "tipo_arma": "Armas Corpo a Corpo e de Arremesso",
+    "efeito": "O peso balanceado e a ergonomia aprimorada facilitam o manuseio e a precisão dos golpes.",
+    "mecanica_detalhada": "Concede um bônus de +2 nos testes de ataque."
+  },
+  {
+    "nome": "Compensador",
+    "tipo_arma": "Armas de Fogo Automáticas (Fuzil de Assalto, Submetralhadora e Metralhadora)",
+    "efeito": "Sistema interno de amortecimento e saídas de gás que reduz o coice e a elevação do cano.",
+    "mecanica_detalhada": "Anula a penalidade de -1D nos testes de ataque ao utilizar o Modo Rajada."
+  },
+  {
+    "nome": "Cruel",
+    "tipo_arma": "Armas Corpo a Corpo e de Arremesso",
+    "efeito": "Lâminas afiadas ao extremo ou materiais de altíssima densidade para maximizar o estrago.",
+    "mecanica_detalhada": "Concede um bônus de +2 nas rolagens de dano."
+  },
+  {
+    "nome": "Discreta",
+    "tipo_arma": "Qualquer Arma (Corpo a Corpo, Disparo ou Fogo)",
+    "efeito": "Mecanismos retráteis ou partes desmontáveis para passar despercebida e ocupar menos espaço.",
+    "mecanica_detalhada": "Concede +2 nos testes de Crime para ocultá-la (permite o teste mesmo sem ser treinado). Reduz em 1 o Espaço ocupado no inventário (mínimo de 0 Espaços)."
+  },
+  {
+    "nome": "Dum Dum",
+    "tipo_arma": "Armas de Fogo que utilizem Balas Curtas ou Balas Longas",
+    "efeito": "Projétil de ponta cega/oca projetado para se expandir ao atingir o alvo e causar estragos internos.",
+    "mecanica_detalhada": "Aumenta o multiplicador de crítico da arma em +1 (ex.: de x3 passa para x4)."
+  },
+  {
+    "nome": "Explosiva",
+    "tipo_arma": "Armas de Fogo que utilizem Balas Curtas ou Balas Longas",
+    "efeito": "Projéteis contendo pequenas cápsulas com substâncias reativas que detonam no impacto.",
+    "mecanica_detalhada": "Concede um bônus de +2d6 de dano adicional (do mesmo tipo de dano da arma, Fogo ou Impacto)."
+  },
+  {
+    "nome": "Ferrolho Automático",
+    "tipo_arma": "Armas de Fogo não automáticas (Pistolas, Revólveres ou Fuzis de Precisão)",
+    "efeito": "Mecanismo de disparo e câmara de ação modificados para permitir disparo contínuo.",
+    "mecanica_detalhada": "Transforma a arma em automática, permitindo o uso do Modo Rajada (-1 desvantagem no teste de ataque para causar +1 dado de dano do mesmo tipo)."
+  },
+  {
+    "nome": "Mira Laser",
+    "tipo_arma": "Armas de Fogo e de Disparo",
+    "efeito": "Feixe laser que projeta um ponto de visada sobre o alvo.",
+    "mecanica_detalhada": "Concede +4 nos testes de ataque contra alvos em alcance Curto (até 9m). Em distâncias maiores não concede bônus."
+  },
+  {
+    "nome": "Mira Telescópica",
+    "tipo_arma": "Armas de Fogo e de Disparo",
+    "efeito": "Luneta de alta precisão com retículo graduado.",
+    "mecanica_detalhada": "Aumenta o alcance da arma em uma categoria (Curto->Médio, Médio->Longo, Longo->Extremo). Permite utilizar Ataque Furtivo em qualquer alcance com linha de visão desimpedida."
+  },
+  {
+    "nome": "Perigosa",
+    "tipo_arma": "Armas Corpo a Corpo e de Arremesso",
+    "efeito": "Afiação no limite molecular ou estrutura recalibrada com materiais maciços para atravessar proteções.",
+    "mecanica_detalhada": "Ignora 2 pontos de Redução de Dano (RD) do mesmo tipo de dano da arma (Corte, Perfuração ou Impacto)."
+  },
+  {
+    "nome": "Silenciador",
+    "tipo_arma": "Armas de Fogo",
+    "efeito": "Supressor acoplado ao cano que abafa o ruído e oculta o clarão do disparo.",
+    "mecanica_detalhada": "Concede +1D6 em Furtividade ao tentar se esconder ou permanecer oculto no mesmo turno em que realizou o ataque."
+  },
+  {
+    "nome": "Tática",
+    "tipo_arma": "Qualquer Arma (Corpo a Corpo, Disparo ou Fogo)",
+    "efeito": "Cabo texturizado, bandoleira de saque rápido e design ergonômico.",
+    "mecanica_detalhada": "Permite sacar ou guardar a arma como uma ação livre (em vez de uma ação de movimento)."
+  },
+  {
+    "nome": "Visão de Calor",
+    "tipo_arma": "Armas de Fogo e de Disparo",
+    "efeito": "Sistema óptico que sobrepõe imagens em infravermelho para destacar assinaturas térmicas.",
+    "mecanica_detalhada": "Ignora completamente qualquer tipo de Camuflagem do alvo (escuridão, fumaça, neblina ou folhagem), desde que o alvo emita assinatura de calor."
+  },
+  {
+    "nome": "Carregador Rápido",
+    "tipo_arma": "Armas de Fogo, Bestas e Balestras",
+    "efeito": "Sistema de encaixe aprimorado, presilhas táticas ou carretel/pente de alimentação rápida.",
+    "mecanica_detalhada": "Armas de fogo: Recarrega como ação livre (1x por rodada). Bestas e Balestras: Magazine integrado para 5 virotes, permitindo recarregar como ação livre com uma mão (após 5 tiros exige ação de movimento por virote)."
+  },
+  {
+    "nome": "Encaixe",
+    "tipo_arma": "Armas Corpo a Corpo (Apenas Armas Leves ou de Uma Mão, Simples ou Táticas)",
+    "efeito": "Cabo alterado com travas rápidas e trilhos mecânicos para conexão com outra arma compatível.",
+    "mecanica_detalhada": "Unir ou separar as armas exige uma ação de movimento. Quando encaixadas, contam como uma única arma acoplável de duas mãos."
+  },
+  {
+    "nome": "Acoplável (Propriedade)",
+    "tipo_arma": "Fusão de Duas Armas de Uma Mão com a modificação Encaixe",
+    "efeito": "Lâmina/arma unificada formada pela fusão de duas armas independentes.",
+    "mecanica_detalhada": "Gasta ação de movimento para unir/separar. A arma unificada é sempre considerada tática de duas mãos. Dano aumenta em +1 dado do mesmo tipo, multiplicador de crítico aumenta em +1, e o Espaço ocupado no inventário dobra. Pode ser usada com Combater com Duas Armas como se fosse uma mão e leve simultaneamente. Cada ataque escolhe qual metade/extremidade lidera o golpe para aplicar seus atributos/encantamentos."
+  },
+  {
+    "nome": "Aprimorado",
+    "aplicacao": "Kits de Perícia, Utensílios e Vestimentas",
+    "efeito": "O bônus na perícia concedido pelo acessório aumenta de +2 para +5.",
+    "mecanica_detalhada": "Aumenta o bônus de perícia. Pode ser aplicado uma segunda vez caso o acessório possua a modificação Função Adicional."
+  },
+  {
+    "nome": "Discreto",
+    "aplicacao": "Kits de Perícia, Utensílios e Vestimentas",
+    "efeito": "O item é miniaturizado ou camuflado em um objeto cotidiano inócuo (como um relógio, caneta ou broche).",
+    "mecanica_detalhada": "Reduz em 1 o espaço ocupado (mínimo 0). Concede +2 em testes de Crime para escondê-lo e permite realizar o teste sem ser treinado."
+  },
+  {
+    "nome": "Função Adicional",
+    "aplicacao": "Kits de Perícia, Utensílios e Vestimentas",
+    "efeito": "O acessório passa a fornecer +2 em uma segunda perícia à sua escolha (exceto Luta ou Pontaria).",
+    "mecanica_detalhada": "Adiciona bônus em uma nova perícia, sujeita à aprovação do Mestre."
+  },
+  {
+    "nome": "Instrumental",
+    "aplicacao": "Kits de Perícia, Utensílios e Vestimentas",
+    "efeito": "O acessório é adaptado para funcionar e ser utilizado simultaneamente como um Kit de Perícia específico.",
+    "mecanica_detalhada": "Elimina a necessidade de carregar um kit de perícia separado para a perícia escolhida."
+  },
+  {
+    "nome": "Bateria Potente",
+    "aplicacao": "Dispositivos Eletrônicos (Celulares, Notebooks, Lanternas, Tasers e similares)",
+    "efeito": "O objeto é equipado com uma célula de energia de alta capacidade para otimizar a eficiência elétrica.",
+    "mecanica_detalhada": "Lanterna, Celular e Notebook: Dobra a duração da bateria e o alcance da luz (ex: 4,5m para 9m). Taser: Dobra os usos/cargas, aumenta o dano para 1d8 e concede +2 na DT do teste de resistência de atordoamento."
+  }
+]

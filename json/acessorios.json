@@ -1,0 +1,70 @@
+[
+  {
+    "nome": "Kit de Perícia",
+    "tipo": "Acessório",
+    "espaco": 1,
+    "efeito": "Conjunto de ferramentas indispensáveis para a execução de certas perícias (Medicina, Tecnologia, Crime, etc.). Realizar um teste que exige um kit sem possuí-lo impõe penalidade de -2[cite: 121]."
+  },
+  {
+    "nome": "Utensílio",
+    "tipo": "Acessório",
+    "espaco": 1,
+    "empunhadura": "Exige 1 mão ocupada durante o uso[cite: 121]",
+    "efeito": "Item funcional para utilidade prática (ex.: smartphone, lupa). Concede +2 em uma perícia específica, exceto Luta e Pontaria[cite: 121]."
+  },
+  {
+    "nome": "Vestimenta",
+    "tipo": "Acessório",
+    "espaco": 1,
+    "tempo_de_troca": "Ação Completa para vestir ou despir[cite: 122]",
+    "efeito": "Peça vestível para favorecer tarefas (ex.: botas para Atletismo, terno para Diplomacia). Concede +2 em uma perícia específica (exceto Luta e Pontaria). Limite de duas vestimentas simultâneas[cite: 122]."
+  },
+  {
+    "nome": "Amuleto Sagrado",
+    "tipo": "Utensílio Especial / Acessório",
+    "espaco": 1,
+    "efeito": "Objeto de fé que blinda a mente do agente. Concede +2 em Religião e +2 em Vontade[cite: 122]."
+  },
+  {
+    "nome": "Celular",
+    "tipo": "Utensílio Especial / Acessório",
+    "espaco": 1,
+    "efeito": "Permite comunicação, gravação de mídias e acesso à rede. Com internet, concede +2 em testes para pesquisar informações (Investigação, Ciências, Atualidades). Possui LED com iluminação em cone de 4,5m[cite: 122, 123]."
+  },
+  {
+    "nome": "Chave de Fenda Universal",
+    "tipo": "Utensílio Especial / Acessório",
+    "espaco": 1,
+    "efeito": "Ferramenta versátil. Concede +2 em testes para criar ou reparar objetos (Profissão ou Tecnologia) ou como apoio técnico[cite: 123]."
+  },
+  {
+    "nome": "Chaves",
+    "tipo": "Item Comum / Utensílio",
+    "espaco": 0,
+    "efeito": "Molho de chaves diversificado. Tilintar o molho para distração concede +2 no próximo teste de Furtividade na mesma rodada[cite: 123]."
+  },
+  {
+    "nome": "Documentos Falsos",
+    "tipo": "Utensílio Especial / Acessório",
+    "espaco": "0 ou 1",
+    "efeito": "Credenciais sob identidade falsa. Concede +2 em Diplomacia, Enganação e Intimidação ao se passar pela pessoa ou cargo[cite: 123]."
+  },
+  {
+    "nome": "Manual Operacional",
+    "tipo": "Item Utilitário / Acessório",
+    "espaco": 1,
+    "efeito": "Guia focado em uma perícia. Estudo em ação de Interlúdio permite usar a perícia como Treinado até o próximo Interlúdio (versão Aprimorada concede +5)[cite: 123]."
+  },
+  {
+    "nome": "Notebook (ou Tablet)",
+    "tipo": "Utensílio Especial / Acessório",
+    "espaco": 1,
+    "efeito": "Dispositivo portátil. Com internet, concede +2 em busca de informações. No Interlúdio (Relaxar), recupera +1 SAN adicional. Possui tela com iluminação em cone de 4,5m[cite: 123]."
+  },
+  {
+    "nome": "Câmera Filmadora",
+    "tipo": "Acessório",
+    "espaco": 1,
+    "efeito": "Registra detalhes e anomalias. Concede +2 em Investigação e Percepção. Possui lanterna (cone de 9m) e modo de visão noturna (Visão no Escuro)."
+  }
+]

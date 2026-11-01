@@ -21,6 +21,15 @@ def ensure_schema():
     ability_columns = {
         column["name"] for column in inspect(engine).get_columns("habilidades")
     }
+    skill_columns = {
+        column["name"] for column in inspect(engine).get_columns("pericias")
+    }
+    power_columns = {
+        column["name"] for column in inspect(engine).get_columns("poderes")
+    }
+    ritual_columns = {
+        column["name"] for column in inspect(engine).get_columns("rituais")
+    }
     with engine.begin() as connection:
         if "automatico" not in ability_columns:
             connection.execute(text(
@@ -29,6 +38,22 @@ def ensure_schema():
         if "nivel_desbloqueio" not in ability_columns:
             connection.execute(text(
                 "ALTER TABLE habilidades ADD COLUMN nivel_desbloqueio INTEGER"
+            ))
+        if "automatico_origem" not in skill_columns:
+            connection.execute(text(
+                "ALTER TABLE pericias ADD COLUMN automatico_origem BOOLEAN NOT NULL DEFAULT 0"
+            ))
+        if "custo" not in power_columns:
+            connection.execute(text(
+                "ALTER TABLE poderes ADD COLUMN custo VARCHAR DEFAULT ''"
+            ))
+        if "alcance" not in power_columns:
+            connection.execute(text(
+                "ALTER TABLE poderes ADD COLUMN alcance VARCHAR DEFAULT ''"
+            ))
+        if "elemento" not in ritual_columns:
+            connection.execute(text(
+                "ALTER TABLE rituais ADD COLUMN elemento VARCHAR DEFAULT ''"
             ))
 
     with engine.begin() as connection:

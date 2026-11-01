@@ -1,0 +1,178 @@
+[
+  {
+    "nome": "Componentes Ritualísticos (Sangue, Morte, Conhecimento ou Energia)",
+    "tipo": "Item Paranormal",
+    "categoria": "0",
+    "espaco": 1,
+    "descricao": "Conjuntos de objetos simbólicos e condutores essenciais para a conjuração de rituais de um elemento específico. Não existem componentes para o elemento Medo[cite: 139].",
+    "efeito": "Necessários para canalizar e conjurar rituais do respetivo elemento sem penalidades mecânicas[cite: 139]."
+  },
+  {
+    "nome": "Amarras de (Elemento)",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": 1,
+    "descricao": "Cordas ou correntes imbuídas com a essência de um elemento específico (Sangue, Morte, Conhecimento ou Energia), desenvolvidas para conter e imobilizar manifestações do Outro Lado[cite: 139].",
+    "efeito": "Armadilha (gasta 1 ação completa e 2 PE para armar perímetro de 3x3m; falha em Reflexos DT Int deixa Imóvel até o fim da cena) ou Laçar (gasta 1 ação padrão e 1 PE em alcance Curto; falha em Vontade DT Agi deixa Paralisado)[cite: 139]."
+  },
+  {
+    "nome": "Câmera de Aura Paranormal",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": 1,
+    "descricao": "Câmera fotográfica amaldiçoada com Energia e gravada com sigilos de Conhecimento[cite: 140].",
+    "efeito": "Gastar 1 ação padrão e 1 PE para tirar uma foto instantânea que revela a presença, intensidade e elemento das auras paranormais na área[cite: 140]."
+  },
+  {
+    "nome": "Lente de Revelação",
+    "tipo": "Modificação Paranormal (Para Câmera de Aura Paranormal)",
+    "categoria": "I",
+    "espaco": "+0",
+    "descricao": "Lente polida com cristais de Conhecimento e refracção de Energia[cite: 140].",
+    "efeito": "Passivo: Permite visualizar seres invisíveis e incorpóreos pelo visor, ignorando camuflagem e invisibilidade. Ativo: Gasta 1 ação padrão e 1 PE para tirar foto em alcance Curto; falha em Vontade DT Pre torna a criatura corpórea e remove camuflagem/invisibilidade até o fim da cena[cite: 140]."
+  },
+  {
+    "nome": "Escuta de Ruídos Paranormais",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": 1,
+    "descricao": "Microfone de recepção e captação espectral para frequências inaudíveis[cite: 140].",
+    "efeito": "Exige 1 ação completa e 2 PE para gravar áudios por até 24 horas. Ouvir o material gravado concede 2 Vantagens (+1d6) em testes de Ocultismo para identificar, rastrear ou estudar criaturas da cena[cite: 140]."
+  },
+  {
+    "nome": "Medidor de Estabilidade da Membrana",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": 1,
+    "descricao": "Aparelho de diagnóstico com sensores magnéticos, térmicos e de dilatação temporal[cite: 141].",
+    "efeito": "Agentes Treinados em Ocultismo podem utilizá-lo para avaliar o enfraquecimento e a integridade da Membrana, pontos de afinidade e riscos de manifestação[cite: 141]."
+  },
+  {
+    "nome": "Catalisadores Ritualísticos",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": 1,
+    "descricao": "Componentes ritualísticos alterados por exposição direta à energia do Outro Lado. Consumidos ao serem utilizados (limite de 1 por ritual)[cite: 141].",
+    "efeito": "Variantes: Ampliador (aumenta alcance ou dobra área), Perturbador (aumenta DT em +2), Potencializador (aumenta dano ou cura em +1 dado), Prolongador (dobra duração, exceto Instantânea ou Sustentada)[cite: 141]."
+  },
+  {
+    "nome": "Pen Drive Selado",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": "0 (insignificante)",
+    "descricao": "Dispositivo de armazenamento gravado com sigilos dourados de Conhecimento[cite: 141].",
+    "efeito": "Totalmente imune a invasões, rituais, criaturas e efeitos de Energia. Mantém dados invioláveis e permite invadir sistemas sem risco de contaminação[cite: 141]."
+  },
+  {
+    "nome": "Valete da Salvação",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": "0 (insignificante)",
+    "descricao": "Carta de baralho (valete de ouros) gravada em tinta dourada com sigilos de Conhecimento[cite: 142].",
+    "efeito": "Gastar 1 ação padrão para atirar ao ar; voa em alcance Médio apontando a rota de fuga mais segura antes de desaparecer. Concede sucesso automático em Cortar Caminho se consumida em perseguição[cite: 142]."
+  },
+  {
+    "nome": "Amuleto Sinalizador de (Elemento)",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": "0 (insignificante)",
+    "descricao": "Ornamento místico que ressoa com a presença do Outro Lado (Sangue, Morte, Conhecimento ou Energia)[cite: 142].",
+    "efeito": "Reage automaticamente quando criatura do elemento correspondente entra em alcance Longo (36m), mesmo através de paredes (ex: goteja sangue, emite fumaça cinzenta, brilho dourado ou oscilação caótica). Conta para itens vestidos[cite: 142]."
+  },
+  {
+    "nome": "Carranca Caçadora",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": 2,
+    "descricao": "Cabeça raivosa de proporções animalescas entalhada em madeira grotesca[cite: 142].",
+    "efeito": "Insere-se um vestígio orgânico de uma criatura para que os olhos apontem na direção dela por 10 minutos (seguindo a rota mais perigosa). Consome o material e só pode ser usada uma vez por espécie[cite: 142, 143]."
+  },
+  {
+    "nome": "Pé de Coelho",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": "1 (Item Vestido)",
+    "descricao": "Pata decepada que concede sorte ao portador ao custo de dor física[cite: 143].",
+    "efeito": "Gastar ação de movimento para esfregar e soprar (1x por cena): concede +1d4 em todos os testes até o fim da cena. Se o d4 der resultado ÍMPAR, o portador sofre um pequeno acidente e perde 1d4 PV[cite: 143]."
+  },
+  {
+    "nome": "Sal Dourado",
+    "tipo": "Item Paranormal",
+    "categoria": "I",
+    "espaco": "1 (Saleiro com 3 cargas)",
+    "descricao": "Mistura alquímica de sal refinado e resíduos de ouro consagrado que repele Energia[cite: 143].",
+    "efeito": "Linha de Proteção (1 carga) ou Círculo de Proteção (3 cargas). Criaturas de Energia com VD 80 ou menor que tentem cruzar devem passar em Vontade DT 20 (sucesso fica Fatigado; falha fica Enjoado e incapaz de atravessar)[cite: 143, 144]."
+  },
+  {
+    "nome": "Emissor de Pulsos Paranormais",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": 1,
+    "descricao": "Caixa selada por sigilos usada como isca ou repelente[cite: 144].",
+    "efeito": "Exige 1 ação completa e 1 PE para emitir onda contínua de um elemento (atrai criaturas do elemento e repele do oposto). Criaturas afetadas resistem com Vontade DT Pre[cite: 144]."
+  },
+  {
+    "nome": "Scanner de Manifestação Paranormal de (Elemento)",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": 1,
+    "descricao": "Dispositivo sintonizado com um elemento específico[cite: 144].",
+    "efeito": "Gastar 1 ação padrão e 1 PE por rodada para conhecer instantaneamente a direção e proximidade de manifestações paranormais do elemento em alcance Longo (36m)[cite: 144, 145]."
+  },
+  {
+    "nome": "Ligação Direta Infernal",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": 1,
+    "descricao": "Emaranhado orgânico de fios de cobre corrompidos por Sangue e Energia[cite: 145].",
+    "efeito": "Conecta-se a veículos para dar partida imediata. Concede RD 10, Imunidade a Sangue e 2 Vantagens (+1d6) em Pilotagem, mas falhas em Pilotagem têm consequências severamente ampliadas[cite: 145]."
+  },
+  {
+    "nome": "Medidor de Condição Vertebral",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": 1,
+    "descricao": "Dispositivo fixado diretamente à coluna vertebral do agente (deixa Atordoado por 1 rodada ao colocar)[cite: 145].",
+    "efeito": "Conta para itens vestidos, concede +2 em Fortitude. Mostra estado de saúde por cores (verde, amarelo, vermelho) e pulsos lilás se houver maldição. Concede 2 Vantagens (+1d6) em testes de Medicina realizados por terceiros no usuário[cite: 145]."
+  },
+  {
+    "nome": "Pé de Morto",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": "1 (Item Vestido)",
+    "descricao": "Botas macabras costuradas com pele de cadáveres impregnados por Lodo da Morte[cite: 145].",
+    "efeito": "Concede 2 Vantagens (+1d6) em Furtividade. Em cenas de Furtividade/Visibilidade, ações chamativas de locomoção (correr/saltar) aumentam a Visibilidade em apenas +1[cite: 145, 146]."
+  },
+  {
+    "nome": "Agrupador Ritualístico",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": "1",
+    "descricao": "Dispositivo tático compacto gravado com conexões condutoras para ressonância de elementos[cite: 146].",
+    "efeito": "Gastar ação padrão para prender até 4 componentes/catalisadores de qualquer elemento. Contam como empunhados simultaneamente, dispensando trocas de itens em combate[cite: 146]."
+  },
+  {
+    "nome": "Rubra",
+    "tipo": "Item Paranormal",
+    "categoria": "II",
+    "espaco": "1",
+    "descricao": "Droga paranormal em pó viscoso avermelhado-escuro[cite: 146].",
+    "efeito": "Esfregar em ferida aberta (gasta ação de movimento): concede +2 em perícias de Força, Agilidade e Vigor e 10 PV temporários até o fim da cena. Rebote: perde 1d3 em Atributos Físicos e risco de surto/mutação por Vontade[cite: 146, 147]."
+  },
+  {
+    "nome": "Crânio Dominador",
+    "tipo": "Item Paranormal",
+    "categoria": "III",
+    "espaco": "1",
+    "descricao": "Crânio nefasto tomado por podridão e correntes[cite: 147].",
+    "efeito": "Gastar 1 ação padrão e 2 PE para lançar correntes de lodo e metal em até 2 alvos em alcance Curto; falha em Reflexos DT Pre deixa Paralisado (correntes exigem destruição física com Defesa 10, RD 5 e 20 PV). Recarga de 24 horas[cite: 147]."
+  },
+  {
+    "nome": "Gaiola do Corvo",
+    "tipo": "Item Paranormal",
+    "categoria": "III",
+    "espaco": "2",
+    "descricao": "Gaiola de pássaros esculpida em ossos humanos com nuvem de cinzas[cite: 147, 148].",
+    "efeito": "Gastar 1 ação padrão para apoiar no chão e abrir: transforma raio de 18m em Terreno Difícil com Lodo. Início de rodada causa 3d10 de dano de Morte (Fortitude DT Vig reduz à metade). Consome corpos Morrendo na área[cite: 148]."
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "nome": "Antielemento",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Armas",
+    "efeito": "Ao realizar ataque bem-sucedido contra criatura do elemento oposto/correspondente, pode gastar 2 SAN para causar +4d8 pontos de dano adicionais. O elemento é definido ao forjar (ou 1d4: 1: Conhecimento, 2: Energia, 3: Morte, 4: Sangue)[cite: 149]."
+  },
+  {
+    "nome": "Ritualística",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Armas",
+    "efeito": "Permite armazenar um ritual na arma pagando os custos de Sanidade. Ao acertar um ataque, pode descarregar o ritual armazenado como ação livre, tornando o alvo atingido o alvo central do ritual[cite: 149]."
+  },
+  {
+    "nome": "Senciente",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Armas",
+    "efeito": "Gastar ação de movimento e 2 SAN para despertar uma centelha de consciência: a arma flutua ao lado do usuário e realiza um ataque autônomo por rodada em alcance Curto (ou alcance máximo da arma). Exige gastar 1 SAN no início de cada turno para manter[cite: 149]."
+  },
+  {
+    "nome": "Empuxo",
+    "elemento": "Energia",
+    "tipo": "Maldição para Armas (Exclusivo para Corpo a Corpo)",
+    "efeito": "Permite arremessar a arma em alcance Curto (9m) [ou aumenta em uma categoria se já possuía arremesso], causa +1 dado de dano ao arremessar, e retorna voando para as mãos no mesmo turno (exige reação para pegar)[cite: 149, 150]."
+  },
+  {
+    "nome": "Energética",
+    "elemento": "Energia",
+    "tipo": "Maldição para Armas",
+    "efeito": "Gastar 2 SAN por ataque para converter a lâmina/projétil em puro plasma e luz: concede 2 Vantagens (+1d6) no ataque, ignora completamente a RD do alvo e converte todo o dano para o elemento Energia[cite: 150]."
+  },
+  {
+    "nome": "Vibrante",
+    "elemento": "Energia",
+    "tipo": "Maldição para Armas",
+    "efeito": "Vibra continuamente, permitindo realizar um Ataque Extra por rodada ao gastar 2 SAN (se o agente já possui a habilidade Ataque Extra por trilha ou classe, o custo em Sanidade diminui em -1 SAN)[cite: 150]."
+  },
+  {
+    "nome": "Consumidora",
+    "elemento": "Morte",
+    "tipo": "Maldição para Armas",
+    "efeito": "Efeito passivo: qualquer ser atingido fica com a condição Lento até o final da cena. Ativação (2 SAN ao atacar): colapsa os movimentos do alvo, deixando-o na condição Imóvel por 1 rodada[cite: 150]."
+  },
+  {
+    "nome": "Erosiva",
+    "elemento": "Morte",
+    "tipo": "Maldição para Armas",
+    "efeito": "Efeito passivo: causa +1d8 pontos de dano de Morte adicionais. Ativação (2 SAN ao atacar): faz a vítima sofrer 2d4 pontos de dano de Morte no início de cada turno pelas próximas 2 rodadas[cite: 150, 151]."
+  },
+  {
+    "nome": "Repulsora",
+    "elemento": "Morte",
+    "tipo": "Maldição para Armas",
+    "efeito": "Efeito passivo: emana aura que concede +2 na Defesa enquanto empunhada. Ativação (Bloqueio): gastar 2 SAN para receber um bônus adicional de +2 na Defesa contra aquele ataque[cite: 151]."
+  },
+  {
+    "nome": "Lancinante",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Armas",
+    "efeito": "Efeito passivo: retalha a carne causando +1d8 pontos de dano de Sangue adicionais em cada ataque. O dado de Sangue é multiplicado em acertos críticos pelo multiplicador da arma (ex: crítico x3 inflige +3d8)[cite: 151]."
+  },
+  {
+    "nome": "Predadora",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Armas",
+    "efeito": "Efeito passivo: anula penalidades de Camuflagem Leve e Cobertura Leve, amplia o alcance de armas à distância em uma categoria e duplica a margem de ameaça da arma antes de quaisquer valores fixos[cite: 151]."
+  },
+  {
+    "nome": "Sanguinária",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Armas",
+    "efeito": "Efeito passivo: todo ser atingido entra na condição Sangrando (o sangramento acumula a cada acerto). Acerto crítico faz o alvo ficar Fraco e o usuário recebe 2d10 PV temporários[cite: 151, 152]."
+  },
+  {
+    "nome": "Abascanta",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: coberta por sigilos que concedem 2 Vantagens (+1d6) em testes de resistência contra rituais[cite: 152]. Reflexão Ritualística (gasta reação e SAN igual ao custo do ritual para refleti-lo de volta ao conjurador, assumindo o controle das escolhas e alvos)[cite: 152]."
+  },
+  {
+    "nome": "Profética",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: concede vislumbres do futuro, fornecendo RD 5 a Conhecimento[cite: 152]. Presciência Defensiva (gasta 2 SAN para rolar novamente um teste de resistência falhado, ficando com o melhor resultado)[cite: 152]."
+  },
+  {
+    "nome": "Sombria",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: distorce a percepção, concedendo 2 Vantagens (+1d6) em Furtividade e ignorando penalidade de carga/peso nessa perícia[cite: 152]. Camuflagem Cotidiana (gasta ação de movimento e 1 SAN para alterar a forma visual para vestimenta comum mantendo as propriedades)[cite: 152]."
+  },
+  {
+    "nome": "Cinética",
+    "elemento": "Energia",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: gera campo de repulsão eletromagnética que concede +2 na Defesa, além de RD 2 contra todos os danos (se em Proteção Leve ou Escudo) ou RD 5 contra todos os danos (se em Proteção Pesada)[cite: 152, 153]."
+  },
+  {
+    "nome": "Lépida",
+    "elemento": "Energia",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: amplia resposta muscular, concedendo 2 Vantagens (+1d6) em Atletismo e +3m no Deslocamento[cite: 153]. Arrancada Sobrenatural (gasta 2 SAN para ignorar terreno difícil, receber deslocamento de escalada igual ao terrestre e imunidade a dano de queda de até 9m até o fim do turno)[cite: 153]."
+  },
+  {
+    "nome": "Voltaica",
+    "elemento": "Energia",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: absorve correntes elétricas, fornecendo RD 5 a Energia[cite: 153]. Aura Plasmática (gasta ação de movimento e 2 SAN para envolver em arcos elétricos até o fim da cena, causando 2d6 de dano de Energia a todos os seres adjacentes no final de cada turno)[cite: 153]."
+  },
+  {
+    "nome": "Letárgica",
+    "elemento": "Morte",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: altera a dilatação temporal, concedendo +2 na Defesa[cite: 153]. Negação de Críticos e Furtivos (chance percentual de absorver e anular o dano extra de críticos e furtivos, recebendo apenas o dano normal: 25% para Proteção Leve/Escudo ou 50% para Proteção Pesada)[cite: 153]."
+  },
+  {
+    "nome": "Repulsiva",
+    "elemento": "Morte",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: dispersa decomposição e envelhecimento, concedendo RD 5 a Morte[cite: 154]. Manto de Lodo (gasta ação de movimento e 2 SAN para secretar Lodo preto até o final da cena; retalia atacantes corpo a corpo com 2d8 de dano de Morte)[cite: 154]."
+  },
+  {
+    "nome": "Regenerativa",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: reage à vitalidade, fornecendo RD 5 a Sangue[cite: 154]. Vitalidade Vascular (gasta ação de movimento e 1 SAN para estimular cicatrização acelerada, recuperando 1d12 PV no mesmo instante)[cite: 154]."
+  },
+  {
+    "nome": "Sádica",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Proteções",
+    "efeito": "Efeito passivo: converte dor e agressão recebidas em fúria biológica[cite: 154]. Fúria por Trauma (no início do turno, recebe 1 Vantagem nos testes de ataque e +2 no dano para cada 20 pontos de dano sofridos desde o fim do último turno)[cite: 154]."
+  },
+  {
+    "nome": "Carisma",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: emana aura de magnetismo pessoal e autoconfiança, aumentando o atributo Presença em +1 (não concede Sanidade adicional)[cite: 155]. Regra de penalidade: -1D em testes de Vontade e Intuição para resistir a efeitos, rituais e habilidades de Conhecimento[cite: 155]."
+  },
+  {
+    "nome": "Conjuração",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: contém inscrições de um ritual de 1º círculo gravado. Permite conjurar o ritual como se o conhecesse; se já o conhecer, o custo diminui em -1 SAN[cite: 155]. Regra de penalidade: -1D em testes de Vontade e Intuição para resistir a efeitos, rituais e habilidades de Conhecimento[cite: 155]."
+  },
+  {
+    "nome": "Escudo Mental",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: gera barreira psíquica ao redor da mente, fornecendo RD Mental 5[cite: 155]. Regra de penalidade: -1D em testes de Vontade e Intuição para resistir a efeitos, rituais e habilidades de Conhecimento[cite: 155]."
+  },
+  {
+    "nome": "Reflexão",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Ativação: uma vez por rodada, quando for alvo direto de um ritual, pode gastar reação e SAN equivalente ao custo para refleti-lo de volta ao conjurador, assumindo o controle das decisões[cite: 155]. Regra de penalidade: -1D em testes de Vontade e Intuição para resistir a efeitos, rituais e habilidades de Conhecimento[cite: 155]."
+  },
+  {
+    "nome": "Sagacidade",
+    "elemento": "Conhecimento",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: expande a capacidade cognitiva e velocidade de raciocínio, aumentando o atributo Intelecto em +1 (não concede perícias ou graus de treinamento)[cite: 155]. Regra de penalidade: -1D em testes de Vontade e Intuição para resistir a efeitos, rituais e habilidades de Conhecimento[cite: 155]."
+  },
+  {
+    "nome": "Defesa",
+    "elemento": "Energia",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: malha geométrica de energia plasmática orbita o acessório, fornecendo +2 na Defesa[cite: 156]. Regra de penalidade: -1D em testes de Reflexos e Agilidade para resistir a efeitos, rituais e habilidades de Energia[cite: 156]."
+  },
+  {
+    "nome": "Destreza",
+    "elemento": "Energia",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: acelera impulsos nervosos e coordenação motora, aumentando o atributo Agilidade em +1[cite: 156]. Regra de penalidade: -1D em testes de Reflexos e Agilidade para resistir a efeitos, rituais e habilidades de Energia[cite: 156]."
+  },
+  {
+    "nome": "Potência",
+    "elemento": "Energia",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: amplifica o impacto e a instabilidade de manifestações, aumentando em +2 a Dificuldade do Teste (DT) contra todas as suas habilidades, poderes e rituais[cite: 156]. Regra de penalidade: -1D em testes de Reflexos e Agilidade para resistir a efeitos, rituais e habilidades de Energia[cite: 156]."
+  },
+  {
+    "nome": "Esforço Adicional",
+    "elemento": "Morte",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: canaliza espirais do tempo que desaceleram o cansaço, fornecendo +5 PE temporários/adicionais à reserva máxima (ativa-se após 24 horas contínuas de uso)[cite: 156]. Regra de penalidade: -1D em testes de Fortitude e Vigor para resistir a efeitos, rituais e habilidades de Morte[cite: 156]."
+  },
+  {
+    "nome": "Disposição",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: fortalece a densidade celular e o metabolismo, aumentando o atributo Vigor em +1[cite: 156]. Regra de penalidade: -1D em testes de Fortitude e Vontade para resistir a efeitos, rituais e habilidades de Sangue[cite: 156]."
+  },
+  {
+    "nome": "Pujança",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: amplifica a densidade e potência da massa muscular, aumentando o atributo Força em +1[cite: 157]. Regra de penalidade: -1D em testes de Fortitude e Vontade para resistir a efeitos, rituais e habilidades de Sangue[cite: 156]."
+  },
+  {
+    "nome": "Vitalidade",
+    "elemento": "Sangue",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: infunde vitalidade constante na corrente sanguínea, fornecendo +10 PV à reserva máxima (ativa-se após 24 horas contínuas de uso)[cite: 157]. Regra de penalidade: -1D em testes de Fortitude e Vontade para resistir a efeitos, rituais e habilidades de Sangue[cite: 156]."
+  },
+  {
+    "nome": "Proteção Elemental",
+    "elemento": "Variável (Conhecimento, Energia, Morte ou Sangue)",
+    "tipo": "Maldição para Acessórios",
+    "efeito": "Efeito passivo: concede RD 5 contra o elemento escolhido no momento da criação[cite: 157]. Classificação: o acessório passa a contar como um item do elemento contra o qual fornece resistência, aplicando a respetiva penalidade de -1D em testes de resistência contra aquele elemento enquanto equipado[cite: 157]."
+  }
+]

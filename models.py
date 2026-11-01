@@ -69,6 +69,8 @@ class PersonagemModel(Base):
     atributos = relationship("AtributoDB", back_populates="personagem", cascade="all, delete-orphan")
     pericias = relationship("PericiaDB", back_populates="personagem", cascade="all, delete-orphan")
     inventario = relationship("ItemInventarioDB", back_populates="personagem", cascade="all, delete-orphan")
+    armas = relationship("ArmaInventarioDB", back_populates="personagem", cascade="all, delete-orphan")
+    protecoes = relationship("ProtecaoInventarioDB", back_populates="personagem", cascade="all, delete-orphan")
     habilidades = relationship("HabilidadeDB", back_populates="personagem", cascade="all, delete-orphan")
     rituais = relationship("RitualDB", back_populates="personagem", cascade="all, delete-orphan")
     poderes = relationship("PoderDB", back_populates="personagem", cascade="all, delete-orphan")
@@ -89,6 +91,7 @@ class PericiaDB(Base):
     nome = Column(String)
     treinamento = Column(String, default="Destreinado")
     bonus = Column(Integer, default=0)
+    automatico_origem = Column(Boolean, default=False, nullable=False)
     personagem = relationship("PersonagemModel", back_populates="pericias")
 
 class ItemInventarioDB(Base):
@@ -100,18 +103,62 @@ class ItemInventarioDB(Base):
     descricao = Column(String, default="")
     personagem = relationship("PersonagemModel", back_populates="inventario")
 
-class HabilidadeDB(Base):
-    __tablename__ = "habilidades"
+class ArmaInventarioDB(Base):
+    __tablename__ = "armas_inventario"
     id = Column(Integer, primary_key=True, index=True)
     personagem_id = Column(Integer, ForeignKey("personagens.id"))
     nome = Column(String)
-    classificacao = Column(String, default="")
+    proficiencia = Column(String, default="")
+    tipo = Column(String, default="")
+    empunhadura = Column(String, default="")
+    dano_base = Column(String, default="")
+    critico = Column(String, default="")
+    tipo_dano = Column(String, default="")
+    alcance = Column(String, default="")
+    espaco = Column(Integer, default=1)
+    habilidades = Column(Text, default="")
+    modificacoes = Column(Text, default="")  # JSON array de nomes
+    maldicoes = Column(Text, default="")  # JSON array de nomes
+    personalizada = Column(Boolean, default=False)
+    personagem = relationship("PersonagemModel", back_populates="armas")
+
+class ProtecaoInventarioDB(Base):
+    __tablename__ = "protecoes_inventario"
+    id = Column(Integer, primary_key=True, index=True)
+    personagem_id = Column(Integer, ForeignKey("personagens.id"))
+    nome = Column(String)
+    tipo = Column(String, default="Proteção")
+    bonus_defesa = Column(String, default="")
+    espaco = Column(Integer, default=1)
+    resistencia_dano = Column(String, default="")
+    penalidade = Column(String, default="")
+    empunhadura = Column(String, default="")
+    regras_especiais = Column(String, default="")
+    descricao = Column(Text, default="")
+    modificacoes = Column(Text, default="")  # JSON array de nomes
+    maldicoes = Column(Text, default="")  # JSON array de nomes
+    personalizada = Column(Boolean, default=False)
+    personagem = relationship("PersonagemModel", back_populates="protecoes")
+
+class HabilidadeDB(Base):
+    __tablename__ = "habilidades"
+
+    id = Column(Integer, primary_key=True, index=True)
+    personagem_id = Column(
+        Integer, 
+        ForeignKey("personagens.id", ondelete="CASCADE"), 
+        nullable=False
+    )
+    nome = Column(String, nullable=False)
+    classificacao = Column(String, default="Tier I")
     prereq = Column(String, default="")
     custo = Column(String, default="")
     alcance = Column(String, default="")
     efeito = Column(Text, default="")
     automatico = Column(Boolean, default=False, nullable=False)
     nivel_desbloqueio = Column(Integer, nullable=True)
+
+    # Relacionamento com o model de personagem
     personagem = relationship("PersonagemModel", back_populates="habilidades")
 
 class RitualDB(Base):
@@ -124,6 +171,7 @@ class RitualDB(Base):
     custo = Column(String, default="")
     alcance = Column(String, default="")
     efeito = Column(Text, default="")
+    elemento = Column(String, default="")
     personagem = relationship("PersonagemModel", back_populates="rituais")
 
 class PoderDB(Base):
@@ -133,6 +181,8 @@ class PoderDB(Base):
     nome = Column(String)
     elemento = Column(String, default="sangue")
     prereq = Column(String, default="")
+    custo = Column(String, default="")
+    alcance = Column(String, default="")
     efeito = Column(Text, default="")
     afinidade = Column(Text, default="")
     personagem = relationship("PersonagemModel", back_populates="poderes")
@@ -147,3 +197,11 @@ class ArquetipoDB(Base):
     buffs = Column(Text)
     pp_tematico = Column(Text)
     habilidades = Column(Text) # Armazenadas em JSON stringificado ou tabela relacionada
+
+class OrigemDB(Base):
+    __tablename__ = "origens"
+    id = Column(Integer, primary_key=True, index=True)
+    nome = Column(String, unique=True, index=True, nullable=False)
+    pericias_treinadas = Column(Text, nullable=False)
+    habilidade_nome = Column(String, nullable=False)
+    habilidade_descricao = Column(Text, nullable=False)

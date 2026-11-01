@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "Proteção Leve",
+    "tipo": "Proteção",
+    "bonus_defesa": "+2",
+    "espaco": 2,
+    "resistencia_dano": "RD 1 contra dano Balístico, Corte, Impacto e Perfuração",
+    "penalidade": "Nenhuma",
+    "descricao": "Uma jaqueta de couro reforçada, vestuário balístico discreto ou colete leve de kevlar. Tipicamente utilizada por seguranças, patrulheiros e policiais em rondas urbanas para oferecer proteção ágil sem comprometer a mobilidade do usuário."
+  },
+  {
+    "nome": "Proteção Pesada",
+    "tipo": "Proteção",
+    "bonus_defesa": "+4",
+    "espaco": 5,
+    "resistencia_dano": "RD 3 contra dano Balístico, Corte, Impacto e Perfuração",
+    "penalidade": "Impõe -1 desvantagem em testes de perícias que sofrem penalidade de armadura/carga (como Agilidade, Atletismo, Crime e Furtividade).",
+    "descricao": "Equipamento completo de infantaria pesada e grupos de operações especiais. Composto por capacete reforçado, ombreiras, joelheiras, caneleiras e colete tático rígido com placas cerâmicas e kevlar."
+  },
+  {
+    "nome": "Escudo",
+    "tipo": "Proteção / Equipamento de Mão",
+    "bonus_defesa": "+2 (acumula com Proteção Leve ou Pesada)",
+    "espaco": 2,
+    "resistencia_dano": "RD 1 contra dano Balístico, Corte, Impacto e Perfuração",
+    "empunhadura": "Exige 1 mão livre para ser empunhado",
+    "regras_especiais": "Para efeitos de proficiência e penalidades por falta de proficiência, o Escudo é considerado uma Proteção Pesada.",
+    "descricao": "Um escudo tático moderno de policarbonato/kevlar (usado por tropas de choque) ou uma peça de metal reforçado. Oferece uma barreira física direta para bloquear golpes e redirecionar disparos."
+  }
+]

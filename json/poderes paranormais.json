@@ -1,0 +1,434 @@
+[
+  {
+    "nome": "Aprender Ritual",
+    "elemento": "Variável (Corresponde ao Elemento do Ritual Escolhido)",
+    "prereq": "Elemento 1",
+    "custo": "Passivo (Reduz o ganho de SAN Máxima ao avançar de nível e avança 1 passo na Linha Paranormal do elemento escolhido)",
+    "alcance": "Pessoal",
+    "efeito": "Ao se conectar com as memórias esotéricas de ocultistas do passado e com a essência das entidades, você assimila a fórmula mística de um novo ritual. Conhecimento Místico: Você aprende e pode conjurar 1 ritual do elemento escolhido. O círculo máximo do ritual aprendido é determinado pelo seu Nível de Agente (Nível 1 a 8: 1º Círculo; Nível 9 a 14: até 2º Círculo; Nível 15 a 20: até 3º Círculo). Reciclagem Arcana: Sempre que escolher este poder (ou ao avançar de nível), você pode substituir 1 ritual que já conhece por outro do mesmo elemento e de círculo equivalente ao seu limite atual. Limite de Conhecimento: Rituais aprendidos por este poder contam normalmente para o seu Limite de Rituais Conhecidos. Cumulativo: Este poder pode ser escolhido múltiplas vezes. Cada seleção conta como 1 Poder Paranormal na Linha do Elemento associado ao ritual.",
+    "afinidade": null
+  },
+  {
+    "nome": "Resistir a Elemento",
+    "elemento": "Variável (Conhecimento, Energia, Morte ou Sangue)",
+    "prereq": "Elemento 1",
+    "custo": "Passivo (Reduz o ganho de SAN Máxima ao avançar de nível e avança 1 passo na Linha Paranormal do elemento escolhido)",
+    "alcance": "Pessoal",
+    "efeito": "Seu corpo e sua mente foram expostos e alterados pela presença de uma Entidade, tornando sua estrutura densa e parcialmente refratária às manifestações daquele elemento. Casca Elemental: Escolha entre Conhecimento, Energia, Morte ou Sangue. Você recebe Resistência 5 ao elemento escolhido (reduz em 5 o dano sofrido por efeitos, ataques e rituais daquele elemento). Revolução Biológica: Sempre que passar em um teste de resistência para reduzir pela metade o dano do elemento escolhido, você ignora completamente o dano restante se ele for igual ou menor que o seu valor de Resistência. Especialização: Este poder pode ser escolhido múltiplas vezes, desde que para elementos diferentes. Cada escolha avança a linha paranormal do elemento respectivo.",
+    "afinidade": "Benefício de Afinidade (Anulação Paranormal): Sua resistência ao elemento escolhido aumenta para Resistência 10. Além disso, você recebe Vantagem (+1d) em todos os testes de resistência (Fortitude, Reflexos ou Vontade) realizados contra habilidades, ataques e rituais do elemento sintonizado."
+  },
+  {
+    "nome": "Percepção Paranormal",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "O Conhecimento sussurra detalhes imperceptíveis e símbolos ocultos diretamente em sua mente. Em cenas de investigação ou exploração, sempre que realizar um teste de perícia para procurar ou analisar pistas (Investigação, Percepção ou Ocultismo), o dado do atributo utilizado para a rolagem avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Além disso, você pode rolar novamente 1 dado da sua reserva que tenha resultado menor que 10, devendo aceitar a segunda rolagem.",
+    "afinidade": "O fluxo de sussurros se torna constante e cristalino. Em testes de investigação ou exploração, você passa a rolar novamente até 2 dados da sua reserva com resultado menor que 10."
+  },
+  {
+    "nome": "Precognição (Refatorado)",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Fragmentos do futuro imediato vislumbra em sua mente milissegundos antes dos acontecimentos. Você recebe +2 na Defesa. Além disso, em todos os seus testes de resistência (Fortitude, Reflexos e Vontade), o dado do atributo utilizado para a rolagem avança 1 etapa na escala de dados (por exemplo, de d12 para d20).",
+    "afinidade": "Sua percepção do espaço-tempo ao seu redor torna-se contínua. Você se torna completamente imune à condição Desprevenido."
+  },
+  {
+    "nome": "Sensitivo",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Você capta as flutuações psíquicas e a intenção latente de outros seres, decodificando suas emoções profundas. Nos testes das perícias Diplomacia, Intimidação e Intuição, o dado do atributo utilizado para a rolagem avança 1 etapa na escala de dados (por exemplo, de d12 para d20).",
+    "afinidade": "Sua percepção empática se estende a um nível invasivo. Quando você realizar um teste oposto de Diplomacia, Intimidação ou Intuição, o oponente sofre desvantagem (-1d) na rolagem dele, enquanto você aprimora sua leitura sobre a mente do alvo."
+  },
+  {
+    "nome": "Visão do Oculto",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Seus olhos físicos deixam de ser sua única forma de percepção; sua mente passa a mapear o ambiente através dos rastros invisíveis do Conhecimento. Em todos os testes da perícia Percepção, o dado do atributo utilizado para a rolagem avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Além disso, você passa a enxergar perfeitamente na completa escuridão (visão no escuro).",
+    "afinidade": "Sua percepção mística fende qualquer véu físico ou ilusório. Você ignora completamente camuflagem (incluindo escuridão, fumaça, neblina e efeitos de ocultação visual), enxergando a verdadeira essência de tudo o que está ao seu alcance."
+  },
+  {
+    "nome": "Afortunado",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A Energia considera resultados mediocres e falhas estáticas uma ofensa ao caos dinâmico do universo. Uma vez por rolagem, você pode rolar novamente qualquer dado da sua reserva que tenha obtido o resultado 1. Você deve aceitar o resultado do segundo dado.",
+    "afinidade": "Além disso, sempre que obtiver um resultado máximo natural em qualquer dado da sua reserva, você recebe Vantagem na próxima rolagem realizada na mesma cena."
+  },
+  {
+    "nome": "Campo Protetor",
+    "elemento": "Energia",
+    "prereq": "Energia 2",
+    "custo": "1 PE",
+    "alcance": null,
+    "efeito": "Você canaliza a instabilidade caótica do seu elemento para condensar um campo de pura eletricidade estática e força ao seu redor. Quando utiliza a ação Esquiva, você pode gastar 1 PE para fazer com que o dado do atributo utilizado no teste de agilidade avance 1 etapa na escala de dados (por exemplo, de d12 para d20).",
+    "afinidade": "Seu campo protetor torna-se hiperativo e imprevisível. Quando usa este poder com 1 PE, você também avança 1 etapa na escala de dados do atributo de Reflexos para o teste correspondente. Além disso, se passar em um teste de Reflexo que reduziria o dano à metade, você ignora completamente o dano e uma descarga de energia estática rebate de volta contra o agressor adjacente, causando dano de Energia equivalente ao atributo-chave."
+  },
+  {
+    "nome": "Causalidade Fortuita",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A Energia guia seus passos através de um labirinto de coincidências caóticas, conduzindo-o diretamente rumo a descobertas. Em cenas de investigação, o dado do atributo utilizado em testes de Procurar ou Investigação para encontrar pistas avança 1 etapa na escala de dados (por exemplo, de d12 para d20) até que você encontre a sua primeira pista na cena.",
+    "afinidade": "A corrente da probabilidade trabalha constantemente a seu favor. Em todas as cenas de investigação, o dado do atributo utilizado em testes de Procurar ou Investigação para procurar pistas avança permanentemente 1 etapa na escala de dados (por exemplo, de d12 para d20) durante toda a duração da cena."
+  },
+  {
+    "nome": "Golpe de Sorte",
+    "elemento": "Energia",
+    "prereq": "Energia 2",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A Energia distorce as probabilidades ao seu redor, fazendo com que suas investidas encontrem brechas improváveis na guarda do alvo. Ao realizar qualquer teste de ataque, o dado do atributo utilizado na rolagem avança 1 etapa na escala de dados (por exemplo, de d12 para d20).",
+    "afinidade": "A imprevisibilidade da Energia premia a sua audácia com uma letalidade devastadora. Sempre que você obtiver um acerto crítico através da explosão natural do seu dado de ataque, o multiplicador de dano crítico da arma utilizada é aumentado em +1 (por exemplo, um multiplicador de x2 passa a ser x3), transformando a sua sorte em um golpe catastrófico."
+  },
+  {
+    "nome": "Manipular Entropia",
+    "elemento": "Energia",
+    "prereq": "Energia 2",
+    "custo": "2 SAN",
+    "alcance": "Curto",
+    "efeito": "Nada diverte mais a Energia do que a possibilidade repentina de um desastre ou de uma reviravolta caótica. Quando outro ser em alcance curto realiza um teste de perícia, você pode gastar 2 SAN (como Reação) para forçá-lo a rolar novamente um dos dados da reserva desse teste (podendo ser o dado de Atributo, o dado de Perícia ou um dado de Vantagem/Desvantagem). O novo resultado deve ser aceito obrigatoriamente.",
+    "afinidade": "A sua sintonia com o caos absoluto amplia o seu poder sobre as probabilidades alheias. Quando usa este poder, em vez de apenas um dado, você pode forçar o alvo a rolar novamente quantos dados da reserva dele você escolher (re-rolando a mão inteira do inimigo ou aliado se desejar)."
+  },
+  {
+    "nome": "Encarar a Morte",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Sua conexão com a Morte amortece o peso do terror e do esforço em sua mente. O custo em Sanidade (SAN) para ativar qualquer poder paranormal, habilidade ou ritual é reduzido em 1 SAN (até um mínimo obrigatório de 1 SAN).",
+    "afinidade": "A entropia caminha ao seu lado, e a frieza do túmulo torna sua mente impassível. A redução no custo de Sanidade das suas habilidades e rituais passa a ser de 2 SAN (mantendo sempre o limite mínimo de 1 SAN por uso)."
+  },
+  {
+    "nome": "Escapar da Morte",
+    "elemento": "Morte",
+    "prereq": "Morte 2",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A Morte tem um interesse especial em sua caminhada e recusa-se a levá-lo antes da hora. Uma vez por cena, quando você sofrer dano letal que o reduziria a 0 PV (colocando-o na condição Morrendo), você resiste ao golpe e fica com 1 PV em vez disso. Este efeito não funciona caso o ataque caracterize Dano Massivo.",
+    "afinidade": "O seu elo com o fim é tão forte que a Morte simplesmente desvia a foice. Uma vez por cena, quando sofrer dano que o reduziria a 0 PV, em vez de ficar com 1 PV, você ignora completamente o dano daquele ataque. Caso o gatilho seja um ataque de Dano Massivo, você não ignora o dano total, mas o poder ativa: você sobrevive ao impacto ficando com 1 PV e evita cair Inconsciente."
+  },
+  {
+    "nome": "Potencial Aprimorado",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A Morte lhe concede o potencial latente de momentos e memórias roubadas de outras linhas temporais, expandindo a capacidade da sua mente de suportar o Paranormal. A sua Sanidade Máxima (SAN) aumenta em um valor igual ao seu Nível de personagema tual. Sempre que você subir de nível, a SAN concedida por este poder aumenta em +1.",
+    "afinidade": "O seu receptáculo temporal expande-se drasticamente. O bônus na sua Sanidade Máxima aumenta para +2 SAN por Nível de personagem (aplicando-se retroativamente aos níveis anteriores)."
+  },
+  {
+    "nome": "Potencial Reaproveitado",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Você absorve os momentos desperdiçados de outros seres e os converte em energia vital para a sua própria mente. Uma vez por rodada, quando você passa em um teste de resistência, você ganha 2 pontos de Sanidade (SAN) Temporária cumulativos. Esses pontos são consumidos antes da sua Sanidade máxima ao pagar os custos de habilidades e rituais (ou ao sofrer dano mental), e desaparecem no final da cena.",
+    "afinidade": "A sua fome pela entropia alheia atinge o ápice. Uma vez por rodada, ao passar em um teste de resistência, você passa a ganhar 3 pontos de SAN Temporária cumulativos, em vez de 2."
+  },
+  {
+    "nome": "Surto Temporal",
+    "elemento": "Morte",
+    "prereq": "Morte 3",
+    "custo": "3 SAN",
+    "alcance": null,
+    "efeito": "A sua percepção temporal se torna distorcida e espiralizada, fazendo com que a noção de passagem do tempo nunca mais seja a mesma para você. Uma vez por cena, durante o seu turno, você pode gastar 3 SAN para realizar uma ação padrão adicional.",
+    "afinidade": "O tempo dobra-se inteiramente à sua vontade. Em vez de ser limitado a uma vez por cena, você passa a poder usar este poder uma vez por turno (pagando o custo de 3 SAN a cada ativação)."
+  },
+  {
+    "nome": "Anatomia Insana",
+    "elemento": "Sangue",
+    "prereq": "Sangue 3",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "O seu corpo é transfigurado e parece desenvolver um instinto próprio de sobrevivência, com órgãos deslizando de forma antinatural sob a pele. Quando você é alvo de um acerto crítico ou de um ataque furtivo, você pode usar uma Reação e gastar 2 SAN para reposicionar seus pontos vitais no momento do impacto, ignorando todo o dano adicional do ataque (tratando-o como um acerto normal).",
+    "afinidade": "A sua biologia se torna um caos grotesco, indecifrável e impenetrável. Você se torna passivamente imune aos danos adicionais de acertos críticos e ataques furtivos (o efeito passa a ser constante, sem exigir gasto de SAN ou uso de Reação)."
+  },
+  {
+    "nome": "Arma de Sangue",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": "2 SAN (manifestar) / 1 SAN (ataque adicional)",
+    "alcance": null,
+    "efeito": "O Sangue devora parte do seu corpo, transfigurando-se em garras, chifres ou uma lâmina cristalizada. Você pode gastar uma ação de movimento e 2 SAN para manifestá-la. É uma arma corpo a corpo leve que não ocupa as mãos e causa 1d6 pontos de dano de Sangue. Para não ficar obsoleta, esta arma é tratada como um equipamento orgânico: ela pode receber modificações e maldições normalmente (você gasta os espaços de carga e a categoria do aprimoramento, e seu corpo absorve os componentes). Além disso, uma vez por turno, ao usar a ação Agredir, você pode gastar 1 SAN para realizar um ataque adicional com essa arma. A mutação dura até o final da cena.",
+    "afinidade": "A transfiguração torna-se uma extensão permanente da sua anatomia (não exige ação ou custo em SAN para ser manifestada). O dado de dano base da arma avança 2 etapas na escala de dados (passando de 1d6 para 1d10). Além disso, os seus acertos críticos com a Arma de Sangue rasgam a vitalidade do inimigo, curando os seus próprios PV em um valor igual ao dano extra gerado pelo crítico."
+  },
+  {
+    "nome": "Sangue de Ferro",
+    "elemento": "Sangue",
+    "prereq": "Sangue 2",
+    "custo": null,
+    "alcance": null,
+    "efeito": "O seu sangue flui de forma paranormal e agressiva, engrossando a sua musculatura e concedendo um vigor físico inatural. Você recebe +2 Pontos de Vida (PV) por Nível de personagem. Quando você sobe de nível, os PV concedidos por este poder aumentam de acordo (aplicando-se retroativamente aos níveis anteriores, exatamente como o Potencial Aprimorado faz com a Sanidade).",
+    "afinidade": "A sua biologia se torna um ecossistema impenetrável e hostil a qualquer contaminação. O dado de atributo utilizado em testes de Fortitude avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Além disso, você se torna completamente imune a venenos e doenças (sejam elas mundanas ou de origem paranormal)."
+  },
+  {
+    "nome": "Sangue Fervente",
+    "elemento": "Sangue",
+    "prereq": "Sangue 2",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A intensidade da dor desperta em você instintos bestiais e prazerosos que você nem imaginava existirem. Enquanto estiver com a condição Machucado (com menos da metade dos seus PV máximos), o dado do seu atributo de Força ou Agilidade (à sua escolha) avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Você faz essa escolha toda vez que a condição for ativada.",
+    "afinidade": "O êxtase da dor ignora completamente os limites naturais do seu corpo. Enquanto estiver Machucado, o avanço no dado do atributo escolhido (Força ou Agilidade) passa a ser de 2 etapas na escala de dados (permitindo alcançar o teto do d20 com muito mais facilidade, o excedente se torna vantagem)."
+  },
+  {
+    "nome": "Espreitar da Besta",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "O Sangue do Outro Lado transfigura seus músculos e articulações, permitindo que você se mova e cace exatamente como uma besta predadora. O dado do atributo utilizado em testes de Furtividade avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Em cenas de perseguição, se você for o caçador, pode realizar testes de Furtividade em vez de Atletismo. Além disso, em cenas de furtividade, seus instintos bestiais assumem o controle, permitindo que você realize ações discretas (como mover-se em velocidade normal) sem sofrer desvantagens ou penalidades na rolagem.",
+    "afinidade": "Você se torna o predador alfa do ambiente, fundindo-se às sombras com uma graciosidade monstruosa. O avanço no dado de atributo para testes de Furtividade passa a ser de 2 etapas na escala de dados. Caso esse avanço ultrapasse o limite máximo do dado (d20), o excedente se converte em Vantagem, adicionando +1d4 extra ao resultado final."
+  },
+  {
+    "nome": "Instintos Sanguinários",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Ao se conectar com o Sangue do Outro Lado, você desperta sentidos animalescos paranormais de um predador perfeito. Você recebe visão no escuro (permitindo enxergar normalmente na ausência de luz) e faro (podendo detectar presas, rastrear oponentes invisíveis ou notar perigos através do cheiro).",
+    "afinidade": "Seus instintos aguçados transformam o terror do combate em uma tempestade viciante de adrenalina. A sua percepção espacial torna-se absoluta: você não pode mais ser flanqueado e nunca fica desprevenido. Além disso, o dado do atributo utilizado em testes de resistência contra armadilhas (mundanas ou paranormais) avança 1 etapa na escala de dados (caso ultrapasse o limite do d20, o excedente converte-se em +1d4 de Vantagem)."
+  },
+  {
+    "nome": "Antecipar Vitalidade",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Sua ligação com a Morte permite que você sacrifique sua vitalidade futura para garantir o seu sucesso no presente. Quando faz um teste, você pode acumular uma Carga de Antecipação para receber +1d4 de Vantagem nesse teste (adicionando o valor ao resultado final). Você pode acumular um número máximo de cargas igual ao seu atributo de Vigor (mínimo de 1). Enquanto possuir uma carga de antecipação, durante a sua próxima ação de interlúdio Dormir, em vez de recuperar Pontos de Vida (PV), você não recupera nada e remove uma dessas cargas.",
+    "afinidade": "Você amplia a sua capacidade de sacrificar o amanhã pelo hoje. O limite de Cargas de Antecipação que você pode acumular aumenta em +2. Além disso, o seu metabolismo paranormal se adapta ao desgaste do tempo: você passa a remover 2 cargas por ação Dormir no interlúdio, em vez de apenas uma."
+  },
+  {
+    "nome": "Aura de Pavor",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": "2 SAN",
+    "alcance": "Médio",
+    "efeito": "Ao receber este poder, você é tomado por uma aura de Morte que nunca mais o abandona. Do ponto de vista dos outros, o mundo ao seu redor perde as cores e se torna sufocante e opressor. Você pode gastar 2 SAN e uma ação de movimento para invadir a mente de uma pessoa ou animal em alcance médio. O alvo deve fazer um teste de Vontade; se falhar, fica apavorado (se passar, a condição é reduzida para abalado). O alvo não precisa ser capaz de ver você para ser afetado. Esta condição termina ao fim da cena, se o alvo se afastar para além do alcance médio, ou se você usar este efeito em um novo alvo. Uma mesma criatura só pode sofrer o efeito deste poder uma vez por dia.",
+    "afinidade": "A manifestação do seu pavor atinge proporções de uma anomalia entrópica. Você passa a poder focar a aura em quaisquer pessoas ou animais que escolher dentro do alcance médio simultaneamente (afetando múltiplos alvos de uma só vez). Além disso, a densidade da aura é tão esmagadora que os alvos sofrem Desvantagem (-1d4) em seus testes de Vontade para resistir ao poder."
+  },
+  {
+    "nome": "Absorver Conhecimento",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": "1 SAN",
+    "alcance": null,
+    "efeito": "Você se conecta com o Conhecimento do Outro Lado para extrair informações de forma paranormal, sem gastar horas de pesquisa. Ao empunhar uma fonte de conhecimento escrito (como um diário, um celular ou um pergaminho), você pode gastar 1 SAN e uma ação completa para fazer uma pergunta à fonte. Se a resposta estiver documentada ali, você a compreende instantaneamente. Além disso, se usar este poder em conjunto com a ação de interlúdio Ler, o dado de bônus recebido por esta ação avança 1 etapa na escala de dados (por exemplo, de d6 para d8. Caso ultrapasse o d20, o excedente converte-se em +1d4 de Vantagem na rolagem).",
+    "afinidade": "A transferência de saber exige contato direto, mas poupa a sua mente do esforço cognitivo. Quando conjura um ritual de Conhecimento que tenha como alvo uma pessoa (exceto você mesmo), se você tocar o alvo como parte da conjuração, o custo desse ritual é reduzido em 1 SAN (respeitando o mínimo obrigatório de 1 SAN por uso)."
+  },
+  {
+    "nome": "Apatia Herege",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "Saber tudo é perder tudo. Contudo, não se deve subestimar a capacidade de adaptação humana. Ao se conectar com o Conhecimento do Outro Lado, você usa as experiências grotescas que já viveu para desligar suas emoções e blindar sua mente. Quando faz um teste para resistir a uma condição de medo (como a Presença Perturbadora de monstros ou rituais de pavor), você pode usar uma Reação e gastar 2 SAN para rolar o teste novamente. Você deve aceitar o resultado da segunda rolagem, mesmo que seja pior que a primeira.",
+    "afinidade": "A apatia absoluta domina a sua consciência, transformando o pavor em mera estatística. Você passa a poder usar este poder depois de o Mestre anunciar o resultado do seu teste original (se passou ou falhou). Além disso, a sua mente calcula a rota mais segura instantaneamente: você não é mais obrigado a aceitar o segundo resultado, podendo escolher o melhor resultado entre as duas rolagens (funcionando como uma Vantagem retroativa e infalível)."
+  },
+  {
+    "nome": "Conexão Empática",
+    "elemento": "Energia",
+    "prereq": "Energia 2",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "Você consegue canalizar a Energia do Outro Lado para dar um sopro de vida bizarro a objetos tecnológicos energizados. Gastando uma ação completa e 2 SAN, você pode tocar um aparelho elétrico que esteja ligado (como um celular, uma batedeira ou um servidor). Até o fim da cena, ou até você deixar de tocá-lo, você pode conversar com o objeto como se ele fosse um ser senciente. A percepção dele é limitada aos seus arredores e periféricos (câmeras, microfones), e sua \"personalidade\" é definida apenas pelos arquivos e programas nele registrados. O objeto possui uma atitude inicial indiferente, mas pode ser persuadido com testes de Diplomacia (a Vontade de um objeto comum é 1; sistemas muito sofisticados ou protegidos podem ter Vontade 2 ou 3). Apenas você \"ouve\" as respostas do objeto, mas precisa falar em voz alta para que ele te escute. Quando a conexão termina, o item vivencia uma sensação traumática de \"morte\"; se você tentar usar este poder nele novamente no futuro, a atitude inicial dele será hostil pelo sofrimento ao qual foi exposto.",
+    "afinidade": "A sua sintonia com as correntes de dados e eletricidade é absoluta. Quando interage com um objeto afetado por este poder, o dado do atributo (Intelecto ou Presença) utilizado nos seus testes de perícia para persuadi-lo ou extrair informações avança 2 etapas na escala de dados (por exemplo, de d12 para d20). Caso esse avanço ultrapasse o limite máximo do dado (d20), o excedente se converte em Vantagem, adicionando +1d4 extra ao resultado da rolagem."
+  },
+  {
+    "nome": "Valer-se do Caos",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Você pode tentar manipular o caos do mundo ao seu redor, um ato que fornece grande poder imediato às custas da estabilidade da sua mente. Quando faz um teste, você pode escolher abraçar a entropia para receber +1d4 de Vantagem nessa rolagem (adicionando o valor ao resultado final). Entretanto, a imprevisibilidade cobra o seu preço: se o teste resultar em uma falha, ou se o resultado exato do dado de Vantagem for 1, você perde 1d4 pontos de Sanidade (SAN).",
+    "afinidade": "A sua mente se acostuma a surfar nas correntes de entropia, extraindo ainda mais poder do caos. O bônus concedido pelo poder avança para +1d6 de Vantagem. Além disso, o risco mental diminui proporcionalmente: você continua perdendo 1d4 de Sanidade caso o teste falhe, mas a punição gerada pelo dado extra só ocorre se o d6 rolar um 1."
+  },
+  {
+    "nome": "Ferro Maculado",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": "2 PV",
+    "alcance": null,
+    "efeito": "Acostumado a lidar com ameaças do Outro Lado, a sua relação com armas de fogo se intensifica e se torna visceral conforme você é corrompido pelo Sangue. Quando faz um ataque com uma arma de disparo, você pode sacrificar 2 Pontos de Vida (PV) para amaldiçoar a munição com a sua própria essência. Até o fim do turno, essa munição é considerada paranormal e causa +1d6 pontos de dano de Sangue. Diferente de bônus de dano convencionais, este dano de Sangue é multiplicado em caso de acerto crítico (somando-se aos dados da arma antes de aplicar o multiplicador).",
+    "afinidade": "A simbiose com o seu armamento atinge o ápice, e os seus disparos se tornam projéteis vivos de pura destruição. O dado de dano bônus da munição amaldiçoada avança uma etapa, passando a causar +1d8 pontos de dano de Sangue (mantendo a capacidade de ser multiplicado em acertos críticos)."
+  },
+  {
+    "nome": "Placas Sanguinolentas",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1 e habilidade de conjurar rituais de Sangue",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Você consegue manipular parte do Sangue presente em suas conjurações para criar placas rubras e cristalizadas que o protegem. Quando você conjura um ritual de Sangue, recebe um bônus direto na sua Defesa equivalente ao Círculo do ritual conjurado (por exemplo, +3 na Defesa para um ritual de 3º Círculo). Este bônus dura até o início do seu próximo turno.",
+    "afinidade": "A armadura de sangue torna-se densa, espessa e brutalmente reagente. O bônus concedido na sua Defesa passa a ser igual ao Círculo do ritual + 2 (+3 para um ritual de 1º Círculo, +4 para um de 2º Círculo, e assim por diante)."
+  },
+  {
+    "nome": "Sangue Corrosivo",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": "1 SAN",
+    "alcance": null,
+    "efeito": "A maldade do Sangue borbulha nas suas veias como um ácido extraído do inferno. Você pode gastar uma ação de movimento e 1 SAN para transformar o seu sangue em uma substância volátil e corrosiva até o fim da cena. Durante esse período, sempre que você sofrer dano de um ser que esteja adjacente a você (alcance corpo a corpo), o seu sangue respinga e queima o agressor, causando 1d10 pontos de dano de Sangue nele automaticamente.",
+    "afinidade": "A sua biologia se torna um reator de puro ódio líquido sob alta pressão. A acidez e a quantidade de sangue expelido nos ferimentos aumentam drasticamente, fazendo com que o dano de retaliação passe para 2d10 pontos de dano de Sangue."
+  },
+  {
+    "nome": "Sangue Prazeroso",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "A sua conexão com o Sangue permite que você resista à dor apenas para que consiga saboreá-la por mais tempo. Enquanto estiver com a condição Machucado (com menos da metade dos seus PV máximos), o seu corpo adormece para o trauma letal e você recebe Resistência a Dano (RD) 5 (reduzindo todo dano sofrido em 5 pontos).",
+    "afinidade": "O êxtase da carnificina atinge o seu ápice, forçando o seu corpo a continuar lutando muito além dos limites biológicos. A primeira vez na cena em que você entrar na condição Machucado, o pico de endorfina e brutalidade lhe concede instantaneamente 20 Pontos de Vida (PV) temporários. (Esses pontos são consumidos antes dos seus PV reais e desaparecem ao final da cena)."
+  },
+  {
+    "nome": "Predador de Sangue",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": "3 SAN",
+    "alcance": null,
+    "efeito": "O prazer da caçada e do abate flui diretamente pelas suas veias. Você pode gastar uma ação padrão e 3 SAN para memorizar o rastro olfativo de uma vítima, desde que possua uma fonte desse odor (como um pedaço de tecido rasgado, sangue fresco ou pertences pessoais). Ao fazer isso, o seu instinto de caça desperta: o dado do atributo utilizado em testes para rastreá-la, percebê-la (como Percepção ou Faro) e atacá-la avança 1 etapas na escala de dados (por exemplo, de d12 para d20). Caso esse avanço ultrapasse o limite máximo do d20, o excedente converte-se em +1d4 de Vantagem. Você só pode memorizar uma vítima por vez, e o efeito dura até você memorizar um novo alvo.",
+    "afinidade": "A sua mente se expande para rastrear matilhas inteiras. A quantidade máxima de vítimas que você pode manter memorizadas simultaneamente aumenta para três, permitindo alternar o foco do seu massacre de acordo com as necessidades da caçada."
+  },
+  {
+    "nome": "Pressão Atmosférica",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "Você canaliza correntes violentas de Energia através dos seus punhos, comprimindo o ar ao redor do impacto. Quando você acerta um ataque corpo a corpo em um alvo que esteja sendo agarrado (por você ou por um aliado), você pode gastar 2 SAN para descarregar uma pressão destruidora. Você causa +1d10 pontos de dano de Energia adicionais e o alvo fica atordoado por 1 rodada. O alvo tem direito a um teste de Fortitude (com o dado do atributo avançado ou padrão, conforme a escala) contra a sua DT de Ocultismo/Habilidade para evitar a condição de atordoamento. Uma mesma criatura só pode sofrer o efeito de atordoamento por esta habilidade uma vez por cena.",
+    "afinidade": "A descarga de energia colapsa completamente a estrutura física e mental da presa. Caso o alvo falhe no teste de resistência contra o atordoamento, ele também sofre as condições caído e vulnerável (substituindo o sangramento físico por falhas severas no sistema nervoso)."
+  },
+  {
+    "nome": "Zona dos Sussurros",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": "3 SAN",
+    "alcance": null,
+    "efeito": "Você utiliza o peso esmagador do Conhecimento para amaldiçoar uma área, distorcendo a percepção de todos que entram nela com ecos e sussurros incessantes. Gastando uma ação completa e 3 SAN, você marca um cômodo pequeno com símbolos crípticos de Conhecimento (áreas maiores exigem usos adicionais, a critério do Mestre). Dentro dessa zona, o dado de atributo utilizado em seus testes de ataque avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Além disso, a desorientação mental gerada pelos sussurros mascara a sua presença: você não sofre penalidades em testes de Furtividade por realizar ações chamativas ou atacar dentro da área. Você pode manter no máximo três Zonas dos Sussurros ativas simultaneamente; se criar uma quarta, a mais antiga se desfaz instantaneamente.",
+    "afinidade": "A zona torna-se uma extensão da sua mente tática, onde cada sussurro guia a lâmina ou o disparo para os pontos vitais. Sempre que você causar dano em um alvo que esteja desprevenido, que você esteja flanqueando, ou que se encontre dentro da sua Zona dos Sussurros, você pode re-rolar quaisquer dados de dano que resultem em 1 ou 2, devendo aceitar o novo resultado obtido (garantindo um piso mínimo de dano muito mais letal e consistente)."
+  },
+  {
+    "nome": "Disparo da Morte",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "Ao realizar um ataque com uma arma de fogo ou de disparo, você pode se conectar com a Morte para desacelerar momentaneamente o fluxo do tempo ao seu redor, enxergando a exata fração de segundo em que o alvo fica vulnerável. Antes de fazer o teste de ataque, você pode gastar 2 SAN para focar a sua mira; com isso, o dado utilizado no seu teste de ataque avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Caso esse avanço ultrapasse o limite máximo do dado (d20), o excedente se converte em +1d4 de Vantagem para garantir a precisão cirúrgica do disparo.",
+    "afinidade": "A sua bala transcende a barreira física do tempo e do espaço, perfurando o que estiver no caminho. O disparo passa a ignorar completamente cobertura leve e anula 10 pontos de Resistência a Dano (RD) do alvo, fazendo o projétil rasgar carne, armaduras e barreiras paranormais com facilidade implacável."
+  },
+  {
+    "nome": "Engolir Sangue",
+    "elemento": "Sangue",
+    "prereq": "Sangue 1",
+    "custo": "1d4 SAN",
+    "alcance": null,
+    "efeito": "Sua conexão visceral com o Sangue abriu o apetite para atos de canibalismo macabro. Você pode gastar uma ação completa para consumir uma porção de carne humana (equivalente a 1 espaço, como um membro ou tecido coletado), recuperando 2d8+2 Pontos de Vida (PV) instantaneamente. No entanto, o peso psicológico e a repulsa de tal ato cobram o seu preço: você perde 1d4 pontos de Sanidade (SAN) ao fazê-lo.",
+    "afinidade": "A sua biologia se alimenta da carne e da alma dos caídos com uma eficiência grotesca, transformando o horror em combustível bruto. A quantidade de PV recuperados ao consumir uma porção dobra, passando para 4d8+4 Pontos de Vida, mantendo o custo de perda mental em 1d4 de SAN."
+  },
+  {
+    "nome": "Conhecimento de Direção Precognitiva",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Você possui um \"sexto sentido\" matemático e entrópico que aponta exatamente para onde você deve ir, extraindo rotas do próprio tecido do Outro Lado, mesmo que você nunca tenha visto o destino ou saiba onde ele fica. O dado do atributo utilizado em seus testes de Percepção ou Sobrevivência para se localizar ou se orientar avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Caso esse avanço ultrapasse o limite máximo do dado (d20), o excedente converte-se em +1d4 de Vantagem para garantir que você não se perca.",
+    "afinidade": "A sua mente mapeia o espaço-tempo com precisão cirúrgica e absoluta. O avanço no dado de atributo para testes de orientação e localização passa a ser de 2 etapas na escala de dados (com o excedente convertendo-se em +1d4 de Vantagem adicional). Além disso, você se torna imune a efeitos de desorientação espacial, ilusões geográficas ou labirintos paranormais."
+  },
+  {
+    "nome": "Instrumento Elétrico de Combate",
+    "elemento": "Energia",
+    "prereq": "Energia 1 e proficiência ou treinamento na perícia Artes (especializada em instrumentos)",
+    "custo": null,
+    "alcance": "Curto",
+    "efeito": "Você canaliza a instabilidade caótica da Energia através da música, transformando um instrumento musical comum em uma arma de destruição sônica permanente. Ao adquirir este poder (e posteriormente antes de iniciar uma missão ou durante um interlúdio, caso precise substituir um instrumento que quebrou), escolha um instrumento musical que você possua e saiba tocar. Ele sofre uma mutação irreversível, tornando-se uma Arma Tática Amaldiçoada de Energia, cujas propriedades técnicas são: Proficiência: Concede proficiência de uso exclusiva a você (outros personagens não conseguem operá-lo adequadamente em combate); Empunhadura: Duas mãos; Alcance e Ataque: Dispara ondas sonoras concentradas atingindo 1 alvo à sua escolha em alcance curto; Perícia de Ataque: Os testes de ataque são feitos utilizando a perícia Artes em vez de Luta ou Pontaria; Dano Base: Causa 2d8 pontos de dano de Energia; Atributo de Dano: Soma o seu modificador de Presença no dano; Crítico: x2; Categoria e Espaços: Ocupa 2 espaços no inventário; Nota de Durabilidade: Se o instrumento quebrar, você pode transmutar um novo no próximo interlúdio. Se você morrer, a arma entra em colapso e se desfaz em cinzas energizadas. Para interações com talentos ou habilidades de combate que afetam o uso de armas de disparo (como bônus de dano ou manobras), consulte o Mestre para adaptar o uso da perícia Artes.",
+    "afinidade": "A sua música rasga o tecido da realidade com acordes ensurdecedores e caóticos. O alcance das ondas sonoras expande-se drasticamente: em vez de atingir apenas 1 alvo, você pode escolher qualquer número de alvos à sua escolha em alcance curto, descarregando uma sinfonia de destruição em massa sobre um grupo inteiro de inimigos com uma única ação de ataque."
+  },
+  {
+    "nome": "Foco Gravitacional",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "A gravidade deixa de ser uma lei absoluta para você ou, pelo menos, passa a ser opcional por breves instantes. Você pode gastar 2 SAN para dobrar e distorcer as leis físicas ao seu redor, recebendo um deslocamento de voo de 9m até o final do seu turno. Quando o seu turno se encerra, o efeito cessa imediatamente; se você não estiver apoiado no chão ou em uma superfície sólida nesse momento, você sofre a queda normalmente. Contudo, manipular a gravidade sem um aparato adequado cobra um preço instável da sua sanidade e do espaço ao seu redor: para cada uso deste poder além do primeiro na mesma missão, surge uma chance de colapso de 10% (cumulativa: 10% no 2º uso, 20% no 3º, 30% no 4º, e assim por diante). Caso o imprevisto aconteça, a Energia rejeita o seu comando: em vez de voar, você é violentamente atirado a 6m para o alto e despenca de imediato, sofrendo 4d6 pontos de dano de impacto por queda.",
+    "afinidade": "A sua sintonia com a distorção gravitacional torna-se muito mais estável, reduzindo drasticamente o risco de repulsa da Energia. A chance cumulativa de colapso por uso excedente na mesma missão cai pela metade, passando a ser de apenas 5% por uso acumulado (5% no 2º uso, 10% no 3º, 15% no 4º, e assim por diante), permitindo que você desafie as alturas com muito mais segurança ao longo de missões longas."
+  },
+  {
+    "nome": "Sobrepor Imprevisível",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "Os seus movimentos tornam-se erráticos, vibrando com uma instabilidade entrópica que desafia qualquer lógica de combate. Se você não sabe exatamente o seu próximo passo, o inimigo muito menos. Uma vez por rodada, no exato início da sua rodada (ou como uma Reação rápida de reajuste tático), você pode gastar 2 SAN para canalizar o caos e rolar um d20. Se o resultado for par, você soma esse valor ao seu valor atual de iniciativa; se for ímpar, você subtrai. A sua posição na ordem de iniciativa é alterada instantaneamente de acordo com o novo valor recalculado, saltando na frente ou sendo jogado para o final do turno conforme o capricho da Energia.",
+    "afinidade": "O fluxo do caos obedece aos seus caprichos com muito mais precisão. Ao invés de rolar um único dado, você passa a rolar 2d20, podendo escolher o resultado numérico que preferir entre os dois dados (garantindo que você decida se prefere somar um bônus estrondoso ou evitar uma penalidade severa na sua posição de iniciativa)."
+  },
+  {
+    "nome": "Traço de Inconsistência",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "A sua própria existência vibra em uma frequência caótica e dissonante, causando perturbações severas em qualquer aparelho eletrônico que tente registrar a sua imagem. Você pode gastar 2 SAN como uma Reação instantânea no momento exato em que for fotografado ou filmado (por câmeras de segurança, smartphones ou câmeras profissionais), corrompendo os dados digitais para esconder completamente o seu rosto, roupas e traços de identidade, deixando apenas um borrão estático ou ruído visual estrambótico.",
+    "afinidade": "A sua anomalia digital torna-se irreversível e permanente. A sua presença física jamais pode ser capturada por imagens digitais, fazendo com que qualquer câmera que aponte para você registre apenas uma falha estática ou um espaço vazio. Além disso, a desarmonia quântica afeta o áudio: a sua voz também se torna permanentemente distorcida e irreconhecível em qualquer gravação ou transmissão de rádio."
+  },
+  {
+    "nome": "Ácido Corrosivo",
+    "elemento": "Energia",
+    "prereq": "Energia 1",
+    "custo": "1 SAN",
+    "alcance": null,
+    "efeito": "Você canaliza a instabilidade corrosiva da Energia, permitindo expelir uma substância ácida e espessa pelas mãos ou revestindo uma arma. Gastando 1 SAN como uma ação livre, você impregna os seus golpes com o ácido até o final da cena. O dado do atributo utilizado em seus testes de ataque desarmado avança 1 etapa na escala de dados (por exemplo, de d12 para d20) e você recebe um avanço fixo equivalente a +1 etapa de dado adicional nas rolagens de dano desarmado. Além disso, o seu tipo de dano desarmado muda para químico. Você também pode optar por afetar uma arma corpo a corpo que esteja empunhando com o ácido (concedendo o avanço de 1 etapa no ataque, 1 etapa extra no dano e alterando o tipo de dano para químico); contudo, se a arma utilizada não for um item amaldiçoado ou de Categoria especial, ela será completamente corroída e destruída pelo ácido no final da cena.",
+    "afinidade": "A simbiose com o ácido energético atinge o grau máximo de corrosão molecular. O poder destrutivo se intensifica: o avanço nas rolagens de dano desarmado (ou da arma amaldiçoada) dobra, passando a somar 2 etapas extras na escala de dados de dano, transformando cada golpe em um derretimento absoluto de carne e metal."
+  },
+  {
+    "nome": "Dead Man Switch",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 2",
+    "custo": null,
+    "alcance": "Médio",
+    "efeito": "Quando levado à beira da morte, o seu cérebro se transforma em um transmissor vivo, despejando memórias, reflexos e o seu próprio Conhecimento diretamente na mente daqueles em quem você confia. Quando estiver na condição Machucado (com menos da metade dos seus PV máximos), você pode escolher um alvo aliado em alcance médio e uma perícia na qual você seja treinado. O alvo então sintoniza com a sua frequência e recebe temporariamente o mesmo nível de treinamento que você na perícia escolhida (substituindo o nível dele pelo seu, caso o seu seja superior). O efeito e a conexão mental duram enquanto você mantiver a condição Machucado, encerrando-se assim que você recuperar seus PVs ou se morrer.",
+    "afinidade": "O seu Conhecimento transcende a falência do corpo físico, transformando a sua morte em um legado de sabedoria para o grupo. A quantidade de alvos que você pode conectar simultaneamente aumenta para três, e você pode transmitir duas perícias diferentes (uma perícia adicional). Além disso, se você morrer enquanto este poder estiver ativo, a transmissão se torna permanente para os últimos alvos afetados: eles mantêm as perícias transmitidas até o fim da missão, carregando a sua experiência para concluir a luta."
+  },
+  {
+    "nome": "Paralinguística Ampliada",
+    "elemento": "Conhecimento",
+    "prereq": "Conhecimento 1",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Há muito mais verdade e lógica abstrata em sua mente do que você gostaria de suportar. O dado do atributo utilizado em seus testes para decifrar, rastrear ou extrair informações de \"linguagens\" e símbolos do Outro Lado (como decifrar Sigilos de Conhecimento, textos arcanos ou inscrições paranormais) avança 1 etapa na escala de dados (por exemplo, de d12 para d20). Caso esse avanço ultrapasse o limite máximo do dado (d20), o excedente converte-se em +1d4 de Vantagem. Além disso, você aprende instantaneamente o ritual Compreensão Paranormal. Se você já o conhecia, o custo em Sanidade para conjurá-lo diminui permanentemente em 1 SAN.",
+    "afinidade": "A sua mente decodifica o tecido do Outro Lado de forma reflexiva e constante. O avanço no dado de atributo para interagir com linguagens paranormais dobra, passando a 2 etapas na escala de dados (com o excedente convertido em +1d4 de Vantagem adicional). Além disso, a sua percepção se altera de forma irreversível: você está sempre sob o efeito do ritual Compreensão Paranormal em sua forma verdadeira, compreendendo instantaneamente qualquer idioma, símbolo ou comunicação paranormal sem precisar gastar recursos ou ações."
+  },
+  {
+    "nome": "Escudo Espiral Temporal",
+    "elemento": "Morte",
+    "prereq": "Morte 2",
+    "custo": "2 SAN",
+    "alcance": null,
+    "efeito": "A sua conexão com a Morte distorce o fluxo temporal ao seu redor, fazendo com que o tempo acelere violentamente sobre qualquer objeto utilizado para agredi-lo, provocando um envelhecimento e desgaste instantâneo. Uma vez por rodada, você pode gastar 2 SAN como uma Reação para erguer essa distorção e afetar uma arma ou munição que esteja prestes a lhe causar dano: Contra Munições: Se o ataque for à distância, o projétil sofre séculos de erosão em frações de segundo. Você recebe Resistência a Dano (RD) 20 contra esse dano, e a munição desfaz-se em cinzas logo após o impacto. Contra Armas Corpo a Corpo: Se o ataque for físico corpo a corpo, a lâmina ou estrutura sofre oxidação e fragilização imediata. Você recebe Resistência a Dano (RD) 10 contra esse dano, e a arma sofre 10 pontos de dano químico (representando o apodrecimento e a corrosão do material). Exceção Temporal: A RD concedida por esta habilidade não funciona contra danos do elemento Energia (cuja instabilidade quântica e caótica resiste ao envelhecimento linear da Morte).",
+    "afinidade": "O seu domínio sobre a putrefação do tempo torna-se amplo o suficiente para interceptar múltiplas ameaças simultâneas. Você passa a poder usar esta habilidade mais de uma vez por rodada (desde que gaste a Reação correspondente para cada uso). Além disso, a virulência do tempo esmaga a durabilidade alheia: o dano químico aplicado às armas corpo a corpo inimigas dobra, passando a ser de 20 pontos."
+  },
+  {
+    "nome": "Grilhões de Lodo",
+    "elemento": "Morte",
+    "prereq": "Morte 1",
+    "custo": "2 SAN",
+    "alcance": "9m de raio",
+    "efeito": "Você rasga a finita barreira com o Outro Lado para manifestar correntes viscosas, vinhas putrefatas e grilhões de lodo negro que brotam diretamente do chão. Você pode gastar uma ação padrão e 2 SAN para corromper o terreno, criando uma área afetada com 9m de raio centrada em você. A área apodrecida e pegajosa dura até o fim da cena. No momento da ativação, todos os seres hostiles ou desprevenidos na área (exceto você e criaturas nativas do elemento Morte) sofrem 3d6 pontos de dano de Morte e ficam com a condição lento. Um teste de Fortitude (com DT baseada no seu atributo mais alto) reduz o dano à metade e evita completamente a condição de lentidão por 1 rodada.",
+    "afinidade": "A lama entrópica ganha vontade própria, estendendo garras e laços sufocantes que prendem os alvos ao solo. O dano de Morte provocado pela expansão dobra, passando para 6d6 pontos, e a severidade do terreno aumenta: a condição aplicada aos alvos que falham no teste de resistência muda de lento para enredado (impedindo qualquer movimento e imponendo penalidades severas de combate)."
+  },
+  {
+    "nome": "Salto de Dados",
+    "elemento": "Energia",
+    "prereq": "Energia 3",
+    "custo": "2 SAN (marcar) / 3 SAN (consumir)",
+    "alcance": null,
+    "efeito": "Através da sua conexão caótica com a Energia, você consegue \"copiar\" o seu estado atual na realidade por um breve momento, gravando um registro quântico de si mesmo. Você pode gastar uma ação completa e 2 SAN para marcar um símbolo instável em seu próprio corpo. Esse símbolo dura por 1 dia ou até ser consumido, o que acontecer primeiro (você não pode ter mais de um símbolo marcado simultaneamente). A qualquer momento enquanto o símbolo estiver ativo, você pode gastar 3 SAN como uma Reação instantânea para consumir a marca e reescrever o seu próprio fluxo temporal, retornando o seu estado físico e mental exato para o momento em que fez o símbolo (seus Pontos de Vida, Sanidade, condições ativas, efeitos e estatísticas da ficha voltam integralmente para como estavam). Entretanto, a Energia não permite viagens temporais de graça: você sofre uma amnésia traumática, perdendo a memória de tudo o que vivenciou desde o momento em que se marcou. Mecanicamente, essa falha de sinapse deixa você alquebrado e frustrado até o fim da cena, além de pasmo por 1d4+1 rodadas enquanto o seu cérebro tenta processar o paradoxo.",
+    "afinidade": "A sua sintonia com as fendas da realidade atinge um patamar permanente e assustador. A duração máxima do símbolo gravado em seu corpo se expande exponencialmente, mudando para 1 ano ou até ser consumido, o que acontecer primeiro, permitindo que você armazene um \"ponto de salvamento\" de longo prazo para emergências catastróficas."
+  }
+]

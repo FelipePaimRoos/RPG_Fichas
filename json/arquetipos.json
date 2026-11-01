@@ -1,0 +1,384 @@
+[
+    {
+        "nome": "Guerreiro",
+        "atributos": "Força + Vigor",
+        "perfil": "Combatente de linha de frente focado em combate corpo a corpo consistente. Combina força bruta para causar dano elevado a uma alta capacidade física de absorção de impacto.",
+        "buffs": "+2 PV Inicial e por Nível | +2 Espaços de Carga",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "carga": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo ou Proteção.",
+        "habilidades": [    
+            {
+                "nome": "Técnica Letal",
+                "nivel": 2,
+                "prereq": "Treinado em Luta",
+                "efeito": "Golpe Devastador: Você recebe +2 na Rolagem de Dano em todos os seus ataques corpo a corpo."
+            },
+            {
+                "nome": "Revidar",
+                "nivel": 8,
+                "prereq": "Treinado em Luta",
+                "custo": "1 SAN",
+                "gatilho": "Quando você Bloquear com sucesso um ataque corpo a corpo de um inimigo.",
+                "efeito": "Você recebe imediatamente 1 Reação Adicional para realizar uma ação de Contra-Ataque contra o inimigo que o atacou."
+            },
+            {
+                "nome": "Força Opressora",
+                "nivel": 13,
+                "prereq": "Treinado em Luta",
+                "custo": "1 SAN (Manobra) + 1 SAN opcional (Ataque Extra)",
+                "gatilho": "Ao acertar um ataque corpo a corpo contra um alvo.",
+                "efeito": "Manobra Devastadora: Ao acertar o ataque, você pode gastar 1 SAN para realizar imediatamente qualquer manobra de combate (Derrubar, Empurrar, Desarmar, Agarrar) contra o mesmo alvo como Ação Livre. Inércia do Impacto: Você recebe +2 no teste da manobra para cada 5 pontos de dano causados pelo ataque inicial. Pressionar o Caído: Se a manobra escolhida for Derrubar e você vencer o teste oposto, pode gastar +1 SAN adicional para realizar 1 ataque corpo a corpo adicional contra o alvo derrubado."
+            },
+            {
+                "nome": "Potência Máxima",
+                "nivel": 20,
+                "prereq": "Treinado em Luta",
+                "custo": "3 SAN",
+                "acao": "Parte de uma ação de ataque corpo a corpo",
+                "efeito": "Inabalável: Você ignora completamente qualquer penalidade ou Desvantagem aplicada ao seu teste de ataque. Conversão de Supremacia: Cada fonte de Vantagem que você receberia no ataque é convertida em +2 no Teste de Ataque ou +2 na Rolagem de Dano (à sua escolha)."
+            }
+        ]
+    },
+    {
+        "nome": "Batedor",
+        "atributos": "Vigor + Agilidade",
+        "perfil": "Mestre da mobilidade e do reposicionamento constante em campo de batalha. Especialista em travessia de terreno hostil, esquiva e em desferir múltiplos ataques em sequência.",
+        "buffs": "+2 PV Inicial e por Nível | +2 de Defesa",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "defesa": 2},
+        "pp_tematico": "Escolhe entre Proteção, Corpo a Corpo (Ágil), Armas de Disparo ou Armas de Fogo.",
+        "habilidades": [
+            {
+                "nome": "Adepto do Escuro",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Visão nas Sombras: Você ignora as penalidades e os efeitos de Camuflagem (Leve ou Total) causados por escuridão natural ou penumbra. Atenção no Escuro: Você recebe +2 em testes de Percepção e Procurar realizados em ambientes com iluminação reduzida ou precária (como penumbra, salas iluminadas apenas por velas/lanternas, ao crepúsculo, etc.)."
+            },
+            {
+                "nome": "Resistir à Pressão",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Uma vez por cena de investigação (ou cena com limite de tempo/urgência), você pode gastar 2 SAN para reorganizar a atuação do grupo em alcance curto (9m). Ganho de Tempo: A urgência ou o limite de rodadas/turnos da investigação é estendido em +1 rodada. Foco Sob Tensão: Durante essa rodada adicional ganha pela habilidade, você e todos os seus aliados em alcance curto recebem +2 em todos os testes de perícia."
+            },
+            {
+                "nome": "Fuga Obstinada",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Mobilidade Fluida: Você ignora Terreno Difícil, não provoca ataques de oportunidade ao se mover e seu deslocamento base aumenta em +3m. Superar Restrições: Gastando 1 SAN como Ação Livre no seu turno, você rompe e se liberta instantaneamente de condições de restrição física de movimento (como agarro, enredamento ou lentidão)."
+            },
+            {
+                "nome": "Só Mais um Passo...",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Arrancada de Emergência: Uma vez por cena, ao sofrer dano que o deixaria morrendo ou quando for encurralado, você pode gastar 2 SAN como Reação para realizar um deslocamento completo imediato. Inviolabilidade em Trânsito: Durante este movimento de emergência, você atravessa o espaço ocupado por inimigos sem ser bloqueado e encerra o deslocamento recebendo +4 na Defesa/Esquiva até o início do seu próximo turno."
+            }
+        ]
+    },
+    {
+        "nome": "Bastião",
+        "atributos": "Vigor + Presença",
+        "perfil": "O escudo físico e mental da equipe. Combina resiliência corporal com determinação inquebrável, contendo entidades e reduzindo o impacto do choque paranormal nos aliados.",
+        "buffs": "+2 PV Inicial e por Nível | +2 SAN Inicial e por Nível",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "sanidade_inicial": 2, "sanidade_por_nivel": 2},
+        "pp_tematico": "Escolhe entre Proteção ou Ferramentas de Ocultismo.",
+        "habilidades": [
+            {
+                "nome": "Aura de Confiança",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Todos os seus aliados em alcance médio (18m) recebem +2 em testes de Iniciativa e +2 em testes de resistência contra Presença Perturbadora e efeitos de medo ou insanidade. Este bônus não afeta você."
+            },
+            {
+                "nome": "Vitalidade Sofrida",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Escolha entre PV ou SAN. A pontuação máxima da estatística escolhida aumenta em um valor igual ao seu Nível de Personagem (até o limite de +20). Esta habilidade não acumula com outros bônus de escalonamento por nível."
+            },
+            {
+                "nome": "Inabalável",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Fortaleza Mental: Você recebe 3 de Resistência a Dano (RD) contra dano mental e de origem paranormal. Mente Inabalável: Quando for alvo de um ritual ou efeito paranormal que permita um teste de Vontade para reduzir o dano à metade, você não sofre dano algum se passar no teste de resistência."
+            },
+            {
+                "nome": "A Sanidade Está Lá Fora",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "3 SAN",
+                "efeito": "Purificação Psíquica: Ao gastar uma Ação de Movimento e 3 SAN, você remove todas as condições de medo ou mentais (como Abalado, Apavorado, Confuso, Fascinado ou Perturbado) ativas em você mesmo ou em um aliado voluntário adjacente (Toque). Barreira Emocional: O alvo afetado recebe imunidade a novas condições de medo e mentais até o início do seu próximo turno."
+            }
+        ]
+    },
+    {
+        "nome": "Médico de Combate",
+        "atributos": "Vigor + Intelecto",
+        "perfil": "Suporte biológico e científico de emergência sob fogo cruzado. Estabiliza aliados traumatizados, trata ferimentos severos e concede socorro rápido em campo.",
+        "buffs": "+2 PV Inicial e por Nível | +1 Perícia Treinada",
+        "bonus": {"vida_inicial": 2, "vida_por_nivel": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Proteção ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Paramédico",
+                "nivel": 2,
+                "prereq": "Intelecto 2 ou Presença 2",
+                "custo": "1 SAN (escalonável)",
+                "efeito": "Com uma Ação Padrão (Adjacente ou Pessoal), você gasta 1 SAN para restaurar 10 PV de si mesmo ou de um aliado adjacente. Evolução por Nível: Nível 1 ao 4: Restaurar 10 PV (Custo: 1 SAN); Nível 5 ao 10: Até 15 PV (Custo máximo: 2 SAN); Nível 11 ao 16: Até 20 PV (Custo máximo: 3 SAN); Nível 17+: Até 25 PV (Custo máximo: 4 SAN)."
+            },
+            {
+                "nome": "Médico da Salvação",
+                "nivel": 8,
+                "prereq": "Paramédico",
+                "custo": "1 SAN (para agilizar)",
+                "efeito": "Cura Ampliada: A eficiência dos seus primeiros socorros é aprimorada: os dados de cura da sua habilidade Paramédico aumentam de d10 para d12 (ou somam +2 de cura adicional por dado rolado). Socorro Agilizado: Uma vez por rodada, ao utilizar a habilidade Paramédico, você pode gastar 1 SAN para realizar o atendimento como uma Ação de Movimento (em vez de uma Ação Padrão)."
+            },
+            {
+                "nome": "Resgatar da Morte",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Intervenção Crítica: Ao realizar um teste de Medicina para prestar Primeiros Socorros (estabilizar um aliado morrendo ou estancar uma hemorragia grave) ao toque, você pode gastar 1 SAN para obter Sucesso Automático no teste. Restrição: Você só pode utilizar esta habilidade uma vez por cena no mesmo ser."
+            },
+            {
+                "nome": "Veterano da Equipe de Trauma",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Tratamento Avançado: Ao realizar um atendimento de emergência ao toque, você remove todas as condições negativas ativas no alvo (como sangrando, abalado, fraco, cego, etc.), incluindo morrendo, em vez de apenas uma."
+            }
+        ]
+    },
+    {
+        "nome": "Assassino",
+        "atributos": "Força + Agilidade",
+        "perfil": "Combatente ágil de alto impacto ofensivo. Focado em eliminações rápidas, flanqueamento e dano massivo em um estilo de jogo de alto risco e alta recompensa.",
+        "buffs": "+2 Espaços de Carga | +2 de Defesa",
+        "bonus": {"carga": 2, "defesa": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo ou Armas de Fogo.",
+        "habilidades": [
+            {
+                "nome": "Ataque Furtivo",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN (escalonável)",
+                "efeito": "Uma vez por rodada, ao acertar um ataque corpo a corpo ou em alcance curto (9m) contra um alvo desprevenido ou que você esteja flanqueando, você pode gastar 1 SAN para causar +2 de dano adicional do mesmo tipo da arma. Evolução por Nível: Nível 1 ao 4: +1d6 de dano (1 SAN); Nível 5 ao 10: Até +2d6 (2 SAN); Nível 11 ao 16: Até +3d6 (3 SAN); Nível 17+: Até +4d6 (4 SAN)."
+            },
+            {
+                "nome": "Gatuno",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "Nenhum",
+                "efeito": "Especialização Prática: Você recebe +2 em testes de Atletismo e Crime. Movimentação Silenciosa: Você pode mover-se utilizando o seu deslocamento normal enquanto se esconde ou se desloca furtivamente, sem sofrer penalidades no seu teste de Furtividade."
+            },
+            {
+                "nome": "Assassinato Furtivo",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Precisão Ampliada: O dano bônus do seu Ataque Furtivo aumenta para +2d6, +4d6, +6d6, +8d6, respectivamente e a categoria do dado de dano da sua arma é elevada em um passo (ex: d6 passa a d8, d8 passa a d10). Perfuração de Armadura: Gastando 1 SAN ao declarar o ataque furtivo, todo o dano do golpe ignora a Resistência a Dano (RD) física do alvo."
+            },
+            {
+                "nome": "Assassinar",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Golpe de Misericórdia: Ao atacar um alvo totalmente Desprevenido a partir de Furtividade em alcance curto (9m), você pode gastar 2 SAN para transformar a emboscada em uma tentativa de execução imediata. Multiplicador Crítico: Se o ataque acertar, todo o dano final da rolagem (arma + dados furtivos) é dobrado. Além disso, o alvo deve passar em um teste de Fortitude ou fica imediatamente Incapacitado (ou sofre a condição Sangrando grave no valor do seu atributo de Agilidade por rodada)."
+            }
+        ]
+    },
+    {
+        "nome": "Algoz",
+        "atributos": "Força + Presença",
+        "perfil": "Focado em confrontos curtos, agressivos e aterrorizantes. Une a força física à intimidação e canalização paranormal para quebrar a vontade dos alvos.",
+        "buffs": "+2 Espaços de Carga | +2 SAN Inicial e por Nível",
+        "bonus": {"carga": 2, "sanidade_inicial": 2, "sanidade_por_nivel": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo ou Ferramentas de Ocultismo.",
+        "habilidades": [
+            {
+                "nome": "Valentão",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN (Ativo)",
+                "efeito": "Imposição Física: Você pode usar seu atributo Força no lugar de Presença para realizar testes da perícia Intimidação. Grito de Ameaça: Uma vez por cena, você pode gastar 1 SAN para realizar um teste de Intimidação para assustar ou abalar um inimigo em alcance curto como uma Ação Livre durante o seu turno."
+            },
+            {
+                "nome": "Eloquência",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "1 SAN por alvo",
+                "efeito": "Com uma Ação Completa, escolha alvos em alcance curto (9m) (até o limite da sua Presença) e faça um teste oposto de Diplomacia, Enganação ou Intimidação contra a Vontade de cada alvo. Fascínio: Ficam na condição Fascinado enquanto você mantiver a concentração (Ação Padrão/rodada). Criaturas hostis têm Vantagem e teste a cada turno. Passar no teste concede imunidade por 24 horas."
+            },
+            {
+                "nome": "O Sorriso",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo/ativo)",
+                "efeito": "Máscara Inabalável: +2 e Vantagem em Diplomacia/Enganação e +2 em Vontade contra medo/insanidade/manipulação. Desarmar Hostilidade (Reação): Teste oposto para cancelar ação hostil de inimigo visível em alcance curto. Compostura Contagiosa (Ação Livre, 1x por cena): Você e aliados em alcance curto recuperam 2 SAN e encerram condições mentais negativas (exceto enlouquecendo)."
+            },
+            {
+                "nome": "Multifacetado",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "3 SAN",
+                "efeito": "Como Ação Livre ou de Movimento, gaste 3 SAN para escolher dois dos seguintes benefícios até o final da cena: Mente Plural (Treinado em 3 perícias ou +2 e Vantagem em 2 perícias já treinadas); Maestria Improvisada (Poder Geral de até Tier III); Adaptação Reativa (Gaste 1 SAN como Reação para redefinir as escolhas feitas por esta habilidade)."
+            }
+        ]
+    },
+    {
+        "nome": "Caçador",
+        "atributos": "Força + Intelecto",
+        "perfil": "Adapta armamentos, calcula trajetórias e ataca os pontos fracos da armadura inimiga ou de estruturas.",
+        "buffs": "+2 Espaços de Carga | +1 Perícia Treinada",
+        "bonus": {"carga": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Corpo a Corpo, Armas de Disparo, Armas de Fogo ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Estudar Fraquezas",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (Interlúdio)",
+                "efeito": "Requer 1 Ação de Interlúdio ou Cena de Preparação (e 1 pista/amostra do alvo). Análise Breve: O Mestre revela 1 informação vital sobre o alvo. Vantagem Tática: Você e aliados recebem +2 em testes de perícia e resistência relacionados ao alvo até o final da missão."
+            },
+            {
+                "nome": "Análise Combativa",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "1 SAN (ou gratuito com preparo)",
+                "efeito": "Análise em Tempo Real: Durante o combate, gaste 1 SAN e Ação de Movimento para ler a postura de uma ameaça visível e receber +2 em testes de ataque e Defesa contra ela até o fim da cena. Preparo Prévio: Se já tiver analisado a ameaça antes, recebe o bônus de +2 automaticamente desde o início."
+            },
+            {
+                "nome": "Estudar a Presa",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Gaste 1 SAN e Ação de Movimento observando um inimigo em alcance médio para marcá-lo como Presa. Benefícios: Vantagem nos ataques e +4 no dano; Ignora até 5 de RD; +2 na Defesa e resistências contra a Presa; Ao reduzir a Presa a 0 PV, recupera 1 SAN e transfere a marca como Ação Livre."
+            },
+            {
+                "nome": "Predador Perfeito",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Perseguição Absoluta: Ação de Movimento para triplicar deslocamento em direção ao alvo, ignorando terreno difícil e sem provocar ataques de oportunidade. Bote de Sangue-Frio: Se terminar ao alcance, gaste 2 SAN para atacar imediatamente com Vantagem, +2 dados de dano e deixar o alvo Imobilizado até o fim do próximo turno dele."
+            }
+        ]
+    },
+    {
+        "nome": "Atirador",
+        "atributos": "Agilidade + Intelecto",
+        "perfil": "Especialista em disparos de precisão e combate à distância tático.",
+        "buffs": "+2 de Defesa | +1 Perícia Treinada",
+        "bonus": {"defesa": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Corpo a Corpo (Ágil), Armas de Disparo, Armas de Fogo ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Sombra Fugaz",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Ao realizar um ataque ou executar uma ação chamativa/ruidosa, você pode gastar 1 SAN para realizar um teste de Furtividade imediatamente para tentar se esconder (ou permanecer escondido) sem sofrer as penalidades normais por ter revelado sua posição."
+            },
+            {
+                "nome": "Disparo Letal",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Ao realizar a ação de Mirar, você pode gastar 1 SAN para alinhar o disparo. Mira Cirúrgica: Próximo ataque à distância até o final do próximo turno recebe +2 no teste de ataque e +4 no dano. Transpassar Defesas: Ignora Cobertura Leve ou Parcial e reduz em 2 pontos a RD física do alvo."
+            },
+            {
+                "nome": "Especialista em Matar",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Preparo Rápido: Reduz em um passo o custo de ação para Mirar e Fintar (Padrão vira Movimento; Movimento vira Livre). Golpe Meticuloso: Ao atacar após Mirar/Fintar, gaste 1 SAN para escolher: Análise Completa (+2 ataque, +4 dano); Foco Extremo (+4 ataque OU +6 dano); Ponto Vital (+1x no Multiplicador Crítico)."
+            },
+            {
+                "nome": "Atirar para Matar",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "2 SAN",
+                "efeito": "Dano Maximizado: Ao obter acerto crítico com arma de fogo ou atacar à distância sob efeito de Mirar, gaste 2 SAN para infligir o dano máximo de todos os dados sem rolar. Impacto Perfurante: Ignora qualquer RD física do alvo e, se reduzi-lo a 0 PV, permite realizar um disparo imediato contra outro alvo no alcance como Ação Livre."
+            }
+        ]
+    },
+    {
+        "nome": "Celerante",
+        "atributos": "Agilidade + Presença",
+        "perfil": "Especialista em infiltração social, disfarces e lábia sob extrema pressão. Usa percepção social e sensibilidade paranormal para manipular intenções e acalmar mentes.",
+        "buffs": "+2 de Defesa | +2 SAN Inicial e por Nível",
+        "bonus": {"defesa": 2, "sanidade_inicial": 2, "sanidade_por_nivel": 2},
+        "pp_tematico": "Escolhe entre Corpo a Corpo (Ágil), Armas de Disparo, Armas de Fogo ou Ferramentas de Ocultismo.",
+        "habilidades": [
+            {
+                "nome": "Camuflar Ocultismo",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "1 SAN",
+                "efeito": "Sigilos Ocultos: Como Ação Livre, torna símbolos/marcas invisíveis. Conjuração Discreta: Gaste +1 SAN ao conjurar ritual para ignorar voz, gestos e componentes (discreto). Infiltração Mística: Reduz em 1 nível a penalidade de Furtividade ao conjurar."
+            },
+            {
+                "nome": "Acelerar Ritual",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "+2 SAN",
+                "efeito": "Aceleração Mística: Uma vez por ritual, ao conjurá-lo, pague +2 SAN adicionais para encurtar o tempo de execução para 2 turnos. Acúmulo Limitado: Acumula com Afinidade para reduzir para 1 turno (não acumula com outras fontes)."
+            },
+            {
+                "nome": "Presença Poderosa",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Reserva Espiritual: No início de cada cena, recebe SAN Temporária igual à sua Presença, usada exclusivamente para pagar custo de conjuração de rituais. Isolamento Mental: Não absorve perdas por dano mental, medo ou presença perturbadora."
+            },
+            {
+                "nome": "Truque de Mestre",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "2 SAN + custo original",
+                "efeito": "Pague 2 SAN mais a ação e custo em SAN originais para replicar uma habilidade de classe ou poder utilizado por um aliado na mesma cena. Ignora pré-requisitos, mas usa seus próprios parâmetros. Não copia passivas permanentes, rituais ou transformações biológicas únicas."
+            }
+        ]
+    },
+    {
+        "nome": "Erudito",
+        "atributos": "Presença + Intelecto",
+        "perfil": "Especialista no Oculto. Domina a teoria arcaica, decifra marcas e símbolos e canaliza rituais com alta eficiência mental.",
+        "buffs": "+2 SAN Inicial e por Nível | +1 Perícia Treinada",
+        "bonus": {"sanidade_inicial": 2, "sanidade_por_nivel": 2, "pericia_treinada": 1},
+        "pp_tematico": "Escolhe entre Ferramentas de Ocultismo ou Utilitários.",
+        "habilidades": [
+            {
+                "nome": "Saber Ampliado",
+                "nivel": 2,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Repertório Expandido: Aprende imediatamente 1 ritual adicional do maior Círculo que é capaz de conjurar. Crescimento Místico: Aprende +1 ritual a cada novo Círculo. Fora do Limite: Rituais aprendidos por esta habilidade não contam no seu limite total."
+            },
+            {
+                "nome": "Grimório Ritualístico",
+                "nivel": 8,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Armazena rituais adicionais de 1º ou 2º Círculo igual ao seu Intelecto (e +1 ritual por novo Círculo). Ocupa 1 Espaço, precisa ser empunhado e exige gastar Ação de Movimento folheando o tomo antes da conjuração. Reconstrução: 2 Ações de Interlúdio se for destruído."
+            },
+            {
+                "nome": "Rituais Eficientes",
+                "nivel": 13,
+                "prereq": "Nenhum",
+                "custo": "Nenhum (passivo)",
+                "efeito": "Domínio Universal: A Dificuldade (DT) para resistir a qualquer ritual que você conjurar aumenta em +2 (acumula normalmente com outros aumentos de DT)."
+            },
+            {
+                "nome": "Reprogramação Mental",
+                "nivel": 20,
+                "prereq": "Nenhum",
+                "custo": "3 SAN",
+                "efeito": "Condicionamento Neural: Durante Cena de Interlúdio, gaste 3 SAN e a Ação de Interlúdio de um aliado voluntário para conceder a ele temporariamente 1 Habilidade de Tier I ou Tier II (Geral, de Classe ou de Perfil) até o próximo Interlúdio ou fim da missão (máximo 1 habilidade por vez)."
+            }
+        ]
+    }
+]

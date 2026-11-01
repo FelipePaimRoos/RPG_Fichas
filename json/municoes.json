@@ -1,0 +1,66 @@
+[
+  {
+    "nome": "Balas Curtas",
+    "tipo": "Munição",
+    "quantidade_por_pacote": "30 projéteis",
+    "armas_compativeis": "Pistolas, Revólveres, Pistola Pesada e Submetralhadoras",
+    "espaco": 1,
+    "efeito": "Utilizado para contagem unitária de munição em armas leves/curtas."
+  },
+  {
+    "nome": "Balas Longas",
+    "tipo": "Munição",
+    "quantidade_por_pacote": "20 projéteis",
+    "armas_compativeis": "Fuzis de Assalto, Fuzis de Precisão e Metralhadoras",
+    "espaco": 1,
+    "efeito": "Utilizado para contagem unitária de munição em armas longas e automáticas."
+  },
+  {
+    "nome": "Cartuchos",
+    "tipo": "Munição",
+    "quantidade_por_pacote": "10 cartuchos",
+    "armas_compativeis": "Espingardas e Espingardas de Cano Duplo",
+    "espaco": 1,
+    "efeito": "Utilizado para contagem unitária de munição em espingardas."
+  },
+  {
+    "nome": "Combustível",
+    "tipo": "Munição Especial",
+    "quantidade_por_pacote": "1 Carga Completa (5 disparos/jorros)",
+    "armas_compativeis": "Lança-Chamas",
+    "espaco": 1,
+    "efeito": "Fornece combustível suficiente para 5 disparos ou jorros com o lança-chamas."
+  },
+  {
+    "nome": "Flechas e Virotes",
+    "tipo": "Munição",
+    "quantidade_por_pacote": "20 flechas/virotes",
+    "armas_compativeis": "Arco Simples, Arco Composto, Balestra e Besta",
+    "espaco": 1,
+    "efeito": "Após cada combate, podes gastar 5 minutos para recuperar metade (50%) dos projéteis disparados que não foram destruídos."
+  },
+  {
+    "nome": "Foguete",
+    "tipo": "Munição Especial (Uso Único)",
+    "quantidade_por_pacote": "1 foguete",
+    "armas_compativeis": "Bazuca",
+    "espaco": 1,
+    "efeito": "Projétil explosivo de uso único para a bazuca. Cada foguete ocupa 1 espaço individual."
+  },
+  {
+    "nome": "Munição de Calibre Grosso",
+    "tipo": "Munição Especial",
+    "quantidade_por_pacote": "30 para Balas Curtas, 20 para Balas Longas e 10 para Cartuchos",
+    "armas_compativeis": "Armas de Fogo com a modificação Calibre Grosso",
+    "espaco": 1,
+    "efeito": "Só pode ser disparada por armas com a modificação Calibre Grosso. Tentar utilizar esta munição numa arma padrão causa travamento instantâneo ou danos ao mecanismo."
+  },
+  {
+    "nome": "Granada 40mm",
+    "tipo": "Explosivo / Munição Tática",
+    "quantidade_por_pacote": "Consumida individualmente por disparo",
+    "armas_compativeis": "Exclusiva para o Lançador de Granadas",
+    "espaco": 1,
+    "efeito": "Cada projétil disparado gasta 1 unidade. Utiliza as regras e variantes dos modelos de granada correspondentes (Atordoamento, Fumaça, Incendiária, Fragmentação, etc.). Não possui efeito se arremessada manualmente."
+  }
+]

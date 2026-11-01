@@ -1,0 +1,2018 @@
+[
+  {
+    "nome": "Transcender",
+    "classificacao": "Tier I",
+    "prereq": "Nenhum",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você escolhe 1 Poder Paranormal para o qual cumpra os pré-requisitos. Como consequência, você não ganha o aumento de Sanidade (SAN) máxima correspondente ao nível em que escolhe este poder e avança 1 passo no Elo Paranormal. Este poder pode ser escolhido múltiplas vezes."
+  },
+  {
+    "nome": "Treinamento em Perícia",
+    "classificacao": "Tier I",
+    "prereq": "Nenhum",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Escolha 2 perícias para se tornar Treinado. Ao escolher este poder em patamares mais altos (Tier II e Tier III), você pode promover 2 perícias elegíveis para o grau Veterano ou Expert. Pode ser escolhido múltiplas vezes."
+  },
+  {
+    "nome": "Ataque Especial",
+    "classificacao": "Tier I",
+    "prereq": "Nenhum",
+    "custo": "1 SAN",
+    "alcance": "Conforme a arma",
+    "efeito": "Ao declarar um ataque corpo a corpo, à distância ou de arremesso, você pode gastar 1 SAN para receber +2 no teste de ataque ou +2 na rolagem de dano. Pode gastar +1 SAN adicional no mesmo ataque para cada +2 de bônus adicional, distribuindo livremente entre o teste de ataque e o dano (respeitando o limite de SAN do seu patamar)."
+  },
+  {
+    "nome": "Artista Marcial",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Força 2",
+    "custo": "Nenhum",
+    "alcance": "Adjacente",
+    "efeito": "Seus ataques desarmados causam dano letal ou não-letal (à sua escolha) e recebem a propriedade Ágil (permitem utilizar Agilidade no teste de ataque). O dano base do seu ataque desarmado passa a ser 1d6 (aumenta para 1d8 no Tier II e para 1d10 no Tier III)."
+  },
+  {
+    "nome": "Armamento Pesado",
+    "classificacao": "Tier I",
+    "prereq": "Força 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Armas pesadas ocupam -1 Espaço no seu inventário (mínimo de 1 Espaço). Além disso, você recebe +2 na rolagem de dano em todos os ataques realizados com armas pesadas."
+  },
+  {
+    "nome": "A Favorita",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Força 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Escolha um tipo específico de arma. Ao realizar ataques com ela, você recebe +2 na rolagem de dano ou +2 no teste de ataque."
+  },
+  {
+    "nome": "Apego Angustiado",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Enquanto estiver Machucado (metade da vida ou menos), você recebe +2 em todos os testes de resistência (Fortitude, Reflexos e Vontade)."
+  },
+  {
+    "nome": "Combate Defensivo",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Ao realizar a ação Agredir, você pode optar por lutar de forma defensiva até o início do seu próximo turno. Você recebe +2 na Defesa, mas sofre 1 Desvantagem em todos os seus testes de ataque até o início do seu próximo turno."
+  },
+  {
+    "nome": "Incansável",
+    "classificacao": "Tier I",
+    "prereq": "Força 2 ou Agilidade 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por cena de Investigação, você pode gastar 1 SAN para realizar uma ação física adicional baseada em Força ou Agilidade (como mover obstáculos, arrombar acessos ou escalar)."
+  },
+  {
+    "nome": "Presteza Atlética",
+    "classificacao": "Tier I",
+    "prereq": "Força 2 ou Agilidade 2",
+    "custo": "1 SAN",
+    "alcance": "Adjacente",
+    "efeito": "Ao Ajudar um aliado em uma cena de investigação ou exploração, você pode gastar 1 SAN para realizar o teste de suporte utilizando Força ou Agilidade. Se for bem-sucedido, o aliado recebe o bônus normal e +1 Vantagem adicional no teste principal dele."
+  },
+  {
+    "nome": "Proteção Pesada",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Força 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Enquanto estiver vestindo uma Proteção Pesada, você recebe +2 de Resistência a Dano (RD) física contra ataques corporais, à distância e de arremesso."
+  },
+  {
+    "nome": "Reflexos Defensivos",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você recebe +2 na Defesa e +2 em testes de resistência baseados em Agilidade (Reflexos)."
+  },
+  {
+    "nome": "Saque Rápido",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você pode sacar ou guardar armas e itens de tamanho até médio como Ação Livre. Além disso, você pode recarregar armas de fogo ou de disparo como Ação Livre."
+  },
+  {
+    "nome": "Inspirar Confiança",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "1 SAN",
+    "alcance": "Curto (9m)",
+    "efeito": "Quando um aliado em alcance curto falhar em um teste qualquer, você pode gastar 1 SAN como Reação para permitir que ele role novamente o teste, devendo manter o novo resultado."
+  },
+  {
+    "nome": "Isca Tática",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "1 SAN",
+    "alcance": null,
+    "efeito": "Você assume abertamente os riscos de uma situação para cobrir a fuga, o avanço ou o sigilo do seu grupo. Distração Tática (Em Combate): O inimigo selecionado em alcance curto fica provocado até o seu próximo turno. Enquanto estiver provocado, ele sofre Desvantagem em testes de ataque que não tenham você como alvo principal. Além disso, a exposição do alvo concede +2 em testes de ataque para você e todos os seus aliados contra esse inimigo até o início do seu próximo turno. Distração de Cenas (Fora de Combate): Ao se expor deliberadamente para atrair a atenção do ambiente em cenas de Furtividade, Perseguição ou Exploração, você se torna o único foco das ameaças e guardas da cena. Isso concede Vantagem no próximo teste de perícia de todos os seus aliados para passarem despercebidos, fugirem ou superarem o obstáculo da cena."
+  },
+  {
+    "nome": "Iniciativa Aprimorada",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você recebe +2 em testes de Iniciativa. Além disso, na primeira rodada de cada combate, você recebe 1 Ação de Movimento adicional."
+  },
+  {
+    "nome": "Casca Grossa",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Sua Pontuação Máxima de PV aumenta em +10."
+  },
+  {
+    "nome": "Cai Dentro",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Presença 2",
+    "custo": "1 SAN",
+    "alcance": "Curto (9m)",
+    "efeito": "Quando um inimigo em alcance curto declarar um ataque contra um aliado, você pode gastar 1 SAN para forçá-lo a fazer um teste de Vontade. Se falhar, o inimigo é obrigado a redirecionar o ataque para você (desde que você esteja ao alcance do ataque dele)."
+  },
+  {
+    "nome": "Ciente das Cicatrizes",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Percepção 2",
+    "custo": "Nenhum",
+    "alcance": "Curto (9m)",
+    "efeito": "Permite usar Luta ou Pontaria para analisar armas, balística e marcas de combate. Você recebe +2 em testes de Percepção para analisar equipamentos, postura ou ferimentos. Em caso de sucesso, descobre a RD, Defesa, fraquezas ou tipo de dano do alvo antes do combate."
+  },
+  {
+    "nome": "Correria Desesperada",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Seu deslocamento base aumenta em +3 metros e você recebe +2 em testes de perícia realizados para fugir de perseguições."
+  },
+  {
+    "nome": "Engolir o Choro",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Vigor 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você ignora penalidades de condições físicas em testes de Furtividade e Fuga. Enquanto estiver Machucado, recebe +2 em testes de Furtividade e Vontade para manter a concentração e não revelar sua posição ao sofrer dano contínuo."
+  },
+  {
+    "nome": "Instinto de Fuga",
+    "classificacao": "Tier I",
+    "prereq": "Percepção 2 ou Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você recebe +2 em testes de Intuição e Percepção para notar emboscadas e armadilhas antes do combate. Em cenas de fuga, perseguição ou recuo tático, recebe +2 em todos os testes de perícia e testes de resistência."
+  },
+  {
+    "nome": "Mochileiro",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Seu limite de inventário aumenta em +2 espaços e você pode se equipar e se beneficiar dos efeitos de 1 vestimenta adicional simultaneamente."
+  },
+  {
+    "nome": "Paranoia Defensiva",
+    "classificacao": "Tier I",
+    "prereq": "Percepção 2 ou Intelecto 2",
+    "custo": "2 SAN",
+    "alcance": "Médio (18m)",
+    "efeito": "Uma vez por cena, gastando 1 rodada (ou 1 minuto fora de combate), você alerta o grupo sobre perigos iminentes. Você e cada aliado no alcance escolhem receber +2 na Defesa contra o próximo ataque sofrido OU +2 em um único teste de perícia até o final da cena."
+  },
+  {
+    "nome": "Sacrificar os Joelhos",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Força 2",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por cena, ao realizar um teste físico de Atletismo, você pode gastar 2 SAN para obter sucesso automático em transições de cenário, obstáculos e perseguições, ou receber Vantagem no teste de Atletismo no combate e ignorar terreno difícil até o final do seu turno."
+  },
+  {
+    "nome": "Sem Tempo, Irmão",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Presença 2",
+    "custo": "Nenhum",
+    "alcance": "Curto (9m)",
+    "efeito": "Uma vez por cena de investigação ou exploração, ao Ajudar um aliado em testes de busca ou análise, você concede Vantagem no teste dele automaticamente (sem precisar rolar), mas sua pressa engatilha um Evento de Investigação/complicação imediato na cena."
+  },
+  {
+    "nome": "Carteirada",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você recebe +2 em testes de Diplomacia ou Enganação. Além disso, possui credenciais oficiais (0 espaços de carga) que garantem autoridade para assumir jurisdição sobre investigações civis, porte ostensivo e acesso a áreas restritas sem necessidade de testes contra autoridades comuns."
+  },
+  {
+    "nome": "Método Investigativo",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Percepção 2",
+    "custo": "2 SAN",
+    "alcance": "Curto (9m)",
+    "efeito": "Quando um contratempo, alarme ou complicação for acionado durante uma cena de investigação, você pode gastar 2 SAN como Reação para anular o evento negativo ou adicionar +1 rodada no tempo limite da cena."
+  },
+  {
+    "nome": "Rastrear o Paranormal",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Percepção 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você recebe +2 em testes de Sobrevivência e pode utilizar a perícia Sobrevivência no lugar de Ocultismo, Procurar ou Percepção para identificar, rastrear e analisar vestígios ou criaturas paranormais."
+  },
+  {
+    "nome": "Atacar das Sombras",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você move seu deslocamento normal em Furtividade sem sofrer penalidades. Ao atacar a partir da Furtividade com uma arma silenciosa, recebe +2 no teste de ataque e pode fazer um teste de Furtividade imediato para permanecer escondido. Recebe +2 em Furtividade sob penumbra ou cobertura."
+  },
+  {
+    "nome": "Golpes de Arena",
+    "classificacao": "Tier I",
+    "prereq": "Força 2 ou Agilidade 2",
+    "custo": "1 SAN",
+    "alcance": "Adjacente",
+    "efeito": "Ao acertar um ataque desarmado, você pode gastar 1 SAN como Ação Livre para realizar uma Manobra de Combate (Derrubar, Agarrar, Empurrar ou Desarmar) contra o mesmo alvo, recebendo +2 no teste da manobra."
+  },
+  {
+    "nome": "Combatente Esforçado",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2 ou Vigor 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Sua Pontuação Máxima de SAN aumenta em +10."
+  },
+  {
+    "nome": "Treinamento Militarizado",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Força 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Permite realizar a ação de Exercitar-se em Cenas de Interlúdio sem gastar sua ação de descanso. O bônus passa a ser +4 fixo, aplicável em um teste físico ou rolagem de dano na missão."
+  },
+  {
+    "nome": "Fôlego de Emergência",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por cena, estando na condição Machucado durante um confronto, você pode gastar 1 SAN e 1 Ação de Movimento para receber 5 + Vigor em Pontos de Vida Temporários até o final da cena."
+  },
+  {
+    "nome": "Parede de Carne",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 3 ou Força 3",
+    "custo": "Nenhum",
+    "alcance": "Adjacente",
+    "efeito": "Aliados em espaços adjacentes ao seu recebem +2 na Defesa (Cobertura Parcial) contra ataques originados do outro lado do seu espaço."
+  },
+  {
+    "nome": "Especialista em Proteção Leve",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Se estiver vestindo uma proteção leve, você recebe +2 na Defesa e +2 em testes de Reflexos."
+  },
+  {
+    "nome": "Ser Amaldiçoado",
+    "classificacao": "Tier I",
+    "prereq": "Treinado em Ocultismo",
+    "custo": "Nenhum (Exige a execução de uma etapa ritualística diária correspondente ao elemento escolhido)",
+    "alcance": "Pessoal",
+    "efeito": "Em suas veias corre uma maldição paranormal que o corrompe lentamente, transformando-o em um monstro. Você se torna treinado na perícia Ocultismo (se já for treinado, em vez disso recebe um bônus de +2 nela). Você deve escolher um elemento paranormal entre Sangue, Morte, Conhecimento ou Energia. Uma vez por dia, você precisa executar uma etapa ritualística específica ligada a esse elemento para saciar a praga em seu corpo (beber sangue fresco para Sangue, inalar cinzas para Morte, tatuar palavras de medo para Conhecimento, ou receber choques elétricos para Energia). Se realizar o ritual diário, você recebe os efeitos descritos abaixo até o fim do dia; caso contrário, você sofre das condições de fome e sede naquele dia. Se adquirir afinidade com um elemento no futuro, deverá escolher obrigatoriamente o mesmo elemento selecionado aqui. Sangue: Suas presas ficam protuberantes e seus olhos vermelhos. Você recebe resistência a balístico e Sangue 5 e o sentido Faro. Quando faz um contra-ataque bem-sucedido, soma seu Vigor na rolagem de dano, mas sofre penalidade de -2 desvantagens em Ciências e Intuição. Morte: Você fica pálido e seu metabolismo desacelera. Você recebe resistência a perfuração e Morte 5, imunidade a fadiga e soma sua Força no seu total de Pontos de Vida (PV) máximos, mas sofre penalidade de -2 desvantagens em Diplomacia e Enganação. Conhecimento: Seus olhos são banhados em um dourado sobrenatural. Você recebe resistência a balístico e Conhecimento 5, Visão no Escuro e soma seu Intelecto na Defesa, mas sofre penalidade de -2 desvantagens em Atletismo e Acrobacia. Energia: Sua pele ganha cicatrizes de queimaduras elétricas multicoloridas. Você recebe resistência a corte, eletricidade, fogo e Energia 5 e soma sua Agilidade na RD recebida por um bloqueio bem-sucedido, mas sofre penalidade de -2 desvantagens em Procurar e Percepção."
+  },
+  {
+    "nome": "Eclético",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Ao realizar um teste de qualquer perícia na qual não seja Treinado, você pode gastar 1 SAN para receber os benefícios de ser Treinado nessa perícia durante a resolução daquele teste."
+  },
+  {
+    "nome": "Perito",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Percepção 2",
+    "custo": "1 SAN (escalonável)",
+    "alcance": "Pessoal",
+    "efeito": "Escolha duas perícias nas quais você seja Treinado (exceto Luta e Pontaria). Ao realizar um teste de uma dessas perícias, você pode gastar 1 SAN para receber +2 no resultado do teste. Evolução de Nível (Limite de Gasto): O limite de Sanidade que você pode gastar no mesmo teste aumenta com o seu nível, permitindo somar blocos adicionais de +2 (+1 SAN por bloco): Nível 1 ao 4: Até +2 no teste (Custo máximo: 1 SAN). Nível 5 ao 10: Até +4 no teste (Custo máximo: 2 SAN). Nível 11 ao 16: Até +6 no teste (Custo máximo: 3 SAN). Nível 17+: Até +8 no teste (Custo máximo: 4 SAN)."
+  },
+  {
+    "nome": "Balística Avançada",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Armas táticas de fogo ocupam -1 Espaço no seu inventário (mínimo de 1 Espaço) e você recebe +2 na rolagem de dano em todos os seus ataques realizados com armas de fogo."
+  },
+  {
+    "nome": "Conhecimento Aplicado",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você utiliza teoria acadêmica e raciocínio lógico para resolver problemas práticos fora do combate. Em cenas de Investigação ou Exploração, ao realizar um teste de perícia utilitária, você pode gastar 1 SAN para utilizar Intelecto como o atributo-base do teste."
+  },
+  {
+    "nome": "Hacker",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você possui facilidade natural para operar, burlar e manipular dispositivos virtuais e sistemas eletrônicos, você recebe +2 em testes de Tecnologia."
+  },
+  {
+    "nome": "Mãos Rápidas",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 3",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Ao realizar um teste da perícia Crime (como furtar objetos, prestidigitação, sabotar mecanismos ou destrancar fechaduras), você pode gastar 1 SAN para executá-lo como uma Ação Livre (uma vez por rodada), em vez de gastar uma Ação Padrão ou de Movimento."
+  },
+  {
+    "nome": "Mochila de Utilidades",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você organiza seu equipamento de forma extremamente eficiente e personalizada. Escolha um item de utilidade, kit de perícia ou vestimenta à sua escolha (exceto armas). Carga Otimizada: O item escolhido ocupa -1 Espaço no seu inventário (mínimo de 1 Espaço). Especialização de Uso: Você recebe +2 em testes de perícia realizados ao utilizar kits."
+  },
+  {
+    "nome": "Movimento Tático",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Força 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você utiliza sua técnica corporal para superar obstáculos físicos e terrenos acidentados sem perder o ritmo. Ao gastar 1 SAN, você ignora a redução de deslocamento por terreno difícil e adquire deslocamento de escalada igual ao seu deslocamento base até o final do seu turno."
+  },
+  {
+    "nome": "Na Trilha Certa",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Percepção 2",
+    "custo": "1 SAN (ou +1 SAN por nível de encadeamento)",
+    "alcance": "Pessoal",
+    "efeito": "Ao obter sucesso em um teste para procurar, analisar ou deduções de pistas durante uma cena de Investigação, você pode gastar 1 SAN para engatar uma linha de raciocínio fluida. Efeito em Cadeia: Você (ou um aliado que continue a examinar a mesma pista) recebe +2 no próximo teste de Investigação na mesma cena. Inércia Investigativa: Se esse segundo teste for bem-sucedido, você pode gastar +1 SAN adicional (total 2 SAN) para aumentar o bônus para +4 no próximo teste (teto máximo de +4) ou revelar 1 detalhe/pista secundária."
+  },
+  {
+    "nome": "Nerd",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por cena, você pode gastar 1 SAN para recorrer ao seu vasto repertório de curiosidades, referências e conhecimentos obscuros acumulados em livros, mídias ou fóruns da internet. Escolha um dos benefícios conforme a situação: Cena de Investigação/Exploração: O Mestre revela uma dica direta ou orientação útil para avançar na cena sem a necessidade de um teste (ou você recebe Vantagem no seu próximo teste de análise/dedução). Cena de Combate: Você identifica um conceito aplicável à ameaça e descobre uma informação tática crucial de um inimigo visível (como o valor de RD, uma fraqueza elementar, a menor defesa/resistência ou uma habilidade especial)."
+  },
+  {
+    "nome": "Ninja Urbano",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Força 2 e proficiência com Armas táticas corpo a corpo e de disparo",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Armas táticas corpo a corpo e de disparo (exceto armas de fogo) ocupam -1 Espaço no seu inventário (mínimo de 1 Espaço) e você recebe +2 na rolagem de dano em todos os seus ataques realizados."
+  },
+  {
+    "nome": "Pensamento Ágil",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Percepção 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por rodada durante uma cena de Investigação ou Exploração, você pode gastar 1 SAN para realizar uma ação adicional dedicada exclusivamente a procurar pistas, examinar o ambiente ou analisar um objeto."
+  },
+  {
+    "nome": "Perito em Explosivos",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 e proficiência com Utilitários",
+    "custo": "1 SAN",
+    "alcance": "Conforme o explosivo",
+    "efeito": "Ao arremessar ou plantar uma bomba, granada ou explosivo, você pode gastar 1 SAN para moldar a onda de choque e otimizar a detonação: Carga Otimizada: A DT do teste de resistência para esquivar ou reduzir o dano do seu explosivo aumenta em +2 na DT. Detonação Seletiva: Você calcula os ângulos de impacto para excluir um número de alvos dentro da área de efeito do explosivo até o limite do seu atributo Intelecto (esses alvos não sofrem qualquer dano ou efeito)."
+  },
+  {
+    "nome": "Primeira Impressão",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "No primeiro teste de Diplomacia, Enganação, Intimidação ou Intuição que você realizar em uma cena, você recebe Vantagem no teste."
+  },
+  {
+    "nome": "Disparo Impactante",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Conforme a arma",
+    "efeito": "Ao realizar um ataque com uma arma de fogo, você pode gastar 1 SAN para, em vez de causar dano, executar uma Manobra de Combate (Derrubar, Desarmar, Empurrar ou Quebrar) à distância contra o alvo. Utilize o seu teste de ataque à distância para resolver a manobra."
+  },
+  {
+    "nome": "Resgate",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "Nenhum",
+    "alcance": "Curto (9m)",
+    "efeito": "Você possui treinamento tático para extrair companheiros de situações de risco com extrema rapidez. Extração Rápida: Uma vez por rodada, se um aliado em alcance curto (9m) estiver Machucado, Inconsciente ou Morrendo, você pode realizar uma Ação Livre para se mover até ficar adjacente a ele (respeitando o seu deslocamento normal). Garantia de Cobertura: Sempre que você curar PV ou remover uma condição negativa de um aliado, você e esse aliado recebem +2 na Defesa até o início do seu próximo turno. Transporte Eficiente: O número de espaços ocupados por carregar ou arrastar outro personagem no seu inventário é reduzido pela metade."
+  },
+  {
+    "nome": "Inventário Otimizado",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você utiliza métodos de organização tática, compartimentalização e distribuição eficiente de peso para maximizar o transporte de equipamentos. Você soma o seu atributo Intelecto ao seu atributo Força para calcular a sua capacidade total de carga (espaços de inventário)."
+  },
+  {
+    "nome": "Remendão",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Adjacente ou Pessoal",
+    "efeito": "Você possui facilidade para realizar reparos de emergência e gambiarras utilitárias com os recursos disponíveis ao seu redor. Reparo de Emergência: Com uma Ação Completa e 1 SAN, você remove temporariamente a condição Quebrado de um equipamento adjacente, permitindo que ele volte a funcionar normalmente até o final da cena. Construção em Campo: Ao realizar testes para fabricar, improvisar ou reparar itens e ferramentas em campo (fora de uma oficina), você recebe +2 no teste e reduz o tempo necessário para a montagem/improvisação pela metade, não sofrendo penalidades por falta de ferramentas adequadas."
+  },
+  {
+    "nome": "Disfarce Sutil",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você utiliza pequenos detalhes, postura e truques visuais para alterar rapidamente a sua própria aparência. Improvisação Rápida: Com uma Ação Completa e o gasto de 1 SAN, você cria um disfarce em si mesmo utilizando a perícia Enganação, sem a necessidade de um kit de disfarces. Uso de Ferramentas: Caso utilize um kit de disfarces adequado ao executar a habilidade, você recebe +2 no teste de Enganação."
+  },
+  {
+    "nome": "Leitura Fria",
+    "classificacao": "Tier I",
+    "prereq": "Presença 1 ou Intelecto 1",
+    "custo": "Nenhum",
+    "alcance": "Curto (9m)",
+    "efeito": "Você estudou a fundo microexpressões, linguagem corporal e padrões comportamentais, permitindo deduzir informações sobre um indivíduo apenas observando seus trejeitos. Análise Comportamental: Uma vez por Interlúdio (ou cena social/investigativa), após passar alguns minutos observando ou interagindo com um PNJ (NPC), você pode fazer 3 perguntas ao Mestre sobre o histórico, hábitos, motivações ou segredos do personagem. Informação ou Determinação: Para cada pergunta respondida pelo Mestre, você obtém uma informação verdadeira. Para cada pergunta que o Mestre optar por se negar a responder (por envolver segredos extremamente protegidos pela trama), você ganha 1 SAN temporária (que dura até o final da missão). Restrição: Esta habilidade só pode ser utilizada uma única vez em cada PNJ e não afeta outros jogadores."
+  },
+  {
+    "nome": "Mãos Firmes",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 1",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Sua precisão motora e controle corporal evitam qualquer ruído acidental, mesmo sob extrema tensão. Manipulação Silenciosa: Ao realizar um teste de Furtividade para se esconder ou executar uma ação discreta que envolva a manipulação de um objeto (como abrir uma fechadura, desarmar um dispositivo, desviar de armadilhas sonoras ou pegar/soltar itens sem fazer barulho), você pode gastar 1 SAN para receber +2 nesse teste."
+  },
+  {
+    "nome": "Plano de Fuga",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 1",
+    "custo": "1 SAN (para o sucesso automático)",
+    "alcance": "Pessoal",
+    "efeito": "Você está constantemente analisando o ambiente em busca de rotas de saída e rotas de escape, calculando a física e a arquitetura ao seu redor para atrasar perseguidores. Estratégia de Fuga: Ao realizar a ação de Criar Obstáculos durante uma Perseguição, você pode utilizar o seu atributo Intelecto no lugar de Força. Éxito Calculado: Uma vez por cena, você pode gastar 1 SAN para obter sucesso automático na ação de Criar Obstáculos, dispensando a realização do teste."
+  },
+  {
+    "nome": "Remoer Memórias",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 1",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Sua mente revive constantemente experiências, fatos e detalhes do passado, permitindo que você resgate lembranças úteis em momentos de pressão. Resgate de Memória: Uma vez por cena, ao realizar qualquer teste de perícia baseada em Intelecto ou Presença, você pode gastar 1 SAN para substituir o teste original da perícia por um teste puro de Intelecto contra DT 7. Se for bem-sucedido, você obtém sucesso no teste da perícia original."
+  },
+  {
+    "nome": "Conhecimento Prático",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal / Curto (9m)",
+    "efeito": "Sua experiência prática e repertório de mundo real permitem que você analise pistas e objetos sob uma ótica funcional, identificando utilidades, origens e conexões operacionais que outros deixariam passar. Análise de Vestígios: Ao examinar uma pista física, ferramenta, documento ou vestígio em uma Cena de Investigação, você pode gastar 1 SAN para extrair um detalhe prático adicional (como origem de fabricação, tempo de desgaste, técnica utilizada ou método de adulteração) sem consumir tempo extra da cena. Dedução Operacional: Sempre que um teste de investigação envolver entender a funcionalidade ou a aplicação de um objeto encontrado na cena de crime, você recebe +2 no teste."
+  },
+  {
+    "nome": "Leitor Contumaz",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "A leitura para você é um hábito automático e otimizado, permitindo extrair o máximo de conhecimento em tempo recorde. Absorção Total: Ao realizar a Ação de Interlúdio Ler, você não rola o dado de bônus: você obtém automaticamente o valor máximo possível para o bônus, podendo aplicá-lo em testes de qualquer perícia. Leitura Passiva: O ato de ler é tão natural que a ação Ler não consome a sua Ação de Interlúdio da fase de descanso (você pode realizá-la sem abrir mão das suas outras atividades de interlúdio)."
+  },
+  {
+    "nome": "Rato de Biblioteca",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você possui um método de pesquisa hiperfocado para localizar informações relevantes em acervos, arquivos e bibliotecas em tempo recorde. Pesquisa Tática: Quando estiver em um ambiente com abundância de livros, documentos ou arquivos (como uma biblioteca, cartório, escritório, livraria ou antiquário), você pode gastar 1 Rodada (em cena de ação/investigação) ou alguns minutos e 1 SAN para obter imediatamente os benefícios de uma Ação de Interlúdio à sua escolha entre Ler ou Revisar Caso. Restrição: Esta habilidade só pode ser utilizada uma única vez por cena."
+  },
+  {
+    "nome": "Soluções Improvisadas",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Sua rapidez de raciocínio e adaptabilidade sob estresse permitem encontrar saídas criativas quando um plano inicial falha ou surge um imprevisto. Reavaliação Rápida: Logo após realizar um teste de perícia e ver o resultado, você pode gastar 1 SAN para rolar novamente 1 dos dados utilizados naquele teste. Você escolhe e mantém o melhor resultado entre as duas rolagens. Restrição: Esta habilidade só pode ser utilizada uma única vez no mesmo teste."
+  },
+  {
+    "nome": "Mascate",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, treinamento em Tecnologia ou Mecânica",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você aprendeu um ofício prático e desenvolveu métodos de logística para carregar o necessário e improvisar ferramentas sob medida. Carga Otimizada: Sua Capacidade de Carga aumenta em +2 Espaços (ou slots de inventário). Improvisação Eficiente: Ao criar ou improvisar um item ou utilitário sem os materiais ideais, a Dificuldade (DT) do teste de criação é reduzida em -5 (ou você ignora totalmente a penalidade por usar ferramentas improvisadas)."
+  },
+  {
+    "nome": "Fabricação Própria",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você aperfeiçoou suas técnicas manuais e logística de oficina, permitindo montar, calibrar e produzir equipamentos essenciais em metade do tempo. Produção Acelerada: Você reduz pela metade o tempo necessário para fabricar itens mundanos (não modificados e não paranormais). Eficiência de Interlúdio/Manutenção: Ao utilizar uma Ação de Manutenção/Interlúdio para fabricação: Consumíveis (munições, explosivos, insumos): Você fabrica o dobro da quantidade padrão (ou 2 unidades do consumível) em uma única ação. Equipamentos Gerais (armas, proteções, ferramentas): Requer apenas 1 Ação de Manutenção para ser concluído (em vez de múltiplas ações/turnos). Restrição: Esta habilidade não se aplica a itens paranormais nem a equipamentos que recebam modificações complexas."
+  },
+  {
+    "nome": "Análise Conturbada",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Presença 2",
+    "custo": "1 SAN",
+    "alcance": "Curto (9m)",
+    "efeito": "Suas análises carregam uma carga mórbida que, embora desconfortável, força a mente do grupo a enxergar conexões sombrias que passariam despercebidas. Dedução Incisiva: Sempre que você realizar a ação de Compartilhar (informações/pistas) ou Recapitular em uma Cena de Investigação, você pode gastar 1 SAN para injetar teorias e hipóteses perturbadoras na discussão. Paranoia Produtiva: Os aliados voluntários que derem ouvidos à sua análise sofrem 1 de dano de Sanidade (SAN). Em contrapartida, a ação de Compartilhar ou Recapitular concede a você e a esses aliados um bônus de +2 em todos os testes realizados para avançar na investigação ou superar etapas do Desafio de Acesso até o fim da cena."
+  },
+  {
+    "nome": "Adepto do Escuro",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Seus olhos e sentidos são altamente adaptados a locais com pouca iluminação, permitindo que você note detalhes e navegue no escuro onde outros só veem sombras. Visão nas Sombras: Você ignora as penalidades e os efeitos de Camuflagem (Leve ou Total) causados por escuridão natural ou penumbra. Atenção no Escuro: Você recebe +2 em testes de Percepção e Procurar realizados em ambientes com iluminação reduzida ou precária (como penumbra, salas iluminadas apenas por velas/lanternas, ao crepúsculo, etc.)."
+  },
+  {
+    "nome": "Saudosista Hi-Tech",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, treinado em Tecnologia",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Seu conhecimento de hardware analógico e computação retrô permite reparar circuitos defasados e criar pontes de conexão incomuns entre velhas e novas tecnologias. Hardware Retrô & Conserto: Você recebe +2 em testes de Tecnologia para operar, invadir ou manipular dispositivos legados (anteriores aos anos 2000), bem como para consertar qualquer item tecnológico. Gambiarra Analógica: Ao integrar aparelhos retrô em sistemas modernos, a sua abordagem não convencional confunde defesas digitais automáticas. Na primeira rodada de uma Cena de Hacking ou invasão digital, você recebe 1 Ação de Movimento extra."
+  },
+  {
+    "nome": "Treinado nas Telas",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "O tempo dedicado a jogos eletrônicos e ao processamento de estímulos visuais em alta velocidade aprimorou a sua coordenação motora e o seu tempo de reação. Reflexos Rápidos: Ao realizar um teste de Iniciativa ou de Reflexos, você pode gastar 1 SAN para reagir instintivamente à ameaça, recebendo +2 no teste."
+  },
+  {
+    "nome": "Meus Bebês",
+    "classificacao": "Tier I",
+    "prereq": "Treinado em Mecânica",
+    "custo": null,
+    "alcance": null,
+    "efeito": "Se quer um trabalho bem feito, faça você mesmo. Você recebe um bônus de +2 em testes de Mecânica. Além disso, a sua expertise técnica permite que você leve para o campo o seu próprio arsenal personalizado: você começa a missão com 1 explosivo autoral gratuito (que não conta para o seu limite de itens de inventário e possui a categoria reduzida em 1, com o mínimo 0). O número de explosivos autorais com que você começa a missão aumenta em +1 para cada outra habilidade desta trilha que você adquirir. Por fim, você é capaz de produzir novos explosivos autorais durante cenas de interlúdio utilizando as regras de Fabricação em Campo."
+  },
+  {
+    "nome": "Ser Experimentado",
+    "classificacao": "Tier I",
+    "prereq": "Treinado em Ocultismo",
+    "custo": "Nenhum (Exige uma ação completa e a execução diária de um experimento cruel com o próprio corpo)",
+    "alcance": "Pessoal",
+    "efeito": "Você submete sua própria carne a processos drásticos e dolorosos de hibridização paranormal, tornando-se uma verdadeira cobaia do Outro Lado. Você recebe um bônus de +2 em Ocultismo, mas a degradação social e o comportamento errático impõem uma penalidade permanente de -2 dados de desvantagem em testes de Diplomacia, Enganação e Intuição. Uma vez por dia, você precisa gastar uma ação completa para realizar experimentos cruéis com o seu corpo (injetar sangue humano para Sangue, inalar cinzas de mortos para Morte, ingerir ouro puro para Conhecimento, ou se eletrocutar para Energia). Se realizar o experimento diário, você recupera 1d8+1 PV e, até o fim do dia, recebe os efeitos descritos a seguir, conforme o elemento escolhido. Caso contrário, você sofre no dia efeitos similares às condições de fome e sede (OPRPG, p. 292). Só é possível fazer um experimento por dia. Por fim, se adquirir afinidade com um elemento no decorrer da campanha, deverá obrigatoriamente escolher o mesmo elemento selecionado aqui. SANGUE: Você consome carne e sangue maculado. Seus músculos crescem com velocidade sobrenatural e a adrenalina consome suas veias: você passa a ser considerado de tamanho Grande (+2 em manobras de combate e -2 em testes de Furtividade), soma sua Força em testes baseados nesse atributo e passa a usar Força, em vez de Presença, para calcular sua Sanidade máxima (SAN). MORTE: Você inala as cinzas de um passado esquecido, fazendo sua pele acinzentar e seus olhos escurecerem. Você recebe 2d6 PV temporários, ganha uma ação padrão adicional por cena, soma seu Vigor em testes baseados nesse atributo e passa a usar Vigor, em vez de Presença, para calcular sua Sanidade máxima (SAN). CONHECIMENTO: Você absorve textos incompreensíveis, forçando sua mente a assimilar saberes proibidos através de um esforço torturante. Escolha duas perícias: você é considerado treinado nelas, soma seu Intelecto em testes baseados nesse atributo e passa a usar Intelecto, em vez de Presença, para calcular sua Sanidade máxima (SAN). ENERGIA: Você injeta reagentes químicos letais e recebe choques para se manter consciente, acelerando a química do seu corpo. Você pode, uma vez por rodada, sacar um item como ação livre (efeito cumulativo com bandoleiras), todos os seus deslocamentos aumentam em 6m, soma sua Agilidade em testes baseados nesse atributo e passa a usar Agilidade, em vez de Presença, para calcular sua Sanidade máxima (SAN)."
+  },
+  {
+    "nome": "Escolhido pelo Outro Lado",
+    "classificacao": "Tier I",
+    "prereq": "Nenhum",
+    "custo": null,
+    "alcance": "Pessoal",
+    "efeito": "Você teve uma experiência paranormal e foi marcado pelo Outro Lado, absorvendo o conhecimento e poder necessários para realizar rituais. Você pode lançar rituais de 1º círculo. À medida que aumenta seu NEX, pode lançar rituais de círculos maiores (2º círculo em NEX 25%, 3º círculo em NEX 55% e 4º círculo em NEX 85%). Você começa com três rituais de 1º círculo. Sempre que avança de NEX, aprende um ritual de qualquer círculo que possa lançar. Esses rituais não contam no seu limite de rituais conhecidos."
+  },
+  {
+    "nome": "Criar Selo",
+    "classificacao": "Tier I",
+    "prereq": "Nenhum",
+    "custo": "Custo em SAN do ritual",
+    "alcance": "Toque",
+    "efeito": "Você consegue armazenar a matriz de um ritual conhecido em um suporte físico para uso posterior. Fabricação no Interlúdio: Durante uma Cena de Interlúdio, você pode gastar o custo normal em SAN de um ritual que você conheça para criar um selo contendo aquele ritual. Ativação por Qualquer Um: Qualquer agente segurando o selo pode destruí-lo com uma Ação Padrão para ativar o ritual armazenado sem gastar SAN adicional. Limite de Selos: Você pode manter um número máximo de selos criados ao mesmo tempo igual ao seu atributo de Presença (mínimo 1)."
+  },
+  {
+    "nome": "Envolto em Mistério",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "Nenhum (ou 1 SAN)",
+    "alcance": "Pessoal",
+    "efeito": "Sua postura assombrosa e aura enigmática causam fascínio e temor em mentes desavisadas. Aura Perturbadora: Você recebe +2 em testes de Enganação e Intimidação contra pessoas leigas ou não treinadas em Ocultismo. Influência Impositora: Gastando 1 SAN, você pode usar seu teste de Ocultismo no lugar de Enganação ou Intimidação ao tentar persuadir, manipular ou amedrontar alvos sem conhecimento paranormal."
+  },
+  {
+    "nome": "Especialista em Elemento",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você se afina profundamente com uma das manifestações do Outro Lado. Afinidade Elemental: Escolha um elemento paranormal (Conhecimento, Energia, Morte ou Sangue). A DT para resistir aos rituais que você conjura desse elemento aumenta em +2."
+  },
+  {
+    "nome": "Ferramentas Paranormais",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você domina a operação e otimização de dispositivos tecnológicos e canalizadores paranormais. Ativação Eficiente: Você pode ativar o efeito de ferramentas e gadgets paranormais sem pagar seu custo em SAN. Operação Tática: Você recebe +2 em testes de Ocultismo ou Tecnologia para identificar, reparar ou operar ferramentas paranormais."
+  },
+  {
+    "nome": "Guiado pelo Paranormal",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "O Outro Lado sussurra pistas para sua mente, guiando sua busca no ambiente. Ação Extra de Busca: Gastando 1 SAN, você pode realizar uma ação de Procurar adicional na mesma rodada ou cena. Intuição Paranormal: Você pode usar a perícia Ocultismo no lugar de Procurar ao examinar locais. Se a pista ou objeto buscado tiver origem paranormal, você recebe +2 no teste."
+  },
+  {
+    "nome": "Identificação Paranormal",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você possui estudos teóricos e práticos para reconhecer manifestações do Outro Lado sem depender apenas da sorte. Análise Mística: Você recebe +2 em testes de Ocultismo para identificar criaturas, objetos, símbolos ou rituais paranormais."
+  },
+  {
+    "nome": "Improvisar Componentes",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "1 SAN (no improviso rápido)",
+    "alcance": "Pessoal",
+    "efeito": "Você consegue usar recursos do ambiente ou materiais comuns para substituir componentes ritualísticos específicos. Confecção em Campo: Durante uma Cena de Interlúdio, você pode gastar 1 Insumo de Campo para fabricar componentes ritualísticos de um elemento à sua escolha. Improviso de Urgência: Em combate ou exploração, você pode gastar uma Ação Completa e 1 SAN para realizar um teste de Procurar (DT 7). Se passar, encontra ou improvisa objetos do ambiente que funcionam como componentes de um elemento à sua escolha até o fim da cena."
+  },
+  {
+    "nome": "Intuição Paranormal",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "1 SAN (para orientação rápida)",
+    "alcance": "Curto",
+    "efeito": "Você utiliza sua conexão mística para orientar as ações dos seus aliados. Sintonia de Campo: Sempre que você realiza a ação de Prestar Ajuda para um aliado em testes de Ocultismo ou testes baseados em Intelecto, o aliado recebe uma Vantagem adicional no teste."
+  },
+  {
+    "nome": "Ritual Potente",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "Sua precisão teórica e compreensão mística amplificam os efeitos dos seus rituais. Potencialização Mística: Você soma o valor do seu atributo Intelecto às rolagens de dano ou aos efeitos de cura de qualquer ritual que você conjurar."
+  },
+  {
+    "nome": "Ritual Predileto",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "Você domina a estrutura de uma manifestação mística específica, executando-a com facilidade e menor desgaste. Invocação Fluida: Escolha um ritual que você conhece. O custo para conjurar esse ritual é reduzido em 1 SAN. Essa redução acumula com outras fontes (como Mestre em Elemento), mas não pode reduzir o custo final para menos de 1 SAN. Aprofundamento Místico: Você pode selecionar esta habilidade mais de uma vez, mas deve obrigatoriamente escolher o mesmo ritual. A cada nova escolha para o seu Ritual Predileto, o custo de suas versões aprimoradas ou de círculos superiores é reduzido em -1 SAN adicional (mínimo de 1 SAN) ou a DT para resistir a ele aumenta em +2."
+  },
+  {
+    "nome": "Tatuagem Ritualística",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "Símbolos e marcas místicas traçados permanentemente na sua pele facilitam a canalização do Paranormal para alterar ou proteger seu próprio corpo. Ancoragem Corporal: O custo para conjurar rituais com alcance pessoal e que tenham você como único alvo é reduzido em 1 SAN. Esta redução não pode diminuir o custo do ritual para menos de 1 SAN."
+  },
+  {
+    "nome": "Ampliar Ritual",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "+1 SAN (adicional ao custo do ritual)",
+    "alcance": "Pessoal",
+    "efeito": "Você consegue injetar uma carga adicional de energia paranormal para expandir o alcance ou a área de suas manifestações místicas. Aumento de Alcance: Ao conjurar um ritual, você pode pagar +1 SAN para aumentar seu alcance em um passo na seguinte progressão: Toque -> Curto -> Médio -> Longo -> Extremo. (Rituais de alcance Pessoal não têm seu alcance alterado). Expansão de Área: Alternativamente, você pode pagar +1 SAN ao conjurar um ritual de área para dobrar o seu tamanho (raio, cone, cubo ou explosão)."
+  },
+  {
+    "nome": "Poder do Flagelo",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2, Ocultismo",
+    "custo": "Varia (Substitui custo em SAN por PV)",
+    "alcance": "Pessoal",
+    "efeito": "Você utiliza o próprio sangue e dor física como catalisadores místicos, poupando sua mente do desgaste do Paranormal. Sacrifício de Carne: Ao conjurar um ritual, você pode pagar parte ou a totalidade do seu custo em SAN sacrificando sua própria vida à taxa de 2 PV para cada 1 SAN substituído. Marcas da Invocação: O dano de PV sofrido por esta habilidade ignora qualquer resistência a dano e não pode ser curado durante a cena atual. Assim que a cena for encerrada, essa perda de vida pode ser recuperada por meios normais de cura."
+  },
+  {
+    "nome": "Abraçar a Dor",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Presença 2, Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Seu corpo e mente calejados pela exposição ao Paranormal conseguem absorver e amortecer o impacto de manifestações místicas. Blindagem Mística: Como uma Reação ao sofrer dano ou ser alvo de um efeito de origem paranormal (rituais, habilidades de criaturas ou efeitos do Outro Lado), você pode gastar 1 SAN para receber +2 de Resistência a Dano (RD) contra aquela fonte específica até o final da rodada."
+  },
+  {
+    "nome": "Lâmina Maldita",
+    "classificacao": "Tier I",
+    "prereq": "Ocultismo, Luta ou Pontaria, ritual Amaldiçoar Arma",
+    "custo": "Passivo (+1 SAN opcional)",
+    "alcance": "Pessoal",
+    "efeito": "Você canaliza a energia paranormal através da sua arma, unindo a prática de combate à teoria mística. Ataque Canalizado: Ao realizar testes de ataque com uma arma sob efeito do ritual Amaldiçoar Arma (independentemente de quem o tenha conjurado), você pode utilizar a perícia Ocultismo no lugar de Luta ou Pontaria. O atributo testado permanece sendo Força (para ataques corpo a corpo) ou Agilidade (para ataques à distância). Invocação Veloz: Ao conjurar Amaldiçoar Arma, você pode pagar +1 SAN adicional para reduzir em 1 turno o tempo total de conjuração. Esta redução acumula apenas com Afinidade, não acumulando com nenhuma outra fonte de aceleração."
+  },
+  {
+    "nome": "Deixe os Sussurros Guiarem",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você sintoniza sua mente com as vozes sutis do Outro Lado, permitindo que ecos e impressões paranormais guiem suas ações, escolhas e sentidos. Sintonia Paranormal: Ao gastar 2 SAN, você ativa a comunicação com os sussurros até o final da cena. Orientação Ampliada: Enquanto a habilidade estiver ativa, você recebe +2 em testes de perícia para: Procurar, Percepção e Intuição (análise de pistas, leitura de intenções, notar ameaças ou detalhes ocultos); Furtividade e Enganação (mover-se em silêncio guiado pelas sombras, criar distrações ou desviar a atenção); Desafios de Acesso e Perseguições (quaisquer testes de perícia exigidos para arrombar, hackear, encontrar atalhos, despistar ou alcançar um alvo). Preço da Distração: A sobreposição de vozes na sua mente exige foco absoluto. Enquanto o efeito estiver ativo, sempre que você falhar em qualquer teste de perícia ou desafio de acesso, sofre 1 de dano mental (SAN) imediato devido ao ruído e repuxo espiritual das entidades."
+  },
+  {
+    "nome": "Estalos Macabros",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Intelecto 2, Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Curto",
+    "efeito": "Você utiliza pequenos componentes ou ecos místicos para provocar estalidos, distorções de som ou sombras efêmeras no ambiente, desviando a atenção de ameaças e alvos incautos. Distração Mística: Ao realizar um teste de perícia para distrair um guarda (Furtividade), fintar ou desorientar um oponente em combate (Enganação/Atrapalhar) ou criar uma rota falsa em perseguições e exploração, você pode gastar 1 SAN para utilizar a perícia Ocultismo no lugar da perícia original. Sobressalto Mântico: Se o alvo da distração for uma pessoa, animal ou criatura sem sensibilidade paranormal aguçada, você recebe +2 no teste de Ocultismo devido à estranheza e ao choque repentino do fenômeno."
+  },
+  {
+    "nome": "Minha Dor me Impulsiona",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você canaliza a dor e a descarga de adrenalina resultantes dos seus ferimentos para ultrapassar os limites do seu corpo em momentos críticos. Impulso de Sobrevivência: Ao realizar um teste de Atletismo, Acrobacia ou Furtividade (seja em perseguições, transposição de obstáculos, fuga ou movimentação tática), você pode gastar 1 SAN para receber +2 no teste. Condição do Sacrifício: Esta habilidade só pode ser ativada se você não estiver com os Pontos de Vida cheios (tendo sofrido pelo menos 5 de dano em PV). Aplicações Expandidas: Este bônus também se aplica a testes físicos exigidos durante Desafios de Acesso (escapar de armadilhas, forçar passagens trancadas) e para Manobras de Combate atreladas a Atletismo ou Acrobacia (como agarrar, derrubar ou esquivar de perigos do ambiente)."
+  },
+  {
+    "nome": "Olhar Sinistro",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "Passivo (+1 SAN opcional)",
+    "alcance": "Curto",
+    "efeito": "O seu domínio sobre o Paranormal não vem de estudos acadêmicos rigorosos, mas da projeção bruta e assustadora da sua própria força de vontade. Vontade Impositiva: Você pode utilizar o atributo Presença no lugar de Intelecto para realizar testes de Ocultismo. Coação Paranormal: Você pode utilizar Ocultismo no lugar de Intimidação ou Diplomacia ao tentar coagir, interrogar testemunhas, extrair informações de suspeitos ou dobrar a vontade de alvos em cenas sociais e de investigação e você pode gastar 1 SAN para receber +2 nesse teste de Ocultismo."
+  },
+  {
+    "nome": "Revelação do Mal",
+    "classificacao": "Tier I",
+    "prereq": "Religião",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Discernimento Sagrado: Você pode utilizar a perícia Religião no lugar de Investigação ou Percepção para detectar, rastrear ou analisar pistas, presenças e profanações de origem paranormal."
+  },
+  {
+    "nome": "Poder Não Desejado",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Presença 2, Ocultismo",
+    "custo": "1 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Uma presença paranormal habita seu interior, reestruturando sua carne para garantir a sobrevivência do hospedeiro, mas tornando sua mente cada vez mais exposta e vulnerável. Regeneração Profana: Uma vez por rodada, ao sofrer dano físico, você pode gastar 1 SAN como Reação para que a entidade recompile seu corpo, recuperando 5 PV imediatamente. Erosão Mental: Cada utilização desta habilidade na mesma cena fragiliza sua sanidade. Para cada uso realizado, qualquer perda de Sanidade ou dano mental que você sofrer até o fim da cena aumenta em +1 (acumulativo)."
+  },
+  {
+    "nome": "Explorador da Névoa",
+    "classificacao": "Tier I",
+    "prereq": "Ocultismo",
+    "custo": "1 SAN (Ação de Movimento)",
+    "alcance": "Pessoal",
+    "efeito": "Seu hábito de transitar por locais assolados pela corrupção do Outro Lado permite que você sinta e aproveite as rachaduras na realidade. Sintonia com a Membrana: Com uma Ação de Movimento e gastando 1 SAN, você identifica imediatamente o estado da Membrana no ambiente (Estável, Danificada, Arruinada, etc.). Aproveitar a Fenda: Se a Membrana do local estiver Danificada ou Arruinada, a permeabilidade mística facilita suas invocações: o custo de todos os rituais que você conjurar até o fim da cena é reduzido em -1 SAN (mínimo de 1 SAN)."
+  },
+  {
+    "nome": "Ritual Intenso",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua imposição espiritual e força de vontade intensificam diretamente os efeitos das suas manifestações arcanas. Potencialização Arcana: Sempre que você conjurar um ritual que cause dano ou recupere Pontos de Vida (PV), você soma o seu valor de Presença ao total de dano causado ou de vida recuperada."
+  },
+  {
+    "nome": "Identificação Macabra",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Ocultismo ou Investigação",
+    "custo": "Passivo (+1 SAN opcional)",
+    "alcance": "Pessoal",
+    "efeito": "Sua familiaridade com a assinatura do Outro Lado torna a análise de artefatos e manifestações um processo rápido e intuitivo. Análise Lesta: Você pode analisar e identificar rituais em conjuração, símbolos ou itens amaldiçoados gastando uma Ação Padrão (em vez de uma ação completa ou tempo prolongado), sem sofrer penalidades de tempo. Intuição Arcana: Ao realizar um teste de Ocultismo ou Investigação para examinar e identificar as propriedades de um item amaldiçoado ou ritual, você pode gastar 1 SAN para receber +2 no teste."
+  },
+  {
+    "nome": "Ser Escarificado",
+    "classificacao": "Tier I",
+    "prereq": "Treinado na perícia Ocultismo",
+    "custo": "Nenhum (Exige uma ação completa e a execução diária de escarificações ritualísticas na pele)",
+    "alcance": "Pessoal",
+    "efeito": "Talvez seja a solidão, quem sabe a curiosidade ou o insuportável medo do silêncio. Comunicar-se com a Realidade parece muito mais complexo do que conversar com o incompreensível, levando você a se envolver com o Outro Lado em busca de uma conexão constante entre o seu corpo e uma entidade. Você recebe +2 em Ocultismo e sofre as consequências da corrupção, acumulando uma penalidade permanente de -2 dados de desvantagem em testes de Diplomacia, Enganação e Intuição. Uma vez por dia, você precisa eternizar símbolos em seu corpo através de escarificação ritualística (rasgar a pele com ossos humanos para Sangue, corroer com Lodo para Morte, inserir ouro com Sigilos para Conhecimento, ou queimar com eletricidade para Energia). Esse processo exige tempo, cuidado e deve ser repetido diariamente com uma ação completa. Se fizer isso, você recupera 1d4 pontos de Sanidade e, até o fim do dia, recebe os efeitos descritos a seguir, conforme o elemento escolhido. Caso contrário, você sofre no dia efeitos similares às condições de fome e sede (OPRPG, p. 292). Só é possível fazer uma escarificação por dia. Por fim, se adquirir afinidade com um elemento, deverá obrigatoriamente escolher o mesmo elemento selecionado aqui. SANGUE: Então está decidido. Sua pele será a fundação da porta que você está construindo para o Sangue. Você rasga sua carne com formas agressivas e fluídas, aceitando a dor como preço pelo poder. Você passa a usar Força, em vez de Presença, para determinar sua Sanidade máxima (SAN) e a DT dos seus rituais, além de receber +1 ponto permanente em Força. MORTE: Então está decidido. Sua pele será a fundação da porta que você está construindo para a Morte. Você eterniza os símbolos com formas e movimentos inconscientemente invertidos, usando uma tinta que mistura cinzas, vinho apodrecido e o lodo. Você passa a usar Vigor, em vez de Presença, para determinar sua Sanidade máxima (SAN) e a DT dos seus rituais, além de receber +1 ponto permanente em Vigor. CONHECIMENTO: Então está decidido. Sua pele será a fundação da porta que você está construindo para o Conhecimento. Cada Sigilo de Eloquência é posicionado com precisão milimétrica e formas matematicamente perfeitas. Você passa a usar Intelecto, em vez de Presença, para determinar sua Sanidade máxima (SAN) e a DT dos seus rituais, além de receber +1 ponto permanente em Intelecto. ENERGIA: Então está decidido. Sua pele será a fundação da porta que você está construindo para a Energia. Você marca sua pele de maneira desorganizada com mudanças bruscas e repentinas, usando queimaduras químicas, de ferro quente ou frio extremo. Você passa a usar Agilidade, em vez de Presença, para determinar sua Sanidade máxima (SAN) e a DT dos seus rituais, além de receber +1 ponto permanente em Agilidade."
+  },
+  {
+    "nome": "Acrobático",
+    "classificacao": "Tier I",
+    "prereq": "Treinado em Acrobacia",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu equilíbrio excepcional e flexibilidade corporal permitem que você se mova com fluidez e supere obstáculos físicos com facilidade. Agilidade Corporal: Você recebe +2 na perícia. Movimentação Fluida: Você ignora as penalidades de deslocamento impostas por terreno difícil e pode realizar investidas ou ações de movimento através dele sem sofrer redução de velocidade."
+  },
+  {
+    "nome": "Ás do Volante",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Pilotagem",
+    "custo": "Passivo / 1 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Sua paixão por velocidade e ousadia ao volante permitem que você realize manobras extremas e proteja seu veículo em situações de perigo. O Domínio do Volante: Você recebe +2 em testes de Pilotagem. Manobra Evasiva: Uma vez por rodada, quando o veículo que você está pilotando for sofrer dano de um ataque ou efeito, você pode gastar 1 SAN como Reação para fazer um teste de Pilotagem (DT igual ao resultado do teste de ataque ou à DT do efeito). Se for bem-sucedido, o veículo ignora completamente aquele dano."
+  },
+  {
+    "nome": "Atlético",
+    "classificacao": "Tier I",
+    "prereq": "Força 2, Treinado em Atletismo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu preparo físico e treinamento árduo garantem um desempenho corporal superior em termos de força e mobilidade. Condicionamento Físico: Você recebe +2 em testes de Atletismo. Mobilidade Aprimorada: Seu deslocamento base aumenta em +3m."
+  },
+  {
+    "nome": "Atraente",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Diplomacia",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua beleza física, postura e carisma natural chamam a atenção por onde você passa, facilitando suas interações sociais. Magnetismo Pessoal: Você recebe +2 em testes de Artes, Diplomacia, Enganação e Intimidação realizados contra pessoas que possam se sentir fisicamente atraídas por você."
+  },
+  {
+    "nome": "Dedos Ágeis",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Crime",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua motricidade fina e controle manual impecável permitem manipular fechos, bolsos e mecanismos em uma fração do tempo normal. Destreza Manual: Você recebe +2 em testes de Crime. Mãos Rápidas: Você reduz a categoria de tempo necessária para executar manobras de Crime: Arrombar: Pode ser realizado utilizando uma Ação Padrão. Furtar: Pode ser realizado como uma Ação Livre (uma vez por rodada). Sabotar: Pode ser realizado utilizando uma Ação Padrão. Especialista em Acessos: Em Desafios de Acesso ou testes estendidos baseados em Crime (como burlar painéis, adivinhar combinações mecânicas ou arrombar cofres complexos), você recebe +1 ação/tentativa extra por rodada sem consumir o tempo do grupo, ou reduz em 1 a quantidade total de sucessos exigidos para superar o obstáculo (mínimo de 1)."
+  },
+  {
+    "nome": "Detector de Mentiras",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Intuição",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua capacidade de ler microexpressões, tom de voz e linguagem corporal permite identificar enganos e contradições com facilidade. Olho Clínico: Você recebe +2 em testes de Intuição. Leitura da Verdade: Outros seres sofrem uma penalidade de -5 em testes de Enganação quando tentam mentir diretamente para você. Além disso, você identifica automaticamente quando um alvo demonstra hesitação atípica ao responder a uma pergunta direta."
+  },
+  {
+    "nome": "Especialista em Emergências",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Medicina",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu treinamento como socorrista de emergência permite estabilizar e tratar feridos com agilidade impecável sob a pressão do campo de batalha. Socorrista de Campo: Você recebe +2 em testes de Medicina. Primeiros Socorros Ágeis: Você pode aplicar cicatrizantes, medicamentos ou kits médicos utilizando uma Ação de Movimento (em vez de uma Ação Padrão). Saque Médico: Uma vez por rodada, você pode sacar um item médico ou insumo de cura como uma Ação Livre."
+  },
+  {
+    "nome": "Estigmado",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2, Treinado em Vontade",
+    "custo": "Passivo (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "A dor física serve como uma âncora para a sua mente, usando a descarga de adrenalina do corpo para impedir que sua Sanidade se esfalace diante do terror. Ancoragem Física: Você recebe +2 em testes de Vontade. Transmutação da Dor: Sempre que for sofrer dano mental ou perda de Sanidade proveniente de efeitos de Medo, você pode optar por converter essa perda em perda de Pontos de Vida (PV) na proporção de 1 para 1 (por exemplo, convertendo 5 pontos de dano mental em 5 pontos de dano físico)."
+  },
+  {
+    "nome": "Foco em Perícia",
+    "classificacao": "Tier I",
+    "prereq": "Treinado na perícia escolhida",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua dedicação obsessiva e estudo aprofundado nos pormenores de uma disciplina tornam você uma referência na área. Especialização Prática: Escolha uma perícia na qual você seja treinado (exceto Luta e Pontaria). Você recebe +2 em testes com a perícia escolhida. Versatilidade: Você pode escolher esta habilidade múltiplas vezes. Cada vez que a escolher, deve selecionar uma perícia diferente na qual seja treinado."
+  },
+  {
+    "nome": "Inventário Organizado",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Investigação",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Você sabe como otimizar o espaço do seu equipamento, distribuindo o peso de forma racional e eliminando volumes desnecessários. Organização Eficiente: Você recebe +2 em testes de Investigação (para examinar, procurar ou organizar equipamentos). Capacidade Expandida: Você soma o seu valor de Intelecto ao limite total de espaços (slots) que pode carregar."
+  },
+  {
+    "nome": "Informado",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Atualidades",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Você acompanha constantemente fóruns, jornais e redes de informação sobre o mundo ao seu redor, acumulando um vasto repertório de fatos, antecedentes e rumores. Repertório de Notícias: Você recebe +2 em testes de Atualidades. Conhecimento Geral: Você pode realizar testes de Atualidades no lugar de outras perícias para obter informações, dados históricos ou boatos sobre pessoas, locais e organizações (como substituto pontual para Ciências, Investigação ou Crime, mediante aprovação do mestre conforme o contexto do rumor)."
+  },
+  {
+    "nome": "Interrogador",
+    "classificacao": "Tier I",
+    "prereq": "Força 2, Treinado em Intimidação",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Você sabe usar a imposição física e a ameaça velada para arrancar informações e forçar a cooperação de alvos sob pressão. Presença Ameaçadora: Você recebe +2 em testes de Intimidação. Coação Rápida: Você pode realizar testes de Intimidação para Coagir utilizando uma Ação Padrão (em vez de despender longos minutos de conversa), limitado a uma vez por cena contra o mesmo alvo."
+  },
+  {
+    "nome": "Mentiroso Nato",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Enganação",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua capacidade de manter a calma e sustentá-la sem piscar torna até as histórias mais absurdas surpreendentemente convincentes. Lábia Inabalável: Você recebe +2 em testes de Enganação. Cara de Pau: Você ignora as penalidades numéricas ou desvantagens impostas ao realizar testes de Enganação para contar mentiras altamente implausíveis, absurdas ou difíceis de acreditar."
+  },
+  {
+    "nome": "Observador",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Procurar",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua atenção aos detalhes e mente analítica permitem notar pistas visuais no ambiente e processá-las com extrema rapidez. Olhar Atento: Você recebe +2 em testes de Procurar. Dedução Apurada: Você soma o seu valor de Intelecto em testes de Intuição para interpretar pistas, identificar detalhes ocultos e ler o comportamento de alvos."
+  },
+  {
+    "nome": "Pai de Pet",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Adestramento",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu vínculo afetivo e dedicação ao cuidado de animais criaram uma forte conexão com um companheiro de estimação leal que o acompanha em suas missões. Empatia Animal: Você recebe +2 em testes de Adestramento. Companheiro Animal: Você possui um animal de estimação que atua como um Aliado. Ele concede +2 em duas perícias à sua escolha (exceto Luta e Pontaria, e desde que adequadas ao tipo de animal e aprovadas pelo Mestre)."
+  },
+  {
+    "nome": "Palavras de Devoção",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Religião",
+    "custo": "Passivo / 2 SAN (Ação Completa)",
+    "alcance": "Curto",
+    "efeito": "A força de suas convicções e o domínio dos ritos sagrados permitem canalizar palavras de conforto que blindam a mente dos seus aliados contra o terror e o desespero. Doutrina e Fé: Você recebe +2 em testes de Religião. Oração Protetora: Uma vez por cena, você pode gastar 2 SAN e uma Ação Completa para conduzir uma oração para um número de aliados até o dobro da sua Presença. Até o fim da cena, todos os participantes afetados recebem Resistência a Dano Mental 5."
+  },
+  {
+    "nome": "Pensamento Tático",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Luta ou Pontaria",
+    "custo": "Passivo",
+    "alcance": "Pessoal / Médio",
+    "efeito": "Sua mente analítica permite antecipar o posicionamento do inimigo e explorar a geometria do campo de batalha a seu favor. Visão Combativa: Ao escolher esta habilidade, selecione Luta ou Pontaria. Você recebe +2 em testes com a perícia escolhida. Análise de Terreno: Quando realizar uma análise de ambiente ou posicionamento antes de um confronto e for bem-sucedido em um teste da perícia escolhida, você e todos os seus aliados em alcance médio recebem 1 Ação de Movimento adicional na primeira rodada do combate naquele local (desde que o confronto ocorra até o fim do mesmo dia)."
+  },
+  {
+    "nome": "Personalidade Esotérica",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Ocultismo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua mente é naturally fascinada e sintonizada com os mistérios arcanos, símbolos antigos e forças ocultas. Mente Mística: Você recebe +2 em testes de Ocultismo. Reserva Esotérica: Sua familiaridade com o sobrenatural expande seus limites mentais, aumentando em +2 a sua Sanidade máxima e permitindo identificar a presença de objetos amaldiçoados ou vestígios de rituais com um olhar rápido."
+  },
+  {
+    "nome": "Persuasivo",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Diplomacia",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua lábia refinada e postura diplomática permitem convencer alvos e contornar resistências até mesmo diante de pedidos arriscados ou desfavoráveis. Lábia Diplomática: Você recebe +2 em testes de Diplomacia. Argumentação Convincente: Ao realizar testes de Diplomacia para persuadir alguém, qualquer penalidade aplicada por fazer solicitações custosas, arriscadas ou desfavoráveis para o alvo é reduzida em 5."
+  },
+  {
+    "nome": "Pesquisador Científico",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Ciências",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu rigor metodológico e amplo conhecimento acadêmico permitem analisar tanto o mundo natural quanto o inexplicável sob uma ótica estritamente racional e empírica. Rigor Acadêmico: Você recebe +2 em testes de Ciências. Análise Empírica: Você pode realizar testes de Ciências no lugar de Ocultismo para identificar a natureza, fraquezas ou comportamentos de criaturas sobrenaturais, e no lugar de Sobrevivência para identificar espécimes da fauna silvestre e animais."
+  },
+  {
+    "nome": "Proativo",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Iniciativa",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua prontidão extrema e capacidade de resposta instantânea permitem que você tome a frente da situação no primeiro sinal de ameaça. Prontidão de Ação: Você recebe +2 em testes de Iniciativa. Arrancada Proativa: Ao realizar um teste de Iniciativa, se pelo menos um dos dados do teste explodir (atingir o valor máximo natural impresso no dado), você recebe 1 Ação Padrão adicional no seu primeiro turno daquele confronto."
+  },
+  {
+    "nome": "Racionalidade Inflexível",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 3, Treinado em Vontade",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Suas convicções e visão de mundo são fundamentadas em rigor lógico e análise empírica, permitindo que sua mente processe o trauma e o terror sob uma ótica estritamente racional. Convicção Lógica: Você recebe +2 em testes de Vontade. Lógica Inabalável: Você pode utilizar o seu atributo Intelecto no lugar de Presença para realizar testes da perícia Vontade."
+  },
+  {
+    "nome": "Rato de Computador",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Tecnologia",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua familiaridade obsessiva com sistemas virtuais, hardwares e redes permite operar terminais, invadir bancos de dados e extrair informações em tempo recorde. Fluência Digital: Você recebe +2 em testes de Tecnologia. Invasão Acelerada: Você pode hackear painéis, operar sistemas eletrônicos ou extrair arquivos virtuais utilizando 1 Ação Completa durante cenas de combate ou ação direta (em vez de despender múltiplos turnos). Varredura Instantânea: Uma vez por cena de investigação, se tiver acesso a um computador, servidor ou rede local, você pode realizar um teste de Tecnologia para procurar pistas digitais sem consumir o tempo ou a rodada da cena."
+  },
+  {
+    "nome": "Resposta Rápida",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Reflexos",
+    "custo": "Passivo / 2 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Seus reflexos motores e instinto de sobrevivência reagem à ameaça antes mesmo que sua mente consciente consiga processar a presença do perigo. Esquiva Instintiva: Você recebe +2 em testes de Reflexos. Reação Involuntária: Ao falhar em um teste de Percepção ou Intuição para notar uma emboscada (evitando a condição Desprevenido ou Surpreendido no início da cena), você pode gastar 2 SAN como Reação para refazer o teste de resistência ou detecção utilizando a perícia Reflexos no lugar da perícia original."
+  },
+  {
+    "nome": "Talentoso",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Artes",
+    "custo": "Passivo",
+    "alcance": "Pessoal / Curto (9m)",
+    "efeito": "Sua inclinação natural e sensibilidade para todas as formas de expressão artística fascinam e impactam o público e seus aliados. Inspiração Artística: Você recebe +2 em testes de Artes. Performance Impactante: Ao realizar um teste de Artes para impressionar, cativar ou inspirar alvos em cenas sociais ou de Interlúdio, você concede um bônus base de +2 em testes de perícias Sociais (Diplomacia, Enganação, Intimidação) ou de Vontade aos indivíduos afetados. Para cada 5 pontos que o resultado do seu teste superar a DT da ação, este bônus aumenta em +1 (limitado a um bônus máximo total equivalente ao seu valor do atributo Presença)."
+  },
+  {
+    "nome": "Teimosia Obstinada",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Vontade",
+    "custo": "Passivo / 2 SAN (Declaração)",
+    "alcance": "Pessoal",
+    "efeito": "Sua inflexibilidade comportamental e apego irrestrito às suas próprias convicções tornam sua mente uma fortaleza extremamente difícil de ser manipulada ou dobrada por forças externas. Espírito Indomável: Você recebe +2 em testes de Vontade. Resistência Inflexível: Ao realizar um teste de Vontade para resistir a qualquer efeito, ritual ou habilidade que inflija uma condição mental (como Apavorado, Confuso, Fascinado, Paralisado, Perturbado) ou tente alterar sua atitude e controle consciente (como rituais de coerção, dominação ou fascínio), você pode gastar 2 SAN para receber Vantagem (+1d12) naquele teste de resistência."
+  },
+  {
+    "nome": "Tenacidade",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2, Treinado em Fortitude",
+    "custo": "Passivo / 2 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Seu corpo desenvolveu uma resiliência biológica fora do comum, capaz de suportar impactos destrutivos e reter a consciência no limite da vida. Físico Calejado: Você recebe +2 em testes de Fortitude. Resistência Inextremis: Quando sofrer um golpe ou efeito que reduziria seus Pontos de Vida a 0 PV (entrando na condição Morrendo), você pode gastar 2 SAN como Reação para realizar um teste de Fortitude (DT igual ao dano sofrido no ataque ou DT 10+5 para cada uso anterior na mesma cena). Se for bem-sucedido, você ignora o excesso de dano e permanece firme com 1 PV, evitando cair inconsciente ou entrar no estado Morrendo."
+  },
+  {
+    "nome": "Sentidos Aguçados",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Percepção",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Suas capacidades sensoriais (visão periférica, audição, olfato e tato) são extraordinariamente desenvolvidas, permitindo captar estímulos imperceptíveis para pessoas comuns. Percepção Apurada: Você recebe +2 em testes de Percepção. Alerta Sensorial: Você não fica a condição Desprevenido contra ataques de inimigos que não possa ver (como alvos invisíveis, ocultos em escuridão total ou camuflados). Foco Apurado: Sempre que errar um ataque devido à chance de falha decorrente de Camuflagem ou Ocultação do alvo (fumaça, penumbra, invisibilidade parcial), você pode rolar novamente o dado de verificação de camuflagem uma vez por ataque."
+  },
+  {
+    "nome": "Sobrevivencialista",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Sobrevivência",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua vivência e treinamento em ambientes selvagens ou hostis ensinaram você a adaptar seu corpo e mente aos rigores da natureza extrema. Instinto Selvagem: Você recebe +2 em testes de Sobrevivência. Resistência Climática: Você recebe +2 em testes de resistência (Fortitude ou Vontade) para resistir a perigos ambientais e efeitos de clima extremo (como calor sufocante, frio congelante, fumaça, altitude e privação de água ou alimento). Passo Firme: Terreno difícil de origem natural (lama, neve, vegetação densa, pântano ou cascalho) não reduz seu deslocamento e não impede que você realize investidas ou ações de movimento acelerado."
+  },
+  {
+    "nome": "Sorrateiro",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Furtividade",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua facilidade em mover-se sem ruído e utilizar sombras e pontos cegos permite que você permaneça invisível mesmo em movimento contínuo ou cenários desfavoráveis. Passo Silencioso: Você recebe +2 em testes de Furtividade. Mobilidade Discreta: Você não sofre as penalidades padrão em testes de Furtividade ao mover-se com seu deslocamento normal. Além disso, você pode perseguir ou vigiar alvos em ambientes com pouca cobertura ou espaço aberto sem sofrer penalidades no teste por falta de esconderijos diretos."
+  },
+  {
+    "nome": "Vitalidade Reforçada",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2, Treinado em Fortitude",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu vigor biológico e constituição física permitem que você resista a traumas e ferimentos graves que derrubariam um indivíduo comum. Vigor Aprimorado: Você recebe +2 em testes de Fortitude. Reserva Vital: Seu limite máximo de Pontos de Vida (PV) aumenta em +1 PV para cada Nível de agente (este ganho é retroativo e se aplica automaticamente a cada novo nível alcançado)."
+  },
+  {
+    "nome": "Vontade Inabalável",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Vontade",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua mente e disciplina psíquica foram temperadas para suportar a dor existencial, o terror e os traumas mais profundos sem se quebrar. Mente Temperada: Você recebe +2 em testes de Vontade. Reserva Psíquica: Seu limite máximo de Sanidade (SAN) aumenta em +1 SAN para cada Nível de agente (este ganho é retroativo e se aplica automaticamente a cada novo nível alcançado)."
+  },
+  {
+    "nome": "Cicatrizes Expostas",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2 ou Presença 2, possuir histórico de trauma ou cicatrizes graves (físicas ou psicológicas)",
+    "custo": "Passivo / 1 Ação de Movimento (Ativação voluntária)",
+    "alcance": "Pessoal",
+    "efeito": "Suas marcas do passado, sejam marcas físicas no corpo ou traumas psicológicos profundos, alimentam uma raiva incontida quando trazidas à tona. Ira Despertada: Você pode gastar 1 Ação de Movimento para expor voluntariamente suas cicatrizes (ou se outro ser expor o seu trauma/cicatriz verbal ou fisicamente durante a cena). Ao fazê-lo, você entra em um estado de ira até o fim da cena. Fúria Agressiva: Sempre que você causar dano com um ataque ou habilidade ofensiva, você causa +1d8 de dano adicional do mesmo tipo do ataque original. Perda de Autocontrole: Enquanto a ira estiver ativa, a sua mente fica focada exclusivamente na agressão, fazendo com que você sofra Desvantagem (-1d) em testes de Vontade e em qualquer teste de perícia que exija calma, paciência ou concentração (como Furtividade, Tecnologia, Medicina, Crime ou Investigação)."
+  },
+  {
+    "nome": "Curiosidade Oculta",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Ocultismo",
+    "custo": "Passivo / 2 SAN (Declaração)",
+    "alcance": "Pessoal",
+    "efeito": "Seu fascínio obsessivo pelos mistérios do Paranormal e pela lógica por trás do inexplicável abriu novos caminhos em sua mente, permitindo utilizar seu conhecimento teórico para racionalizar e absorver o impacto do desconhecido. Mente Aberta: Você recebe +2 em testes de Ocultismo. Racionalização do Horror: Ao realizar um teste da perícia Vontade para resistir a um efeito, ritual, presença perturbadora ou entidade paranormal, você pode gastar 2 SAN para realizar a rolagem utilizando a perícia Ocultismo no lugar de Vontade."
+  },
+  {
+    "nome": "Habilidade Aprimorada",
+    "classificacao": "Tier I",
+    "prereq": "Atributo-chave 2 do efeito/ritual escolhido, Treinado na perícia relacionada",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Você refinou a execução de uma técnica, ritual ou truque específico, tornando extremamente difícil para seus alvos resistirem aos seus efeitos. Especialização de Efeito: Escolha uma habilidade ou ritual que possua Dificuldade de Resistência (DT). A DT para que alvos resistam a essa habilidade ou ritual específico aumenta em +2. Acúmulo e Foco: Você pode escolher esta habilidade múltiplas vezes, aplicando-a a habilidades ou rituais diferentes. Se escolher esta habilidade duas vezes para a mesma habilidade ou ritual, o bônus na DT daquele efeito aumenta para +5 no total (limite máximo de duas escolhas para o mesmo efeito)."
+  },
+  {
+    "nome": "Instintos Urbanos",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Crime",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua vivência na selva de concreto ensinou você a ler o ambiente urbano, antecipar rotas de fuga e reagir com malícia antes que a armadilha se feche. Instinto da Quebrada: Você recebe +2 em testes de Crime. Mapeamento de Saída: Ao entrar em uma cena em ambiente fechado, recinto ou área urbana restrita, você pode realizar um teste de Crime (DT 10) para analisar a estrutura topográfica do local. Rota Identificada: Se passar e o local possuir pontos de saída, você identifica a rota de fuga ideal. Caso decida abandonar a cena/combate, você recebe +1 Ação de Movimento extra na primeira rodada da fuga e +2 na Defesa Passiva e Esquiva até concluir a retirada da zona de perigo. Local Encurralado: Se passar e o ambiente não possuir saídas viáveis (ou for uma sala trancada/sem escapatória), a consciência de estar encurralado ativa sua postura defensiva de acossamento, concedendo +2 na Defesa Passiva e Esquiva enquanto permanecer combatendo naquele recinto."
+  },
+  {
+    "nome": "Palpite Confiante",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2",
+    "custo": "2 SAN (Declaração)",
+    "alcance": "Pessoal",
+    "efeito": "Há momentos em que você sente uma certeza absoluta sobre um fato, dedução ou leitura social, conectando pistas de forma subconsciente sem conseguir explicar a origem exata da sua intuição. Dedução Intuitiva: Ao realizar um teste de perícia baseado em Intelecto (como Investigação, Ocultismo, Tecnologia, Medicina) ou Presença (como Intuição, Diplomacia, Enganação, Vontade), você pode gastar 2 SAN para somar o seu valor de Intelecto ao resultado do teste (até o máximo de +5)."
+  },
+  {
+    "nome": "Especialista em Correntes",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Luta",
+    "custo": "Passivo / 1 Ação Padrão (para prender/soltar um item)",
+    "alcance": "Pessoal ou Toque",
+    "efeito": "Você domina o uso tático e a amarração de correntes, cabos e tiras reforçadas para travar seus equipamentos ao corpo e estender o alcance de suas investidas. Fixação Inviolável: Você pode gastar 1 Ação Padrão para prender firmemente um item ou arma em uma corrente acoplada ao seu corpo (ou ao corpo de um aliado voluntário em alcance de toque). Um item acorrentado não pode ser desarmado ou tomado por manobras normais; a única forma de removê-lo à força é destruindo a corrente (sofrer dano equivalente à estrutura do objeto) ou cortando suas amarras. Alcance Extensivo: Ao realizar ataques corpo a corpo empunhando correntes, chicotes, manguais ou armas modificadas com correntes, seu alcance natural de ataque aumenta em +3m. Empunhadura Tática: Você recebe +2 em testes de Manobras de Combate (como Derrubar, Desarmar e Agarrar) realizadas com essas armas ou correntes. Penalidade de Estorvo: O peso e o balanço de itens acorrentados ao corpo causam desconforto físico. Para cada item preso dessa forma além do primeiro, você sofre uma penalidade acumulativa de -1 em testes de perícias afetadas por carga (Acrobacia, Atletismo, Furtividade e Crime)."
+  },
+  {
+    "nome": "Prática com Materiais Ritualísticos",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Ocultismo, capacidade de conjurar rituais",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu conhecimento prático e manuseio cirúrgico de focos, componentes arcanos e reagentes esotéricos permitem manipular materiais ritualísticos complexos sem hesitação ou falhas de canalização. Manipulação Fluida: Ao executar uma Conjuração de Ritual, você não sofre Desvantagem (-1d) ao empregar materiais ou reagentes específicos de uma Entidade durante a 1ª etapa (fase de preparação, desenho de sigilos e alinhamento dos componentes)."
+  },
+  {
+    "nome": "Estágio Terminal",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Atletismo ou Reflexos",
+    "custo": "2 SAN (No seu turno)",
+    "alcance": "Pessoal",
+    "efeito": "A proximidade do colapso físico acelera seus batimentos e dispara surtos de adrenalina em seus músculos, permitindo reposicionamentos ágeis quando sob risco de vida. Arrancada Desesperada: Sempre que você estiver na condição Machucado (com metade ou menos dos seus Pontos de Vida totais), você pode gastar 2 SAN no seu turno para receber 1 Ação de Movimento extra. Esta habilidade pode ser ativada no máximo uma vez por rodada."
+  },
+  {
+    "nome": "Tratamento de Emergência",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Medicina",
+    "custo": "2 SAN (Ação Padrão)",
+    "alcance": "Toque",
+    "efeito": "Você domina procedimentos invasivos e injeções de adrenalina de campo, capazes de manter um aliado combatendo à custa de uma sobrecarga física posterior. Estabilização Adrenalínica: Gastando 1 Ação Padrão e 2 SAN, você aplica um tratamento emergencial em um ser em alcance de toque, concedendo a ele 2d10+10 Pontos de Vida (PV) temporários. Reação Biológica: Quando todos os PVs temporários concedidos por esta habilidade forem consumidos por dano (ou ao fim da cena, quando expiram), estresse celular deixa o alvo na condição Fraco até o fim da cena. Trava de Tolerância: Um mesmo indivíduo só pode ser beneficiado por esta habilidade uma única vez por cena."
+  },
+  {
+    "nome": "Arte da Música Macabra",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Artes e Ocultismo, capacidade de conjurar rituais",
+    "custo": "2 SAN (Ação Padrão)",
+    "alcance": "Curto (9m)",
+    "efeito": "Você utiliza sua arte performática como veículo para distorcer a Realidade, canalizando ressonâncias esotéricas através do som. Ao gastar 1 Ação Padrão e 2 SAN, você toca ou canta uma melodia perturbadora, concedendo um dos seguintes benefícios à próxima ação de 1 ser em alcance curto que possa ouvi-lo: Ressonância de Impacto: O próximo dano causado pelo alvo recebe +2 de bônus. Nota Harmonizada: O próximo teste de ataque do alvo recebe +2 de bônus. Sintonia Arcana: A Dificuldade de Resistência (DT) do próximo ritual ou habilidade usada pelo alvo aumenta em +2. Eco Distorcido: O alcance do próximo ataque, ritual ou habilidade ativada pelo alvo aumenta em +3m."
+  },
+  {
+    "nome": "Sintonização Mental com Arma",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Presença 2, Treinado em Ocultismo, capacidade de conjurar rituais",
+    "custo": "3 SAN (Ação de Interlúdio)",
+    "alcance": "Pessoal",
+    "efeito": "Você canaliza o Paranormal para vincular sua consciência à essência de uma arma, permitindo guiá-la através da sua percepção psíquica em vez de relying exclusivamente na força física ou coordenação motora. Vínculo Paranormal: Durante uma cena de Interlúdio, você pode gastar 1 Ação de Interlúdio e 3 SAN para se sintonizar com uma arma específica que esteja empunhando. Substituição de Atributo: Até o início da próxima cena de Interlúdio (ou até você sintonizar uma nova arma), enquanto estiver empunhando a arma sintonizada, você pode utilizar um Atributo à sua escolha (como Intelecto ou Presença) para realizar os testes de ataque e rolagens de dano com ela, em vez do atributo padrão da arma (Força ou Agilidade). Exclusividade: A sintonização é estritamente pessoal e se desfaz temporariamente caso a arma saia das suas mãos ou seja empunhada por outro ser."
+  },
+  {
+    "nome": "Sintonização Mental com Proteção",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2 ou Presença 2, Treinado em Ocultismo, capacidade de conjurar rituais",
+    "custo": "3 SAN (Ação de Interlúdio)",
+    "alcance": "Pessoal",
+    "efeito": "Você canaliza o Paranormal para harmonizar o fluxo místico do Outro Lado com a estrutura de sua proteção, permitindo que sua percepção psíquica antecipe trajetórias e guie sua defesa sem restringir suas conjurações. Vínculo Protetor: Durante uma cena de Interlúdio, você pode gastar 1 Ação de Interlúdio e 3 SAN para se sintonizar com uma proteção que esteja vestindo. Substituição de Atributo na Defesa: Até o início da próxima cena de Interlúdio (ou até você sintonizar uma nova proteção), enquanto estiver vestindo a proteção sintonizada, você pode utilizar um Atributo à sua escolha (como Intelecto ou Presença) para o cálculo da sua Defesa Passiva, em vez da Agilidade. Fluidez Arcana: A proteção sintonizada deixa de travar seus movimentos ritualísticos: você não sofre penalidades ou agravantes para conjurar rituais por estar vestindo essa proteção (ignora a condição ruim ou terrível para conjurar). Exclusividade: A sintonização é estritamente pessoal e seus efeitos funcionam apenas enquanto a proteção estiver sendo vestida por você."
+  },
+  {
+    "nome": "Movimentação Tática",
+    "classificacao": "Tier I",
+    "prereq": "Força 2, Treinado em Atletismo e Tática",
+    "custo": "2 SAN (Ao se deslocar)",
+    "alcance": "Pessoal",
+    "efeito": "O combate dinâmico é instintivo para você, permitindo-lhe realizar disparadas breves e direcionadas para fechar a distância com o perigo ou buscar proteção sob fogo cruzado. Disparada Direcionada: Ao realizar uma Ação de Movimento para se deslocar diretamente em direção a uma cobertura ou em direção a um inimigo, você pode gastar 2 SAN para dobrar o seu deslocamento base durante aquele movimento (ex: de 9m para 18m)."
+  },
+  {
+    "nome": "Instintos Táticos",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2, Treinado em Percepção e Tática",
+    "custo": "Passivo / 2 SAN (Gatilho ao causar dano)",
+    "alcance": "Pessoal / Válido para o alvo atingido",
+    "efeito": "Seu treinamento militar e leitura de campo mantêm seus sentidos em alerta constante, permitindo antecipar emboscadas e rastrear alvos marcados em combate. Alerta Permanente: Você se torna imune à condição Desprevenido (impede que inimigos se aproveitem de sua guarda baixa em emboscadas ou rodadas de surpresa). Marcação de Combate: Sempre que causar dano a um alvo, você pode gastar 2 SAN para fixar sua atenção nele. Até o início do seu próximo turno (1 rodada), o alvo não pode utilizar a perícia Furtividade para se esconder de você, falhando automaticamente em qualquer tentativa de ocultação contra a sua Percepção."
+  },
+  {
+    "nome": "Ambidestria",
+    "classificacao": "Tier I",
+    "prereq": "Força 2 ou Agilidade 2, Treinado em Luta",
+    "custo": "2 SAN (Gatilho ao realizar a Ação Agredir)",
+    "alcance": "Pessoal / Alcance da Arma",
+    "efeito": "Seu treino na empunhadura simultânea de armas permite desferir golpes rápidos em sequência utilizando ambas as mãos. Golpe Secundário: Ao realizar a ação Agredir enquanto estiver empunhando duas armas (sendo pelo menos uma delas uma Arma Leve), você pode gastar 2 SAN para realizar um ataque adicional com a segunda arma como parte da mesma ação. Penalidade de Coordenação: Se optar por realizar esse ataque adicional, todas as suas rolagens de ataque até o início do seu próximo turno sofrem Desvantagem (-1d). Mestria com Armas de Uma Mão: Caso você também possua o poder Combater com Duas Armas, passa a poder empunhar duas armas de uma mão (eliminando a exigência de que uma delas seja leve) e deixa de sofrer a penalidade de Desvantagem (-1d) ao utilizar esta habilidade."
+  },
+  {
+    "nome": "Entrada Triunfal",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "2 SAN (Livre ao entrar em um ambiente / 1x por sessão)",
+    "alcance": "Pessoal ou Longo (18m)",
+    "efeito": "Você sabe como atrair os olhares e dominar a atenção de um local no momento exato em que coloca os pés nele. Anúncio Ostensivo: Ao entrar em um novo ambiente ou cena, você pode gastar 2 SAN para anunciar sua presença de forma marcante e audível para todos no local. Ao fazer isso, você recebe Vantagem (+2d) no primeiro teste que realizar naquele ambiente (com exceção de testes da perícia Furtividade). Inspiração Compartilhada: Se preferir, você pode gastar uma Reação no mesmo instante para transferir essa Vantagem (+2d) para o primeiro teste de um aliado em alcance longo presente no mesmo ambiente. Frequência: Esta habilidade pode ser ativada no máximo uma vez por sessão."
+  },
+  {
+    "nome": "Papinho Sedutor",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "2 SAN (Declaração)",
+    "alcance": "Curto (9m)",
+    "efeito": "Você domina o uso do charme, do tom de voz e da linguagem corporal para despertar atração e fascínio imediato em seus alvos. Lábia Magnética: Ao realizar um teste de perícia baseado em Presença (como Diplomacia ou Enganação) com o intuito de seduzir ou encantar um indivíduo, você pode gastar 2 SAN para receber +2 de bônus na rolagem. Fascínio Obcecado: Se for bem-sucedido, o alvo fica Apaixonado por você durante a cena (ou enquanto durar a interação social). No entanto, o apego emocional gerado é instável: a critério do Mestre, esse indivíduo pode se tornar um problema recorrente na vida do agente (desenvolvendo comportamentos obsessivos, ciúmes ou aparecendo em momentos inoportunos durante missões)."
+  },
+  {
+    "nome": "Gororoba",
+    "classificacao": "Tier I",
+    "prereq": "Constituição 2 ou Treinado em Sobrevivência",
+    "custo": "Passivo (Ação Livre de Interlúdio)",
+    "alcance": "Pessoal",
+    "efeito": "Seu paladar exótico e estômago de ferro permitem extrair sustento das combinações mais bizarras ou de restos improvisados no ambiente. Nutrição Improvisada: Durante uma cena de Interlúdio, você pode realizar a atividade de Alimentar-se uma vez como uma Ação Livre (sem consumir uma de suas ações padrão de Interlúdio) e sem a necessidade de possuir rações de viagem ou refeições em seu inventário, improvisando a refeição com os insumos que encontrar ao seu redor."
+  },
+  {
+    "nome": "Ruído Branco",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 3, Treinado em Investigação ou Percepção",
+    "custo": "Passivo / 2 SAN (Ação Livre, 1x por cena)",
+    "alcance": "Pessoal",
+    "efeito": "O ruído de ambientes caóticos funciona como um pano de fundo que estimula sua concentração, permitindo-lhe filtrar informações visuais e auditivas em locais movimentados. Foco no Caos: Enquanto estiver em um ambiente movimentado, barulhento ou com muitas conversas paralelas, você recebe Vantagem (+1d) em testes de Investigação e Percepção. Filtro Auditivo: Uma vez por cena, você pode gastar 2 SAN para isolar vozes específicas na multidão. A critério do Mestre, você consegue escutar claramente uma conversa distante que forneça uma pista ou informação útil para a missão."
+  },
+  {
+    "nome": "Uma Última Olhada",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Investigação",
+    "custo": "2 SAN (Gatilho na última rodada da cena, 1x por cena)",
+    "alcance": "Pessoal / Grupo",
+    "efeito": "É melhor prevenir do que remediar. Ao perceber que o tempo para examinar uma área está no fim, você coordena um esforço final de busca com sua equipe. Tempo Extra de Análise: Na última rodada de uma cena de Investigação com limite de tempo, você pode gastar 2 SAN para extrair mais alguns minutos de análise antes que a situação mude. Em termos de regras, o limite de rodadas disponíveis para a cena aumenta em +1 rodada. Esta habilidade só pode ser ativada uma única vez por cena."
+  },
+  {
+    "nome": "Apaixonado por Veículos",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu entusiasmo e domínio técnico sobre máquinas e automóveis transformam sua relação com veículos e pilotagem. Especialização em Pilotagem: Você recebe +2 de bônus nos seus testes de Pilotagem. Direção Defensiva: Qualquer teste realizado com o objetivo direto de garantir a integridade física ou a segurança do veículo sob seu comando (a critério do Mestre) recebe +2 de bônus. Regalia Adicional: Se estiver utilizando as regras de Veículos Operacionais, você pode adicionar 1 Regalia extra ao seu veículo principal. Esta regalia não conta para o limite máximo de regalias do veículo."
+  },
+  {
+    "nome": "Desafiar o Ego",
+    "classificacao": "Tier I",
+    "prereq": "Presença 2",
+    "custo": "2 SAN (Reação / 1x por rodada)",
+    "alcance": "Curto (9m)",
+    "efeito": "Você utiliza palavras afiadas seja por provação ou incentivo ostensivo para atiçar o orgulho de um companheiro no exato momento em que ele desfere um golpe. Esporão Psíquico: Uma vez por rodada, quando presenciar um aliado realizando um ataque contra um alvo que você possa ver, você pode gastar uma Reação e 2 SAN para gritar uma provocação ou incentivo a ele. Resultado do Ataque: Se o ataque acertar: O aliado adiciona um bônus de dano extra ao golpe igual ao seu valor de Presença. Se o ataque errar: O foco do aliado não foi afetado e você recupera os 2 SAN gastos na reação."
+  },
+  {
+    "nome": "Direção Defensiva",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2 ou Treinado em Pilotagem",
+    "custo": "Passivo",
+    "alcance": "Pessoal / Veículo sob seu comando",
+    "efeito": "Seu senso de preservação e domínio ao volante garantem manobras evasivas que protegem o veículo e seus ocupantes durante perseguições e tiroteios. Treinamento Veicular: Você se torna Treinado na perícia Pilotagem. Se já for Treinado nesta perícia, recebe +2 de bônus nos seus testes de Pilotagem. Escudo Evasivo: Enquanto você estiver dirigindo um veículo, você e todos os passageiros a bordo recebem +2 de bônus na Defesa e +2 em todos os testes de resistência contra ameaças externas. Proteção Veicular: Se estiver utilizando as regras de Veículos Operacionais, o próprio veículo sob sua direção também recebe +2 de bônus na Defesa."
+  },
+  {
+    "nome": "Adaptação Climática",
+    "classificacao": "Tier I",
+    "prereq": "Vigor 2",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Através de condicionamento físico rigoroso e exposição controlada a temperaturas extremas, seu organismo desenvolveu alta tolerância ao estresse térmico ambiental. Resistência Física: Você recebe +2 de bônus em testes da perícia Fortitude. Imunidade Ambiental: Você se torna completamente imune a danos, penalidades e desgastes decorrentes de exposições a clima muito quente, muito frio, calor extremo ou frio extremo."
+  },
+  {
+    "nome": "Especialista em Armas Improvisadas",
+    "classificacao": "Tier I",
+    "prereq": "Força 2 ou Agilidade 2, Treinado em Luta",
+    "custo": "Passivo",
+    "alcance": "Pessoal / Alcance do Objeto",
+    "efeito": "Você transformou o ambiente ao seu redor em um arsenal. Qualquer objeto ao seu alcance pode ser empunhado com eficácia mortal. Empunhadura Versátil: Você não sofre a penalidade padrão em testes de ataque ao utilizar armas improvisadas (como garrafas quebradas, cadeiras, tubulações ou ferramentas). Impacto Brutal: Suas rolagens de dano com armas improvisadas recebem +1 dado de dano adicional do mesmo tipo do objeto utilizado (por exemplo, um cano de ferro ou cadeira que causaria 1d6 de dano de impacto passa a causar 2d6)."
+  },
+  {
+    "nome": "Muito Sorrateiro",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Furtividade",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua capacidade de ocultação e movimentação silenciosa é tão refinada que você se mescla ao ambiente de forma quase imperceptível. Especialização em Furtividade: Você recebe +2 de bônus em testes da perícia Furtividade. Ocultação Inicial: Ao início de uma cena de Furtividade com mecânica de Visibilidade, você rola 1d4 e reduz o resultado obtido do seu valor de Visibilidade inicial (podendo atingir valores negativos de detecção, como começar em -2)."
+  },
+  {
+    "nome": "Combater com Duas Armas",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 3",
+    "custo": "Nenhum",
+    "alcance": "Conforme a arma",
+    "efeito": "Ao realizar a ação Agredir empunhando duas armas (sendo pelo menos uma delas Leve), você realiza um ataque adicional com a arma secundária. Ambos os testes de ataque sofrem 1 Desvantagem."
+  },
+  {
+    "nome": "Golpe Demolidor",
+    "classificacao": "Tier II",
+    "prereq": "Força 2",
+    "custo": "1 SAN",
+    "alcance": "Adjacente",
+    "efeito": "Ao declarar um ataque ou manobra de Quebrar utilizando uma arma pesada, você pode gastar 1 SAN para ignorar completamente a Resistência a Dano (RD) física do alvo (seja um objeto, estrutura ou criatura)."
+  },
+  {
+    "nome": "Técnica Secreta",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2 ou Força 2",
+    "custo": "1 SAN por efeito",
+    "alcance": "Conforme a arma",
+    "efeito": "Ao realizar um ataque utilizando sua Arma Favorita, você pode gastar 1 SAN por efeito ativado para aplicar as seguintes modificações: Amplo: O ataque atinge até 2 alvos adicionais dentro do alcance (utilize a mesma rolagem de ataque). Destruidor: Aumenta o multiplicador de crítico da arma em +1 para este ataque."
+  },
+  {
+    "nome": "Estrategista",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2 ou Intelecto 2",
+    "custo": "1 SAN por aliado",
+    "alcance": "Curto (9m)",
+    "efeito": "Como Ação Padrão, escolha um número de aliados no alcance até o limite do seu Intelecto. No próximo turno dos aliados afetados, cada um recebe 1 Ação de Movimento adicional."
+  },
+  {
+    "nome": "Brecha na Guarda",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2 ou Força 2",
+    "custo": "1 SAN",
+    "alcance": "Curto (9m)",
+    "efeito": "Uma vez por rodada, quando um aliado causar dano a um inimigo em alcance curto, você pode gastar 1 SAN para permitir que você ou outro aliado no alcance realize 1 ataque imediato contra esse mesmo oponente."
+  },
+  {
+    "nome": "Ataque Extra",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 3 ou Força 3",
+    "custo": "2 SAN",
+    "alcance": "Conforme a arma",
+    "efeito": "Uma vez por rodada, ao realizar a ação Agredir no seu turno, você pode gastar 2 SAN para realizar 1 ataque adicional imediato com a mesma arma."
+  },
+  {
+    "nome": "Duro de Matar",
+    "classificacao": "Tier II",
+    "prereq": "Vigor 3",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por cena, ao sofrer dano de um ataque ou efeito, você pode gastar 2 SAN como Reação para reduzir o dano recebido nessa instância pela metade."
+  },
+  {
+    "nome": "Inquebrável",
+    "classificacao": "Tier II",
+    "prereq": "Vigor 3",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Enquanto estiver Machucado (metade da vida ou menos), você recebe +2 na Defesa e Resistência a Dano 2 (RD 2) física. Ao chegar a 0 PV (Morrendo), você não fica Indefeso e pode continuar agindo normalmente no seu turno enquanto realiza os testes para se estabilizar."
+  },
+  {
+    "nome": "Chuva de Balas",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Conforme a arma",
+    "efeito": "Seus pacotes de munição duram o dobro de cenas/tiros. Ao realizar um disparo em Rajada com uma arma de fogo, o ataque causa +2 dados de dano do mesmo tipo da arma (não se aplica a projéteis pesados)."
+  },
+  {
+    "nome": "Ser Macabro",
+    "classificacao": "Tier II",
+    "prereq": "Habilidade Ser Amaldiçoado (mesmo elemento escolhido) e NEX 30% (ou patamar avançado de corrupção)",
+    "custo": "Nenhum (Exige a execução contínua da etapa ritualística diária do elemento)",
+    "alcance": "Pessoal",
+    "efeito": "Conforme a sua humanidade é gradativamente substituída pela Entidade, as mutações físicas e mentais se aprofundam de forma irreversível. A Resistência a Dano (RD) concedida pela execução da etapa ritualística do seu elemento aumenta de 5 para 10. No entanto, a alienação mental também se agrava, elevando a penalidade em perícias para -2 dados de desvantagem (você rola 2 dados adicionais ruins e descarta os melhores em testes dessas perícias). Ao executar a sua etapa ritualística diária, além dos bônus anteriores, você passa a receber os efeitos adicionais específicos do seu elemento escolhido: SANGUE: Você veste poucas roupas, expondo o máximo de sua pele sensível ao ambiente. Seu corpo é repleto de cicatrizes e feridas, muitas causadas por você mesmo para saborear a dor, e devorar qualquer coisa que não seja carne ou sangue deixa de ser capaz de conter a sua fome. Você passa a poder usar sua Força para calcular sua Sanidade máxima (SAN) em vez de Presença. Além disso, você pode gastar uma ação de movimento e 1 ou mais pontos de Sanidade (limitado pelo seu valor de Força) para recuperar 1d8 PV por ponto gasto. MORTE: Roupas modernas e complexas perdem o sentido; seus trajes tornam-se anacrônicos e simples, adornados com cristais, esqueletos de pequenas criaturas, pedras e raízes secas. Você recebe um avanço de 1 etapa no dado em Intimidação e passa a poder usar seu Vigor para calcular sua Sanidade máxima (SAN) em vez de Presença. Além disso, o seu metabolismo cadavérico altera as leis da morte: você só morre se iniciar quatro turnos morrendo na mesma cena (em vez de três), e você não precisa mais comer ou beber para sobreviver (embora ainda sofra da fome paranormal da maldição). CONHECIMENTO: Você está sempre vestindo joias de ouro puro ou trajes com linhas douradas, e seu corpo está quase inteiramente coberto por palavras que evocam pavor (como últimas frases de falecidos ou pedidos de socorro), pois você já compreendeu a sua superioridade. O seu Intelecto aumenta permanentemente em +1. Além disso, você pode usar Intelecto como atributo-chave para a perícia Enganação e para calcular sua Sanidade máxima (SAN) em vez de Presença. ENERGIA: Você veste roupas complexas e futuristas, repletas de luzes brilhantes e dispositivos conectados a baterias e à sua própria pele para descarregar choques estimulantes constantes. Você passa a poder usar sua Agilidade para calcular sua Sanidade máxima (SAN) em vez de Presença. Além disso, quando acerta um ataque corpo a corpo, você pode gastar 1 ou mais pontos de Sanidade (limitado pelo seu valor de Agilidade): para cada ponto gasto, o seu ataque descarrega eletricidade e causa +1 etapa adicional na escala de dados de dano de Energia."
+  },
+  {
+    "nome": "Doutor em Emergências",
+    "classificacao": "Tier II",
+    "prereq": "Treinado em Medicina",
+    "custo": "Nenhum",
+    "alcance": "Toque / Pessoal",
+    "efeito": "Sua vivência e precisão cirúrgica em situações críticas garantem que qualquer intervenção médica sob sua responsabilidade tenha eficiência máxima. Tratamento Especializado: Você recebe +2 em testes de Medicina realizados para prestar primeiros socorros, estabilizar alvos ou aplicar tratamentos. Eficiência Medicamentosa: Cicatrizantes, medicamentos ou insumos aplicados por você têm seu efeito potencializado, recuperando +4 PV adicionais (ou concedendo +4 PV temporários adicionais). Resistência Aprimorada: Ao ter sucesso em um teste de Medicina para tratar uma doença ou veneno, o bônus concedido ao paciente no próximo teste de Fortitude contra essa condição aumenta em +2."
+  },
+  {
+    "nome": "Equipe de Trauma",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 3 ou Presença 3, Paramédico",
+    "custo": "1 SAN",
+    "alcance": "Adjacente",
+    "efeito": "Com uma Ação Padrão, você utiliza equipamentos de resposta rápida, estimulantes e procedimentos de emergência para livrar um companheiro de um efeito debilitante. Ao gastar 1 SAN, você remove uma condição negativa que esteja afetando um aliado adjacente (como Abalado, Atordoado, Cego, Confuso, Debilitado, Esnorteado, Lento, Paralisado, Pasmo, Queimado, Sangrando ou Vulnerável). Restrições: Esta habilidade não afeta as condições Machucado, Inconsciente ou Morrendo, nem pode remover maldições ou condições permanentes de origem paranormal/narrativa."
+  },
+  {
+    "nome": "Discurso Motivador",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2",
+    "custo": "2 SAN (escalonável)",
+    "alcance": "Curto (9m)",
+    "efeito": "Com uma Ação Padrão, você profere palavras de incentivo, liderança e determinação para inflar o moral da equipe. Você e todos os seus aliados em alcance curto recebem +2 em todos os testes de perícia até o final da cena. Evolução por Nível: A partir do Nível 11, você pode gastar +1 SAN adicional (total 3 SAN) ao ativar esta habilidade para aumentar o bônus para +4 em testes de perícia."
+  },
+  {
+    "nome": "Eu Conheço um Cara",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal / Especial",
+    "efeito": "Uma vez por missão, você pode gastar 1 SAN para acionar sua extensa rede de contatos informais e solicitar um favor de grande impacto logístico ou narrativo. Exemplos de favores incluem: Reequipamento Tático: Trocar e reorganizar os itens e equipamentos de todo o grupo (como uma segunda fase de preparação de missão em pleno campo). Abrigo Seguro: Conseguir um local oculto e protegido para a equipe realizar um descanso e recuperar recursos. Extração de Emergência: Acionar um resgate urgente para extrair o grupo de uma cena de perigo extremo ou impasse. Acesso Restrito: Obter credenciais de segurança, passagens secretas ou um item específico de utilidade imediata. Nota do Mestre: O Mestre tem a palavra final sobre a viabilidade do favor no contexto atual da história e as condições para sua execução."
+  },
+  {
+    "nome": "Improvisar",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Com uma Ação Completa, você utiliza materiais ao seu redor (sucata, cabos, peças soltas ou objetos do cotidiano) para confeccionar rapidamente um equipamento utilitário necessário no momento. Criação de Emergência: Ao gastar 1 SAN, você fabrica uma versão funcional de qualquer item ou ferramenta de uso geral (respeitando as regras normais de espaço e uso do item original). Durabilidade do Improviso: O equipamento criado permanece totalmente operacional até o final da cena atual, momento em que se desfaz, quebra ou se torna inútil."
+  },
+  {
+    "nome": "Preparado para Tudo",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Com uma Ação de Movimento, você gasta 1 SAN para declarar que previu a situação e convenientemente guardou exatamente o item utilitário que precisa no fundo da sua mochila. Equipamentos Válidos: Você pode 'encontrar' qualquer ferramenta, consumível ou item de uso geral (exceto armas e itens de valor narrativo/paranormal único). Capacidade de Carga: O item encontrado passa a ocupar espaço normalmente no seu inventário, exigindo que você tenha espaço livre suficiente para carregá-lo."
+  },
+  {
+    "nome": "Acolher o Terror",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você aprendeu a canalizar o desespero e o pavor a seu favor em vez de ser paralisado por eles. Aceitação do Medo: Você pode utilizar a mecânica de Entregar-se ao Medo uma vez adicional por sessão de jogo. Impulso de Desespero: Ao se entregar ao medo, você aceita a falha ou consequência mental, mas recebe Vantagem em todos os seus testes até o início do seu próximo turno."
+  },
+  {
+    "nome": "Contatos Oportunos",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2",
+    "custo": "1 SAN",
+    "alcance": "Pessoal / Especial",
+    "efeito": "Durante uma Ação de Interlúdio, você pode gastar 1 SAN para acionar seus contatos e conexões locais na região onde a investigação ou operação ocorre. Recrutamento de Aliado: Você obtém o suporte de um Aliado de um tipo à sua escolha (como Médico, Atirador, Investigador, Acadêmico, etc.), que acompanha a equipe até o final da missão ou até ser dispensado. Restrições: Você só pode manter um aliado ativo por meio desta habilidade por vez. O Mestre tem a palavra final sobre a viabilidade e a coerência narrativa da presença desse aliado no local."
+  },
+  {
+    "nome": "Esconderijo Desesperado",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você aprendeu na prática que a sobrevivência contra ameaças avassaladoras muitas vezes depende de passar completamente despercebido. Deslocamento Furtivo: Você pode mover-se utilizando o seu deslocamento normal enquanto se esconde ou se desloca furtivamente, sem sofrer penalidades no seu teste de Furtividade. Mestre do Ocultamento: Em Cenas de Furtividade, sempre que for bem-sucedido em um teste para se esconder ou evitar a detecção, o seu nível de Visibilidade diminui em 2 pontos (em vez de apenas 1)."
+  },
+  {
+    "nome": "Flashback",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Um evento traumático ou uma memória reprimida vem à tona, revelando habilidades e conhecimentos do seu passado que você nem sabia que possuía. Conhecimento Desbloqueado: Você escolhe uma Origem diferente da sua Origem inicial e recebe o poder concedido por ela. Permanência: Esta escolha é permanente e representa um traço consolidado na história do seu personagem."
+  },
+  {
+    "nome": "A Força do Saber",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 3",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "O estudo rigoroso e o acúmulo de conhecimento expandiram a sua capacidade cognitiva e fortaleceram sua estrutura mental. Expansão Intelectual: Seu atributo Intelecto aumenta em +1. Fortalecimento Mental: Você soma o seu valor de Intelecto ao seu total máximo de Sanidade (SAN). Domínio Teórico: Escolha uma perícia qualquer. O atributo-base dessa perícia passa a ser Intelecto de forma permanente para você, sem a necessidade de gastar SAN para realizar a substituição."
+  },
+  {
+    "nome": "Determinação Inquestionável",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Mesmo sob o peso do terror e do desespero, sua força de vontade permite que você recobre o controle sobre o próprio corpo e mente. Superação Mental: Uma vez por cena, você pode gastar uma Ação Padrão e 2 SAN para remover uma condição de medo, mental ou de paralisia (como Amedrontado, Apavorado, Pasmo, Fascinado ou Paralisado), exceto enlouquecendo, que esteja afetando você. Restrição: Esta habilidade não cura condições decorrentes de fatores puramente biológicos ou físicos (como venenos, toxinas, doenças ou restrições mecânicas)."
+  },
+  {
+    "nome": "Laboratório de Campo",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 3",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "A sua engenharia avançada permite otimizar a estrutura de artefatos paranormais, extraindo o máximo de eficiência de componentes misteriosos e reduzindo drasticamente o tempo de manutenção. Mecânica Avançada: Você recebe +2 em testes de Mecânica (e testes de criação/manutenção de dispositivos). Produção Paranormal Otimizada: O tempo para criar ou consertar artefatos paranormais é reduzido: fabricar um item exige apenas 2 Ações de Interlúdio (em vez das 3 padrão), e consertar um item paranormal danificado consome metade de uma Ação de Interlúdio (ou pode ser feito como ação livre durante a fase de descanso). Sintonia Aprimorada: Dispositivos e itens paranormais montados ou recalibrados por você recebem um acabamento superior. Qualquer aliado que utilize um item paranormal preparado por você reduz em 1 SAN o custo de ativação do efeito do item (mínimo 1 SAN) ou recebe +2 no teste associado ao uso do artefato."
+  },
+  {
+    "nome": "Achado Conveniente",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você é capaz de improvisar um protótipo funcional ou aparato técnico de emergência usando peças sobressalentes, ferramentas e gambiarras de última hora. Protótipo de Emergência: Com uma Ação Completa e 2 SAN, você monta um aparato utilitário ou ferramenta técnica de pequeno a médio porte (ocupando até 2 Espaços/Slots no inventário) feito sob medida para resolver um problema imediato da cena (ex: um decodificador de sinal, uma lanterna de luz UV caseira, um reagente químico específico ou um bypass eletrônico). Aplicação Técnica: O protótipo viabiliza testes de perícia que exigem a ferramenta específica e concede +2 no teste diretamente relacionado ao uso do dispositivo na cena. Sobrecarga: Por ser uma engenhoca instável ou um protótipo não finalizado, o item se deteriora, quebra ou queima seus componentes ao fim da cena, tornando-se totalmente inutilizável."
+  },
+  {
+    "nome": "Profissão Perigo",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você possui a capacidade de improvisar e adaptar recursos em tempo real, canibalizando peças de equipamentos para transformar ferramentas obsoletas em novos utilitários ou matérias-primas vitais. Reciclagem Tática: Com uma Ação Completa e o gasto de 2 SAN, você pode desmontar e sacrificar um item mundano do seu inventário para escolher uma das opções: Conversão Impartida: Montar um novo item mundano e operacional à sua escolha que não ocupe mais Espaços (Slots) do que o item sacrificado (permanece funcional até o fim da missão). Obtenção de Insumos: Reduzir o item a insumos e peças de reposição, gerando material útil para alimentar testes e ações de Fabricação em Campo (como acelerar a criação de consumíveis, consertos ou protótipos). Restrições: Os itens convertidos ou insumos gerados não possuem propriedades paranormais. Limite: Esta habilidade pode ser utilizada no máximo 3 vezes por missão."
+  },
+  {
+    "nome": "Quase Novo",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Seu cuidado técnico durante o alinhamento e reparo de equipamentos vai além do conserto simples, deixando o item em estado impecável e otimizado para o campo. Reforço Estrutural: Ao realizar uma Ação de Manutenção durante o Interlúdio, o item reparado passa por um reforço na sua estrutura, recebendo +5 Pontos de Vida de Item (PV/Durabilidade) adicionais além do seu limite normal. Calibragem Temporária: Nessa mesma ação, você pode aplicar 1 Modificação Temporária ao equipamento (arma, proteção ou utilitário). Essa melhoria não consome espaço extra de inventário e permanece ativa até a realização da próxima Cena de Interlúdio."
+  },
+  {
+    "nome": "Farmacêutico de Campo",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Medicina",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você se especializou em sintetizar compostos químicos e preparar insumos médicos em condições improvisadas de expedição. Sintetização de Insumos: Durante uma Cena de Interlúdio, caso possua um Kit de Medicina, você pode gastar 2 SAN para criar 1 unidade de cicatrizante ou medicamento mundano. Desgaste do Kit: Um mesmo Kit de Medicina permite fabricar até 3 insumos por meio desta habilidade antes de ter seus materiais completamente esgotados. Produção Adicional: Você pode usar esta habilidade mais de uma vez na mesma cena de descanso, mas cada uso adicional exige o gasto de 1 Ação de Interlúdio extra."
+  },
+  {
+    "nome": "O Calor do Momento",
+    "classificacao": "Tier II",
+    "prereq": "Treinado em Mecânica e Meus Bebês",
+    "custo": "2 San + 2 por modificação",
+    "alcance": "Nenhum",
+    "efeito": "Não se pode estar preparado para tudo. Quando a hora 'H' chega e o plano inicial desmorona, o improviso técnico entra em ação. Uma vez por cena, você pode gastar uma ação padrão e 2 pontos de Sanidade (2 SAN) para fabricar em tempo recorde um explosivo autoral à sua escolha. Como a montagem é feita de forma totalmente instável e às pressas, o explosivo é volátil: se você não arremessá-lo ou utilizá-lo até o final da cena, ele vai explodir automaticamente nas suas mãos (ou no seu inventário). Além disso, a sua engenharia de campo é versátil o suficiente para adaptar munições pesadas: você consegue manusear e disparar granadas de 40mm como se fossem granadas comuns arremessáveis à mão. Modificações de Improviso: Durante a fabricação rápida no meio do combate, você pode gastar +2 de Sanidade acumulativa para adicionar modificações destrutivas ao explosivo improvisado (a primeira modificação custa +2 SAN adicionais, a segunda custa +4 SAN extras em cima disso, e assim por diante)."
+  },
+  {
+    "nome": "Fogo Amigo",
+    "classificacao": "Tier II",
+    "prereq": "Habilidade Perito em Explosivos",
+    "custo": "Nenhum",
+    "alcance": "Nenhum",
+    "efeito": "É altamente recomendável que quem te acompanhe nas missões tenha assinado um termo de isenção de culpa sobre os seus hábitos hiper-destrutivos. Com o domínio absoluto da balística e da dispersão de fragmentos, a letalidade das suas detonações se expande e se torna cirúrgica no caos: a CD (Dificuldade de Resistência) dos seus explosivos aumenta em +2 e o raio da área afetada por eles aumenta em +6m (por exemplo, uma granada padrão que afetava um raio de 6m passa a devastar um raio de 12m). Além disso, a sua precisão com o posicionamento letal melhora drasticamente: você aumenta em +2 a quantidade máxima de alvos que pode excluir diretamente dos efeitos das suas explosões (permitindo poupar aliados pegos no raio de deflagração)."
+  },
+  {
+    "nome": "Ser Testado",
+    "classificacao": "Tier II",
+    "prereq": "Habilidade Ser Experimentado (mesmo elemento escolhido) e NEX 40%",
+    "custo": "Nenhum (Exige a execução diária e dolorosa do experimento com o próprio corpo)",
+    "alcance": "Pessoal",
+    "efeito": "Seu corpo demonstra total costume com os estímulos frequentes ao organismo, exigindo métodos alternativos e ainda mais extremos para resultados surpreendentes. Você submete sua mente a sacrifícios brutais, elevando a penalidade nas perícias sociais de -2 para -3 de desvantagem em Diplomacia, Enganação e Intuição. Ao realizar o experimento diário, você recupera 2d8+2 PV e, até o fim do dia, recebe os efeitos passivos e as mecânicas de sacrifício de atributos descritas a seguir, conforme o seu elemento escolhido: SANGUE: Você fica ainda mais bestial. Ao fazer o experimento, seus ataques causam +1d6 pontos de dano de Sangue e você recebe RD 2. Além disso, você pode devorar seus pontos de Intelecto (até o limite de Intelecto 0). Para cada ponto devorado temporariamente, seus ataques causam +1d6 pontos de dano de Sangue adicionais e sua RD aumenta em +2. Essa alteração de atributo não afeta PV, Sanidade ou número de perícias treinadas, e você não pode sacrificar pontos provenientes de itens ou rituais. MORTE: Sua natureza torna-se fria e cadavérica. Ao fazer o experimento, o número de turnos em que pode permanecer na condição morrendo antes de falecer aumenta em +1 e você recebe 2d8 PV temporários no início de cada cena. Além disso, você pode necrosar seus pontos de Força (até o limite de Força 0). Para cada ponto necrosado temporariamente, o número de turnos em que pode ficar morrendo aumenta em +1 e você recebe +2d8 PV temporários extras no início de cada cena. Essa alteração de atributo não afeta PV, Sanidade ou perícias, aplicando-se apenas aos seus atributos base. CONHECIMENTO: A verdade sobre tudo reflete em seu ser, tornando-o estático. Ao fazer o experimento, você recebe +1d6 em testes baseados em Intelecto. Além disso, você pode inexistir seus pontos de Agilidade (até o limite de Agilidade 0). Para cada ponto inexistido temporariamente, você recebe +2 em testes baseados em Intelecto. Essa alteração de atributo não afeta PV, Sanidade ou perícias, e você não pode alterar pontos que não sejam seus. ENERGIA: O caos acelera sua mente e corpo, gastando ambos como combustível. Ao fazer o experimento, você recebe +1d6 em testes de ataque e +2 na Defesa. Além disso, você pode queimar seus pontos de Vigor (até o limite de Vigor 0). Para cada ponto queimado temporariamente, você recebe +1d4 em testes de ataque e +2 na Defesa. Essa alteração de atributo não afeta PV, Sanidade ou perícias, e restringe-se aos seus atributos nativos."
+  },
+  {
+    "nome": "Mestre em Elemento",
+    "classificacao": "Tier II",
+    "prereq": "Especialista em Elemento (no mesmo elemento), Presença 3",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "Você atinge um domínio superior sobre a essência de um elemento paranormal. Canalização Eficiente: O custo para conjurar rituais do elemento escolhido é reduzido em 1 SAN. Esta habilidade não pode reduzir o custo de um ritual para menos de 1 SAN."
+  },
+  {
+    "nome": "Anular Ritual",
+    "classificacao": "Tier II",
+    "prereq": "Presença 3, Ocultismo",
+    "custo": "3 SAN",
+    "alcance": "Curto",
+    "efeito": "Você tenta projetar uma interferência mística para desestabilizar o fluxo paranormal no momento exato em que ele ganha forma. Interrupção Reativa: Como uma Reação ao ver um ritual sendo conjurado ou uma habilidade paranormal de área/alvo ser ativada por uma criatura em alcance Curto, você pode gastar 3 SAN para tentar interrompê-la. Teste de Disrupção: Faça um teste de Ocultismo contra a DT do efeito (ou teste oposto de Ocultismo contra outro conjurador). Sucesso: A manifestação é dissipada antes de se concretizar, cancelando seus efeitos. Falha: O choque de retenção falha e você sofre 2 SAN de dano mental imediato pelo repuxo da energia paranormal. Limite de Uso: Você só pode tentar anular os efeitos de uma mesma criatura ou conjurador uma vez por cena."
+  },
+  {
+    "nome": "Absorver Agonia",
+    "classificacao": "Tier II",
+    "prereq": "Presença 3, Ocultismo",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "A destruição e o sofrimento causados pela conclusão de uma manifestação mística canalizam energia de volta para a sua mente. Regeneração Agônica: Sempre que você reduzir um ou mais inimigos a 0 PV com um ritual, você recebe uma quantidade de SAN Temporária igual ao Círculo do ritual utilizado (1 SAN Temporária para 1º Círculo, 2 para 2º Círculo e 3 para 3º Círculo). Retenção: A SAN Temporária recebida por esta habilidade dura até o final da cena e não se acumula com ela mesma (caso abata múltiplos inimigos, aplica-se apenas o maior valor gerado)."
+  },
+  {
+    "nome": "Mente Sã",
+    "classificacao": "Tier II",
+    "prereq": "Presença 3, Ocultismo",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "A compreensão aprofundada da natureza do Outro Lado fortalece sua mente e corpo, tornando você menos suscetível às distorções da realidade. Resistência Paranormal: Você recebe +2 em testes de resistência (Vontade, Fortitude e Reflexos) contra quaisquer rituais, habilidades de criaturas ou efeitos de origem paranormal."
+  },
+  {
+    "nome": "Gladiador Paranormal",
+    "classificacao": "Tier II",
+    "prereq": "Força 2 ou Agilidade 2, Ocultismo",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "A adrenalina da luta canaliza o impacto dos seus disparos e golpes convencionais para abastecer sua mente. Fervor de Combate: Sempre que acertar um ataque não paranormal (corpo a corpo ou a distância) em um inimigo, você recebe 1 SAN Temporária. Uso Restrito: Esta SAN Temporária dura até o final da cena e pode ser gasta exclusivamente para pagar o custo de conjuração de rituais. Isolamento Mental: Esta reserva não absorve perdas de Sanidade decorrentes de dano mental, testes de Vontade ou presença perturbadora."
+  },
+  {
+    "nome": "Conjuração Marcial",
+    "classificacao": "Tier II",
+    "prereq": "Luta ou Pontaria, Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você entrelaça a execução de golpes físicos com a canalização mística, utilizando a trajetória da sua arma para traçar os sigilos do ritual no ar. Ataque Catalisador: Ao realizar uma Ação Padrão para Atacar, você pode gastar 1 SAN para que o próprio golpe substitua e cumpra o 1º Turno (traçar o símbolo) de um ritual que pretenda conjurar. Progressão do Ritual: Com Redução de Turnos (Acelerar Ritual, Lâmina Maldita ou Afinidade): O 2º Turno (gestos/ingredientes) é ignorado. No seu turno seguinte ao ataque, você pode usar sua Ação (Movimento, Padrão ou Completa, depende do tempo do ritual) para executar o 3º Turno e manifestar o ritual diretamente. Sem Redução de Turnos: O ritual segue a cadência normal. No turno seguinte ao ataque, você realiza o 2º Turno (gestos/ingredientes) e, no terceiro turno, usa sua Ação para executar o 3º Turno (manifestação)."
+  },
+  {
+    "nome": "Domínio Esotérico",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 3, Ocultismo",
+    "custo": "Nenhum (passivo)",
+    "alcance": "Pessoal",
+    "efeito": "Seu conhecimento profundo sobre materiais, símbolos e reagentes místicos permite harmonizar múltiplos focos paranormais em uma mesma conjuração. Sinergia Catalítica: Ao conjurar qualquer ritual, você pode aplicar os efeitos de até 2 catalisadores ritualísticos diferentes simultaneamente na mesma manifestação (consumindo ou utilizando ambos os itens normalmente)."
+  },
+  {
+    "nome": "Nos Olhos do Monstro",
+    "classificacao": "Tier II",
+    "prereq": "Presença 3 ou Intelecto 3, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Curto ou Médio (visão direta do alvo)",
+    "efeito": "Você encara o horror de frente, reprimindo o pavor para decifrar os padrões, a anatomia e os hábitos de caça da manifestação paranormal. Análise de Risco: Ao gastar uma Ação Padrão e 2 SAN fixando seu olhar nos olhos (ou no núcleo sensorial) de uma criatura paranormal visível, você passa a prever seus movimentos. Compreensão Ameaçadora: Você recebe +2 em todos os testes de perícia e testes de resistência contra aquela criatura e suas habilidades até o final da cena (exceto testes de ataque). Perseguição e Furtividade: O bônus de +2 aplica-se a testes para se esconder da criatura, rastrear suas pistas, prever atalhos em fugas ou despistá-la em momentos críticos."
+  },
+  {
+    "nome": "Sentido Premonitório",
+    "classificacao": "Tier II",
+    "prereq": "Presença 3 ou Intelecto 3, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Sensações repentinas e relances do futuro imediato revelam informações cruciais antes que o perigo ou a complicação se concretize. Visão Antecipada: Ao gastar uma Ação de Movimento e 2 SAN, você obtém um vislumbre místico do destino. Você pode escolher apenas 1 das opções a seguir por cena: Tempo de Investigação: Descobre a quantidade exata de turnos/tempo restantes na cena de investigação antes que a oportunidade expire ou a situação mude. Mapeamento de Pistas: Descobre exatamente quais perícias são válidas para alcançar o resultado esperado ou extrair a pista principal do local. Evento de Furtividade e Perseguição: Prevê exatamente qual será o próximo evento ou complicação da cena (uma patrulha dobrando a esquina, um obstáculo no percurso) com 1 rodada de antecedência. Margem de Acesso: Descobre o limite exato de tentativas ou falhas permitidas em um Desafio de Acesso antes que o mecanismo trave, a tranca quebre ou o alarme seja disparado."
+  },
+  {
+    "nome": "Sincronia Paranormal",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Médio",
+    "efeito": "Você entrelaça temporariamente a percepção da sua mente com a dos seus aliados, criando um elo místico de coordenação. Conexão Silenciosa: Com uma Ação Padrão e o gasto de 2 SAN, você estabelece o elo com até Presença aliados em alcance médio. O elo dura até o final da cena (sem custo de manutenção por rodada). Comunicação Não Verbal: Os afetados conseguem transmitir sentimentos, intenções simples e alertas de perigo instantaneamente e em absoluto silêncio. Foco Compartilhado: Uma vez por rodada, quando um aliado conectado realizar um teste de perícia baseado em Intelecto ou Presença (Investigação, Percepção, Intimidação, Vontade, etc.), você pode conceder +2 no teste desse aliado."
+  },
+  {
+    "nome": "Traçado Conjuratório",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2 ou Presença 2, Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal (sob seus pés)",
+    "efeito": "Você desenha no chão marcas e sigilos de ancoragem mística que reforçam sua proteção e potencializam suas conjurações. Ancoragem Ritualística: Ao gastar uma Ação Padrão e 1 SAN, você traça um símbolo paranormal no chão ocupando o seu espaço (1,5m). O símbolo permanece ativo até o final da cena. Bônus de Permanência: Enquanto estiver posicionado dentro do seu símbolo, você recebe +2 em testes de Ocultismo, +2 em testes de resistência e a DT para resistir aos seus rituais aumenta em +2. Catalisador do 1º Turno: A própria ação de desenhar este símbolo conta automaticamente como o 1º Turno (traçar o símbolo) do próximo ritual que você for conjurar."
+  },
+  {
+    "nome": "Poder da Fé",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2, Religião",
+    "custo": "2 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Redenção Espiritual: Ao falhar em um teste de resistência (Vontade, Fortitude ou Reflexos), você pode gastar 2 SAN como Reação para refazer o teste utilizando a perícia Religião no lugar da perícia original. Você deve aceitar o resultado do segundo teste, mesmo que seja inferior ao primeiro."
+  },
+  {
+    "nome": "Parareligiosidade",
+    "classificacao": "Tier II",
+    "prereq": "Religião, Ocultismo",
+    "custo": "+2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Fervor Catalisador: Ao conjurar um ritual, você pode gastar +2 SAN adicionais para imbuir a conjuração com a intensidade da sua fé ou doutrina. Ao fazer isso, você aplica ao ritual o efeito de 1 catalisador ritualístico à sua escolha, sem a necessidade de possuir ou consumir o item físico."
+  },
+  {
+    "nome": "As Sombras Dentro de Mim",
+    "classificacao": "Tier II",
+    "prereq": "Poder Não Desejado, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você cede o controle do seu sistema motor à entidade, permitindo que ela tensione seus músculos e estale suas articulações em posições antinaturais para executar movimentos de precisão e agilidade macabras. Tensionamento Desnatural: Ao gastar uma Ação de Movimento e 2 SAN, a entidade assume a mecânica do seu corpo até o início do seu próximo turno. Mobilidade Aberrante: Você recebe +2 em testes de Acrobacia, Atletismo e Furtividade. Enquanto o efeito durar, você ignora terreno difícil e pode se contorcer para atravessar frestas, dutos ou aberturas minúsculas em Desafios de Acesso sem perder deslocamento. Passos Inaudíveis: Em cenas de Furtividade e Perseguição, a ausência de ruído biológico (como respiração ou passos normais) concede +2 para reduzir visibilidade, despistar perseguidores ou contornar complicações do ambiente."
+  },
+  {
+    "nome": "Ele Me Ensina",
+    "classificacao": "Tier II",
+    "prereq": "Poder Não Desejado, Ocultismo",
+    "custo": "Passivo (+1 SAN opcional)",
+    "alcance": "Pessoal",
+    "efeito": "Os sussurros constantes da entidade sopram segredos arcanos e técnicas de conjuração em sua mente, revelando conhecimentos que não pertencem ao seu estudo ou origem. Sabedoria Compartilhada: Você adquire 1 Habilidade de Tier I ou Tier II pertencente a qualquer outro perfil ou lista de Ocultismo (respeitando os pré-requisitos do poder escolhido). Sussurro Revelador: Uma vez por cena, ao realizar um teste para identificar uma criatura, decifrar um símbolo/enigma ou analisar um fenômeno paranormal (Investigação ou Ocultismo), você pode gastar 1 SAN para que a entidade lhe sopre a resposta, concedendo +2 no teste."
+  },
+  {
+    "nome": "Terapia",
+    "classificacao": "Tier II",
+    "prereq": "Diplomacia",
+    "custo": "2 SAN (Reação)",
+    "alcance": "Curto",
+    "efeito": "Seu estudo do comportamento humano e da mente permite que você sirva de âncora emocional, acalmando a si mesmo e a seus aliados diante de horrores paranormais. Ancoragem Mental: Uma vez por rodada, quando você ou um aliado em alcance curto falhar em um teste de resistência contra dano mental ou efeito de Medo/Perturbação, você pode gastar 2 SAN como Reação para intervir verbalmente. Substituição de Teste: Você realiza um teste de Diplomacia e o alvo substitui a rolagem do teste de resistência falho pelo valor total do seu teste de Diplomacia."
+  },
+  {
+    "nome": "Palavras-chave",
+    "classificacao": "Tier II",
+    "prereq": "Diplomacia",
+    "custo": "1 SAN",
+    "alcance": "Curto",
+    "efeito": "Você utiliza gatilhos psicológicos e técnicas de ancoragem para restaurar a estabilidade mental de aliados em colapso. Estabilização Verbal: Ao ser bem-sucedido em um teste de Diplomacia para acalmar um aliado sob efeito de pânico, perturbação ou surto mental, você pode gastar 1 SAN para fazer o alvo recuperar 3 de Sanidade (SAN) imediatamente. Apoio em Interlúdio: Durante Cenas de Interlúdio ou momentos de exploração/descanso, você pode dedicar seu tempo para prestar suporte psicológico a um companheiro. Ao fazê-lo, o aliado tratado recupera +2 SAN adicionais ao final do descanso."
+  },
+  {
+    "nome": "Liturgia de Fortalecimento Ritualístico",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Presença 2, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Práticas e cânticos místicos prolongados fortalecem os vínculos do seu grimório/mente com a Membrana, energizando a execução de uma manifestação específica. Preparação Sacra: Durante uma Cena de Interlúdio, você pode gastar 2 SAN e sua Ação de Interlúdio para realizar ritos de purificação e fortalecimento dedicados a um ritual que você conheça. Sintonização Aumentada: Até a próxima Cena de Interlúdio (ou até o fim da missão), a DT para resistir ao ritual escolhido aumenta em +2."
+  },
+  {
+    "nome": "Recuperação Flagelante",
+    "classificacao": "Tier II",
+    "prereq": "Vigor 2, Poder do Flagelo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Regeneração Imediata: Permite que você recupere Pontos de Vida (PV) sacrificados por habilidades de Flagelo dentro da mesma cena através de curas externas normais (rituais de cura, itens de medicina ou habilidades de aliados), eliminando a restrição de aguardar uma cena de Interlúdio ou descanso."
+  },
+  {
+    "nome": "Sinestesia Paranormal",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2 ou Presença 2, Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "O enfraquecimento da realidade distorce seus sentidos, permitindo que você ouça cores, saboreie sons e processe estímulos do ambiente de formas bizarramente funcionais. Percepção Cruzada: Em locais com a Membrana Danificada ou Arruinada, você pode gastar 2 SAN no início da cena para ceder à distorção sensorial do Outro Lado. Inversão Sensorial: Até o fim da cena, escolha 2 perícias nas quais você seja treinado e troque os atributos base utilizados entre elas (ex.: usar Presença para Atletismo e Força para Percepção, ou Intelecto para Acrobacia e Agilidade para Investigação)."
+  },
+  {
+    "nome": "Terrores Noturnos",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2 ou Ocultismo",
+    "custo": "Especial (Ação de Interlúdio)",
+    "alcance": "Pessoal",
+    "efeito": "Os sussurros da escuridão perturbam seu descanso, mas transformam seus pesadelos em revelações de poder paranormal. Premonição Onírica: Durante uma Cena de Interlúdio, ao realizar uma ação de descanso, você pode optar por se entregar a pesadelos profundos em vez de ter um sono reparador. Ao fazer isso, sua recuperação do descanso é reduzida à metade e você sofre 2 de dano mental (SAN). Conhecimento Arrancado: Em troca do trauma psíquico, uma revelação do Outro Lado se fixa em sua mente: escolha 1 Ritual ou Habilidade (Tier I ou Tier II) para a qual cumpra os pré-requisitos. Você ganha a capacidade de conjurar esse ritual ou utilizar essa habilidade uma única vez até a próxima Cena de Interlúdio."
+  },
+  {
+    "nome": "Catálogo de Criaturas Ambulante",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Identificação Paranormal",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua memória e conhecimento enciclopédico sobre as manifestações do Outro Lado permitem catalogar e analisar entidades com velocidade impressionante e a partir de mínimos sinais. Análise Acelerada: Você pode realizar testes de perícia para identificar criaturas, reconhecer seus elementos e descobrir suas fraquezas utilizando uma Ação de Movimento (em vez de uma Ação Padrão). Rastreio por Indícios: Você pode identificar uma criatura sem a necessidade de contato visual direto, deduzindo sua espécie e comportamentos analisando apenas vestígios no ambiente (como fluido paranormal, marcas de garras, pegadas, perturbações na matéria ou padrões de destruição)."
+  },
+  {
+    "nome": "Meditação Ocultista",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2 ou Ocultismo",
+    "custo": "Especial (Ação de Interlúdio)",
+    "alcance": "Pessoal",
+    "efeito": "Você desenvolveu técnicas de transe e centralização psíquica que limpam os vestígios da influência do Outro Lado da sua mente durante momentos de pausa. Ação de Meditação: Você ganha a Ação de Interlúdio Meditar. Ao escolher esta ação durante uma Cena de Interlúdio, você canaliza seu foco mental para reorganizar seus pensamentos. Restauração Mental: Ao Meditar, você recupera 3 de Sanidade (SAN). Se o ambiente de descanso for Confortável ou Luxuoso, a estabilidade alcançada é ainda maior, aumentando a recuperação para 5 SAN."
+  },
+  {
+    "nome": "Ruído de Comunicação",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2 ou Ocultismo",
+    "custo": "2 SAN (Reação)",
+    "alcance": "Curto",
+    "efeito": "Você interfere na frequência da realidade ao seu redor, distorcendo bônus e penalidades que afetam alvos próximos através de ruído paranormal. Inversão de Sinal: Uma vez por rodada, ao ver um ser em alcance curto receber um bônus ou penalidade em um teste ou rolagem (como bônus numérico de +2/-2, vantagem/desvantagem ou bônus de dano), você pode gastar 2 SAN como Reação para inverter o efeito. Efeito Invertido: Bônus concedidos transformam-se em penalidades de mesmo valor, e penalidades aplicadas transformam-se em bônus para o alvo até o início do seu próximo turno."
+  },
+  {
+    "nome": "Acostumado à Maldição de [Elemento]",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Suas constantes interações e ritos com uma força específica do Paranormal acostumaram sua mente ao peso e às distorções daquele elemento. Sintonia Elementar: Ao adquirir esta habilidade, escolha 1 elemento do Paranormal (Sangue, Morte, Conhecimento ou Energia). Aclimatação Arcana: Sempre que falhar em um teste para resistir ao preço psíquico ou gatilho de maldição ao ativar um item amaldiçoado do elemento escolhido, você não perde Sanidade (SAN). Quaisquer outros efeitos colaterais, penalidades físicas ou limitações do item continuam afetando você normalmente."
+  },
+  {
+    "nome": "Reter Ritual de Combate",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "1 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Sua capacidade de ancorar e estabilizar a energia paranormal permite que rituais permaneçam ativos mesmo quando o vínculo psíquico é interrompido. Ancoragem de Emergência: Sempre que um alvo afetado por um ritual sustentado por você sair da sua linha de efeito, ou sempre que você sofrer um dano/condição que interrompa sua concentração, você pode gastar 1 SAN como Reação para fixar a energia. Estabilização da Cópia: Ao fazer isso, a duração do ritual afetado muda automaticamente para Até o fim da cena, mantendo seus efeitos ativos no ambiente ou no alvo sem exigir que você continue sustentando o efeito turno a turno."
+  },
+  {
+    "nome": "Saúde Sobrenatural",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Presença 2, Ocultismo",
+    "custo": "2 SAN (Ação de Movimento)",
+    "alcance": "Pessoal",
+    "efeito": "Você utiliza a energia vital do Outro Lado para revestir a sua carne com uma camada efêmera de resiliência e proteção. Barreira de Carne: Uma vez por cena, ao gastar uma Ação de Movimento e 2 SAN, você recebe 5 PV temporários (somados ao seu valor de Presença). Efemeridade: Esses Pontos de Vida temporários duram até o fim da cena atual e não se acumulam com outros efeitos que concedem PV temporários."
+  },
+  {
+    "nome": "Método Intuitivo",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Ocultismo, Criar Selo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua velocidade e intuição ritualística permitem desenhar e encantar selos paranormais em ritmo muito mais acelerado durante momentos de pausa. Confecção Acelerada: Ao utilizar uma Ação de Interlúdio para criar selos paranormais, você consegue fabricar 2 selos na mesma ação (em vez de apenas 1). Domínio Ritualístico: A quantidade de selos criados por Ação de Interlúdio aumenta em +1 adicional para cada outra habilidade de Ocultismo (Tier II ou superior) que você possuir."
+  },
+  {
+    "nome": "Caligrafia Eficiente",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Ocultismo, Criar Selo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "A precisão e clareza dos seus traços arcanos simplificam a ativação de selos e a leitura de símbolos paranormais. Traçado Facilitador: A DT do teste de Ocultismo para que você ou um aliado ative um selo desenhado por você contendo um ritual que não conheça torna-se DT 10+ custo em SAN do ritual. Leitura Simbólica: Sua familiaridade com traços ritualísticos concede +2 em testes de Ocultismo para identificar rituais ou reconhecer símbolos paranormais no ambiente."
+  },
+  {
+    "nome": "Decifrar à Distância",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Ocultismo",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua conexão com a simbologia do Paranormal permite que você processe e ative glifos e inscrições sem a necessidade de contato físico ou vocalização. Ativação Remota: Você não precisa empunhar nem ler em voz alta um Selo Paranormal para ativá-lo. Basta que o selo esteja em alcance curto e dentro do seu campo de visão para que você o ative mentalmente. Decifração Arcana: Sua facilidade em interpretar padrões arcanos concede +2 em testes de Ocultismo ou Investigação para ler, traduzir e extrair informações de sigilos, marcas e escritas do Outro Lado."
+  },
+  {
+    "nome": "Barreira do Oculto",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2 ou Intelecto 2, Ocultismo",
+    "custo": "+1 ou +2 SAN (Integrado à conjuração)",
+    "alcance": "Pessoal",
+    "efeito": "Sua sintonia com um elemento do Outro Lado canaliza resíduos de energia arcana para erguer um escudo protetor ao redor de seu corpo. Sintonia Elementar: Escolha 1 elemento do Paranormal (Sangue, Morte, Conhecimento ou Energia). Escudo Místico: Sempre que conjurar um ritual do elemento escolhido, você pode aumentar o custo da conjuração para erguer uma defesa temporária: Gastando +1 SAN: recebe +2 na Defesa até o início do seu próximo turno. Gastando +2 SAN: recebe +4 na Defesa até o início do seu próximo turno."
+  },
+  {
+    "nome": "Ser Perfurado",
+    "classificacao": "Tier II",
+    "prereq": "Habilidade Ser Escarificado (mesmo elemento escolhido) e NEX 40%",
+    "custo": "Nenhum (Exige a execução diária e dolorosa da escarificação ritualística)",
+    "alcance": "Pessoal",
+    "efeito": "Parte intrínseca da sua formação física, os símbolos ritualísticos comunicam-se diretamente com as necessidades do seu corpo, exigindo permanecerem permanentemente expostos. Essa mutação aprofundada agrava a desumanização: a penalidade em testes sociais de Diplomacia, Enganação e Intuição muda de -2 para -5 dados de desvantagem. Agora, ao realizar a escarificação diária, você recupera 1d6 pontos de Sanidade (SAN) e, até o fim do dia, também recebe os efeitos passivos e reativos descritos a seguir, conforme o seu elemento escolhido: CONHECIMENTO: Você veste ornamentos de ouro e prata marcados com símbolos para formar linhas invisíveis de Sigilos de Eloquência. Através da verdade enlouquecedora, você forma o batente da porta para a entidade. Você recebe o poder Tatuagem Ritualística, que excepcionalmente se aplica a todos os rituais de Conhecimento marcados em sua pele (não apenas aos de alcance pessoal que têm você como alvo; caso já possua o poder, troque-o por outro de ocultista). Além disso, uma vez por cena, se estiver sob efeito de uma condição mental ou de medo, você pode conjurar um ritual marcado em sua pele como uma Reação. Finalmente, você recebe +5 em testes de concentração com rituais de Conhecimento marcados. ENERGIA: As queimaduras deixam sua pele em estado maleável, permitindo transformar os símbolos marcados com as próprias mãos. Através do caos fervente, você forma o batente da porta para a entidade. Você recebe o poder Tatuagem Ritualística, que excepcionalmente se aplica a todos os rituais de Energia marcados em sua pele (caso já o possua, troque-o por outro de ocultista). Além disso, uma vez por cena, se estiver sob efeito de uma condição de paralisia ou de sentidos, você pode conjurar um ritual marcado em sua pele como uma Reação. Finalmente, você recebe +5 em testes de concentração com rituais de Energia marcados. SANGUE: Você marca por cima de suas cicatrizes antigas, sentindo o sofrimento extremo acumulado de cada traço. Através da dor, você forma o batente da porta para a entidade. Você recebe o poder Tatuagem Ritualística, que excepcionalmente se aplica a todos os rituais de Sangue marcados em sua pele (caso já o possua, troque-o por outro de ocultista). Além disso, uma vez por cena, se estiver machucado ou sob efeito de fadiga, você pode conjurar um ritual marcado em sua pele como uma Reação. Finalmente, você recebe +5 em testes de concentração com rituais de Sangue marcados. MORTE: Suas tatuagens consomem a carne ao redor, exigindo inserir gravetos, ossos e lodo para expandir o espaço marchetado. Através do cadaverismo, você forma o batente da porta para a entidade. Você recebe o poder Tatuagem Ritualística, que excepcionalmente se aplica a todos os rituais de Morte marcados em sua pele (caso já o possua, troque-o por outro de ocultista). Além disso, uma vez por cena, se estiver morrendo ou sob efeito de uma condição de sentidos, você pode conjurar um ritual marcado em sua pele como uma Reação. Finalmente, você recebe +5 em testes de concentração com rituais de Morte marcados."
+  },
+  {
+    "nome": "Parceiro",
+    "classificacao": "Tier II",
+    "prereq": "Presença 3, Treinado em Diplomacia",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Em sua trajetória, você conquistou a lealdade inabalável de alguém disposto a acompanhá-lo e arriscar a própria vida ao seu lado. Empatia e Confiança: Você recebe +2 em testes de Diplomacia. Companheiro Leal: Você possui um aliado (um NPC) que o acompanha e o auxilia ativamente em suas missões. Você define o nome, a aparência e a personalidade dele. Em termos de jogo, ele funciona como um Aliado de um tipo à sua escolha (Combatente, Médico, Suporte, etc.). Vínculo e Substituição: Seu parceiro segue suas orientações e se arrisca por você, mas pode abandoná-lo se for cronicamente maltratado ou traído. Caso perca seu parceiro (morte, incapacidade ou abandono), você deve gastar 1 Ação de Folga/Intermissão para encontrar e integrar um novo aliado ao seu grupo."
+  },
+  {
+    "nome": "Provisões de Emergência",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Treinado em Procurar",
+    "custo": "Passivo / 1 Ação de Interlúdio",
+    "alcance": "Pessoal",
+    "efeito": "Sua precaução e planejamento detalhado garantem a existência de esconderijos ocultos abastecidos com suprimentos e equipamentos para situações de crise. Faro de Recursos: Você recebe +2 em testes de Procurar. Esconderijo Tático: Uma vez por missão, durante uma Cena de Interlúdio, você pode gastar 1 Ação de Interlúdio para resgatar o conteúdo de um de seus esconderijos secretos (seja pessoalmente ou por meio de um contato). Ao fazê-lo, você realiza uma nova etapa de seleção de equipamentos e insumos exclusivamente para você, reabastecendo munições, consumíveis e ferramentas como se estivesse em uma nova fase de preparação de missão (respeitando sua capacidade de carga e Tiers de Proficiência)."
+  },
+  {
+    "nome": "Especialista Esotérico",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 3, Treinado em Ocultismo, capacidade de conjurar rituais de 2º Círculo, Domínio Esotérico",
+    "custo": "Passivo (consome os insumos/catalisadores empregados)",
+    "alcance": "Pessoal",
+    "efeito": "Sua compreensão avançada da física alquímica e das ressonâncias do Oculto permite canalizar e harmonizar múltiplos catalisadores em uma única conjuração. Sinergia Catalítica: Ao conjurar um ritual, você pode aplicar e combinar os efeitos de até 3 catalisadores ritualísticos diferentes na mesma conjuração (respeitando as regras de consumo e disponibilidade dos itens), em vez do limite padrão de apenas um catalisador por ritual."
+  },
+  {
+    "nome": "Revidar Violento",
+    "classificacao": "Tier II",
+    "prereq": "Força 2 ou Agilidade 2, Treinado em Luta",
+    "custo": "2 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Seu treinamento reflexivo permite converter a guarda em uma resposta agressiva imediata, aproveitando a brecha do oponente sem comprometer a sua capacidade de reagir na rodada. Retaliação Instantânea: Ao ser alvo de um ataque corpo a corpo, você pode gastar 2 SAN como Reação para realizar um Contra-Ataque contra o agressor. Você pode ativar esta habilidade mesmo que já tenha realizado outra Reação nesta rodada (como uma Esquiva, Bloqueio ou uso de habilidade reativa)."
+  },
+  {
+    "nome": "Corpo Fechado",
+    "classificacao": "Tier II",
+    "prereq": "Vigor 2, Treinado em Fortitude",
+    "custo": "2 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Seu corpo calejado e sua postura inabalável permitem erguer a guarda e absorver múltiplos impactos em sequência sem perder o tempo de reação. Bloqueio Reativo: Ao ser alvo de um ataque, você pode gastar 2 SAN como Reação para realizar um Bloqueio contra o ataque. Você pode ativar esta habilidade mesmo que já tenha realizado outra Reação nesta rodada (como outro Bloqueio, Esquiva, Contra-Ataque ou uso de habilidade reativa)."
+  },
+  {
+    "nome": "Esquiva Tática",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2, Treinado em Reflexos",
+    "custo": "2 SAN (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Sua agilidade sob pressão e leitura espacial apurada permitem pendular e esquivar-se de múltiplos ataques em sequência sem perder o tempo de reação no combate. Esquiva Reativa: Ao ser alvo de um ataque, você pode gastar 2 SAN como Reação para realizar uma Esquiva contra o ataque. Você pode ativar esta habilidade mesmo que já tenha realizado outra Reação nesta rodada (como outra Esquiva, Bloqueio, Contra-Ataque ou uso de habilidade reativa)."
+  },
+  {
+    "nome": "Puxar pra Briga",
+    "classificacao": "Tier II",
+    "prereq": "Força 2 ou Agilidade 2, Treinado em Luta, Especialista em Correntes",
+    "custo": "2 SAN (Gatilho ao acertar)",
+    "alcance": "Alcance da Arma",
+    "efeito": "Você aprendeu a usar o peso e a extensão de suas correntes para prender a atenção dos oponentes, arrastando-os para o combate direto e punindo tentativas de ignorar sua presença. Arraste de Combate: Sempre que você acertar um ataque corpo a corpo utilizando uma corrente, chicote, corda ou arma acorrentada, pode gastar 2 SAN para puxar o alvo atingido para um espaço desocupado adjacente a você (desde que o tamanho da ameaça não seja superior a Enorme). Marca de Provocação: Se o alvo puxado se afastar voluntariamente de você durante a cena, ele sofre Desvantagem (-1d) em todas as suas rolagens de ataque contra qualquer outro alvo que não seja você por 1 rodada."
+  },
+  {
+    "nome": "Kian Vai Nos Salvar",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2, capacidade de conjurar rituais, devoção/lealdade à causa de Kian",
+    "custo": "Passivo (ativação por convicção em cena) / Custo padrão em SAN ao conjurar o ritual",
+    "alcance": "Pessoal",
+    "efeito": "Sua crença inabalável nas palavras e na visão de Kian guia sua mente, permitindo que o Conhecimento do Paranormal se revele a você no momento da necessidade. Iluminação do Conhecimento: Quando estiver enfrentando um desafio (combates, perigos complexos ou enigmas) em que a sua motivação e devoção estejam envolvidas, você pode manifestar temporariamente 1 ritual do elemento Conhecimento como se o conhecesse, sem que ele conte para o seu limite de rituais conhecidos. Progressão por Nível: Nível 1 a 4: Rituais de 1º Círculo. Nível 5 a 10: Rituais de até 2º Círculo. Nível 11 em diante: Rituais de até 3º Círculo. Trava de Cena: O ritual escolhido permanece disponível para conjuração até o fim da cena. Você só pode manifestar 1 ritual por cena através desta habilidade (não é possível trocar de ritual ou manifestar um segundo ritual na mesma cena, mesmo que o primeiro já tenha sido conjurado)."
+  },
+  {
+    "nome": "Segurar o Gatilho",
+    "classificacao": "Tier III",
+    "prereq": "Agilidade 3",
+    "custo": "1 SAN (escalonado)",
+    "alcance": "Conforme a arma",
+    "efeito": "Ao acertar um ataque com arma de fogo, você pode gastar 1 SAN para realizar imediatamente outro ataque com a mesma arma contra o mesmo alvo. A sequência continua enquanto você continuar acertando os disparos e pagando o custo escalonado de SAN (+1 SAN para cada ataque extra subsequente). A sequência encerra ao errar um disparo, decidir não gastar SAN ou atingir o limite de ataques extras igual ao seu atributo Agilidade na rodada."
+  },
+  {
+    "nome": "Tanque de Guerra",
+    "classificacao": "Tier III",
+    "prereq": "Vigor 3 ou Força 3",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Enquanto estiver vestindo uma Proteção Pesada, você recebe +2 na Defesa e +4 de Resistência a Dano (RD) física adicional."
+  },
+  {
+    "nome": "Técnica Sublime",
+    "classificacao": "Tier III",
+    "prereq": "Agilidade 3 ou Força 3",
+    "custo": "1 SAN por efeito",
+    "alcance": "Conforme a arma",
+    "efeito": "Adiciona as seguintes opções à sua Técnica Secreta (podendo combiná-las gastando +1 SAN por efeito adicional): Perfurante: O ataque ignora até 5 pontos de Resistência a Dano (RD) do alvo. Certeiro: O ataque reduz a Defesa do alvo em -5 contra este golpe."
+  },
+  {
+    "nome": "Oficial Comandante",
+    "classificacao": "Tier III",
+    "prereq": "Presença 3",
+    "custo": "2 SAN",
+    "alcance": "Médio (18m)",
+    "efeito": "Uma vez por cena, como Ação Padrão, você coordena um avanço geral. Cada aliado visível em alcance médio recebe 1 Ação Padrão adicional no próximo turno dele."
+  },
+  {
+    "nome": "Surto de Adrenalina",
+    "classificacao": "Tier III",
+    "prereq": "Agilidade 3 ou Vigor 3",
+    "custo": "3 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Uma vez por cena, como Ação Livre no seu turno, você pode gastar 3 SAN para receber 1 Ação Padrão ou 1 Ação de Movimento adicional."
+  },
+  {
+    "nome": "Marteladas",
+    "classificacao": "Tier III",
+    "prereq": "Força 3",
+    "custo": "3 SAN",
+    "alcance": "Adjacente",
+    "efeito": "Como Ação Completa, você realiza 3 ataques desarmados contra um único alvo. Sumarize o dano de todos os ataques que acertarem e aplique o resultado como uma única instância de dano (a RD do alvo é aplicada apenas uma vez contra o total)."
+  },
+  {
+    "nome": "Guardião da Tropa",
+    "classificacao": "Tier III",
+    "prereq": "Vigor 3",
+    "custo": "2 SAN",
+    "alcance": "Curto (9m)",
+    "efeito": "Quando um aliado em alcance curto for alvo de um ataque ou habilidade de alvo único, você pode gastar 2 SAN e 1 Reação para assumir o lugar dele. Se o ataque errar sua Defesa ou você passar no teste de resistência, recupera 1 SAN imediatamente."
+  },
+  {
+    "nome": "Ser Assustador",
+    "classificacao": "Tier III",
+    "prereq": "Habilidade Ser Macabro (mesmo elemento escolhido) e NEX 60% (ou patamar avançado de simbiose com a Entidade)",
+    "custo": "Nenhum (Exige a execução contínua da etapa ritualística diária do elemento)",
+    "alcance": "Pessoal",
+    "efeito": "Como um parasita absoluto, você sente a Entidade caminhar por cada fibra do seu corpo, transformando-se em uma morada viva para o horror. A Resistência a Dano (RD) concedida pela execução da etapa ritualística do seu elemento aumenta de 10 para 15, mas a erosão da sua humanidade cobra um preço drástico: a sua Presença é reduzida permanentemente em 1. Ao executar a sua etapa ritualística diária, além dos bônus anteriores, você passa a receber os efeitos adicionais específicos do seu elemento escolhido: SANGUE: Você dilacerou seus próprios órgãos sensitivos (como olhos, nariz e orelhas) para sentir com intensidade absoluta o sabor e a dor da existência, enrolando seu corpo em arames farpados e lâminas. O conceito de recusar algo deixa de existir para você: você aceita provar e sofrer tudo. Você tem 50% de chance de ignorar o dano adicional de um acerto crítico ou ataque furtivo sofrido. Além disso, você recebe uma arma natural de mordida (dano com base em 1 etapa de dado correspondente, tipo perfuração). Uma vez por rodada, quando usa a ação Agredir para atacar com outra arma, você pode gastar 1 ponto de Sanidade para desferir um ataque corpo a corpo extra com a mordida. MORTE: O Lodo preto da Morte corrompe seu organismo, apodrecendo seus sistemas internos e mantendo-o vivo através da própria podridão. Você se torna um 'acumulador de lixo', indistinguível de um galho morto perante a estagnação. No início de cada turno em que estiver na condição Morrendo, você pode fazer um teste de Vigor (DT 7): se passar, você encerra a condição morrendo imediatamente e acorda com 1 PV. Além disso, sempre que faz um acerto crítico em combate ou reduz um inimigo a 0 PV, você recupera pontos de Sanidade equivalentes. CONHECIMENTO: Você injeta e ingere ouro líquido esporadicamente, cobrindo cada centímetro da pele restante com registros e anotações obsessivas. Você pode deixar temporariamente de ser treinado em uma de suas perícias para armazenar um número de dados de bônus igual ao seu Intelecto. Até o fim da cena, sempre que fizer um teste, você pode gastar um desses dados de bônus para adicionar etapas extras ao seu teste. Você recupera a perícia treinada sacrificada ao final do seu próximo interlúdio. ENERGIA: A intensidade dos choques aumenta vertiginosamente, complementada por tubos conectados às suas veias para gotejamento de ácido e o uso constante de máscaras com alucinógenos que tornam a realidade caótica e colorida. Sua resistência a dano passa a se aplicar também a dano químico. Além disso, você pode extrair energia de fontes elétricas gastando uma ação de movimento para tocar uma fonte: você recupera pontos de Sanidade conforme o tamanho da fonte (1d4 SAN para dispositivos portáteis como celulares, 2d4 SAN para veículos elétricos como motos ou carros, e 4d4 SAN para geradores ou redes residenciais), embora o uso descarregue e destrua completamente a fonte elétrica utilizada."
+  },
+  {
+    "nome": "Reanimação",
+    "classificacao": "Tier III",
+    "prereq": "Intelecto 3, Equipe de Trauma",
+    "custo": "3 SAN",
+    "alcance": "Adjacente",
+    "efeito": "Uma vez por cena, você pode gastar uma Ação Completa e 3 SAN para aplicar procedimentos médicos extremos (desfibrilação, injeções de adrenalina no miocárdio ou intervenção cirúrgica de urgência) em um aliado que tenha morrido na mesma cena. Retorno à Vida: O personagem retorna à vida estabilizado com 1 PV e a condição Inconsciente (ou consciente, mas caindo para Debilitado até o fim da cena). Restrição de Causa: Esta habilidade não funciona em personagens mortos por dano massivo, desintegração ou cujos corpos tenham sido destruídos/decapitados."
+  },
+  {
+    "nome": "Memória Muscular",
+    "classificacao": "Tier III",
+    "prereq": "Meus Bebês, O Calor do Momento e Fogo Amigo",
+    "custo": "4 SAN",
+    "alcance": "Nenhum",
+    "efeito": "Suas criações e artefatos de destruição agem de forma tão orgânica e ensaiada que parecem extensões diretas do seu próprio sistema nervoso. Você e qualquer aliado que esteja adjacente a você podem sacar qualquer explosivo autoral do inventário como uma ação livre. Além disso, o seu tempo de reação em campo de batalha se funde com a balística: você pode gastar 4 pontos de Sanidade (4 SAN) para sacar e arremessar (ou disparar por um lança-granadas) um explosivo autoral como uma única ação de movimento. O Dobro da Devastação: A engenharia dos seus engenhos explosivos atinge o ápice da sobrecarga térmica e cinética. Todos os seus explosivos autorais passam a causar o dobro dos dados de dano base (por exemplo, uma bomba que causava 6d6 passa a causar 12d6)."
+  },
+  {
+    "nome": "Ser Expurgado",
+    "classificacao": "Tier III",
+    "prereq": "Habilidade Ser Testado (mesmo elemento escolhido) e NEX 70%",
+    "custo": "Nenhum (Exige a execução diária do experimento; sem realizá-lo, o braço paranormal fica inutilizado)",
+    "alcance": "Pessoal",
+    "efeito": "Você expurga e sacrifica um dos braços do seu corpo para que ele, pouco a pouco, se desate das amarras limitantes da Realidade, substituindo-o por algo superior: um braço paranormal alimentado por seus experimentos constantes (essa mutação drástica faz sua Presença ser reduzida permanentemente em 1). Agora, ao fazer o experimento diário, você recupera 3d8+3 PV e, até o fim do dia, também se beneficia das propriedades do braço paranormal correspondente ao seu elemento. Sem fazer o experimento, o membro residual torna-se pesado e inutilizado. SANGUE: Seu braço novo é envolto por sangue, espinhos e lâminas que alimentam a carne pulsante com dor. Você recebe +1 ponto em Força, +1d8 em testes de ataques corpo a corpo e o dano adicional fornecido por Ser Testado melhora para +1d8. Além disso, uma vez por rodada, quando ataca com outra arma, você pode gastar 1 ponto de Sanidade para desferir um ataque desarmado extra com o membro modificado. MORTE: Seu braço novo é esquelético e pútrido, formado por uma aglomeração repulsiva de madeira podre, lodo, ossos e cinzas. Você recebe +1 ponto em Vigor. Quando toca em um item pela primeira vez com essa parte, você pode gastar 3 pontos de Sanidade e escolher entre duas propriedades: Envelhecer: O item sofre 50 pontos de dano de Morte (tocar um item portado por um oponente exige um sucesso na manobra Quebrar). Interagir com o Passado: Você adquire uma visão nebulosa da última pessoa que manipulou o objeto e das ações que ela realizou com ele (a visão dura até 1 minuto). CONHECIMENTO: Seu braço novo é esculpido em ouro maldito, cravado de escrituras antigas e Sigilos vivos. Você recebe +1 ponto em Intelecto. Você pode gastar uma ação completa e 3 pontos de Sanidade para tocar a sua própria cabeça ou a de outro ser (alvos sem cabeça são imunes; tocar um ser resistente exige um teste de ataque corpo a corpo bem-sucedido): Em si mesmo: Você fica sob o efeito do ritual Detecção de Ameaças discente até o fim da cena. Em outro ser: O alvo fica sob o efeito do ritual Mergulho Mental por 3 rodadas (sem custo de sustentação em Sanidade, sem direito a teste de resistência, e o efeito encerra se o contato físico for perdido). ENERGIA: Seu braço novo é uma prótese metálica instável, energizada por cabos em sobrecarga e baterias vazadas. Você recebe +1 ponto em Agilidade. Você pode gastar uma ação de movimento e 2 pontos de Sanidade para manipular a corporeidade do braço molécula por molécula até o fim da cena, permitindo atravessar superfícies sólidas (em termos de regras, sempre que usar o braço criativamente a seu favor, a critério do Mestre, você recebe vantagem de 2 etapas extras no dado para o teste). Além disso, você pode gastar uma ação de interlúdio para acoplar permanentemente um item de uma mão ao braço, permitindo utilizá-lo livremente sem ocupar as mãos."
+  },
+  {
+    "nome": "Fluxo de Poder",
+    "classificacao": "Tier III",
+    "prereq": "Presença 3, Ocultismo",
+    "custo": "Custo normal de manutenção dos rituais",
+    "alcance": "Pessoal",
+    "efeito": "Sua mente divide o foco místico, permitindo manter múltiplos efeitos ativos sem travar suas ações em combate. Manutenção Dupla: Você pode sustentar dois rituais simultaneamente utilizando apenas uma única Ação Livre no seu turno. Você paga o custo de manutenção em SAN de cada ritual individualmente."
+  },
+  {
+    "nome": "Chagas da Resistência",
+    "classificacao": "Tier III",
+    "prereq": "Vigor 2 ou Presença 3, Religião ou Ocultismo",
+    "custo": "5 PV (Reação)",
+    "alcance": "Pessoal",
+    "efeito": "Sua fé ou obstinação faz com que seu corpo absorva a ruína que destruiria sua mente, convertendo o colapso psíquico em ferimentos físicos visíveis. Martírio da Carne: Quando qualquer dano mental, teste de Vontade falho ou efeito paranormal for reduzir sua Sanidade a 0, você pode gastar 5 PV como Reação para absorver o baque na sua carne, permanecendo com 1 SAN. Limite de Sacrifício: Esta habilidade pode ser utilizada no máximo 1 vez por cena."
+  },
+  {
+    "nome": "Tornamo-nos Um",
+    "classificacao": "Tier III",
+    "prereq": "As Sombras Dentro de Mim ou Ele Me Ensina, Ocultismo",
+    "custo": "3 SAN",
+    "alcance": "Pessoal (ou Médio para Energia)",
+    "efeito": "A barreira entre a sua mente e a entidade se extingue. Você atinge a simbiose total com o Paranormal, manifestando uma dádiva devastadora ligada ao seu Elemento de afinidade. Manifestação Elementar: Ao adquirir esta habilidade, escolha 1 das dádivas a seguir de acordo com o elemento da sua entidade: Presente da Obsessão (Sangue): Como uma Reação ao sofrer dano (ou estando Inconsciente), você recupera 10 PV e recebe +2 em testes físicos e Intimidação até o início do seu próximo turno, mas sofre -2 em testes de Vontade ou perícias mentais nesse período. Presente do Tempo (Morte): Uma vez por cena, ao gastar 3 SAN no início da rodada, você ganha 1 Ação Padrão adicional no seu turno. Pode ser ativado mesmo Inconsciente para recuperar a consciência e agir imediatamente. Presente do Saber (Conhecimento): Uma vez por cena, com uma Ação de Movimento, você reescreve temporariamente sua essência e ganha o uso de 1 Habilidade de Tier I ou Tier II qualquer até o final da cena (respeitando os pré-requisitos da habilidade escolhida). Presente do Espaço (Energia): Com uma Ação de Movimento (ou Reação a um ataque), você se teleporta instantaneamente para qualquer espaço desocupado em alcance médio, sem precisar de linha de visão."
+  },
+  {
+    "nome": "Flagelo Bem Aproveitado",
+    "classificacao": "Tier III",
+    "prereq": "Vigor 2, Recuperação Flagelante",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu corpo e sua mente aprenderam a extrair a máxima eficiência do próprio sofrimento físico ao canalizar a energia do Outro Lado. Eficiência de Sangue: Ao utilizar a capacidade de sacrificar vida física para suprir custos mentais (substituindo custos de SAN por PV), a taxa de conversão torna-se 1 PV para cada 1 SAN gasto (em vez de 2 PV por 1 SAN)."
+  },
+  {
+    "nome": "Compreensão de Maldições",
+    "classificacao": "Tier III",
+    "prereq": "Intelecto 3, Ocultismo",
+    "custo": "3 SAN",
+    "alcance": "Toque",
+    "efeito": "Você domina os segredos da transferência e decodificação do Paranormal, conseguindo extrair e selar a essência de itens amaldiçoados. Análise e Extração: Durante uma Cena de Interlúdio, você pode gastar 3 SAN e sua Ação de Interlúdio para realizar um rito de extração sobre um item amaldiçoado. Faça um teste de Ocultismo (DT 7+5 por maldição no item). Se falhar, o rito falha, você sofre 2 de dano mental (SAN) adicional e não pode tentar novamente no mesmo item. Absorção de Ritual: Se o teste for bem-sucedido e o item contiver um ritual armazenado, o item é consumido/destruído e você aprende o ritual permanentemente (ele não conta para o seu limite de rituais conhecidos). Transferência / Tatuagem de Maldição: Se o item contiver maldições (e não um ritual), o item original é consumido e você pode transferir suas maldições para outro item ou selá-las na pele de um aliado voluntário adjacente (ou na sua) na forma de uma Tatuagem Paranormal. A pessoa tatuada passa a usufruir dos benefícios e efeitos da maldição sem precisar empunhar/vestir o item original. Um personagem só pode ter no máximo 1 Tatuagem Paranormal no corpo. A tatuagem pode ser dissipada e destruída com uma Ação de Interlúdio do tatuado ou do Ocultista."
+  },
+  {
+    "nome": "Reproduzir Maldição",
+    "classificacao": "Tier III",
+    "prereq": "Intelecto 3, Ocultismo, Compreensão de Maldições",
+    "custo": "3 SAN",
+    "alcance": "Toque",
+    "efeito": "Sua obsessão e compreensão do Paranormal permitem memorizar a estrutura psíquica de uma maldição e replicá-la temporariamente em novos equipamentos. Memorização Arcana: Durante uma Cena de Interlúdio, você pode gastar 3 SAN e sua Ação de Interlúdio para analisar e gravar em sua mente a matriz de uma maldição com a qual já tenha tido contato (item estudado, utilizado ou que o tenha afetado). Você pode manter 1 maldição memorizada por vez. Aplicação Temporária: Tendo uma maldição memorizada, você pode gastar 3 SAN e uma Ação de Interlúdio em um interlúdio subsequente para forjar e canalizar essa maldição em um novo item. Faça um teste de Ocultismo (DT 7 + 5 por maldição já presente no item alvo). Resultado: Sucesso: O item alvo recebe a maldição memorizada até o fim da missão. Falha: A canalização falha, a maldição não se fixa no objeto e você sofre 2 de dano mental (SAN) adicional."
+  },
+  {
+    "nome": "Grão-Mestre em Elemento",
+    "classificacao": "Tier III",
+    "prereq": "Intelecto 3 ou Presença 3, Ocultismo",
+    "custo": "+1 SAN (Integrado à conjuração)",
+    "alcance": "O mesmo do ritual",
+    "efeito": "Seu domínio sobre uma manifestação do Outro Lado permite extrair efeitos secundários devastadores ou altamente benéficos sempre que canaliza seus rituais. Sintonia Suprema: Ao escolher esta habilidade, selecione 1 elemento do Paranormal (Sangue, Morte, Conhecimento ou Energia). Infusão Elementar: Ao conjurar um ritual do elemento escolhido, você pode gastar +1 SAN para infundir a magia com um efeito adicional direcionado a 1 alvo (aliado ou inimigo) afetado pelo ritual: Sangue: Aliado recebe +1d6 de dano extra em suas rolagens de dano até o fim da cena; Inimigo fica Debilitado por 1 rodada. Morte: Aliado recebe 5 + Presença de PV temporários; Inimigo fica Enjoado por 1 rodada. Conhecimento: Aliado recebe +2 em testes de perícia até o fim da cena; Inimigo fica Esmorecido por 1 rodada. Energia: Aliado recebe +3m de Deslocamento até o fim da cena; Inimigo fica Desprevenido por 1 rodada. Penetração Mística: As condições aplicadas a inimigos através desta habilidade ignoram imunidades normais a condições."
+  },
+  {
+    "nome": "Ser Rasgado",
+    "classificacao": "Tier III",
+    "prereq": "Habilidade Ser Perfurado (mesmo elemento escolhido) e NEX 70%",
+    "custo": "Nenhum (Exige a execução diária e extrema da escarificação ritualística)",
+    "alcance": "Pessoal",
+    "efeito": "Os símbolos precisam ir ainda mais fundo. A entidade agora não só escuta suas súplicas, mas vive dentro de você, respira através de seu corpo e o conhece melhor do que a sua própria mente. Essa simbiose absoluta faz com que a sua Presença seja reduzida permanentemente em 1. Agora, ao realizar a escarificação diária, você recupera 1d8 pontos de Sanidade (SAN) e, até o fim da cena ou do dia, também recebe os efeitos passivos e ativos descritos a seguir, conforme o seu elemento escolhido: SANGUE: A porta está pronta. Você rompe músculos anormalmente robustos e expostos para marcar os rituais na própria carne, transformando a dor excruciante em um banquete para o Sangue. Quando conjura um ritual de Sangue, você pode gastar uma ação de movimento e 2d8+2 PV para servir esse sangue a um aliado adjacente; se o alvo aceitá-lo e ingeri-lo como reação, ele recebe etapas bônus em testes baseados em Agilidade, Força e Vigor até o fim da cena. Além disso, a DT dos seus rituais de Sangue marcados na pele aumenta em +2. MORTE: A porta está pronta. Galhos e ossos atravessam sua pele por dentro, vazando lodo e formando espirais e símbolos invertidos que o tornam um com a Morte. Você aprende o ritual Cicatrização (se já o conhece, o custo para conjurá-lo diminui em -1 ponto de Sanidade, cumulativo). Quando conjura um ritual de Morte diferente de Cicatrização, você pode conjurar Cicatrização como uma ação de movimento. Além disso, a DT dos seus rituais de Morte marcados na pele aumenta em +2. CONHECIMENTO: A porta está pronta. Você substitui a tinta por ouro líquido solidificado, encontrando o Conhecimento que detém todas as respostas. Quando conjura um ritual de Conhecimento, você pode gastar uma ação de movimento e 2 pontos de Sanidade para obter revelações sobre o alvo (o Mestre deve responder a 5 perguntas sobre ficha, história ou personalidade com 'sim' ou 'não'). Se você mesmo for o alvo, ganha a capacidade de ver coisas incorpóreas, invisíveis ou ocultas pelo paranormal até o fim da cena. Além disso, a DT dos seus rituais de Conhecimento marcados na pele aumenta em +2. ENERGIA: A porta está pronta. Sua pele torna-se matéria caótica e instável; linhas se movem em faíscas e descargas contínuas fazem seus músculos reagirem antes da mente. Quando conjura um ritual de Energia, você pode gastar uma ação de movimento e 3 pontos de Sanidade para se teletransportar a 3m de distância e receber um bônus na Defesa igual ao número de pontos de Sanidade gastos no ritual (com duração de 1 rodada). Além disso, a DT dos seus rituais de Energia marcados na pele aumenta em +2."
+  },
+  {
+    "nome": "Máquina de Matar",
+    "classificacao": "Tier IV",
+    "prereq": "Agilidade 4 ou Força 4",
+    "custo": "1 SAN por efeito",
+    "alcance": "Conforme a arma",
+    "efeito": "Adiciona as seguintes opções à sua Técnica Secreta (podendo combiná-las gastando +1 SAN por efeito adicional): Perfurante: O ataque ignora até 5 pontos de Resistência a Dano (RD) do alvo. Certeiro: O ataque reduz em -5 a Defesa do alvo contra este golpe, ignorando esquivas ou proteções ágeis."
+  },
+  {
+    "nome": "Sempre Alerta",
+    "classificacao": "Tier IV",
+    "prereq": "Agilidade 4",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Em cada rodada de combate, você recebe 1 Ação Padrão adicional em seu turno."
+  },
+  {
+    "nome": "Ser Aterrorizante",
+    "classificacao": "Tier IV",
+    "prereq": "Habilidade Ser Assustador (mesmo elemento escolhido) e NEX 90% (o ápice da simbiose e corrupção pela Entidade)",
+    "custo": "Nenhum (A execução da etapa ritualística diária torna-se permanente em seus efeitos, mas você ainda deve realizá-la para evitar as condições de fome e sede)",
+    "alcance": "Pessoal",
+    "efeito": "Você foi transformado no habitat perfeito e absoluto para a entidade que reside no interior de seu corpo e mente. Os benefícios de RD e mutações concedidos por sua etapa ritualística tornam-se permanentes (eliminando a necessidade de refazer o ritual para manter os bônus passivos, embora ele ainda seja exigido diariamente para afastar a fome e a sede paranormais), e você passa a ser classificado mecanicamente como uma criatura paranormal para efeitos de habilidades, alvos de rituais e interações com itens. Além disso, a Resistência a Dano (RD) concedida por esta trilha salta para 20, e você recebe os efeitos adicionais definitivos associados ao seu elemento: SANGUE: Você se move como uma entidade bestial; não resta empatia ou sensibilidade, apenas o instinto puro e a fome voraz. O seu Intelecto diminui permanentemente em -1, enquanto a sua Força aumenta permanentemente em +1. Sempre que causa dano com a sua mordida em um ser, você recupera 5 PV instantaneamente (valor que também é multiplicado em caso de acerto crítico). Além disso, você aprende o ritual Forma Monstruosa. No entanto, o seu desejo primordial de consumir toma o controle: sempre que sofre dano, você deve fazer um teste de Vontade (DT 10+o dano sofrido). Se falhar e não estiver sob o efeito de Forma Monstruosa, a sua próxima ação padrão deve ser obrigatoriamente conjurar esse ritual (caso não possua os recursos, você perde a ação em um frenesi irracional). MORTE: Você está morto, mas a Entidade o força a continuar existindo em um estado de caducidade perpétua. Seus órgãos foram consumidos pelo Lodo e você atingiu a imortalidade. A sua Presença diminui permanentemente em -1, enquanto o seu Vigor aumenta permanentemente em +1. Você recebe imunidade total a dano de Morte e se torna imortal (se morrer, o seu corpo é restaurado pelo Lodo e você retorna à vida no dia seguinte). Contudo, há uma falha na estagnação: se você for reduzido a 0 PV por dano de fogo ou Energia, o seu Lodo é completamente desintegrado e você morre de vez, sem retorno. Por fim, você aprende o ritual Fim Inevitável. CONHECIMENTO: Sua boca desapareceu após você costurá-la com fios dourados, pois ninguém mais é considerado digno do seu ensinamento. Seus olhos aumentaram e aprofundaram-se com escleras negras, seus membros alongaram-se e afinaram, e suas tatuagens converteram-se em sigilos vivos do Outro Lado. Atrás de uma porta dourada em sua mente reside a verdade que você deve esquecer; você consegue enxergá-la, mas sabe que abri-la custará tudo o que é. Sua Força diminui permanentemente em -1 e seu Intelecto aumenta permanentemente em +1. Além disso, você recebe o sentido de Percepção às Cegas e aprende um ritual de Conhecimento de 4º círculo à sua escolha. Entretanto, a carga cósmica é brutal: sempre que conjura esse ritual, você perde a memória de tudo o que vivenciou desde o início da cena. ENERGIA: Tudo faz parte de você e você é tudo. Você se tornou uma metamorfose ambulante, assumindo uma forma plasmática indescritível que não é sólida, líquida ou gasosa. Seu corpo flutua alguns centímetros acima do chão e torna-se incapaz de segurar objetos convencionais, pois tudo o que você toca funde-se transitoriamente ao seu ser enquanto há contato; seus traços físicos mudam sem parar e você perde uma aparência definitiva. O Caos substitui a lógica: sua Força diminui permanentemente em -1 e sua Agilidade aumenta permanentemente em +1. Você passa a pairar a 1,5m do chão com deslocamento de 12m (ignorando terreno difícil e ficando imune a dano por queda), pode espremer-se por qualquer espaço onde uma criatura Minúscula passaria, e ganha imunidade a condições de paralisia física (como ser agarrado ou enredado). Por fim, você aprende o ritual Deflagração de Energia. Contudo, as amarras da matéria se rompem: você não pode mais se beneficiar de itens vestidos e, por não possuir um corpo físico coeso, só consegue manipular objetos utilizando a força da mente (limitado a um objeto por vez, equivalente ao que manipularia com as duas mãos)."
+  },
+  {
+    "nome": "Ser Apavorante",
+    "classificacao": "Tier IV",
+    "prereq": "Habilidade Ser Expurgado (mesmo elemento escolhido) e NEX 99% (o limite absoluto da mutação e corrupção física/mental)",
+    "custo": "Nenhum (Exige a execução diária e definitiva do experimento com o próprio corpo)",
+    "alcance": "Pessoal",
+    "efeito": "Suas experimentações alcançaram o limiar absoluto entre a humanidade e a monstruosidade, transformando seu corpo no receptáculo perfeito e definitivo para a entidade preenchê-lo. Essa degradação extrema faz com que a sua Presença seja reduzida permanentemente em mais 1, e a penalidade nas perícias sociais salta de -5 para -10 dados de desvantagem em Diplomacia, Enganação e Intuição. Agora, ao fazer o experimento diário, você recupera 4d8+4 PV e, até o fim do dia, recebe os efeitos aprimorados e definitivos descritos a seguir, conforme o seu elemento escolhido: SANGUE: O seu corpo já não é mais seu; você é uma massa bestial impregnada pelo fluxo do Outro Lado, feita de partes desproporcionais costuradas e moldadas à força, onde consumir e crescer são as únicas pulsões restantes. Os bônus anteriores de Ser Experimentado evoluem: você passa a ser considerado de tamanho Enorme (+5 em manobras de combate e -5 dados de desvantagem em Furtividade), soma sua Força em testes baseados nela, recebe +1 ponto permanente em Força e aprende o ritual Vínculo de Sangue. MORTE: Tudo o que restou é o tempo, distorcido em um fluxo infinito onde segundos, séculos e milênios fundem-se em um só tique-taque, deixando um rastro de lodo cadavérico por onde passa. Os bônus anteriores de Ser Experimentado evoluem: você recebe 4d6 PV temporários, ganha duas ações padrão adicionais por cena, soma seu Vigor em testes baseados nele, recebe +1 ponto permanente em Vigor e aprende o ritual Distorção Temporal. CONHECIMENTO: Sua mente carrega o peso de todas as descobertas e decifrações do Outro Lado, com a mão já empurrando a porta para o segredo final. Os bônus anteriores de Ser Experimentado evoluem: escolha três perícias, nas quais você passa a ser considerado expert (dobrando o bônus de treinamento), soma seu Intelecto em testes baseados nele, recebe +1 ponto permanente em Intelecto e aprende o ritual Controle Mental. ENERGIA: Você é o experimento que falhou catastroficamente de propósito, uma massa caótica de partículas fundamentais que se desmaterializam e se remontam constantemente no espaço. Os bônus anteriores de Ser Experimentado evoluem: você pode, três vezes por rodada, sacar um item como ação livre (cumulativo com bandoleiras), seus deslocamentos aumentam em 12m, você soma sua Agilidade em testes baseados nela, recebe +1 ponto permanente em Agilidade e aprende o ritual Teletransporte."
+  },
+  {
+    "nome": "Maldição Suprema",
+    "classificacao": "Tier IV",
+    "prereq": "Intelecto 4, Ocultismo, Reproduzir Maldição",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seu domínio sobre a trama do Paranormal é tão profundo que você consegue vincular maldições adicionais sem que o acúmulo de energias arcanas no objeto dificulte o processo. Sintonia Absoluta: Ao utilizar a habilidade Reproduzir Maldição, a DT do teste de Ocultismo torna-se fixa em 15, ignorando a penalidade de +5 para cada maldição já presente no item alvo."
+  },
+  {
+    "nome": "Selo Supremo",
+    "classificacao": "Tier IV",
+    "prereq": "Intelecto 4, Ocultismo, Decifrar à Distância",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Sua maestria no desenho e encantamento de marcas arcanas atinge o ápice, transformando seus selos em artefatos de poder absoluto e execução perfeita. Uso Perfeito: Qualquer pessoa que ative um Selo Paranormal criado por você ignora completamente a necessidade de realizar testes de Ocultismo. Empoderamento Arcano: Os rituais gravados nos seus selos recebem os seguintes aprimoramentos automáticos: Resistência Aprimorada: A DT dos rituais contidos nos selos aumenta em +2. Potência Ampliada: Se o ritual causar dano ou cura, adicione +3 dados do mesmo tipo à rolagem. Forma Aprimorada Gratuita: O usuário pode ativar a versão aprimorada (discente ou verdadeira) do ritual contido no selo sem pagar o custo adicional em SAN."
+  },
+  {
+    "nome": "Ser Mutilado",
+    "classificacao": "Tier IV",
+    "prereq": "Habilidade Ser Rasgado (mesmo elemento escolhido) e NEX 99% (o ápice absoluto da simbiose e abertura da porta para a Entidade)",
+    "custo": "Nenhum (Exige a execução diária e definitiva da escarificação ritualística)",
+    "alcance": "Pessoal",
+    "efeito": "As escarificações são tão profundas que os rituais marcados dispensam qualquer comunicação para serem conjurados, entrando em um estado de efeito frequente que só terminará com a morte de seu portador. Essa deformação extrema faz com que a sua Presença seja reduzida permanentemente em mais 1, e a penalidade nas perícias sociais de Diplomacia, Enganação e Intuição salta de -5 para -10 dados de desvantagem. Agora, ao realizar a escarificação diária, você recupera 1d12 pontos de Sanidade (SAN) e, até o fim do dia, também recebe os efeitos passivos e definitivos descritos a seguir, conforme o seu elemento escolhido: CONHECIMENTO: A Verdade está marcada em seu corpo, esperando para ser lembrada; você foi aplicado aos Sigilos de Eloquência e tornou-se exatamente o que buscava, com a porta aberta e a conexão quase absoluta. Você recebe +1 ponto permanente em Intelecto, pode conjurar rituais de Conhecimento marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Conhecimento de 4º círculo à sua escolha. ENERGIA: Seu corpo vibra em cores e símbolos que se alternam rapidamente ao som de um ruído caótico que só você escuta, conectados simultaneamente. A porta está aberta e a conexão é quase absoluta. Você recebe +1 ponto permanente em Agilidade, pode conjurar rituais de Energia marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Energia de 4º círculo à sua escolha. SANGUE: Todos os sacrifícios foram feitos e você se tornou o próprio sacrifício, deleitando-se nos frutos de todas as suas dores após provar sua resiliência à Entidade. A porta está aberta e a conexão é quase absoluta. Você recebe +1 ponto permanente em Força, pode conjurar rituais de Sangue marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Sangue de 4º círculo à sua escolha. MORTE: A casca decrépita que um day chamou de corpo contém a infinitude de momentos em que você pôde parar mas não o fez, tornando-se a personificação do fim e da destruição inevitável. A porta está aberta e a conexão é quase absoluta. Você recebe +1 ponto permanente em Vigor, pode conjurar rituais de Morte marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Morte de 4º círculo à sua escolha."
+  }
+]

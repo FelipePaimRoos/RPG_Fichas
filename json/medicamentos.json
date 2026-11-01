@@ -1,0 +1,50 @@
+[
+  {
+    "nome": "Antibiótico",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Fortalece o sistema imunológico contra agentes patogênicos e infecções. Concede 2 Vantagens (+1d6) no próximo teste de Fortitude realizado contra os efeitos de uma doença até o fim do dia[cite: 137]."
+  },
+  {
+    "nome": "Antídoto",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Antídoto Geral: Concede 2 Vantagens (+1d6) no próximo teste de Fortitude contra os efeitos de um veneno até o fim do dia[cite: 137]. Antídoto Específico: Neutraliza e remove completamente um veneno específico do organismo de forma imediata[cite: 137]."
+  },
+  {
+    "nome": "Antiemético",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Neutraliza o enjoo e estabiliza o centro do vômito. Remove imediatamente a condição Enjoado e concede 2 Vantagens (+1d6) em testes para evitar a condição Enjoado ou náuseas até o fim da cena[cite: 137]."
+  },
+  {
+    "nome": "Anti-histamínico",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Inibe reações alérgicas agudas e choques anafiláticos. Concede 2 Vantagens (+1d6) no próximo teste de resistência contra efeitos de reações alérgicas ou toxinas histamínicas até o fim do dia[cite: 137]."
+  },
+  {
+    "nome": "Anti-inflamatório",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Inibe a resposta inflamatória, mitigando a dor e reduzindo o inchaço. Concede 1d8+2 Pontos de Vida (PV) temporários[cite: 137]."
+  },
+  {
+    "nome": "Antitérmico",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Controla estados febris graves e cefaleias. Permite realizar um novo teste de resistência para tentar encerrar uma condição mental (limitado a uma vez por cena para o mesmo personagem)[cite: 137, 138]."
+  },
+  {
+    "nome": "Broncodilatador",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Desobstrui as vias aéreas e otimiza a troca gasosa. Concede 2 Vantagens (+1d6) em testes de resistência para evitar as condições Asfixiado ou Fatigado até o fim do dia[cite: 138]."
+  },
+  {
+    "nome": "Coagulante",
+    "tipo": "Medicamento",
+    "espaco": 1,
+    "efeito": "Agente hemostático rápido. Concede 2 Vantagens (+1d6) em testes para estancar/estabilizar a condição Sangrando até o fim do dia. Se usado com Medicina para estabilizar um personagem Morrendo, o socorrista recebe 2 Vantagens (+1d6)[cite: 138]."
+  }
+]

@@ -1,0 +1,404 @@
+[
+  {
+    "nome": "Amarras Mortais",
+    "tipo": "Item Amaldiçoado Especial (Morte / Acessório)",
+    "espaco": 1,
+    "efeito": "Agarrar Temporal: gasta ação padrão e 2 SAN para tentar agarrar alvo Grande ou menor em alcance Curto (9m) com 2 Vantagens no teste oposto. Atração do Lodo: gasta ação de movimento para puxar o alvo agarrado para uma posição adjacente[cite: 131]."
+  },
+  {
+    "nome": "Casaco de Lodo",
+    "tipo": "Item Amaldiçoado Especial (Morte / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Amortecimento Temporal (RD): concede RD 5 contra dano de Corte, Impacto, Morte e Perfuração[cite: 131]. Debilidade Elemental: o portador recebe Vulnerabilidade a Energia e Vulnerabilidade a dano Balístico (+50% de dano)[cite: 131, 132]."
+  },
+  {
+    "nome": "Coletora",
+    "tipo": "Item Amaldiçoado Especial (Morte / Arma Ágil Corpo a Corpo Simples de Uma Mão)",
+    "espaco": 1,
+    "efeito": "Ceifa de Vitalidade: gasta ação completa para apunhalar pessoa em estado Morrendo; o alvo morre instantaneamente e a arma absorve 1d8 SAN (armazena até 20 SAN para pagar custos de rituais/habilidades). Pesadelos e Insônia: condições de descanso sempre ruins[cite: 132]."
+  },
+  {
+    "nome": "Crânio Espiral",
+    "tipo": "Item Amaldiçoado Especial (Morte / Utensílio)",
+    "espaco": 1,
+    "efeito": "Dilatação do Tempo: gasta ação livre para receber 1 Ação Padrão adicional no turno. Cobrança de Vida: exige teste de Vontade (DT 7 +5 por uso); falha envelhece 1d4 anos e o crânio fica inerte no dia[cite: 132]."
+  },
+  {
+    "nome": "Frasco de Lodo",
+    "tipo": "Item Amaldiçoado Especial (Morte / Consumível)",
+    "espaco": 1,
+    "efeito": "Cauterização Temporal: gasta ação padrão para aplicar em ferida. Ferimento recente (até 1 rodada): recupera 6d8+20 PV[cite: 132]. Ferimento antigo (mais de 1 rodada): 1d6 par recupera 3d8+10 PV; ímpar causa 3d8+10 de dano de Morte[cite: 132, 133]."
+  },
+  {
+    "nome": "Vislumbre do Fim",
+    "tipo": "Item Amaldiçoado Especial (Morte / Acessório)",
+    "espaco": 1,
+    "efeito": "Acentuação Temporal: gasta ação de movimento para focar em entidade ou pessoa. Pessoas comuns: revela contador regressivo para a morte. Marcados e criaturas: revela o pior teste de resistência e todas as Vulnerabilidades mecânicas[cite: 133]."
+  },
+  {
+    "nome": "Ampulheta do Tempo Sofrido",
+    "tipo": "Item Amaldiçoado Especial (Morte / Utensílio)",
+    "espaco": 1,
+    "efeito": "Interlúdio Instantâneo: gasta 5 SAN para receber os benefícios de 1 Ação de Interlúdio imediatamente. Tributo Temporal: fica incapaz de reutilizar até realizar um interlúdio convencional para devolver o tempo[cite: 133]."
+  },
+  {
+    "nome": "Injeção de Lodo",
+    "tipo": "Item Amaldiçoado Especial (Morte / Consumível)",
+    "espaco": 1,
+    "efeito": "Estase do Colapso: gasta ação padrão para aplicar em si ou aliado. Resistência Terminal: a próxima vez que for reduzido a 0 PV, vai para 1 PV em vez de Morrendo. Fragilidade Elemental: recebe Vulnerabilidade a dano Balístico e de Energia (+50% dano) até o fim da cena[cite: 133, 134]."
+  },
+  {
+    "nome": "Instantâneo Mortal",
+    "tipo": "Item Amaldiçoado Especial (Morte / Utensílio)",
+    "espaco": 1,
+    "efeito": "Orientação dos Mortos: ao investigar ou procurar pistas, gasta 1 SAN olhando para a imagem de um óbito. Guia Espectral: concede 1 Vantagem (+1d6) no teste se a perícia se relacionar às circunstâncias da morte[cite: 134]."
+  },
+  {
+    "nome": "Projétil de Lodo",
+    "tipo": "Item Amaldiçoado Especial (Morte / Munição)",
+    "espaco": 1,
+    "efeito": "Conversão Temporal: converte todo o dano do ataque para dano de Morte[cite: 134]. Degradação do Armamento: ao final da cena, a arma utilizada degrada-se e desfaz-se completamente em poeira e lodo[cite: 134]."
+  },
+  {
+    "nome": "Rádio Chiador",
+    "tipo": "Item Amaldiçoado Especial (Morte / Utensílio)",
+    "espaco": 1,
+    "efeito": "Alarme Paranormal: com pilhas de 12 horas, emite chiados se houver criatura paranormal em alcance Extremo (90m), permitindo estimar direção e categoria. Atrai criaturas que o oucham[cite: 134, 135]."
+  },
+  {
+    "nome": "Sniper Fantasma",
+    "tipo": "Item Amaldiçoado Especial (Morte / Arma de Fogo Tática de Duas Mãos)",
+    "espaco": 2,
+    "efeito": "Estatísticas: Tática de Fogo (2 mãos / Longo), Dano: 2d10 Balístico + 3d4 Morte, Margem 19/x3. Mira Fantasma: Veterano em Pontaria ao Mirar recebe +5 na Margem de Ameaça (ex: 14). Apressar o Fim: alvos com 0 PV morrem se iniciarem 2 turnos no estado Morrendo[cite: 135]."
+  },
+  {
+    "nome": "Faixas da Vidência",
+    "tipo": "Item Amaldiçoado Especial (Morte / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Distorção Temporal Próxima: concede +2 na Defesa e 1 Vantagem (+1d6) em testes de resistência contra ataques/rituais a até 9m[cite: 135, 136]. Miopia Temporal Distante: sofre -2 na Defesa e 1 Desvantagem (-1D) contra origens além de 9m. Outros: +2 em Intimidação; gasta 1 SAN para 1 Vantagem em testes de pistas[cite: 136]."
+  },
+  {
+    "nome": "Anel Invertido",
+    "tipo": "Item Amaldiçoado Especial (Morte / Acessório)",
+    "espaco": 0.5,
+    "efeito": "Adesão Sádica: adere ao dedo e não pode ser removido até o fim da cena. Resistência Mitigadora: ao sofrer dano de Nidere, gasta reação e 2 SAN para receber RD 4d10 contra o dano[cite: 136]."
+  },
+  {
+    "nome": "Coração Pulsante",
+    "tipo": "Item Amaldiçoado Especial (Sangue)",
+    "espaco": 1,
+    "efeito": "Mitigação de Trauma: gasta reação ao sofrer dano físico/ataque para espremer o órgão e reduzir o dano à metade. Risco de Ruptura: teste de Fortitude (DT 7 +5 por uso) ou o coração se rompe. Manutenção: o compartimento deve ser limpo 1 vez por dia para evitar estragar equipamentos."
+  },
+  {
+    "nome": "Coroa de Espinhos",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Item Vestido)",
+    "espaco": 1,
+    "efeito": "Sincronia: exige 1 semana de uso contínuo. Conversão de Dor Mental: usa reação para converter Dano Mental (SAN) em Dano de Sangue (PV) de mesmo valor. Maldito Tributo: impede recuperar Sanidade por descanso em Interlúdios."
+  },
+  {
+    "nome": "Frasco de Vitalidade",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Consumível)",
+    "espaco": 1,
+    "efeito": "Armazenamento de Sangue: gasta 1 minuto e sangra até 20 PV para preencher. Consumo e Regeneração: gasta ação padrão para ingerir e recuperar a quantidade exata de PV armazenada. Efeito Colateral: teste de Fortitude (DT 20); falha deixa Enjoado por 1 rodada."
+  },
+  {
+    "nome": "Pérola de Sangue",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Consumível)",
+    "espaco": 1,
+    "efeito": "Absorção: gasta ação de movimento para pressionar contra a pele. Benefício: concede 2 Vantagens (+1d6) em testes de Agilidade, Força e Vigor até o final da cena. Sobrecarga Cardíaca: teste de Fortitude (DT 20) ao fim da cena; falha deixa Fatigado, falha por 5 ou mais causa parada cardíaca (Morrendo) e risco de virar criatura."
+  },
+  {
+    "nome": "Punhos Enraivecidos",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Armamento)",
+    "espaco": 1,
+    "efeito": "Combate Letal: ataques desarmados causam dano letal e recebem +1d8 de dano de Sangue. Ataques em Cadeia (Frenesi): acerto permite realizar outro ataque desarmado pagando 2 SAN adicionais por ataque prévio no turno."
+  },
+  {
+    "nome": "Seringa de Transfiguração",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Utensílio)",
+    "espaco": 1,
+    "efeito": "Extração de Amostra: gasta ação padrão para sugar sangue de alvo adjacente. Injeção Transfiguradora: gasta ação padrão para alterar a aparência da vítima para a do doador por 1 dia. Sequela: 1 em 1d6 ao expirar faz perder 1 PV permanentemente."
+  },
+  {
+    "nome": "Conector de Membros",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Utensílio)",
+    "espaco": 1,
+    "efeito": "Reconexão Vascular: gasta ação padrão para reconectar braço, perna ou cabeça decepados (ocorrido há no máximo 3 rodadas). Estabilização: remove condição Morrendo/morte por decapitação, deixando com 1 PV e Inconsciente. Autonomia Orgânica: 25% de chance de o membro ganhar vida própria (perna deixa Lento, braço impõe desvantagem, cabeça deixa Confuso)."
+  },
+  {
+    "nome": "Dose d'A Praga",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Consumível)",
+    "espaco": 1,
+    "efeito": "Infusão Mutagênica: gasta ação padrão para consumir; concede os poderes Arma de Sangue, Sangue de Ferro e Sangue Vivo até o fim da cena. Efeito Colateral: teste de Fortitude (DT 10 +5 por dose); falha causa 2d4 de Dano Mental e aplica o ritual Ódio Incontrolável."
+  },
+  {
+    "nome": "Mandíbula Agonizante",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Utensílio)",
+    "espaco": 1,
+    "efeito": "Isca Sonora: gasta ação padrão e arremessa a até 18m para emitir gritos que abafam sons em raio de 30m. Distração: sucesso automático em testes para criar distrações em Furtividade. Atração: criaturas de Sangue são atraídas (Vontade DT 35 para resistir)."
+  },
+  {
+    "nome": "Retalho Tenebroso",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Acessório)",
+    "espaco": 1,
+    "efeito": "Máscara da Besta: gasta ação padrão para aplicar no rosto; concede Faro e Visão no Escuro, mas causa Vulnerabilidade a Morte (+50% dano) e -2D em interações sociais. Fúria Acumulada: +1 em dano e ataque por dia consecutivo de uso. Degradação: teste diário de Fortitude (DT 7 +5 por dia) ou perde 1d6 PV (recuperação de PV bloqueada enquanto equipado)."
+  },
+  {
+    "nome": "Machado do Mutilador",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Arma Corpo a Corpo Tática de Uma Mão)",
+    "espaco": 1,
+    "efeito": "Estatísticas: Tática 1 mão, Dano: 1d8 Corte + 1d8 Sangue, Margem 20/x3 (crítico multiplica ambos os dados). Hemorragia Múltipla: gasta 1 SAN ao acertar para deixar o alvo Sangrando (acumulativo)."
+  },
+  {
+    "nome": "Arpão do Pescador",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Arma Simples Corpo a Corpo de Uma Mão / Arremesso)",
+    "espaco": 1,
+    "efeito": "Estatísticas: Simples 1 mão / Arremesso (9m), Dano: 1d8 Perfuração + 1d12 Sangue, Margem 20/x3. Empalamento Restritivo: arremesso bem-sucedido prende a arma na carne, deixando o alvo Lento até remover (ação padrão + Atletismo)."
+  },
+  {
+    "nome": "Combustível de Sangue",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Municiamento e Consumível)",
+    "espaco": 1,
+    "efeito": "Penalidade passiva: -3D em Fortitude e Vontade contra efeitos de Sangue. Conversão Elemental: converte dano de lança-chamas/galão para Sangue e aumenta a categoria do dado de dano em um passo (ex: d6 para d8)."
+  },
+  {
+    "nome": "Marreta Transtornada",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Arma Tática Corpo a Corpo de Duas Mãos)",
+    "espaco": 2,
+    "efeito": "Estatísticas: Tática 2 mãos, Dano: 2d10 Impacto + 2d12 Sangue, Margem 20/x4. Tributo de Sangue: empunhar ou atacar custa 1d6 PV. Fratura Traumática: crítico força teste de Fortitude; falha deixa o alvo Fraco (ou Debilitado se já estiver Fraco)."
+  },
+  {
+    "nome": "Camiseta Psikolera",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Fúria Ferida: se estiver Machucado (menos da metade dos PV), rolagens de dano recebem +2d8 de dano de Sangue adicionais."
+  },
+  {
+    "nome": "Dupla Obsessiva",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Armas Corpo a Corpo Táticas de Uma Mão)",
+    "espaco": 2,
+    "efeito": "Composto por Maça (2d4 Impacto/Perfuração + 1d6 Sangue, 20/x3) e Florete (1d6 Perfuração + 2d4 Sangue, 18/x2). Ataque Duplo: gasta ação padrão para atacar com ambas. Interposição Obsessiva: gasta 2 SAN como reação para se interpor por aliado em alcance Curto (9m) e +2 SAN para contra-atacar."
+  },
+  {
+    "nome": "Armadura dos Couraças (Armadura de Guevara)",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Proteção Pesada)",
+    "espaco": 0,
+    "efeito": "Defesa: +10 inicial (aumenta +1 por semana até +20). Isenta de carga, penalidades e proficiência. Resistências: RD 5 contra Balístico, Impacto, Perfuração e RD 10 contra Sangue; Vulnerabilidade a Morte (+50% dano). Parasitismo: teste de Vontade para não vestir compulsoriamente e teste de Fortitude para não ter o corpo dominado pelo Sangue."
+  },
+  {
+    "nome": "Larva da Fúria",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Consumível Operacional)",
+    "espaco": 1,
+    "efeito": "Consumo Frenético: gasta ação de movimento para engolir; concede +2 Vantagens em ataques e +4 de dano corpo a corpo, mas impede ações de calma/concentração. Cessa se passar 1 rodada sem atacar ou ser atacado."
+  },
+  {
+    "nome": "Cajado da Cruz de Sangue",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Arma Simples Corpo a Corpo de Duas Mãos)",
+    "espaco": 2,
+    "efeito": "Estatísticas: Simples 2 mãos, Dano: 1d12 Corte, Margem 20/x2 (tratado como ágil para Combater com Duas Armas). Ressonância de Ocultista: para ocultistas com rituais de Sangue, reduz custo de rituais/poderes em -1 SAN, aumenta DT em +1 e dano em +1 dado."
+  },
+  {
+    "nome": "Terço Maculado",
+    "tipo": "Item Amaldiçoado Especial (Sangue / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Súplica Herdada: herda um voto do antigo dono. Fervor Obsessivo: concede 2 Vantagens em testes alinhados à súplica. Adesão Maldita: adere à carne e não pode ser removido (tentativa causa 2d10 PV de dano). Punição: ações contra a súplica causam 2d10 PV de dano."
+  },
+  {
+    "nome": "Jaqueta de Veríssimo",
+    "tipo": "Item Amaldiçoado Especial (Medo / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Blindagem da Realidade (RD): concede RD 15 a Dano Paranormal (Sangue, Morte, Conhecimento, Energia e Medo). Escudo Abnegado: gasta reação e 2 SAN para interceptar dano sofrido por aliado adjacente e tornar-se o alvo em seu lugar[cite: 85]."
+  },
+  {
+    "nome": "Dedo Decepado",
+    "tipo": "Item Amaldiçoado Especial (Varia / Utensílio)",
+    "espaco": 0.5,
+    "efeito": "Sintonia Prolongada: exige transporte ou uso contínuo por 1 semana. Poder Herdado: garante 1 Poder Paranormal do antigo dono. Insônia e Assombração: rola 1d4 ao Dormir ou Relaxar (resultado 1 impede recuperar PV ou SAN). Repulsa Social: impõe 1 Desvantagem e -2 em Diplomacia e reações hostis[cite: 85, 86]."
+  },
+  {
+    "nome": "Selos Paranormais",
+    "tipo": "Item Amaldiçoado Especial (Varia / Consumível Utensílio)",
+    "espaco": 0.5,
+    "efeito": "Ativação por Leitura: empunha e recita sigilos em voz alta (ação padrão ou do ritual). Requisito: automático se já conhece, ou teste de Ocultismo (DT 10 + custo SAN) se não conhece. Consome o selo para conjurar o ritual imediatamente, dispensando componentes ritualísticos e permitindo versões Discente/Verdadeira se já o conhecer[cite: 86]."
+  },
+  {
+    "nome": "A Primeira Adaga",
+    "tipo": "Item Amaldiçoado Especial (Medo / Arma Simples Ágil Corpo a Corpo de Uma Mão)",
+    "espaco": 1,
+    "efeito": "Estatísticas: Simples Ágil 1 mão / Arremesso (9m), Dano: 1d4 Perfuração + 1d6 Medo, Margem x2. Catalisador Primordial: aplica os efeitos dos 4 catalisadores (Ampliador, Perturbador, Potencializador, Prolongador) ao conjurar um ritual. Sincronia Temporal: tempo de conjuração fixado em 1 rodada. Preço do Sacrifício: perde metade dos PV totais ou sacrifica vítima indefesa adjacente[cite: 86, 87]."
+  },
+  {
+    "nome": "A Antena",
+    "tipo": "Item Amaldiçoado Especial (Medo / Arma Simples Corpo a Corpo de Duas Mãos)",
+    "espaco": 2,
+    "efeito": "Estatísticas: Simples 2 mãos (Improvisada), aplica 1 Desvantagem em ataques, Dano: 1d6 Impacto, Margem x2. Foco Amplificador: aumenta a DT de todos os rituais em +3 (ou +1d6 no Step Dice). Armazenamento de Ritual: retém 1 único ritual para liberação posterior com ação padrão sem gastar SAN ou ações adicionais[cite: 87, 88]."
+  },
+  {
+    "nome": "Arcabuz dos Moretti",
+    "tipo": "Item Amaldiçoado Especial (Energia / Arma Simples de Fogo de Uma Mão)",
+    "espaco": 1,
+    "efeito": "Acurácia Melindrosa: concede +2 em testes de ataque. Munição Infinita: não necessita de munição convencional. Inconstância Energética: sempre que dispara, rola 1d6 para definir o dado de dano de Energia (1: 2d4, 2: 2d6, 3: 2d8, 4: 2d10, 5: 2d12, 6: 2d20); margem 20/x3[cite: 100]."
+  },
+  {
+    "nome": "Bateria Reversa",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio)",
+    "espaco": 1,
+    "efeito": "Dreno Elétrico: gasta ação padrão e 2 SAN para absorver a carga de dispositivo em alcance Curto, descarregando-o e carregando a bateria. Transferência Energética: transfere carga para dispositivo descarregado. Sobrecarga Explosiva: teste de Ocultismo (DT 7 +5 por uso); falha causa 12d6 de dano de Energia em raio de 3m[cite: 100, 101]."
+  },
+  {
+    "nome": "Peitoral da Segunda Chance",
+    "tipo": "Item Amaldiçoado Especial (Energia / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Desfibrilação Caótica: se reduzido a 0 PV, reanima automaticamente consumindo 5 SAN e restaurando 4d10 PV. Risco de Vaporização: probabilidade de 1 em 10 de matar instantaneamente e incinerar o corpo e equipamentos em plasma puro[cite: 101]."
+  },
+  {
+    "nome": "Relógio de Arnaldo",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio)",
+    "espaco": 1,
+    "efeito": "Propriedade Única: apenas 1 agente no grupo pode portar. Alteração da Sorte: gasta 1 SAN para rolar novamente qualquer dado cujo resultado tenha sido 1. Custo Escalável: aumenta em +1 SAN por cada uso adicional no mesmo dia[cite: 101]."
+  },
+  {
+    "nome": "Talismã da Sorte",
+    "tipo": "Item Amaldiçoado Especial (Energia / Acessório)",
+    "espaco": 1,
+    "efeito": "Intervenção Caótica: ao sofrer dano, gasta reação e 3 SAN para rolar 1d4 (2 ou 3 evita totalmente o dano; 4 evita o dano mas destrói o talismã; 1 sofre o dobro do dano e destrói o talismã)[cite: 101, 102]."
+  },
+  {
+    "nome": "Teclado de Conexão Neural",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio)",
+    "espaco": 1,
+    "efeito": "Interface Cerebral: conecta a terminal para operar sem barreiras de idioma, concede 2 Vantagens em Tecnologia/Hackear e reduz pela metade o tempo para localizar arquivos. Sobrecarga Sináptica: causa 1d6 de Dano Mental (SAN) por rodada de uso ativo[cite: 102]."
+  },
+  {
+    "nome": "Tela do Pesadelo",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio)",
+    "espaco": 1,
+    "efeito": "Armadilha Ilusória: gasta ação padrão e 2 SAN para armar. O próximo ser que tocar sofre teste de Vontade; falha causa Atordoamento, 4d6 de Dano Mental e repete o teste a cada turno até passar ou a tela ser destruída[cite: 102]."
+  },
+  {
+    "nome": "Veículo Energizado",
+    "tipo": "Item Amaldiçoado Especial (Energia / Veículo)",
+    "espaco": "N/A (Veículo)",
+    "efeito": "Imune à necessidade de combustíveis convencionais. Intangibilidade de Emergência: condutor gasta reação e passa em teste de Pilotagem (DT 25) no impacto para desmaterializar o veículo e ocupantes em energia pura, atravessando obstáculos sólidos e evitando dano[cite: 102, 103]."
+  },
+  {
+    "nome": "Arreio Neural",
+    "tipo": "Item Amaldiçoado Especial (Energia / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Conversão Bioelétrica: ao sofrer 5 ou mais pontos de dano de Eletricidade ou Energia, recupera 1 SAN. Limite Biológico: o máximo recuperável por dia é o dobro do Vigor[cite: 103]."
+  },
+  {
+    "nome": "Centrifugador Existencial",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio)",
+    "espaco": 1,
+    "efeito": "Bifurcação Quântica: gasta ação padrão e 3 SAN para dividir a existência em duas linhas temporais, recebendo 1 turno adicional na última Iniciativa. Resolução: sorteia qual versão dissipa ao final da rodada. Erosão Atributiva: teste de Ocultismo (DT 7 +5 por uso); falha divide os atributos pela metade até o Interlúdio[cite: 103, 104]."
+  },
+  {
+    "nome": "Espelho Refletor",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio)",
+    "espaco": 1,
+    "efeito": "Percepção Impossível: gasta ação de movimento para observar pontos fora do campo de visão em alcance Médio com 1 Vantagem e ignorar cobertura total. Deflexão Energética: sacrifica o espelho ao sofrer dano de Energia para virar cinzas, anular o dano e refleti-lo de volta à origem[cite: 104]."
+  },
+  {
+    "nome": "Fuzil Alheio",
+    "tipo": "Item Amaldiçoado Especial (Energia / Arma de Fogo Tática de Duas Mãos)",
+    "espaco": 2,
+    "efeito": "Estatísticas: Tática de Fogo (2 mãos / Longo - 30m), Dano: 2d10 Energia, Margem 19/x3. Munição Infinita: não exige consumo de munição balística convencional[cite: 104]."
+  },
+  {
+    "nome": "Manoplas do Colosso",
+    "tipo": "Item Amaldiçoado Especial (Energia / Arma Tática Corpo a Corpo de Uma Mão)",
+    "espaco": 3,
+    "efeito": "Estatísticas: Tática 1 mão por manopla, Dano: 1d8 Impacto + 1d10 Energia por manopla, Margem 20/x3. Sintonia Dupla: exige o par equipado. Versatilidade Marcial: contam simultaneamente como armas fabris/objetos e como Ataques Desarmados[cite: 104, 105]."
+  },
+  {
+    "nome": "Elmo do Colosso",
+    "tipo": "Item Amaldiçoado Especial (Energia / Vestimenta)",
+    "espaco": 3,
+    "efeito": "Blindagem Eletrostática (RD): concede RD 10 a Dano Geral. Equipamento de Imersão: conta como Traje de Mergulho completo para ambientes subaquáticos ou vácuo[cite: 105]."
+  },
+  {
+    "nome": "Skate Caótico",
+    "tipo": "Item Amaldiçoado Especial (Energia / Utensílio, Arma Improvisada ou Proteção Pesada)",
+    "espaco": 2,
+    "efeito": "Modos de Operação (ação de movimento): Meio de Transporte (+3m de deslocamento para treinados); Arma Improvisada (2 mãos, 1d12 Impacto, x2); Escudo/Proteção Caótica (+2 na Defesa, dispensa proficiência em Proteções Pesadas)[cite: 105, 106]."
+  },
+  {
+    "nome": "Tênis Lépidos",
+    "tipo": "Item Amaldiçoado Especial (Energia / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Mobilidade Ampliada: concede 2 Vantagens em Atletismo e +3m de deslocamento. Movimentação Sobrenatural: gasta 2 SAN para ignorar Terreno Difícil, receber escalada igual ao deslocamento e imunidade a dano de queda de até 9m. Penalidade passiva: -3D em Reflexos e Agilidade contra Energia[cite: 106]."
+  },
+  {
+    "nome": "Granada Ctrl+C Ctrl+V",
+    "tipo": "Item Amaldiçoado Especial (Energia / Consumível Operacional / Explosivo)",
+    "espaco": 1,
+    "efeito": "Arremesso de Fragmentação: alcance Médio (18m), área de 6m de raio causa 8d6 de dano de Energia (Reflexos reduz à metade). Replicação em Cadeia: rola 1d4 após a explosão (par duplica o artefato gerando outra granada instantânea até o limite de 4 explosões)[cite: 106, 107]."
+  },
+  {
+    "nome": "Anéis do Elo Mental",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Acessório)",
+    "espaco": 1,
+    "efeito": "Sincronia: exige uso simultâneo por 24 horas. Rede Telepática: mantém efeito contínuo de Invadir Mente (Ligação Telepática) entre os usuários. Mente Compartilhada: testes de Vontade usam a melhor reserva de dados e bônus entre ambos. Feedback Psíquico: dano mental sofrido por um é replicado integralmente no outro, assim como condições mentais e de medo[cite: 117]."
+  },
+  {
+    "nome": "Lanterna Reveladora",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Utensílio)",
+    "espaco": 1,
+    "efeito": "Foco da Verdade: gasta 1 ação padrão e 1 SAN para acender feixe por 1 cena (revela detalhes ocultos como Terceiro Olho). Repulsão de Sangue: criaturas de Sangue iluminadas são forçadas a focar seus ataques prioritariamente no portador da lanterna[cite: 117]."
+  },
+  {
+    "nome": "Máscara das Pessoas nas Sombras",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Acessório)",
+    "espaco": 1,
+    "efeito": "Barreira Cognitiva: concede RD 5 a Conhecimento. Passagem Umbrática: gasta ação de movimento e 2 SAN para fundir-se a uma sombra e teletransportar-se para outra sombra visível em alcance Médio (18m). Vínculo Obscuro: pacto implícito com o Conhecimento[cite: 117, 118]."
+  },
+  {
+    "nome": "Munição Jurada",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Munição)",
+    "espaco": 1,
+    "efeito": "Ritual de Vinculação: exige 1 hora para vincular a um ser específico. Disparo Jurado: contra o alvo vinculado, fornece 2 Vantagens no ataque, dobra a Margem de Ameaça e causa +6d12 de dano de Conhecimento. Obsessão Mutiladora: sofre -2 na Defesa e 1 Desvantagem nos ataques contra outros alvos que não a vítima vinculada[cite: 118]."
+  },
+  {
+    "nome": "Pergaminho da Pertinácia",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Utensílio)",
+    "espaco": 1,
+    "efeito": "Injeção de Conhecimento: gasta ação padrão para olhar os sigilos, recebendo 5 SAN temporários até o fim da cena. Instabilidade Cognitiva: teste de Ocultismo (DT 7 +5 por uso); falha desfaz o pergaminho em poeira, sucesso mantém-no intacto[cite: 118, 119]."
+  },
+  {
+    "nome": "Câmera Obscura",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Utensílio)",
+    "espaco": 1,
+    "efeito": "Lente de Revelação Ampliada: possui a lente paranormal com DT para resistir aumentada em +10. Erasura Espectral: se o alvo falhar no teste, sofre 6d6 de dano de Frio (restrito a criaturas com Invisibilidade, Incorporeidade ou Camuflagem)[cite: 119]."
+  },
+  {
+    "nome": "Enxame Fantasmagórico",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Camuflagem Absoluta: portador permanece sob a condição Invisível enquanto vestido. Alimento do Enxame: sofre 1 ponto de Dano Mental (SAN) no início de cada turno (ignora RD e imunidade a dano psíquico)[cite: 119]."
+  },
+  {
+    "nome": "Repositório do Fracasso",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Utensílio)",
+    "espaco": 1,
+    "efeito": "Coleta de Falhas: acumula 1 carga para cada resultado '1' obtido por criaturas paranormais em alcance Médio (limite de 6 cargas). Dreno de Energia Mental: consome 1 carga para recuperar 1d4 SAN. Erosão da Mente: cada carga consumida aplica penalidade cumulativa de -1 em Vontade até o próximo Interlúdio[cite: 119, 120]."
+  },
+  {
+    "nome": "Tábula do Saber Custoso",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Utensílio)",
+    "espaco": 1,
+    "efeito": "Compreensão Instantânea: ativada ao realizar um teste para receber os benefícios de ser Treinado na perícia exigida. Custo Psicológico: perde imediatamente pontos de Sanidade (SAN) iguais ao valor do atributo-chave da perícia utilizada[cite: 120]."
+  },
+  {
+    "nome": "Punhal X",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Arma Simples Ágil Corpo a Corpo de Uma Mão / Arremesso)",
+    "espaco": 1,
+    "efeito": "Estatísticas: Simples Ágil 1 mão / Arremesso (9m), Dano: 1d4 Perfuração + 1d6 Conhecimento, Margem x3. Golpe das Sombras: gasta 2 SAN para deixar o alvo Desprevenido contra o ataque e, se acertar, Cego por 1 rodada (1 vez por cena por alvo)[cite: 120, 121]."
+  },
+  {
+    "nome": "Joias da Mente",
+    "tipo": "Item Amaldiçoado Especial (Conhecimento / Vestimenta)",
+    "espaco": 1,
+    "efeito": "Foco Diplomático: concede +2 em Diplomacia. Proteção Psíquica (RD): concede RD 10 contra Dano Mental (SAN). Requisito: exige o uso simultâneo de ambas as peças (piercing e brinco) como um único item. Penalidade passiva: -3D em Vontade e Intuição contra efeitos e rituais de Conhecimento[cite: 121]."
+  }
+]

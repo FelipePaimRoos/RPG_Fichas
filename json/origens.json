@@ -1,0 +1,364 @@
+{
+  "origens": [
+    {
+      "nome": "Acadêmico",
+      "pericias_treinadas": ["Ciências", "Procurar"],
+      "habilidade": {
+        "nome": "Saber é Poder",
+        "descricao": "Ao realizar uma Ação de Examinar (ver, cenas de investigação), você pode gastar 2 SAN para receber 1 Vantagem nesse teste."
+      }
+    },
+    {
+      "nome": "Agente de Saúde",
+      "pericias_treinadas": ["Ciências", "Medicina"],
+      "habilidade": {
+        "nome": "Técnica Médica",
+        "descricao": "Ao realizar um teste de Medicina, você pode gastar 2 SAN para receber 2 Vantagens nesse teste."
+      }
+    },
+    {
+      "nome": "Amnésico",
+      "pericias_treinadas": ["Duas à escolha do Mestre"],
+      "habilidade": {
+        "nome": "Vislumbres do Passado",
+        "descricao": "Uma vez por sessão, você pode fazer um teste de Intelecto (DT 10) para reconhecer pessoas, lugares ou objetos que tenha encontrado antes de perder a memória. Se passar, recebe 1d4 Sanidade temporária e, a critério do Mestre, uma informação útil sobre a cena."
+      }
+    },
+    {
+      "nome": "Atleta",
+      "pericias_treinadas": ["Acrobacia", "Atletismo"],
+      "habilidade": {
+        "nome": "Condicionamento de Elite",
+        "descricao": "Ao realizar um teste de Atletismo ou Acrobacia em eventos de perseguição/corrida ou para superar Obstáculos, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Chef",
+      "pericias_treinadas": ["Ciências", "Fortitude"],
+      "habilidade": {
+        "nome": "Ingredientes Especiais (Interlúdio)",
+        "descricao": "Ao realizar a Ação de Alimentar-se durante o Interlúdio para cozinhar um prato especial, você e todos os membros do grupo que realizarem essa mesma ação recebem o benefício de dois pratos. Caso o mesmo prato seja escolhido duas vezes, seus efeitos se acumulam."
+      }
+    },
+    {
+      "nome": "Criminoso",
+      "pericias_treinadas": ["Crime", "Furtividade"],
+      "habilidade": {
+        "nome": "O Crime Compensa",
+        "descricao": "Ao enfrentar um Desafio de Acesso para abrir portas, cofres ou burlar trancas utilizando ferramentas de Crime, você descobre automaticamente o valor de 1 dos dados secretos do Mestre antes de realizar qualquer tentativa."
+      }
+    },
+    {
+      "nome": "Cultista Arrependido",
+      "pericias_treinadas": ["Ocultismo", "Religião"],
+      "habilidade": {
+        "nome": "Ritual Herdado",
+        "descricao": "Você já começa o jogo conhecendo 1 Ritual de 1º Círculo à sua escolha (representando o conhecimento profano que trouxe do seu antigo culto). Esse ritual não consome slots de Poderes Paranormais nem impõe penalidades à sua Sanidade inicial."
+      }
+    },
+    {
+      "nome": "Desgarrado",
+      "pericias_treinadas": ["Fortitude", "Sobrevivência"],
+      "habilidade": {
+        "nome": "Calejado",
+        "descricao": "Ao realizar um teste de Fortitude contra condições extremas do ambiente (como frio intenso, calor extremo, fumaça, substâncias nocivas ou privação física), você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Engenheiro",
+      "pericias_treinadas": ["Mecânica", "Tecnologia"],
+      "habilidade": {
+        "nome": "Ferramenta Certa",
+        "descricao": "Ao realizar um teste para reparar equipamentos, improvisar utilitários ou fabricar em campo, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Executivo",
+      "pericias_treinadas": ["Diplomacia", "Intuição"],
+      "habilidade": {
+        "nome": "Hack Social",
+        "descricao": "Ao realizar um teste de Intuição durante uma cena de Hack Social, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste. Além disso, o Mestre fornece uma dica ou linha de abordagem a ser explorada na interação."
+      }
+    },
+    {
+      "nome": "Lutador",
+      "pericias_treinadas": ["Luta", "Reflexos"],
+      "habilidade": {
+        "nome": "Mão Pesada",
+        "descricao": "Ao realizar um teste de Luta (para desferir ataques corpo a corpo, agarrar, imobilizar ou derrubar um alvo), você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Mercenário",
+      "pericias_treinadas": ["Iniciativa", "Intimidação"],
+      "habilidade": {
+        "nome": "Posição de Combate",
+        "descricao": "Ao realizar um teste de Iniciativa no início de uma cena de combate, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Militar",
+      "pericias_treinadas": ["Atletismo", "Pontaria"],
+      "habilidade": {
+        "nome": "Pontaria Tática",
+        "descricao": "Ao realizar um teste de Pontaria para disparos ou ataques à distância, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Operário",
+      "pericias_treinadas": ["Fortitude", "Mecânica"],
+      "habilidade": {
+        "nome": "Ferramenta de Trabalho",
+        "descricao": "Você é proficiente no uso de 1 ferramenta pesada à sua escolha que possa ser usada como arma (como Marreta, Motosserra ou Picareta). Além disso, ao utilizar essa ferramenta para destruir objetos, arrombar ou resolver Desafios de Acesso físico, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Policial",
+      "pericias_treinadas": ["Percepção", "Pontaria"],
+      "habilidade": {
+        "nome": "Varredura de Perigo",
+        "descricao": "Ao realizar um teste de Percepção para identificar ameaças armadas, localizar alvos ocultos, mapear coberturas táticas ou identificar rotas de fuga em uma cena de conflito, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Religioso",
+      "pericias_treinadas": ["Intuição", "Religião"],
+      "habilidade": {
+        "nome": "Acalento Espiritual",
+        "descricao": "Ao realizar um teste de Religião para acalmar, acolher ou estabilizar um aliado afetado por pânico, medo ou perturbação mental, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Servidor Público",
+      "pericias_treinadas": ["Diplomacia", "Vontade"],
+      "habilidade": {
+        "nome": "Serviço Essencial",
+        "descricao": "Ao realizar uma Ação de Ajudar um aliado em qualquer teste de Perícia, você pode gastar 2 SAN. Se fizer isso, a sua ajuda concede 2 Vantagens (+1d6) ao teste do aliado (em vez da concessão padrão) e você não sofre penalidades caso o teste dele falhe."
+      }
+    },
+    {
+      "nome": "Teórico da Conspiração",
+      "pericias_treinadas": ["Ocultismo", "Procurar"],
+      "habilidade": {
+        "nome": "Eu Já Sabia!",
+        "descricao": "Ao realizar um teste de Vontade para resistir aos efeitos de Presença Perturbadora (ou choque mental inicial ao presenciar uma nova criatura/anomalia paranormal na cena), você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Profissional de TI",
+      "pericias_treinadas": ["Procurar", "Tecnologia"],
+      "habilidade": {
+        "nome": "Suporte Técnico",
+        "descricao": "Ao realizar um teste de Tecnologia para invadir sistemas, burlar segurança digital, analisar bancos de dados, interceptar redes ou realizar perícia em arquivos digitais, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Trabalhador Rural",
+      "pericias_treinadas": ["Fortitude", "Sobrevivência"],
+      "habilidade": {
+        "nome": "Lida Rústica",
+        "descricao": "Ao realizar um teste de Fortitude para resistir ao cansaço por trabalho físico pesado, suportar longas jornadas sob intempéries severas ou exercer força rústica no ambiente rural, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Trambiqueiro",
+      "pericias_treinadas": ["Crime", "Enganação"],
+      "habilidade": {
+        "nome": "Mão Leve",
+        "descricao": "Ao realizar um teste de Crime para bater carteiras, ocultar objetos no corpo, trapacear em jogos de azar ou realizar pequenos furtos sem ser notado, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Vítima",
+      "pericias_treinadas": ["Furtividade", "Vontade"],
+      "habilidade": {
+        "nome": "Instinto de Sobrevivente",
+        "descricao": "Ao realizar um teste de Furtividade para se esconder em uma cena de furtividade ou perseguição, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Amigo dos Animais",
+      "pericias_treinadas": ["Adestramento", "Intuição"],
+      "habilidade": {
+        "nome": "Empatia Animal",
+        "descricao": "Ao realizar um teste de Adestramento para acalmar criaturas de inteligência animal, interpretar o comportamento agitado de um bicho frente a uma ameaça oculta, ou comandar um animal de cena para ajudá-lo em uma tarefa, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Astronauta",
+      "pericias_treinadas": ["Ciências", "Fortitude"],
+      "habilidade": {
+        "nome": "Aclimatado ao Extremo",
+        "descricao": "Ao realizar um teste de Fortitude para resistir a efeitos de perigos ambientais extremos (como fogo, frio severo, variação de pressão, radiação, sufocamento ou toxinas), você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Cosplayer",
+      "pericias_treinadas": ["Artes", "Enganação"],
+      "habilidade": {
+        "nome": "Caracterização",
+        "descricao": "Ao realizar um teste de Enganação para se disfarçar, personificar uma pessoa/figura específica ou criar maquiagens e figurinos para enganar a atenção de terceiros, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Diplomata",
+      "pericias_treinadas": ["Diplomacia", "Intuição"],
+      "habilidade": {
+        "nome": "Protocolo Imunológico",
+        "descricao": "Ao realizar um teste de Diplomacia para evitar que um confronto humano escale para violência, negociar termos de rendição/trégua ou estabelecer um acordo formal sob extrema tensão, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Explorador",
+      "pericias_treinadas": ["Percepção", "Sobrevivência"],
+      "habilidade": {
+        "nome": "Batedor de Campo",
+        "descricao": "Ao realizar um teste de Sobrevivência para orientar o grupo em terrenos hostis/ruínas, mapear rotas seguras, rastrear pistas no ambiente ou identificar armadilhas naturais e riscos do terreno, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Experimento",
+      "pericias_treinadas": ["Atletismo", "Fortitude"],
+      "habilidade": {
+        "nome": "Fisiologia Alterada",
+        "descricao": "Ao realizar um teste de Atletismo ou Fortitude para executar feitos físicos não-naturais ou limítrofes (como romper contenções, saltar distâncias anômalas ou suportar traumas mecânicos diretos), você pode gastar 2 SAN para receber 1 Vantagem (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Fanático por Criaturas",
+      "pericias_treinadas": ["Ocultismo", "Procurar"],
+      "habilidade": {
+        "nome": "Enciclopédia do Bizarro",
+        "descricao": "Ao realizar um teste de Ocultismo para identificar a espécie, elemento, hábitos de caça ou fraquezas de uma entidade com base em rastros e relatos, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Fotógrafo",
+      "pericias_treinadas": ["Artes", "Percepção"],
+      "habilidade": {
+        "nome": "Olhar Fotográfico",
+        "descricao": "Ao realizar um teste de Percepção ou Procurar para analisar fotografias, gravações de vídeo, arquivos de câmeras de segurança ou identificar detalhes ocultos através de lentes e registros visuais, você pode gastar 2 SAN para receber 1 Vantagens (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Legista",
+      "pericias_treinadas": ["Ciências", "Medicina"],
+      "habilidade": {
+        "nome": "Exame Cautelar",
+        "descricao": "Ao realizar um teste de Medicina para realizar autópsias, necrópsias, determinar a causa exata da morte ou extrair vestígios físicos de um cadáver, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Mergulhador",
+      "pericias_treinadas": ["Atletismo", "Fortitude"],
+      "habilidade": {
+        "nome": "Apneia e Imersão",
+        "descricao": "Ao realizar um teste de Fortitude para prender a respiração por longos períodos, resistir à pressão das profundezas ou realizar manobras complexas de natação, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Motorista",
+      "pericias_treinadas": ["Percepção", "Pilotagem"],
+      "habilidade": {
+        "nome": "Direção Evasiva",
+        "descricao": "Ao realizar um teste de Pilotagem para executar manobras de risco, manter o controle do veículo em alta velocidade, evadir de perseguidores ou atropelar uma ameaça, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Nerd Entusiasta",
+      "pericias_treinadas": ["Ciências", "Tecnologia"],
+      "habilidade": {
+        "nome": "Leitura Compulsiva",
+        "descricao": "Durante uma Cena de Interlúdio, ao escolher a Ação de Ler, você pode gastar 2 SAN para receber 1 Vantagem adicional no teste de conhecimento."
+      }
+    },
+    {
+      "nome": "Psicólogo",
+      "pericias_treinadas": ["Diplomacia", "Intuição"],
+      "habilidade": {
+        "nome": "Terapia de Crise",
+        "descricao": "Ao realizar um teste de Diplomacia ou Intuição para acalmar um aliado sob surto mental, remover a condição Abalado ou evitar que alguém caia em Pânico, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Marcado por Ritual",
+      "pericias_treinadas": ["Ocultismo", "Vontade"],
+      "habilidade": {
+        "nome": "Cicatriz Oculta",
+        "descricao": "Ao realizar um teste de Ocultismo para identificar, analisar ou entender um ritual em andamento, ou um teste de Vontade para resistir a efeitos diretos de rituais e maldições, você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Transtornado Arrependido",
+      "pericias_treinadas": ["Fortitude", "Ocultismo"],
+      "habilidade": {
+        "nome": "Vínculo Rubro",
+        "descricao": "Ao realizar um teste de Ocultismo focado em rituais, símbolos ou manifestações do elemento Sangue você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Influenciador Paranormal",
+      "pericias_treinadas": ["Enganação", "Tecnologia"],
+      "habilidade": {
+        "nome": "Engajamento Digital",
+        "descricao": "Ao realizar um teste de Enganação ou Tecnologia para manipular dados na rede, produzir conteúdo viral, criar narrativas falsas para encobrir o paranormal ou aplicar engenharia social através de mídias digitais, você pode gastar 2 SAN para receber 1 Vantagens (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Caçador de Recompensas",
+      "pericias_treinadas": ["Atletismo", "Percepção"],
+      "habilidade": {
+        "nome": "Perseguição Implacável",
+        "descricao": "Ao realizar um teste de Atletismo ou Percepção durante uma cena de perseguição em que você é o perseguidor, ou ao tentar manter um alvo em fuga sob seu campo de visão, você pode gastar 2 SAN para receber 1 Vantagens (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Ufólogo",
+      "pericias_treinadas": ["Ciências", "Ocultismo"],
+      "habilidade": {
+        "nome": "Teoria Alienígena",
+        "descricao": "Durante uma Cena de Interlúdio, ao escolher a ação de Revisar o Caso (ou debater os eventos anômalos ocorridos com a equipe), você pode gastar 2 SAN para expor uma teoria sobre a origem dos fatos. Se fizer isso, você e até dois aliados presentes recebem 1d4 de Sanidade Temporária até o fim da sessão."
+      }
+    },
+    {
+      "nome": "Cientista Esotérico",
+      "pericias_treinadas": ["Ciências", "Ocultismo"],
+      "habilidade": {
+        "nome": "Método Anômalo",
+        "descricao": "Ao realizar um teste de Ciências ou Ocultismo para analisar fenômenos paranormais sob uma ótica empírica, formular hipóteses científicas sobre relíquias e anomalias ou conduzir testes laboratoriais com amostras do Outro Lado, você pode gastar 2 SAN para receber 1 Vantagem (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Cobaia Sobrevivente (Reformulação Total)",
+      "pericias_treinadas": ["Fortitude", "Vontade"],
+      "habilidade": {
+        "nome": "Resistência Condicionada",
+        "descricao": "Ao realizar um teste de Fortitude ou Vontade para resistir a substâncias químicas/toxinas, dor extrema, tortura, coerção ou efeitos de paralisia, você pode gastar 2 SAN para receber 1 Vantagem (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Segurança",
+      "pericias_treinadas": ["Luta", "Pontaria"],
+      "habilidade": {
+        "nome": "Técnicas de Contenção",
+        "descricao": "Ao realizar um teste de Luta focado em executar manobras de combate (como agarrar, imobilizar, derrubar ou desarmar um alvo), você pode gastar 2 SAN para receber 2 Vantagens (+1d6) nesse teste."
+      }
+    },
+    {
+      "nome": "Exorcizado",
+      "pericias_treinadas": ["Fortitude", "Ocultismo"],
+      "habilidade": {
+        "nome": "Resíduo Anômalo",
+        "descricao": "Escolha um elemento paranormal no momento da criação da ficha. Ao realizar um teste de Fortitude ou Ocultismo para resistir a efeitos/rituais desse elemento específico ou para identificar sua presença no ambiente, você pode gastar 2 SAN para receber 1 Vantagem (+1d4) nesse teste."
+      }
+    },
+    {
+      "nome": "Sensitivo Rebelde",
+      "pericias_treinadas": ["Intuição", "Intimidação"],
+      "habilidade": {
+        "nome": "Sussurros Invasivos",
+        "descricao": "Ao realizar um teste de Intuição para descobrir segredos e intenções ocultas de um indivíduo, ou um teste de Intimidação ao revelar visões/detalhes perturbadores sobre a vida da vítima, você pode gastar 2 SAN para receber 1 Vantagem (+1d4) nesse teste."
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "nome": "Granada de Atordoamento (Flashbang)",
+    "tipo": "Granada / Explosivo",
+    "alcance": "Médio (18m)[cite: 126]",
+    "area": "Raio de 6m a partir do impacto[cite: 126]",
+    "efeito": "Emite um estouro ensurdecedor e clarão luminoso. Seres na área ficam com a condição Atormentado ou Atordoados por 1 rodada[cite: 126].",
+    "resistencia": "Fortitude - DT Agi (Sucesso reduz o efeito para as condições Ofuscado e Surdo por 1 rodada)[cite: 126]"
+  },
+  {
+    "nome": "Granada de Fragmentação",
+    "tipo": "Granada / Explosivo",
+    "alcance": "Médio (18m)[cite: 126]",
+    "area": "Raio de 6m a partir do impacto[cite: 126]",
+    "dano": "6d6 Perfuração[cite: 126]",
+    "resistencia": "Reflexos - DT Agi (Sucesso reduz o dano à metade)[cite: 126]"
+  },
+  {
+    "nome": "Granada de Fumaça",
+    "tipo": "Granada / Explosivo",
+    "alcance": "Médio (18m)[cite: 126]",
+    "area": "Raio de 6m a partir do impacto[cite: 126]",
+    "efeito": "Libera uma nuvem espessa e escura. Seres dentro da área ficam Cegos e ganham Camuflagem Total. A fumaça dura 2 rodadas[cite: 126]."
+  },
+  {
+    "nome": "Granada Incendiária",
+    "tipo": "Granada / Explosivo",
+    "alcance": "Médio (18m)[cite: 126]",
+    "area": "Raio de 6m a partir do impacto[cite: 126]",
+    "dano": "4d6 Fogo[cite: 126]",
+    "efeito_secundario": "Seres atingidos ficam com a condição Em Chamas[cite: 126].",
+    "resistencia": "Reflexos - DT Agi (Sucesso reduz o dano à metade e evita a condição Em Chamas)[cite: 126]"
+  },
+  {
+    "nome": "Mina Antipessoal",
+    "tipo": "Explosivo",
+    "espaco": 1,
+    "instalacao": "Exige ação completa e teste de Luta (DT 7). Define a orientação do estouro (cone de 6m)[cite: 126].",
+    "deteccao": "Exige teste de Percepção contra a DT igual ao resultado do teste de Tática usado ao instalá-la[cite: 126].",
+    "detonacao": "Controle remoto (estando a até alcance Longo, gasta ação padrão)[cite: 126].",
+    "area": "Cone de 6m[cite: 126]",
+    "dano": "8d6 Perfuração[cite: 126]",
+    "resistencia": "Reflexos - DT Int (Sucesso reduz o dano à metade)[cite: 127]"
+  },
+  {
+    "nome": "Dinamite",
+    "tipo": "Explosivo",
+    "mecanismo": "Na mesma ação padrão, acende o pavio e arremessa em ponto dentro de alcance Médio (18m)[cite: 126, 127].",
+    "area": "Raio de 6m a partir do impacto[cite: 127]",
+    "dano": "3d6 Impacto + 3d6 Fogo (total 6d6) a seres e objetos soltos[cite: 127]",
+    "efeito_secundario": "Seres atingidos ficam com a condição Em Chamas[cite: 127].",
+    "resistencia": "Reflexos - DT Agi (Sucesso reduz o dano total à metade e evita a condição Em Chamas)[cite: 127]"
+  },
+  {
+    "nome": "Explosivo Plástico",
+    "tipo": "Explosivo",
+    "mecanismo_preparo": "Requer 2 rodadas para posicionar os pinos de ignição e afixar a massa adesiva[cite: 127].",
+    "detonacao": "À distância como ação livre (até alcance Longo via controle remoto) ou ao sofrer pelo menos 1 ponto de dano de Fogo ou Eletricidade[cite: 127].",
+    "area": "Raio de 3m a partir do ponto de fixação[cite: 127]",
+    "dano": "10d6 Impacto a todos os seres e estruturas na área[cite: 127]",
+    "resistencia": "Reflexos - DT Int (Sucesso reduz o dano à metade)[cite: 127]",
+    "uso_especializado": "Se instalado por especialista (treinado em Crime ou Profissão), causa o dobro de dano contra objetos/estruturas e ignora a RD estrutural[cite: 127]."
+  },
+  {
+    "nome": "Galão Vermelho (Perigo Ambiental)",
+    "tipo": "Perigo Ambiental / Explosivo",
+    "gatilho": "Explode imediatamente ao sofrer qualquer dano de Fogo ou Balístico[cite: 127].",
+    "area": "Esfera de 6m de raio[cite: 127]",
+    "dano_inicial": "8d6 Fogo[cite: 127]",
+    "resistencia": "Reflexos - DT 20 (Sucesso reduz o dano à metade e evita a condição Em Chamas)[cite: 127]",
+    "efeito_da_area": "Toda a área atingida entra em combustão, causando 1d6 de dano de Fogo por rodada a quem nela permanecer até o fogo ser apagado ou a cena terminar[cite: 127]."
+  },
+  {
+    "nome": "Granada de Gás Sonífero",
+    "tipo": "Granada / Explosivo",
+    "alcance": "Médio (18m)[cite: 127]",
+    "area": "Raio de 6m a partir do impacto (permanece por 2 rodadas)[cite: 127]",
+    "efeito": "Seres que iniciem turnos dentro da nuvem sofrem efeitos conforme a atividade: Fora de combate ficam Inconscientes; em combate ficam Exaustos por 1 rodada e depois Fatigados[cite: 127].",
+    "resistencia": "Fortitude - DT Agi (Sucesso reduz o efeito para a condição Fatigado por 1d4 rodadas)[cite: 127]"
+  },
+  {
+    "nome": "Granada de PEM (Pulso Eletromagnético)",
+    "tipo": "Granada / Explosivo",
+    "alcance": "Médio (18m)[cite: 127]",
+    "area": "Raio de 18m a partir do impacto[cite: 128]",
+    "efeito_dispositivos": "Desativa e desliga todos os equipamentos eletrônicos e digitais na área até o fim da cena[cite: 128].",
+    "efeito_criaturas_energia": "Seres compostos puramente por Energia sofrem 5d6 de dano de Impacto e ficam Paralisadas por 1 rodada[cite: 128].",
+    "resistencia": "Fortitude - DT Agi (Sucesso reduz o dano à metade e evita a condição Paralisado)[cite: 128]"
+  },
+  {
+    "nome": "Granada de Gás Lacrimogêneo",
+    "tipo": "Granada",
+    "categoria": "I[cite: 128]",
+    "espaco": 1,
+    "alcance": "Médio (18m)[cite: 128]",
+    "area": "Raio de 6m (permanece por 2 rodadas)[cite: 128]",
+    "efeito": "Causa ardência severa, irritação e sufocamento. Seres na área sofrem 2d6 de dano Químico, ficam Enjoados e entram em Asfixia[cite: 128].",
+    "efeito_continuo": "Ao saírem, as vítimas continuam em Asfixia por 1d4 rodadas adicionais e Enjoadas até o fim da cena[cite: 128].",
+    "resistencia": "Fortitude - DT Agi (Sucesso reduz o dano Químico à metade, evita Enjoado e cancela o efeito de Asfixia contínua após sair)[cite: 128]"
+  },
+  {
+    "nome": "Granada de Tinta",
+    "tipo": "Granada (Caseira)",
+    "categoria": "0[cite: 128]",
+    "espaco": 1,
+    "alcance": "Médio (18m)[cite: 128]",
+    "area": "Raio de 6m a partir do impacto[cite: 128]",
+    "efeito": "Espalha pigmentos fosforescentes. Todos os seres na área ficam Vulneráveis, sofrem -2 desvantagens em Furtividade até o fim da cena e anula camuflagens visuais simples[cite: 128].",
+    "resistencia": "Reflexos - DT Agi (Sucesso evita completamente a tinta e condições associadas)[cite: 128]"
+  }
+]

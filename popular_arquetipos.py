@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 import database
 import models
 
@@ -6,7 +7,7 @@ import models
 models.Base.metadata.create_all(bind=database.engine)
 db = database.SessionLocal()
 
-with open("arquetipos.json", "r", encoding="utf-8") as f:
+with open(Path(__file__).with_name("json") / "arquetipos.json", "r", encoding="utf-8") as f:
     dados = json.load(f)
 
 for arq in dados:
