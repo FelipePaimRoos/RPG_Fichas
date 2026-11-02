@@ -1930,6 +1930,26 @@ async function salvarHabilidadeModal() {
         return;
     }
 
+    // Modo local: guarda apenas na ficha (IndexedDB via autosave)
+    if (typeof modoLocal !== 'undefined' && modoLocal) {
+        if (typeof listas !== 'undefined' && Array.isArray(listas.habilidade)) {
+            listas.habilidade.push({
+                nome: nome,
+                classificacao: classificacao || 'Tier I',
+                prereq: prereq,
+                custo: custo,
+                alcance: alcance,
+                efeito: efeito,
+                automatico: false,
+                nivel_desbloqueio: null
+            });
+            if (typeof renderCards === 'function') renderCards('habilidade');
+        }
+        if (typeof programarAutosave === 'function') programarAutosave();
+        fecharModal();
+        return;
+    }
+
     // 3. Monta o payload JSON
     const payload = {
         nome: nome,
@@ -1947,7 +1967,7 @@ async function salvarHabilidadeModal() {
     console.log("Enviando requisição POST para:", endpoint);
 
     try {
-        const response = await fetch(endpoint, {
+        const { response, data: salva } = await apiRequest(endpoint, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -1956,7 +1976,6 @@ async function salvarHabilidadeModal() {
         });
 
         if (response.ok) {
-            const salva = await response.json().catch(() => ({}));
             // Adiciona a habilidade à lista local para não ser apagada no próximo "Salvar" da ficha
             if (typeof listas !== 'undefined' && Array.isArray(listas.habilidade)) {
                 listas.habilidade.push({
