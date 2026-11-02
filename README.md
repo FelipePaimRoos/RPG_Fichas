@@ -2,11 +2,12 @@
 
 ## Estrutura do projeto:
 
-- `main.py`, `models.py`, `database.py`, `catalogo.py` — código do backend/FastAPI
+- `src/` — código do backend/FastAPI (`main.py`, `models.py`, `database.py`, `catalogo.py`, `popular_arquetipos.py`) e dados em `src/json/`
 - `ficha_rpg_completa.html` — frontend (servido pelo FastAPI)
-- `json/` — dados de catálogo (armas, rituais, origens, arquétipos, modificações, maldições, etc.)
+- `manifest.webmanifest`, `service-worker.js`, `icon.svg` — arquivos do PWA (modo offline)
+- `scripts/` — inicializadores (`Iniciar RPG Fichas Offline.bat`)
 - `tests/` — scripts de teste/QA (`qa_*.mjs`, `check_all.py`) e artefatos temporários
-- `rpg_fichas.db` — banco SQLite (criado automaticamente)
+- `src/rpg_fichas.db` — banco SQLite (criado automaticamente)
 
 ## Como rodar o projeto:
 
@@ -17,7 +18,7 @@
 
 2. Inicie o servidor FastAPI:
    ```bash
-   uvicorn main:app --reload
+   uvicorn src.main:app --reload
    ```
 
 3. Abra `http://localhost:8000/` para acessar o painel local. Ele mostra o nome e nível das fichas e permite acessá-las, importar, exportar ou excluir. As alterações são salvas automaticamente no navegador enquanto você edita; use “Minhas fichas” para voltar ao painel. A interface desta branch não exibe login; as fichas ficam no IndexedDB do navegador, não no SQLite do servidor. Os campos “Origem” e “Arquétipo” oferecem as opções dos catálogos JSON.

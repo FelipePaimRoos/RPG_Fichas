@@ -14,8 +14,8 @@ from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
-import database
-import models
+from src import database
+from src import models
 
 database.ensure_schema()
 
@@ -25,11 +25,12 @@ SESSION_COOKIE = "rpg_session"
 SESSION_DURATION = 60 * 60 * 24 * 14
 PASSWORD_ITERATIONS = 310_000
 SECURE_COOKIE = os.getenv("COOKIE_SECURE", "").lower() in {"1", "true", "yes"}
-FRONTEND_PATH = Path(__file__).with_name("ficha_rpg_completa.html")
-MANIFEST_PATH = Path(__file__).with_name("manifest.webmanifest")
-SERVICE_WORKER_PATH = Path(__file__).with_name("service-worker.js")
-PWA_ICON_PATH = Path(__file__).with_name("icon.svg")
-DATA_DIR = Path(__file__).with_name("json")
+ROOT_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_PATH = ROOT_DIR / "ficha_rpg_completa.html"
+MANIFEST_PATH = ROOT_DIR / "manifest.webmanifest"
+SERVICE_WORKER_PATH = ROOT_DIR / "service-worker.js"
+PWA_ICON_PATH = ROOT_DIR / "icon.svg"
+DATA_DIR = Path(__file__).resolve().parent / "json"
 ARCHETYPES_PATH = DATA_DIR / "arquetipos.json"
 ORIGINS_PATH = DATA_DIR / "origens.json"
 POWERS_PATH = DATA_DIR / "poderes paranormais.json"

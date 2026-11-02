@@ -16,9 +16,9 @@ open(Path(__file__).with_name('_js_check.js'), 'w', encoding='utf-8').write('\n'
 
 # main.py syntax
 import ast
-ast.parse(open(ROOT / 'main.py', encoding='utf-8').read())
+ast.parse(open(ROOT / 'src' / 'main.py', encoding='utf-8').read())
 print('main.py ok')
 
 # armas.json sanity
-d = json.load(open(ROOT / 'json' / 'armas.json', encoding='utf-8'))
+d = json.load(open(ROOT / 'src' / 'json' / 'armas.json', encoding='utf-8'))
 print('armas:', len(d), '| primeira:', d[0]['nome'])

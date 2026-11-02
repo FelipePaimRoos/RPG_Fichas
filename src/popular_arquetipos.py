@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
-import database
-import models
+from src import database
+from src import models
 
 # Garante que as tabelas existem
 models.Base.metadata.create_all(bind=database.engine)
