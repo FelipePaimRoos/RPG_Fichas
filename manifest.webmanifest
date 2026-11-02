@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Ficha de RPG",
+  "short_name": "RPG Fichas",
+  "description": "Fichas de RPG disponíveis offline neste navegador.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#111114",
+  "theme_color": "#17171c",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

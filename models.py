@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, Boolean, ForeignKey
+from sqlalchemy import Column, Float, Integer, String, Text, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -99,7 +99,7 @@ class ItemInventarioDB(Base):
     id = Column(Integer, primary_key=True, index=True)
     personagem_id = Column(Integer, ForeignKey("personagens.id"))
     nome = Column(String)
-    espaco = Column(Integer, default=1)
+    espaco = Column(Float, default=1)
     descricao = Column(String, default="")
     personagem = relationship("PersonagemModel", back_populates="inventario")
 

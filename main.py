@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Annotated, List, Optional
 
 from fastapi import FastAPI, Depends, HTTPException, Cookie, Header, Response
-from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from pydantic import StringConstraints, field_validator
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
@@ -26,6 +26,9 @@ SESSION_DURATION = 60 * 60 * 24 * 14
 PASSWORD_ITERATIONS = 310_000
 SECURE_COOKIE = os.getenv("COOKIE_SECURE", "").lower() in {"1", "true", "yes"}
 FRONTEND_PATH = Path(__file__).with_name("ficha_rpg_completa.html")
+MANIFEST_PATH = Path(__file__).with_name("manifest.webmanifest")
+SERVICE_WORKER_PATH = Path(__file__).with_name("service-worker.js")
+PWA_ICON_PATH = Path(__file__).with_name("icon.svg")
 DATA_DIR = Path(__file__).with_name("json")
 ARCHETYPES_PATH = DATA_DIR / "arquetipos.json"
 ORIGINS_PATH = DATA_DIR / "origens.json"
@@ -36,6 +39,15 @@ WEAPONS_PATH = DATA_DIR / "armas.json"
 MODIFICACOES_PATH = DATA_DIR / "modificacoes.json"
 MALDICOES_PATH = DATA_DIR / "maldicoes.json"
 PROTECOES_PATH = DATA_DIR / "protecoes.json"
+CATALOGOS_INVENTARIO = {
+    "operacionais": DATA_DIR / "itens operacionais.json",
+    "acessorios": DATA_DIR / "acessorios.json",
+    "explosivos": DATA_DIR / "explosivos.json",
+    "amaldiçoados": DATA_DIR / "itens amaldicoados.json",
+    "paranormais": DATA_DIR / "itens paranormais.json",
+    "medicamentos": DATA_DIR / "medicamentos.json",
+    "municoes": DATA_DIR / "municoes.json",
+}
 
 
 
@@ -47,6 +59,25 @@ def servir_ficha():
         FRONTEND_PATH.read_text(encoding="utf-8"),
         headers={"Cache-Control": "no-store"},
     )
+
+
+@app.get("/manifest.webmanifest", include_in_schema=False)
+def servir_manifest_pwa():
+    return FileResponse(MANIFEST_PATH, media_type="application/manifest+json")
+
+
+@app.get("/service-worker.js", include_in_schema=False)
+def servir_service_worker():
+    return FileResponse(
+        SERVICE_WORKER_PATH,
+        media_type="application/javascript",
+        headers={"Cache-Control": "no-cache", "Service-Worker-Allowed": "/"},
+    )
+
+
+@app.get("/icon.svg", include_in_schema=False)
+def servir_icone_pwa():
+    return FileResponse(PWA_ICON_PATH, media_type="image/svg+xml")
 
 
 class SchemaBase(BaseModel):
@@ -81,7 +112,7 @@ class PericiaSchema(SchemaBase):
 
 class ItemSchema(SchemaBase):
     nome: str
-    espaco: int
+    espaco: float
     descricao: Optional[str] = ""
 
 
@@ -559,6 +590,22 @@ def _carregar_catalogo_simples(path: Path, campo_filtro: Optional[str], valor_fi
     ]
 
 
+@app.get("/api/catalogo/inventario/{categoria}")
+def listar_itens_catalogo_inventario(categoria: str):
+    path = CATALOGOS_INVENTARIO.get(categoria)
+    if path is None:
+        raise HTTPException(status_code=404, detail="Categoria de inventário não encontrada.")
+    data = _carregar_catalogo_simples(path, None, "")
+    if any(
+        not isinstance(item, dict)
+        or not isinstance(item.get("nome"), str)
+        or not item["nome"].strip()
+        for item in data
+    ):
+        raise HTTPException(status_code=500, detail=f"Formato inválido em {path.name}.")
+    return data
+
+
 @app.get("/api/catalogo/modificacoes")
 def listar_modificacoes():
     """Modificações aplicáveis a armas: as que possuem o campo tipo_arma.
@@ -735,9 +782,7 @@ def _habilidade_automatica_origem(
 
 
 @app.get("/api/arquetipos")
-def listar_arquetipos(
-    auth_session: models.SessaoModel = Depends(get_current_session),
-):
+def listar_arquetipos():
     return [
         {
             **arquetipo,
@@ -755,7 +800,6 @@ def listar_arquetipos(
 
 @app.get("/api/origens")
 def listar_origens(
-    auth_session: models.SessaoModel = Depends(get_current_session),
     db: Session = Depends(database.get_db),
 ):
     return [
@@ -772,9 +816,7 @@ def listar_origens(
 
 
 @app.get("/api/poderes-paranormais")
-def listar_catalogo_poderes(
-    auth_session: models.SessaoModel = Depends(get_current_session),
-):
+def listar_catalogo_poderes():
     return _carregar_catalogo_poderes()
 
 

@@ -2,7 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#17171c">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Ficha de RPG - Sistema Próprio</title>
   <style>
     :root {
@@ -29,6 +35,8 @@
       background-color: var(--bg-color);
       color: var(--text-color);
       padding: 20px;
+      padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right))
+        max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
       line-height: 1.5;
     }
 
@@ -750,18 +758,15 @@
       font-weight: bold;
     }
 
-    body:not(.authenticated) .ficha-container,
-    body:not(.authenticated) .sumario-lateral,
-    body:not(.authenticated) #character-dashboard {
-      display: none !important;
-    }
-
-    #character-dashboard { display: none; }
+    #auth-screen { display: none !important; }
+    #character-dashboard { display: block; }
+    .ficha-container, .sumario-lateral { display: none; }
     body.authenticated:not(.editing) #character-dashboard { display: block; }
     body.authenticated:not(.editing) .ficha-container,
     body.authenticated:not(.editing) .sumario-lateral { display: none !important; }
     body.authenticated.editing #character-dashboard { display: none; }
     body.authenticated.editing .ficha-container { display: flex; }
+    body.authenticated.editing .sumario-lateral { display: block; }
 
     .auth-screen {
       min-height: calc(100vh - 40px);
@@ -824,6 +829,11 @@
     .character-info h3 { overflow-wrap: anywhere; }
     .character-actions { display: flex; gap: 8px; flex-shrink: 0; }
     .dashboard-message { min-height: 1.5em; color: #ff9a9a; }
+    #install-app-button { min-height: 44px; }
+    #install-help-text { margin-top: 6px; color: var(--text-muted); font-size: .85rem; }
+    @media (display-mode: standalone) {
+      #install-app-button, #install-help-text { display: none !important; }
+    }
     .editor-toolbar {
       display: flex;
       align-items: center;
@@ -832,11 +842,21 @@
     }
     #api_status_msg { margin-right: auto; font-size: .85rem; }
     @media (max-width: 560px) {
+      body { padding: 10px; }
       .dashboard { padding: 18px; }
       .dashboard-header, .new-character-form { align-items: stretch; flex-direction: column; }
       .character-card { align-items: flex-start; flex-direction: column; }
       .character-actions { width: 100%; }
       .character-actions button { flex: 1; }
+      button, select { min-height: 42px; }
+      input, select, textarea { font-size: 16px; }
+      .card-secao { padding: 12px; }
+      .flex-header { align-items: flex-start; flex-wrap: wrap; }
+      .modal-content { width: calc(100vw - 20px); max-height: 88dvh; padding: 14px; -webkit-overflow-scrolling: touch; }
+      .sumario-lateral { top: max(8px, env(safe-area-inset-top)); right: 8px; }
+      .sumario-lateral:is(:hover, :focus-within, .sumario-fixo-aberto) {
+        max-height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      }
     }
 
   </style>
@@ -862,6 +882,7 @@
         </label>
         <button id="auth-submit" type="submit" style="width: 100%;">Entrar</button>
       </form>
+      <button id="use-local-mode" type="button" class="secondary" style="width:100%; margin-top:10px;">Usar fichas salvas neste navegador</button>
       <p id="auth-message" role="status" aria-live="polite"></p>
     </div>
   </section>
@@ -870,10 +891,18 @@
     <header class="dashboard-header">
       <div>
         <h1 id="dashboard-title">Minhas fichas</h1>
-        <p>Perfil: <span id="dashboard-username"></span></p>
+        <p>Armazenadas neste dispositivo</p>
       </div>
-      <button id="dashboard-logout" class="btn-danger" type="button">Sair</button>
+      <div class="character-actions">
+        <button id="import-character-button" type="button" style="display:none;">Importar ficha</button>
+        <input id="import-character-file" type="file" accept="application/json,.json" style="display:none;">
+        <button id="install-app-button" type="button" class="secondary">Fixar como aplicativo</button>
+      </div>
     </header>
+    <p id="local-storage-note" style="color:var(--text-muted);">
+      Fichas guardadas somente neste navegador. Exporte um arquivo JSON para transferir ou criar uma cópia de segurança.
+    </p>
+    <p id="install-help-text"></p>
     <form id="new-character-form" class="new-character-form">
       <input id="new-character-name" type="text" maxlength="120"
               placeholder="Nome do novo personagem (opcional)"
@@ -912,7 +941,6 @@
     <div style="margin-top: 15px; border-top: 1px solid var(--card-border); padding-top: 10px;">
       <div class="account-actions">
         <span id="account_username" style="font-size: .75rem; align-self: center;"></span>
-        <button id="logout-button" class="btn-danger" type="button">Sair</button>
       </div>
     </div>
 
@@ -1179,7 +1207,7 @@
   </section>
 
   <!-- RESISTÊNCIAS E PROFICIÊNCIAS -->
-  <section class="card-secao secao-ficha grid-2">
+  <section id="sec-resistencias" class="card-secao secao-ficha grid-2">
     <label>Resistências <textarea id="resistencias" placeholder="Ex: Fogo 5, Balístico 2..."></textarea></label>
     <label>Proficiências <textarea id="proficiencias" placeholder="Ex: Armas Táticas, Proteções Leves..."></textarea></label>
   </section>
@@ -1239,7 +1267,8 @@
       </div>
     </div>
     <div style="margin-bottom: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
-      <button onclick="adicionarItem()">+ Adicionar Item</button>
+      <button type="button" onclick="abrirModalItensCatalogo()">+ Adicionar do Catálogo</button>
+      <button type="button" onclick="adicionarItem()">+ Novo Item Personalizado</button>
       <button onclick="abrirModalArmas()">+ Adicionar Arma</button>
       <button onclick="abrirModalProtecoes()">+ Adicionar Proteção</button>
     </div>
@@ -1255,6 +1284,30 @@
       <tbody id="tabela-itens"></tbody>
     </table>
   </section>
+
+  <div id="modal-itens-catalogo" class="modal-overlay" style="display: none;">
+    <div class="modal-content" style="max-width: 780px; max-height: 90vh; overflow-y: auto;">
+      <h3>Adicionar item do catálogo</h3>
+      <label>Categoria
+        <select id="categoria-catalogo-inventario" onchange="carregarItensCatalogoInventario()">
+          <option value="operacionais">Itens operacionais</option>
+          <option value="acessorios">Acessórios</option>
+          <option value="explosivos">Explosivos</option>
+          <option value="amaldiçoados">Itens amaldiçoados</option>
+          <option value="paranormais">Itens paranormais</option>
+          <option value="medicamentos">Medicamentos</option>
+          <option value="municoes">Munições</option>
+        </select>
+      </label>
+      <label>Buscar item
+        <input id="busca-catalogo-inventario" type="search" oninput="renderizarItensCatalogoInventario()" placeholder="Digite o nome do item">
+      </label>
+      <div id="lista-catalogo-inventario" role="status" aria-live="polite"></div>
+      <div style="display: flex; justify-content: flex-end; margin-top: 12px;">
+        <button type="button" class="btn-danger" onclick="fecharModalItensCatalogo()">Fechar</button>
+      </div>
+    </div>
+  </div>
 
   <!-- TRILHA DO PARANORMAL -->
   <section class="card-secao secao-ficha">
@@ -2015,6 +2068,9 @@ function atualizarTreinamentoPericia(idx) {
   }
   atualizarDadoPericia(idx);
   atualizarCalculos();
+  document.querySelectorAll('#container-combate .select-per-combate').forEach(select => {
+    if (select.value === PERICIAS_BASE[idx].nome) calcularAtaqueCard(select);
+  });
 }
 
 function aplicarBonusArquetipoCampo(id, bonus, valorCalculado, valorEditado) {
@@ -2081,17 +2137,16 @@ function initPericias() {
   });
 }
 
+function obterFacesDadoTreinamento(treinamento) {
+  return { Destreinado: 4, Treinado: 6, Veterano: 8, Expert: 10 }[treinamento] || 4;
+}
+
 function atualizarDadoPericia(idx) {
   const select = document.getElementById('treino_p_' + idx);
   const badge = document.getElementById('dado_p_' + idx);
   if(!select || !badge) return;
   const dados = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20'];
-  const dadoBase = {
-    Destreinado: 'd4',
-    Treinado: 'd4',
-    Veterano: 'd8',
-    Expert: 'd10'
-  }[select.value] || 'd4';
+  const dadoBase = `d${obterFacesDadoTreinamento(select.value)}`;
   const ajudado = document.getElementById('ajudado_p_' + idx)?.checked;
   const indiceDado = dados.indexOf(dadoBase);
   badge.innerText = dados[Math.min(indiceDado + (ajudado ? 1 : 0), dados.length - 1)];
@@ -2187,11 +2242,9 @@ function atualizarCalculos(valorEditado = false) {
   const treinoReflexos = document.getElementById('treino_p_' + idxReflexos).value;
   const treinoFortitude = document.getElementById('treino_p_' + idxFortitude).value;
   
-  const getDadoTreino = (t) => t === 'Expert' ? 10 : t === 'Veterano' ? 8 : 4;
-  
   // Média matemática de um dado é (Faces / 2) + 0.5. Arredondamos para baixo por padrão em RPGs.
-  const valorMedioDadoReflexos = Math.floor((getDadoTreino(treinoReflexos) / 2) + 0.5) + bonusReflexos; 
-  const valorMedioDadoFortitude = Math.floor((getDadoTreino(treinoFortitude) / 2) + 0.5) + bonusFortitude;
+  const valorMedioDadoReflexos = Math.floor((obterFacesDadoTreinamento(treinoReflexos) / 2) + 0.5) + bonusReflexos;
+  const valorMedioDadoFortitude = Math.floor((obterFacesDadoTreinamento(treinoFortitude) / 2) + 0.5) + bonusFortitude;
 
   document.getElementById('bloqueio').value = valorMedioDadoFortitude;
   document.getElementById('esquiva').value = defAtual + valorMedioDadoReflexos;
@@ -2300,7 +2353,6 @@ function renderBarras() {
 
 function alterarStatus(tipo, val) {
   const input = document.getElementById(tipo + 'Atual');
-  const max = Number(document.getElementById(tipo + 'Max').value) || 100;
   let valEfetivo = val;
 
   // Se for vida e for cura (val > 0), verifica se Vigor está debilitado
@@ -2312,8 +2364,7 @@ function alterarStatus(tipo, val) {
   }
 
   let novoVal = (Number(input.value) || 0) + valEfetivo;
-  if (novoVal < 0) novoVal = 0;
-  if (novoVal > max) novoVal = max;
+  novoVal = Math.max(0, novoVal);
   input.value = novoVal;
   renderBarras();
 }
@@ -2371,6 +2422,7 @@ function atualizarOpcoesArmas() {
 function adicionarAtaque() {
   const container = document.getElementById('container-combate');
   const card = document.createElement('div');
+  card.className = 'ataque-card';
   card.style.cssText = "background: #16161a; border: 1px solid var(--card-border); border-radius: 6px; padding: 12px; display: flex; flex-direction: column; gap: 10px;";
 
   // Monta opções de perícias
@@ -2446,7 +2498,7 @@ function adicionarAtaque() {
 }
 
 function calcularAtaqueCard(el) {
-  const card = el.closest('div[style*="background: #16161a"]');
+  const card = el.closest('.ataque-card');
   const atr = card.querySelector('.select-atr-combate').value;
   const nomePericia = card.querySelector('.select-per-combate').value;
   const acaoArriscada = card.querySelector('.select-arriscada-combate').value;
@@ -2479,10 +2531,7 @@ function calcularAtaqueCard(el) {
     if (idxPer !== -1) {
       const selectTreino = document.getElementById('treino_p_' + idxPer);
       const treinoVal = selectTreino ? selectTreino.value : 'Destreinado';
-      if (treinoVal === 'Treinado') dadoPericiaStr = 'd4';
-      else if (treinoVal === 'Veterano') dadoPericiaStr = 'd8';
-      else if (treinoVal === 'Expert') dadoPericiaStr = 'd10';
-      else dadoPericiaStr = 'd4';
+      dadoPericiaStr = `d${obterFacesDadoTreinamento(treinoVal)}`;
     }
   }
 
@@ -2652,13 +2701,100 @@ function adicionarItem() {
   const tr = document.createElement('tr');
   tr.innerHTML = `
     <td><input type="text" placeholder="Item" oninput="atualizarOpcoesArmas()"></td>
-    <td><input type="number" value="1" style="width: 60px;" oninput="calcularCarga()"></td>
+    <td><input type="number" value="1" min="0" step="0.5" style="width: 60px;" oninput="calcularCarga()"></td>
     <td><input type="text" placeholder="Descrição"></td>
     <td><button class="btn-danger" onclick="this.closest('tr').remove(); calcularCarga(); atualizarOpcoesArmas();">X</button></td>
   `;
   tbody.appendChild(tr);
   calcularCarga();
   atualizarOpcoesArmas();
+}
+
+const catalogosInventario = {};
+
+function abrirModalItensCatalogo() {
+  document.getElementById('modal-itens-catalogo').style.display = 'flex';
+  document.getElementById('busca-catalogo-inventario').value = '';
+  carregarItensCatalogoInventario();
+}
+
+function fecharModalItensCatalogo() {
+  document.getElementById('modal-itens-catalogo').style.display = 'none';
+}
+
+async function carregarItensCatalogoInventario() {
+  const categoria = document.getElementById('categoria-catalogo-inventario').value;
+  const container = document.getElementById('lista-catalogo-inventario');
+  container.innerHTML = '<p>Carregando itens...</p>';
+  try {
+    if (!catalogosInventario[categoria]) {
+      const response = await fetch(`/api/catalogo/inventario/${encodeURIComponent(categoria)}`);
+      if (!response.ok) throw new Error(`Status ${response.status}`);
+      catalogosInventario[categoria] = await response.json();
+    }
+    renderizarItensCatalogoInventario();
+  } catch (error) {
+    console.error('Erro ao carregar catálogo de inventário:', error);
+    container.innerHTML = '<p style="color:#ff5555;">Erro ao carregar o catálogo desta categoria.</p>';
+  }
+}
+
+function renderizarItensCatalogoInventario() {
+  const categoria = document.getElementById('categoria-catalogo-inventario').value;
+  const termo = document.getElementById('busca-catalogo-inventario').value.trim().toLocaleLowerCase();
+  const container = document.getElementById('lista-catalogo-inventario');
+  const itens = catalogosInventario[categoria] || [];
+  const filtrados = itens.filter(item => (item.nome || '').toLocaleLowerCase().includes(termo));
+  if (!filtrados.length) {
+    container.innerHTML = '<p style="color:#aaa;">Nenhum item encontrado nesta categoria.</p>';
+    return;
+  }
+  container.innerHTML = filtrados.map((item, index) => {
+    const detalhes = Object.entries(item)
+      .filter(([campo, valor]) => campo !== 'nome' && campo !== 'espaco' && valor !== '' && valor !== null)
+      .map(([campo, valor]) => {
+        const texto = Array.isArray(valor) ? valor.join(', ') : String(valor);
+        return `<strong>${escaparHTML(campo.replaceAll('_', ' '))}:</strong> ${escaparHTML(texto)}`;
+      }).join(' | ');
+    return `<div style="background:#181818;border:1px solid #333;padding:10px;margin-bottom:8px;border-radius:5px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+        <div style="flex:1;">
+          <strong>${escaparHTML(item.nome)}</strong>
+          <span style="font-size:.8em;color:#9cf;margin-left:6px;">Espaço: ${escaparHTML(String(item.espaco ?? 1))}</span>
+          ${detalhes ? `<p style="margin:4px 0 0;color:#aaa;font-size:.85em;">${detalhes}</p>` : ''}
+        </div>
+        <button type="button" class="btn btn-sm btn-success" onclick="selecionarItemCatalogoInventario(${index})">Adicionar</button>
+      </div>
+    </div>`;
+  }).join('');
+  window.itensCatalogoInventarioExibidos = filtrados;
+}
+
+function selecionarItemCatalogoInventario(index) {
+  const item = (window.itensCatalogoInventarioExibidos || [])[index];
+  if (!item) return;
+  const valorEspaco = String(item.espaco ?? 1);
+  let espaco = Number(valorEspaco.replace(',', '.'));
+  if (!Number.isFinite(espaco)) {
+    const numeroCatalogado = valorEspaco.match(/\d+(?:[.,]\d+)?/)?.[0];
+    espaco = numeroCatalogado ? Number(numeroCatalogado.replace(',', '.')) : 1;
+  }
+  const descricao = Object.entries(item)
+    .filter(([campo, valor]) => campo !== 'nome' && valor !== '' && valor !== null)
+    .map(([campo, valor]) => `${campo.replaceAll('_', ' ')}: ${Array.isArray(valor) ? valor.join(', ') : valor}`)
+    .join(' | ');
+  const tbody = document.getElementById('tabela-itens');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td><input type="text" value="${escaparHTML(item.nome)}" oninput="atualizarOpcoesArmas()"></td>
+    <td><input type="number" min="0" step="0.5" value="${espaco}" style="width:60px;" oninput="calcularCarga()"></td>
+    <td><input type="text" value="${escaparHTML(descricao)}"></td>
+    <td><button class="btn-danger" onclick="this.closest('tr').remove(); calcularCarga(); atualizarOpcoesArmas();">X</button></td>
+  `;
+  tbody.appendChild(tr);
+  calcularCarga();
+  atualizarOpcoesArmas();
+  fecharModalItensCatalogo();
 }
 
 function calcularCarga() {
@@ -3222,7 +3358,7 @@ function filtrarSecao(idSecao) {
     secoes.forEach(s => {
       // Verifica se a seção contém o ID ou se o ID está no próprio h2/section
       const h2 = s.querySelector('h2');
-      if (h2 && h2.id === idSecao) {
+      if (s.id === idSecao || (h2 && h2.id === idSecao)) {
         s.style.display = 'block';
       } else {
         s.style.display = 'none';
@@ -3339,6 +3475,12 @@ async function salvarNaApi() {
   };
 
   try {
+    if (modoLocal) {
+      await guardarFichaLocal(currentCharacterId, dados);
+      statusEl.innerText = "Salvo neste navegador";
+      statusEl.style.color = "#4effb0";
+      return true;
+    }
     const url = `/api/personagem?char_id=${encodeURIComponent(currentCharacterId)}`;
     const { response, data: resJson } = await apiRequest(url, {
       method: 'POST',
@@ -3356,7 +3498,9 @@ async function salvarNaApi() {
     }
   } catch (err) {
     console.error(err);
-    statusEl.innerText = "Erro de conexão!";
+    statusEl.innerText = modoLocal
+      ? `Erro ao salvar neste navegador: ${err.message}`
+      : "Erro de conexão!";
     statusEl.style.color = "#ff4d4d";
     return false;
   }
@@ -3376,11 +3520,22 @@ async function carregarDaApi() {
   statusEl.style.color = "#ffd700";
 
   try {
-    const { response, data: d } = await apiRequest(`/api/personagem/${encodeURIComponent(currentCharacterId)}`);
-    if (!response.ok) {
-      statusEl.innerText = d.detail || "Não encontrado!";
-      statusEl.style.color = "#ff4d4d";
-      return false;
+    let d;
+    if (modoLocal) {
+      d = await buscarFichaLocal(currentCharacterId);
+      if (!d) {
+        statusEl.innerText = "Ficha local não encontrada.";
+        statusEl.style.color = "#ff4d4d";
+        return false;
+      }
+    } else {
+      const { response, data } = await apiRequest(`/api/personagem/${encodeURIComponent(currentCharacterId)}`);
+      if (!response.ok) {
+        statusEl.innerText = data.detail || "Não encontrado!";
+        statusEl.style.color = "#ff4d4d";
+        return false;
+      }
+      d = data;
     }
 
     document.getElementById('nomePersonagem').value = d.nome || '';
@@ -3454,9 +3609,9 @@ async function carregarDaApi() {
       d.inventario.forEach(item => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-          <td><input type="text" value="${item.nome}" oninput="atualizarOpcoesArmas()"></td>
-          <td><input type="number" value="${item.espaco}" style="width: 60px;" oninput="calcularCarga()"></td>
-          <td><input type="text" value="${item.descricao || ''}"></td>
+          <td><input type="text" value="${escaparHTML(item.nome)}" oninput="atualizarOpcoesArmas()"></td>
+          <td><input type="number" value="${escaparHTML(item.espaco)}" style="width: 60px;" oninput="calcularCarga()"></td>
+          <td><input type="text" value="${escaparHTML(item.descricao || '')}"></td>
           <td><button class="btn-danger" onclick="this.closest('tr').remove(); calcularCarga(); atualizarOpcoesArmas();">X</button></td>
         `;
         tbody.appendChild(tr);
@@ -3520,7 +3675,9 @@ async function carregarDaApi() {
     return true;
   } catch (err) {
     console.error(err);
-    statusEl.innerText = "Erro ao conectar!";
+    statusEl.innerText = modoLocal
+      ? `Erro ao carregar ficha local: ${err.message}`
+      : "Erro ao conectar!";
     statusEl.style.color = "#ff4d4d";
     return false;
   }
@@ -3537,13 +3694,91 @@ window.onload = function() {
 };
 
 let csrfToken = "";
-let authMode = "login";
 let currentCharacterId = null;
+let modoLocal = true;
 let autosaveTimer = null;
 let autosavePending = false;
 let autosaveRunning = null;
 let lastSaveSuccessful = true;
 let hasEditedCurrentSheet = false;
+let bancoFichasLocalPromise = null;
+
+function gerarIdLocal() {
+  if (typeof crypto.randomUUID === "function") return crypto.randomUUID();
+  if (typeof crypto.getRandomValues !== "function") {
+    throw new Error("Este navegador não oferece geração segura de identificadores.");
+  }
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, byte => byte.toString(16).padStart(2, "0")).join("");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+function abrirBancoFichasLocal() {
+  if (!("indexedDB" in window)) {
+    return Promise.reject(new Error("Este navegador não oferece armazenamento local de fichas."));
+  }
+  if (!bancoFichasLocalPromise) {
+    bancoFichasLocalPromise = new Promise((resolve, reject) => {
+      const request = indexedDB.open("rpg-fichas-local", 1);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        if (!db.objectStoreNames.contains("fichas")) {
+          db.createObjectStore("fichas", { keyPath: "id" });
+        }
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error || new Error("Não foi possível abrir o armazenamento local."));
+    });
+  }
+  return bancoFichasLocalPromise;
+}
+
+async function listarFichasLocais() {
+  const db = await abrirBancoFichasLocal();
+  return new Promise((resolve, reject) => {
+    const request = db.transaction("fichas", "readonly").objectStore("fichas").getAll();
+    request.onsuccess = () => resolve(request.result.sort((a, b) =>
+      String(a.nome || "").localeCompare(String(b.nome || ""), "pt-BR")));
+    request.onerror = () => reject(request.error || new Error("Não foi possível listar as fichas locais."));
+  });
+}
+
+async function buscarFichaLocal(id) {
+  const db = await abrirBancoFichasLocal();
+  return new Promise((resolve, reject) => {
+    const request = db.transaction("fichas", "readonly").objectStore("fichas").get(String(id));
+    request.onsuccess = () => resolve(request.result || null);
+    request.onerror = () => reject(request.error || new Error("Não foi possível abrir a ficha local."));
+  });
+}
+
+async function guardarFichaLocal(id, ficha) {
+  const db = await abrirBancoFichasLocal();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction("fichas", "readwrite");
+    transaction.objectStore("fichas").put({
+      ...ficha,
+      id: String(id),
+      atualizado_em: new Date().toISOString()
+    });
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error || new Error("Não foi possível salvar a ficha neste navegador."));
+    transaction.onabort = () => reject(transaction.error || new Error("O salvamento local da ficha foi cancelado."));
+  });
+}
+
+async function excluirFichaLocal(id) {
+  const db = await abrirBancoFichasLocal();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction("fichas", "readwrite");
+    transaction.objectStore("fichas").delete(String(id));
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error || new Error("Não foi possível excluir a ficha local."));
+    transaction.onabort = () => reject(transaction.error || new Error("A exclusão local da ficha foi cancelada."));
+  });
+}
 
 async function apiRequest(path, options = {}) {
   const headers = { ...(options.headers || {}) };
@@ -3556,23 +3791,51 @@ async function apiRequest(path, options = {}) {
     credentials: "same-origin"
   });
   const data = await response.json().catch(() => ({}));
-  if (response.status === 401 && document.body.classList.contains("authenticated")) {
-    showLoginScreen();
-  }
   return { response, data };
 }
 
-function showLoginScreen(message = "") {
-  csrfToken = "";
-  document.body.classList.remove("authenticated");
-  document.getElementById("auth-message").textContent = message;
-  document.getElementById("auth-username").focus();
+async function entrarModoLocal() {
+  const status = document.getElementById("dashboard-message");
+  status.textContent = "Preparando fichas locais...";
+  modoLocal = true;
+  document.body.classList.add("authenticated", "modo-local");
+  document.body.classList.remove("editing");
+  try {
+    await abrirBancoFichasLocal();
+    document.getElementById("account_username").textContent = "Neste navegador";
+    document.getElementById("editor-account-username").textContent = "Neste navegador";
+    document.getElementById("import-character-button").style.display = "";
+    if (navigator.storage && navigator.storage.persist && navigator.storage.persisted) {
+      try {
+        const persistido = await navigator.storage.persisted();
+        if (!persistido && !await navigator.storage.persist()) {
+          document.getElementById("local-storage-note").textContent +=
+            " O navegador pode remover dados locais automaticamente; mantenha cópias exportadas.";
+        }
+      } catch (error) {
+        console.warn("O navegador não confirmou o armazenamento persistente:", error);
+        document.getElementById("local-storage-note").textContent +=
+          " O navegador pode remover dados locais automaticamente; mantenha cópias exportadas.";
+      }
+    }
+    await Promise.all([carregarArquetipos(), carregarOrigens()]);
+    await carregarListaPersonagens();
+  } catch (error) {
+    console.error("Erro ao iniciar o modo local:", error);
+    status.textContent = `Não foi possível preparar o armazenamento local: ${error.message}`;
+  }
 }
 
 async function carregarListaPersonagens() {
-  const { response, data } = await apiRequest("/api/personagens");
-  if (!response.ok) {
-    throw new Error(data.detail || "Não foi possível carregar suas fichas.");
+  let data;
+  if (modoLocal) {
+    data = await listarFichasLocais();
+  } else {
+    const { response, data: resposta } = await apiRequest("/api/personagens");
+    if (!response.ok) {
+      throw new Error(resposta.detail || "Não foi possível carregar suas fichas.");
+    }
+    data = resposta;
   }
   const list = document.getElementById("character-list");
   list.replaceChildren();
@@ -3601,9 +3864,69 @@ async function carregarListaPersonagens() {
     remove.className = "btn-danger";
     remove.textContent = "Excluir";
     remove.addEventListener("click", () => excluirFicha(character.id, character.nome));
-    actions.append(access, remove);
+    actions.append(access);
+    if (modoLocal) {
+      const exportButton = document.createElement("button");
+      exportButton.type = "button";
+      exportButton.textContent = "Exportar";
+      exportButton.addEventListener("click", () => exportarFichaLocal(character.id));
+      actions.append(exportButton);
+    }
+    actions.append(remove);
     card.append(info, actions);
     list.append(card);
+  }
+}
+
+async function exportarFichaLocal(characterId) {
+  try {
+    const character = await buscarFichaLocal(characterId);
+    if (!character) throw new Error("A ficha selecionada não foi encontrada neste navegador.");
+    const arquivo = {
+      aplicativo: "RPG_Fichas",
+      versao: 1,
+      exportada_em: new Date().toISOString(),
+      ficha: character
+    };
+    const blob = new Blob([JSON.stringify(arquivo, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    const nomeArquivo = (character.nome || "ficha").replace(/[<>:\"/\\|?*]+/g, "_");
+    link.href = url;
+    link.download = `${nomeArquivo}.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    document.getElementById("dashboard-message").textContent = `Ficha "${character.nome || "Sem nome"}" exportada.`;
+  } catch (error) {
+    document.getElementById("dashboard-message").textContent = error.message;
+  }
+}
+
+async function importarFichaLocal(file) {
+  try {
+    const payload = JSON.parse(await file.text());
+    const imported = payload && (payload.ficha || payload.character || payload);
+    if (!imported || typeof imported !== "object" || Array.isArray(imported) ||
+        (imported.nome !== undefined && typeof imported.nome !== "string")) {
+      throw new Error("O arquivo não contém uma ficha JSON válida.");
+    }
+    const camposLista = ["atributos", "pericias", "inventario", "armas", "protecoes", "habilidades", "rituais", "poderes"];
+    if (camposLista.some(campo => imported[campo] !== undefined && !Array.isArray(imported[campo]))) {
+      throw new Error("A ficha contém uma lista em formato inválido.");
+    }
+    const id = gerarIdLocal();
+    const character = { ...imported, id };
+    await guardarFichaLocal(id, character);
+    const savedCharacter = await buscarFichaLocal(id);
+    if (!savedCharacter) throw new Error("A ficha foi importada, mas não foi possível confirmar o salvamento local.");
+    await carregarListaPersonagens();
+    document.getElementById("dashboard-message").textContent =
+      `Ficha "${character.nome || "Sem nome"}" importada neste navegador.`;
+  } catch (error) {
+    document.getElementById("dashboard-message").textContent =
+      error instanceof SyntaxError ? "O arquivo selecionado não contém JSON válido." : error.message;
+  } finally {
+    document.getElementById("import-character-file").value = "";
   }
 }
 
@@ -3655,6 +3978,12 @@ async function excluirFicha(characterId, characterName) {
   const status = document.getElementById("dashboard-message");
   status.textContent = "Excluindo ficha...";
   try {
+    if (modoLocal) {
+      await excluirFichaLocal(characterId);
+      if (String(characterId) === currentCharacterId) currentCharacterId = null;
+      await carregarListaPersonagens();
+      return;
+    }
     const { response, data } = await apiRequest(
       `/api/personagem/${encodeURIComponent(characterId)}`,
       { method: "DELETE" }
@@ -3672,61 +4001,12 @@ async function excluirFicha(characterId, characterName) {
   }
 }
 
-document.getElementById("login-tab").addEventListener("click", () => {
-  authMode = "login";
-  document.getElementById("login-tab").classList.add("active");
-  document.getElementById("register-tab").classList.remove("active");
-  document.getElementById("login-tab").setAttribute("aria-selected", "true");
-  document.getElementById("register-tab").setAttribute("aria-selected", "false");
-  document.getElementById("auth-submit").textContent = "Entrar";
-  document.getElementById("auth-password").setAttribute("autocomplete", "current-password");
-  document.getElementById("auth-message").textContent = "";
+document.getElementById("import-character-button").addEventListener("click", () => {
+  document.getElementById("import-character-file").click();
 });
-
-document.getElementById("register-tab").addEventListener("click", () => {
-  authMode = "register";
-  document.getElementById("register-tab").classList.add("active");
-  document.getElementById("login-tab").classList.remove("active");
-  document.getElementById("register-tab").setAttribute("aria-selected", "true");
-  document.getElementById("login-tab").setAttribute("aria-selected", "false");
-  document.getElementById("auth-submit").textContent = "Criar conta";
-  document.getElementById("auth-password").setAttribute("autocomplete", "new-password");
-  document.getElementById("auth-message").textContent = "A senha deve ter pelo menos 8 caracteres.";
-});
-
-document.getElementById("auth-form").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const submitButton = document.getElementById("auth-submit");
-  submitButton.disabled = true;
-  document.getElementById("auth-message").textContent = "Aguarde...";
-  try {
-    const { response, data } = await apiRequest(`/api/auth/${authMode}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: document.getElementById("auth-username").value,
-        password: document.getElementById("auth-password").value
-      })
-    });
-    if (!response.ok) {
-      throw new Error(data.detail || "Não foi possível entrar.");
-    }
-    csrfToken = data.csrf_token;
-    document.getElementById("auth-password").value = "";
-    document.getElementById("account_username").textContent = data.username;
-    document.getElementById("dashboard-username").textContent = data.username;
-    document.getElementById("editor-account-username").textContent = data.username;
-    await carregarArquetipos();
-    await carregarOrigens();
-    await carregarListaPersonagens();
-    document.body.classList.add("authenticated");
-    document.body.classList.remove("editing");
-    document.getElementById("api_status_msg").textContent = "";
-  } catch (error) {
-    document.getElementById("auth-message").textContent = error.message;
-  } finally {
-    submitButton.disabled = false;
-  }
+document.getElementById("import-character-file").addEventListener("change", event => {
+  const file = event.target.files && event.target.files[0];
+  if (file) importarFichaLocal(file);
 });
 
 document.getElementById("new-character-form").addEventListener("submit", async (event) => {
@@ -3737,13 +4017,24 @@ document.getElementById("new-character-form").addEventListener("submit", async (
   button.disabled = true;
   status.textContent = "Criando ficha...";
   try {
-    const { response, data } = await apiRequest("/api/personagem", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nome: nameInput.value.trim() })
-    });
-    if (!response.ok) {
-      throw new Error(data.detail || "Não foi possível criar a ficha.");
+    let data;
+    if (modoLocal) {
+      data = { id: gerarIdLocal() };
+      await guardarFichaLocal(data.id, {
+        id: data.id,
+        nome: nameInput.value.trim(),
+        nivel: 1
+      });
+    } else {
+      const { response, data: resposta } = await apiRequest("/api/personagem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome: nameInput.value.trim() })
+      });
+      if (!response.ok) {
+        throw new Error(resposta.detail || "Não foi possível criar a ficha.");
+      }
+      data = resposta;
     }
     nameInput.value = "";
     currentCharacterId = String(data.id);
@@ -3859,24 +4150,6 @@ fichaContainer.addEventListener("click", (event) => {
   }
 });
 
-async function sairDaConta() {
-  const buttons = [
-    document.getElementById("logout-button"),
-    document.getElementById("dashboard-logout")
-  ];
-  buttons.forEach((button) => { button.disabled = true; });
-  try {
-    const { response, data } = await apiRequest("/api/auth/logout", { method: "POST" });
-    if (!response.ok) {
-      throw new Error(data.detail || "Não foi possível sair.");
-    }
-    window.location.reload();
-  } catch (error) {
-    document.getElementById("api_status_msg").textContent = error.message;
-  } finally {
-    buttons.forEach((button) => { button.disabled = false; });
-  }
-}
 let todasHabilidades = [];
 let tierAtivo = 'Tier I';
 
@@ -4796,27 +5069,57 @@ function salvarRitualModal() {
     if (typeof programarAutosave === 'function') programarAutosave(0);
 }
 
-document.getElementById("logout-button").addEventListener("click", sairDaConta);
-document.getElementById("dashboard-logout").addEventListener("click", sairDaConta);
+const fecharModais = {
+  'modal-itens-catalogo': fecharModalItensCatalogo,
+  'modal-poder': fecharModalPoder,
+  'modal-item': fecharModal,
+  'modal-ritual': fecharModalRitual,
+  'modal-arma': fecharModalArma,
+  'modal-editar-arma': fecharModalEditarArma,
+  'modal-protecao': fecharModalProtecao,
+  'modal-editar-protecao': fecharModalEditarProtecao
+};
+document.querySelectorAll('.modal-overlay').forEach(modal => {
+  modal.addEventListener('click', event => {
+    if (event.target === modal) fecharModais[modal.id]?.();
+  });
+});
+
+let deferredInstallPrompt = null;
+window.addEventListener("beforeinstallprompt", event => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  document.getElementById("install-app-button").style.display = "";
+  document.getElementById("install-help-text").textContent =
+    "Instale pelo botão para abrir o app diretamente na tela inicial.";
+});
+window.addEventListener("appinstalled", () => {
+  document.getElementById("install-app-button").style.display = "none";
+  document.getElementById("install-help-text").textContent = "";
+});
+document.getElementById("install-app-button").addEventListener("click", async () => {
+  if (!deferredInstallPrompt) {
+    document.getElementById("install-help-text").textContent =
+      /iPad|iPhone|iPod/.test(navigator.userAgent)
+        ? "No iPhone/iPad: toque em Compartilhar e escolha “Adicionar à Tela de Início”."
+        : "No menu do navegador, escolha “Instalar aplicativo” ou “Adicionar à tela inicial”.";
+    return;
+  }
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  document.getElementById("install-app-button").style.display = "none";
+});
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  navigator.serviceWorker.register("/service-worker.js").catch(error => {
+    console.error("Não foi possível registrar o modo offline:", error);
+    document.getElementById("dashboard-message").textContent =
+      "O app funciona, mas não foi possível preparar o uso offline neste endereço.";
+  });
+}
 
 (async () => {
-  try {
-    const { response, data } = await apiRequest("/api/auth/me");
-    if (!response.ok) {
-      showLoginScreen();
-      return;
-    }
-    csrfToken = data.csrf_token;
-    document.getElementById("account_username").textContent = data.username;
-    document.getElementById("dashboard-username").textContent = data.username;
-    document.getElementById("editor-account-username").textContent = data.username;
-    await carregarArquetipos();
-    await carregarOrigens();
-    await carregarListaPersonagens();
-    document.body.classList.add("authenticated");
-  } catch (error) {
-    showLoginScreen(error.message || "Não foi possível conectar ao servidor.");
-  }
+  await entrarModoLocal();
 })();
 </script>
 
