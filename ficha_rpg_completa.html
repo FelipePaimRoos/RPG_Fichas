@@ -439,6 +439,57 @@
         grid-template-columns: 1fr;
       }
     }
+    /* Habilidades e Rituais: barras longas (uma por linha) que expandem ao clicar.
+       A descrição fica oculta por padrão e abre sem empurrar o layout das outras barras. */
+    #grid-habilidades.cards-grid,
+    #grid-rituais.cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    #grid-habilidades .card-item,
+    #grid-rituais .card-item {
+      width: 100%;
+      cursor: pointer;
+      padding: 10px 42px 10px 14px;
+      position: relative;
+    }
+    #grid-habilidades .card-item .card-subtitle,
+    #grid-rituais .card-item .card-subtitle {
+      font-size: 0.75rem;
+    }
+    #grid-habilidades .power-card-description,
+    #grid-rituais .power-card-description {
+      display: none;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--card-border);
+      max-height: 260px;
+      overflow-y: auto;
+    }
+    #grid-habilidades .card-item.expandido .power-card-description,
+    #grid-rituais .card-item.expandido .power-card-description {
+      display: block;
+    }
+    #grid-habilidades .card-item::after,
+    #grid-rituais .card-item::after {
+      content: '▾';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: transform 0.15s ease;
+    }
+    #grid-habilidades .card-item.expandido::after,
+    #grid-rituais .card-item.expandido::after {
+      content: '▴';
+    }
+    #grid-habilidades .card-item .card-title,
+    #grid-rituais .card-item .card-title {
+      padding-right: 4px;
+    }
     .power-catalog-list {
       display: flex;
       flex-direction: column;
@@ -2620,10 +2671,10 @@ function renderCards(tipo) {
   listas[tipo].forEach((item, idx) => {
     const div = document.createElement('div');
     const classes = ['card-item'];
-    // Cards "grandes" (power-card, com descrição), padrão dos rituais:
-    // aplica a rituais e a habilidades não-automáticas.
-    const cardGrande = tipo === 'ritual' || !item.automatico;
-    if (cardGrande && !item.automatico) {
+    // Barras longas com descrição expansível (padrão acordeão):
+    // habilidades e rituais ocupam uma linha cada; detalhes abrem ao clicar.
+    const temDescricao = Boolean(item.efeito);
+    if (temDescricao && !item.automatico) {
       if (tipo === 'ritual') {
         const elementoRitual = detectarElementoRitual(item);
         if (elementoRitual) classes.push('power-card', `ritual-${elementoRitual}`);
@@ -2634,7 +2685,14 @@ function renderCards(tipo) {
     }
     div.className = classes.join(' ');
     div.onclick = (e) => {
-      if (e.target.tagName !== 'BUTTON') abrirModalEdicao(tipo, idx);
+      if (e.target.tagName !== 'BUTTON') {
+        if (temDescricao) {
+          // clique alterna a expansão da descrição (acordeão)
+          div.classList.toggle('expandido');
+        } else {
+          abrirModalEdicao(tipo, idx);
+        }
+      }
     };
     const subtitulo = [
       item.automatico
@@ -2648,7 +2706,7 @@ function renderCards(tipo) {
       ${item.automatico ? '' : `<button class="btn-delete-card" onclick="removerItem('${tipo}', ${idx}, event)">X</button>`}
       <div class="card-title">${item.nome || '(Sem Nome)'}</div>
       <div class="card-subtitle">${subtitulo}</div>
-      ${cardGrande && item.efeito ? `<div class="power-card-description">${escaparHTML(item.efeito)}</div>` : ''}
+      ${temDescricao && !item.automatico ? `<div class="power-card-description">${escaparHTML(item.efeito)}</div>` : ''}
     `;
     container.appendChild(div);
   });
