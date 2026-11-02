@@ -493,6 +493,28 @@ def listar_habilidades():
     return _carregar_catalogo_habilidades()
 
 
+class BonusHabilidadesRequest(BaseModel):
+    habilidades: List[str] = Field(default_factory=list)
+    machucado: bool = False
+    protecao_pesada: bool = False
+    protecao_leve: bool = False
+    nivel: int = 1
+
+
+@app.post("/api/habilidades/bonus")
+def calcular_bonus_habilidades(dados: BonusHabilidadesRequest):
+    """Calcula os bônus passivos gerados pelas habilidades do personagem."""
+    from src.habilidades_engine import bonus_de_habilidades
+    habilidades = [{"nome": nome} for nome in dados.habilidades]
+    contexto = {
+        "machucado": dados.machucado,
+        "protecao_pesada": dados.protecao_pesada,
+        "protecao_leve": dados.protecao_leve,
+        "nivel": dados.nivel,
+    }
+    return bonus_de_habilidades(habilidades, contexto)
+
+
 def _carregar_catalogo_rituais() -> list[dict]:
     if not RITUALS_PATH.exists():
         raise HTTPException(

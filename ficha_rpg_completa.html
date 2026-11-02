@@ -2177,6 +2177,51 @@ function initDados() {
   });
 }
 
+// ===== MOTOR DE AUTOMAÇÃO DE HABILIDADES (frontend) =====
+// Espelha src/habilidades_engine.py: lê o campo `regras` dos catálogos
+// carregados e soma os bônus passivos aplicáveis ao estado atual da ficha.
+const REGRAS_HABILIDADES = window.REGRAS_HABILIDADES_MUTAVEL = {};
+
+function calcularBonusHabilidades() {
+  const bonus = { pericias: {}, atributos: {}, defesa: 0, pv_max: 0, san_max: 0,
+                  rd: 0, deslocamento: 0, carga: 0, iniciativa: 0 };
+  if (!Array.isArray(listas.habilidade)) return bonus;
+
+  const vidaMax = Number(document.getElementById('vidaMax').value) || 0;
+  const vidaAtual = Number(document.getElementById('vidaAtual').value) || 0;
+  const machucado = vidaMax > 0 && vidaAtual <= vidaMax / 2;
+  const contexto = { machucado, protecao_pesada: false, protecao_leve: false };
+
+  for (const hab of listas.habilidade) {
+    const efeitos = REGRAS_HABILIDADES[typeof hab === 'string' ? hab : hab.nome];
+    if (!efeitos) continue;
+    for (const efeito of efeitos) {
+      if (efeito.condicao && !contexto[efeito.condicao]) continue;
+      const valor = Number(efeito.valor) || 0;
+      switch (efeito.tipo) {
+        case 'pericia':
+          if (efeito.alvo) bonus.pericias[efeito.alvo] = (bonus.pericias[efeito.alvo] || 0) + valor;
+          break;
+        case 'atributo':
+          if (efeito.alvo) bonus.atributos[efeito.alvo] = (bonus.atributos[efeito.alvo] || 0) + valor;
+          break;
+        case 'defesa': bonus.defesa += valor; break;
+        case 'pv_max': bonus.pv_max += valor; break;
+        case 'san_max': bonus.san_max += valor; break;
+        case 'rd': bonus.rd += valor; break;
+        case 'deslocamento': bonus.deslocamento += valor; break;
+        case 'carga': bonus.carga += valor; break;
+        case 'iniciativa': bonus.iniciativa += valor; break;
+      }
+    }
+  }
+  return bonus;
+}
+
+function bonusPericiaDeHabilidades(nomePericia) {
+  return (calcularBonusHabilidades().pericias[nomePericia]) || 0;
+}
+
 function atualizarCalculos(valorEditado = false) {
   const nivel = Math.max(1, Number(document.getElementById('nivel').value) || 1);
   const pontosDisponiveis = 4 + [4, 10, 16, 19].filter(nivelMarco => nivel >= nivelMarco).length;
@@ -2207,6 +2252,7 @@ function atualizarCalculos(valorEditado = false) {
   const intelecto = Number(document.getElementById('atr_intelecto').value) || 0;
   const presenca = Number(document.getElementById('atr_presenca').value) || 0;
   const vigor = Number(document.getElementById('atr_vigor').value) || 0;
+  const bonusHabilidades = typeof calcularBonusHabilidades === 'function' ? calcularBonusHabilidades() : { pericias: {}, atributos: {}, defesa: 0, pv_max: 0, san_max: 0, rd: 0, deslocamento: 0, carga: 0, iniciativa: 0 };
   const bonusProt = Number(document.getElementById('bonusProtecoes').value) || 0;
 
   document.getElementById('dt_forca').innerText = getDT(forca);
@@ -2224,10 +2270,10 @@ function atualizarCalculos(valorEditado = false) {
   const defesaCalculada = document.getElementById('autoDefesa').checked
     ? 5 + agilidade + bonusProt
     : null;
-  aplicarBonusArquetipoCampo('vidaMax', bonusVida, vidaCalculada, valorEditado);
-  aplicarBonusArquetipoCampo('sanidadeMax', bonusSanidade, sanidadeCalculada, valorEditado);
-  aplicarBonusArquetipoCampo('defesaAtual', bonusDefesa, defesaCalculada, valorEditado);
-  document.getElementById('cargaMaxima').value = forca * 5;
+  aplicarBonusArquetipoCampo('vidaMax', bonusVida + bonusHabilidades.pv_max, vidaCalculada, valorEditado);
+  aplicarBonusArquetipoCampo('sanidadeMax', bonusSanidade + bonusHabilidades.san_max, sanidadeCalculada, valorEditado);
+  aplicarBonusArquetipoCampo('defesaAtual', bonusDefesa + bonusHabilidades.defesa, defesaCalculada, valorEditado);
+  document.getElementById('cargaMaxima').value = forca * 5 + bonusHabilidades.carga;
   PERICIAS_BASE.forEach((_, idx) => atualizarDadoPericia(idx));
   renderBarras();
 
@@ -2236,8 +2282,8 @@ function atualizarCalculos(valorEditado = false) {
   const idxReflexos = PERICIAS_BASE.findIndex(p => p.nome === "Reflexos");
   const idxFortitude = PERICIAS_BASE.findIndex(p => p.nome === "Fortitude");
   
-  const bonusReflexos = document.getElementById('bonus_p_' + idxReflexos) ? Number(document.getElementById('bonus_p_' + idxReflexos).value) : 0;
-  const bonusFortitude = document.getElementById('bonus_p_' + idxFortitude) ? Number(document.getElementById('bonus_p_' + idxFortitude).value) : 0;
+  const bonusReflexos = (document.getElementById('bonus_p_' + idxReflexos) ? Number(document.getElementById('bonus_p_' + idxReflexos).value) : 0) + (bonusHabilidades.pericias['Reflexos'] || 0);
+  const bonusFortitude = (document.getElementById('bonus_p_' + idxFortitude) ? Number(document.getElementById('bonus_p_' + idxFortitude).value) : 0) + (bonusHabilidades.pericias['Fortitude'] || 0);
 
   const treinoReflexos = document.getElementById('treino_p_' + idxReflexos).value;
   const treinoFortitude = document.getElementById('treino_p_' + idxFortitude).value;
@@ -4153,6 +4199,18 @@ fichaContainer.addEventListener("click", (event) => {
 let todasHabilidades = [];
 let tierAtivo = 'Tier I';
 
+// Reconstrói o mapa de regras quando o catálogo terminar de carregar
+function _atualizarMapaRegrasHabilidades() {
+  if (typeof window !== 'undefined' && window.REGRAS_HABILIDADES_MUTAVEL) {
+    const mapa = {};
+    (todasHabilidades || []).forEach(h => {
+      if (Array.isArray(h.regras) && h.regras.length) mapa[h.nome] = h.regras;
+    });
+    Object.keys(window.REGRAS_HABILIDADES_MUTAVEL).forEach(k => delete window.REGRAS_HABILIDADES_MUTAVEL[k]);
+    Object.assign(window.REGRAS_HABILIDADES_MUTAVEL, mapa);
+  }
+}
+
 async function abrirModalNovaHabilidade() {
     limparFormularioModal();
     
@@ -4170,6 +4228,7 @@ async function abrirModalNovaHabilidade() {
                 throw new Error(`Status ${response.status}: Não foi possível aceder a /api/catalogo/habilidades`);
             }
             todasHabilidades = await response.json();
+            _atualizarMapaRegrasHabilidades();
         } catch (error) {
             console.error('Erro ao carregar habilidades:', error);
             container.innerHTML = `<p style="color:#ff5555; margin: 0; font-size: 0.85em;">

@@ -53,7 +53,27 @@
     "prereq": "Vigor 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Enquanto estiver Machucado (metade da vida ou menos), você recebe +2 em todos os testes de resistência (Fortitude, Reflexos e Vontade)."
+    "efeito": "Enquanto estiver Machucado (metade da vida ou menos), você recebe +2 em todos os testes de resistência (Fortitude, Reflexos e Vontade).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Fortitude",
+        "condicao": "machucado"
+      },
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Reflexos",
+        "condicao": "machucado"
+      },
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Vontade",
+        "condicao": "machucado"
+      }
+    ]
   },
   {
     "nome": "Combate Defensivo",
@@ -85,7 +105,14 @@
     "prereq": "Vigor 2 ou Força 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Enquanto estiver vestindo uma Proteção Pesada, você recebe +2 de Resistência a Dano (RD) física contra ataques corporais, à distância e de arremesso."
+    "efeito": "Enquanto estiver vestindo uma Proteção Pesada, você recebe +2 de Resistência a Dano (RD) física contra ataques corporais, à distância e de arremesso.",
+    "regras": [
+      {
+        "tipo": "rd",
+        "valor": 2,
+        "condicao": "protecao_pesada"
+      }
+    ]
   },
   {
     "nome": "Reflexos Defensivos",
@@ -125,7 +152,13 @@
     "prereq": "Agilidade 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Você recebe +2 em testes de Iniciativa. Além disso, na primeira rodada de cada combate, você recebe 1 Ação de Movimento adicional."
+    "efeito": "Você recebe +2 em testes de Iniciativa. Além disso, na primeira rodada de cada combate, você recebe 1 Ação de Movimento adicional.",
+    "regras": [
+      {
+        "tipo": "iniciativa",
+        "valor": 2
+      }
+    ]
   },
   {
     "nome": "Casca Grossa",
@@ -133,7 +166,13 @@
     "prereq": "Vigor 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Sua Pontuação Máxima de PV aumenta em +10."
+    "efeito": "Sua Pontuação Máxima de PV aumenta em +10.",
+    "regras": [
+      {
+        "tipo": "pv_max",
+        "valor": 10
+      }
+    ]
   },
   {
     "nome": "Cai Dentro",
@@ -149,7 +188,14 @@
     "prereq": "Intelecto 2 ou Percepção 2",
     "custo": "Nenhum",
     "alcance": "Curto (9m)",
-    "efeito": "Permite usar Luta ou Pontaria para analisar armas, balística e marcas de combate. Você recebe +2 em testes de Percepção para analisar equipamentos, postura ou ferimentos. Em caso de sucesso, descobre a RD, Defesa, fraquezas ou tipo de dano do alvo antes do combate."
+    "efeito": "Permite usar Luta ou Pontaria para analisar armas, balística e marcas de combate. Você recebe +2 em testes de Percepção para analisar equipamentos, postura ou ferimentos. Em caso de sucesso, descobre a RD, Defesa, fraquezas ou tipo de dano do alvo antes do combate.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Percepção"
+      }
+    ]
   },
   {
     "nome": "Correria Desesperada",
@@ -157,7 +203,13 @@
     "prereq": "Agilidade 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Seu deslocamento base aumenta em +3 metros e você recebe +2 em testes de perícia realizados para fugir de perseguições."
+    "efeito": "Seu deslocamento base aumenta em +3 metros e você recebe +2 em testes de perícia realizados para fugir de perseguições.",
+    "regras": [
+      {
+        "tipo": "deslocamento",
+        "valor": 3
+      }
+    ]
   },
   {
     "nome": "Engolir o Choro",
@@ -213,7 +265,14 @@
     "prereq": "Presença 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Você recebe +2 em testes de Diplomacia ou Enganação. Além disso, possui credenciais oficiais (0 espaços de carga) que garantem autoridade para assumir jurisdição sobre investigações civis, porte ostensivo e acesso a áreas restritas sem necessidade de testes contra autoridades comuns."
+    "efeito": "Você recebe +2 em testes de Diplomacia ou Enganação. Além disso, possui credenciais oficiais (0 espaços de carga) que garantem autoridade para assumir jurisdição sobre investigações civis, porte ostensivo e acesso a áreas restritas sem necessidade de testes contra autoridades comuns.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Diplomacia"
+      }
+    ]
   },
   {
     "nome": "Método Investigativo",
@@ -229,7 +288,14 @@
     "prereq": "Intelecto 2 ou Percepção 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Você recebe +2 em testes de Sobrevivência e pode utilizar a perícia Sobrevivência no lugar de Ocultismo, Procurar ou Percepção para identificar, rastrear e analisar vestígios ou criaturas paranormais."
+    "efeito": "Você recebe +2 em testes de Sobrevivência e pode utilizar a perícia Sobrevivência no lugar de Ocultismo, Procurar ou Percepção para identificar, rastrear e analisar vestígios ou criaturas paranormais.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Sobrevivência"
+      }
+    ]
   },
   {
     "nome": "Atacar das Sombras",
@@ -253,7 +319,13 @@
     "prereq": "Presença 2 ou Vigor 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Sua Pontuação Máxima de SAN aumenta em +10."
+    "efeito": "Sua Pontuação Máxima de SAN aumenta em +10.",
+    "regras": [
+      {
+        "tipo": "san_max",
+        "valor": 10
+      }
+    ]
   },
   {
     "nome": "Treinamento Militarizado",
@@ -285,7 +357,20 @@
     "prereq": "Agilidade 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Se estiver vestindo uma proteção leve, você recebe +2 na Defesa e +2 em testes de Reflexos."
+    "efeito": "Se estiver vestindo uma proteção leve, você recebe +2 na Defesa e +2 em testes de Reflexos.",
+    "regras": [
+      {
+        "tipo": "defesa",
+        "valor": 2,
+        "condicao": "protecao_leve"
+      },
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Reflexos",
+        "condicao": "protecao_leve"
+      }
+    ]
   },
   {
     "nome": "Ser Amaldiçoado",
@@ -333,7 +418,14 @@
     "prereq": "Intelecto 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Você possui facilidade natural para operar, burlar e manipular dispositivos virtuais e sistemas eletrônicos, você recebe +2 em testes de Tecnologia."
+    "efeito": "Você possui facilidade natural para operar, burlar e manipular dispositivos virtuais e sistemas eletrônicos, você recebe +2 em testes de Tecnologia.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Tecnologia"
+      }
+    ]
   },
   {
     "nome": "Mãos Rápidas",
@@ -541,7 +633,14 @@
     "prereq": "Intelecto 2",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Seus olhos e sentidos são altamente adaptados a locais com pouca iluminação, permitindo que você note detalhes e navegue no escuro onde outros só veem sombras. Visão nas Sombras: Você ignora as penalidades e os efeitos de Camuflagem (Leve ou Total) causados por escuridão natural ou penumbra. Atenção no Escuro: Você recebe +2 em testes de Percepção e Procurar realizados em ambientes com iluminação reduzida ou precária (como penumbra, salas iluminadas apenas por velas/lanternas, ao crepúsculo, etc.)."
+    "efeito": "Seus olhos e sentidos são altamente adaptados a locais com pouca iluminação, permitindo que você note detalhes e navegue no escuro onde outros só veem sombras. Visão nas Sombras: Você ignora as penalidades e os efeitos de Camuflagem (Leve ou Total) causados por escuridão natural ou penumbra. Atenção no Escuro: Você recebe +2 em testes de Percepção e Procurar realizados em ambientes com iluminação reduzida ou precária (como penumbra, salas iluminadas apenas por velas/lanternas, ao crepúsculo, etc.).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Percepção"
+      }
+    ]
   },
   {
     "nome": "Saudosista Hi-Tech",
@@ -565,7 +664,14 @@
     "prereq": "Treinado em Mecânica",
     "custo": null,
     "alcance": null,
-    "efeito": "Se quer um trabalho bem feito, faça você mesmo. Você recebe um bônus de +2 em testes de Mecânica. Além disso, a sua expertise técnica permite que você leve para o campo o seu próprio arsenal personalizado: você começa a missão com 1 explosivo autoral gratuito (que não conta para o seu limite de itens de inventário e possui a categoria reduzida em 1, com o mínimo 0). O número de explosivos autorais com que você começa a missão aumenta em +1 para cada outra habilidade desta trilha que você adquirir. Por fim, você é capaz de produzir novos explosivos autorais durante cenas de interlúdio utilizando as regras de Fabricação em Campo."
+    "efeito": "Se quer um trabalho bem feito, faça você mesmo. Você recebe um bônus de +2 em testes de Mecânica. Além disso, a sua expertise técnica permite que você leve para o campo o seu próprio arsenal personalizado: você começa a missão com 1 explosivo autoral gratuito (que não conta para o seu limite de itens de inventário e possui a categoria reduzida em 1, com o mínimo 0). O número de explosivos autorais com que você começa a missão aumenta em +1 para cada outra habilidade desta trilha que você adquirir. Por fim, você é capaz de produzir novos explosivos autorais durante cenas de interlúdio utilizando as regras de Fabricação em Campo.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Mecânica"
+      }
+    ]
   },
   {
     "nome": "Ser Experimentado",
@@ -789,7 +895,14 @@
     "prereq": "Treinado em Acrobacia",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu equilíbrio excepcional e flexibilidade corporal permitem que você se mova com fluidez e supere obstáculos físicos com facilidade. Agilidade Corporal: Você recebe +2 na perícia. Movimentação Fluida: Você ignora as penalidades de deslocamento impostas por terreno difícil e pode realizar investidas ou ações de movimento através dele sem sofrer redução de velocidade."
+    "efeito": "Seu equilíbrio excepcional e flexibilidade corporal permitem que você se mova com fluidez e supere obstáculos físicos com facilidade. Agilidade Corporal: Você recebe +2 na perícia. Movimentação Fluida: Você ignora as penalidades de deslocamento impostas por terreno difícil e pode realizar investidas ou ações de movimento através dele sem sofrer redução de velocidade.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Acrobacia"
+      }
+    ]
   },
   {
     "nome": "Ás do Volante",
@@ -797,7 +910,14 @@
     "prereq": "Agilidade 2, Treinado em Pilotagem",
     "custo": "Passivo / 1 SAN (Reação)",
     "alcance": "Pessoal",
-    "efeito": "Sua paixão por velocidade e ousadia ao volante permitem que você realize manobras extremas e proteja seu veículo em situações de perigo. O Domínio do Volante: Você recebe +2 em testes de Pilotagem. Manobra Evasiva: Uma vez por rodada, quando o veículo que você está pilotando for sofrer dano de um ataque ou efeito, você pode gastar 1 SAN como Reação para fazer um teste de Pilotagem (DT igual ao resultado do teste de ataque ou à DT do efeito). Se for bem-sucedido, o veículo ignora completamente aquele dano."
+    "efeito": "Sua paixão por velocidade e ousadia ao volante permitem que você realize manobras extremas e proteja seu veículo em situações de perigo. O Domínio do Volante: Você recebe +2 em testes de Pilotagem. Manobra Evasiva: Uma vez por rodada, quando o veículo que você está pilotando for sofrer dano de um ataque ou efeito, você pode gastar 1 SAN como Reação para fazer um teste de Pilotagem (DT igual ao resultado do teste de ataque ou à DT do efeito). Se for bem-sucedido, o veículo ignora completamente aquele dano.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Pilotagem"
+      }
+    ]
   },
   {
     "nome": "Atlético",
@@ -805,7 +925,18 @@
     "prereq": "Força 2, Treinado em Atletismo",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu preparo físico e treinamento árduo garantem um desempenho corporal superior em termos de força e mobilidade. Condicionamento Físico: Você recebe +2 em testes de Atletismo. Mobilidade Aprimorada: Seu deslocamento base aumenta em +3m."
+    "efeito": "Seu preparo físico e treinamento árduo garantem um desempenho corporal superior em termos de força e mobilidade. Condicionamento Físico: Você recebe +2 em testes de Atletismo. Mobilidade Aprimorada: Seu deslocamento base aumenta em +3m.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Atletismo"
+      },
+      {
+        "tipo": "deslocamento",
+        "valor": 3
+      }
+    ]
   },
   {
     "nome": "Atraente",
@@ -813,7 +944,14 @@
     "prereq": "Presença 2, Treinado em Diplomacia",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua beleza física, postura e carisma natural chamam a atenção por onde você passa, facilitando suas interações sociais. Magnetismo Pessoal: Você recebe +2 em testes de Artes, Diplomacia, Enganação e Intimidação realizados contra pessoas que possam se sentir fisicamente atraídas por você."
+    "efeito": "Sua beleza física, postura e carisma natural chamam a atenção por onde você passa, facilitando suas interações sociais. Magnetismo Pessoal: Você recebe +2 em testes de Artes, Diplomacia, Enganação e Intimidação realizados contra pessoas que possam se sentir fisicamente atraídas por você.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Diplomacia"
+      }
+    ]
   },
   {
     "nome": "Dedos Ágeis",
@@ -821,7 +959,14 @@
     "prereq": "Agilidade 2, Treinado em Crime",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua motricidade fina e controle manual impecável permitem manipular fechos, bolsos e mecanismos em uma fração do tempo normal. Destreza Manual: Você recebe +2 em testes de Crime. Mãos Rápidas: Você reduz a categoria de tempo necessária para executar manobras de Crime: Arrombar: Pode ser realizado utilizando uma Ação Padrão. Furtar: Pode ser realizado como uma Ação Livre (uma vez por rodada). Sabotar: Pode ser realizado utilizando uma Ação Padrão. Especialista em Acessos: Em Desafios de Acesso ou testes estendidos baseados em Crime (como burlar painéis, adivinhar combinações mecânicas ou arrombar cofres complexos), você recebe +1 ação/tentativa extra por rodada sem consumir o tempo do grupo, ou reduz em 1 a quantidade total de sucessos exigidos para superar o obstáculo (mínimo de 1)."
+    "efeito": "Sua motricidade fina e controle manual impecável permitem manipular fechos, bolsos e mecanismos em uma fração do tempo normal. Destreza Manual: Você recebe +2 em testes de Crime. Mãos Rápidas: Você reduz a categoria de tempo necessária para executar manobras de Crime: Arrombar: Pode ser realizado utilizando uma Ação Padrão. Furtar: Pode ser realizado como uma Ação Livre (uma vez por rodada). Sabotar: Pode ser realizado utilizando uma Ação Padrão. Especialista em Acessos: Em Desafios de Acesso ou testes estendidos baseados em Crime (como burlar painéis, adivinhar combinações mecânicas ou arrombar cofres complexos), você recebe +1 ação/tentativa extra por rodada sem consumir o tempo do grupo, ou reduz em 1 a quantidade total de sucessos exigidos para superar o obstáculo (mínimo de 1).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Crime"
+      }
+    ]
   },
   {
     "nome": "Detector de Mentiras",
@@ -829,7 +974,14 @@
     "prereq": "Presença 2, Treinado em Intuição",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua capacidade de ler microexpressões, tom de voz e linguagem corporal permite identificar enganos e contradições com facilidade. Olho Clínico: Você recebe +2 em testes de Intuição. Leitura da Verdade: Outros seres sofrem uma penalidade de -5 em testes de Enganação quando tentam mentir diretamente para você. Além disso, você identifica automaticamente quando um alvo demonstra hesitação atípica ao responder a uma pergunta direta."
+    "efeito": "Sua capacidade de ler microexpressões, tom de voz e linguagem corporal permite identificar enganos e contradições com facilidade. Olho Clínico: Você recebe +2 em testes de Intuição. Leitura da Verdade: Outros seres sofrem uma penalidade de -5 em testes de Enganação quando tentam mentir diretamente para você. Além disso, você identifica automaticamente quando um alvo demonstra hesitação atípica ao responder a uma pergunta direta.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Intuição"
+      }
+    ]
   },
   {
     "nome": "Especialista em Emergências",
@@ -837,7 +989,14 @@
     "prereq": "Intelecto 2, Treinado em Medicina",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu treinamento como socorrista de emergência permite estabilizar e tratar feridos com agilidade impecável sob a pressão do campo de batalha. Socorrista de Campo: Você recebe +2 em testes de Medicina. Primeiros Socorros Ágeis: Você pode aplicar cicatrizantes, medicamentos ou kits médicos utilizando uma Ação de Movimento (em vez de uma Ação Padrão). Saque Médico: Uma vez por rodada, você pode sacar um item médico ou insumo de cura como uma Ação Livre."
+    "efeito": "Seu treinamento como socorrista de emergência permite estabilizar e tratar feridos com agilidade impecável sob a pressão do campo de batalha. Socorrista de Campo: Você recebe +2 em testes de Medicina. Primeiros Socorros Ágeis: Você pode aplicar cicatrizantes, medicamentos ou kits médicos utilizando uma Ação de Movimento (em vez de uma Ação Padrão). Saque Médico: Uma vez por rodada, você pode sacar um item médico ou insumo de cura como uma Ação Livre.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Medicina"
+      }
+    ]
   },
   {
     "nome": "Estigmado",
@@ -845,7 +1004,14 @@
     "prereq": "Vigor 2, Treinado em Vontade",
     "custo": "Passivo (Reação)",
     "alcance": "Pessoal",
-    "efeito": "A dor física serve como uma âncora para a sua mente, usando a descarga de adrenalina do corpo para impedir que sua Sanidade se esfalace diante do terror. Ancoragem Física: Você recebe +2 em testes de Vontade. Transmutação da Dor: Sempre que for sofrer dano mental ou perda de Sanidade proveniente de efeitos de Medo, você pode optar por converter essa perda em perda de Pontos de Vida (PV) na proporção de 1 para 1 (por exemplo, convertendo 5 pontos de dano mental em 5 pontos de dano físico)."
+    "efeito": "A dor física serve como uma âncora para a sua mente, usando a descarga de adrenalina do corpo para impedir que sua Sanidade se esfalace diante do terror. Ancoragem Física: Você recebe +2 em testes de Vontade. Transmutação da Dor: Sempre que for sofrer dano mental ou perda de Sanidade proveniente de efeitos de Medo, você pode optar por converter essa perda em perda de Pontos de Vida (PV) na proporção de 1 para 1 (por exemplo, convertendo 5 pontos de dano mental em 5 pontos de dano físico).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Vontade"
+      }
+    ]
   },
   {
     "nome": "Foco em Perícia",
@@ -861,7 +1027,18 @@
     "prereq": "Intelecto 2, Treinado em Investigação",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Você sabe como otimizar o espaço do seu equipamento, distribuindo o peso de forma racional e eliminando volumes desnecessários. Organização Eficiente: Você recebe +2 em testes de Investigação (para examinar, procurar ou organizar equipamentos). Capacidade Expandida: Você soma o seu valor de Intelecto ao limite total de espaços (slots) que pode carregar."
+    "efeito": "Você sabe como otimizar o espaço do seu equipamento, distribuindo o peso de forma racional e eliminando volumes desnecessários. Organização Eficiente: Você recebe +2 em testes de Investigação (para examinar, procurar ou organizar equipamentos). Capacidade Expandida: Você soma o seu valor de Intelecto ao limite total de espaços (slots) que pode carregar.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Investigação"
+      },
+      {
+        "tipo": "carga",
+        "valor": 0
+      }
+    ]
   },
   {
     "nome": "Informado",
@@ -869,7 +1046,14 @@
     "prereq": "Intelecto 2, Treinado em Atualidades",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Você acompanha constantemente fóruns, jornais e redes de informação sobre o mundo ao seu redor, acumulando um vasto repertório de fatos, antecedentes e rumores. Repertório de Notícias: Você recebe +2 em testes de Atualidades. Conhecimento Geral: Você pode realizar testes de Atualidades no lugar de outras perícias para obter informações, dados históricos ou boatos sobre pessoas, locais e organizações (como substituto pontual para Ciências, Investigação ou Crime, mediante aprovação do mestre conforme o contexto do rumor)."
+    "efeito": "Você acompanha constantemente fóruns, jornais e redes de informação sobre o mundo ao seu redor, acumulando um vasto repertório de fatos, antecedentes e rumores. Repertório de Notícias: Você recebe +2 em testes de Atualidades. Conhecimento Geral: Você pode realizar testes de Atualidades no lugar de outras perícias para obter informações, dados históricos ou boatos sobre pessoas, locais e organizações (como substituto pontual para Ciências, Investigação ou Crime, mediante aprovação do mestre conforme o contexto do rumor).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Atualidades"
+      }
+    ]
   },
   {
     "nome": "Interrogador",
@@ -877,7 +1061,14 @@
     "prereq": "Força 2, Treinado em Intimidação",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Você sabe usar a imposição física e a ameaça velada para arrancar informações e forçar a cooperação de alvos sob pressão. Presença Ameaçadora: Você recebe +2 em testes de Intimidação. Coação Rápida: Você pode realizar testes de Intimidação para Coagir utilizando uma Ação Padrão (em vez de despender longos minutos de conversa), limitado a uma vez por cena contra o mesmo alvo."
+    "efeito": "Você sabe usar a imposição física e a ameaça velada para arrancar informações e forçar a cooperação de alvos sob pressão. Presença Ameaçadora: Você recebe +2 em testes de Intimidação. Coação Rápida: Você pode realizar testes de Intimidação para Coagir utilizando uma Ação Padrão (em vez de despender longos minutos de conversa), limitado a uma vez por cena contra o mesmo alvo.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Intimidação"
+      }
+    ]
   },
   {
     "nome": "Mentiroso Nato",
@@ -885,7 +1076,14 @@
     "prereq": "Presença 2, Treinado em Enganação",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua capacidade de manter a calma e sustentá-la sem piscar torna até as histórias mais absurdas surpreendentemente convincentes. Lábia Inabalável: Você recebe +2 em testes de Enganação. Cara de Pau: Você ignora as penalidades numéricas ou desvantagens impostas ao realizar testes de Enganação para contar mentiras altamente implausíveis, absurdas ou difíceis de acreditar."
+    "efeito": "Sua capacidade de manter a calma e sustentá-la sem piscar torna até as histórias mais absurdas surpreendentemente convincentes. Lábia Inabalável: Você recebe +2 em testes de Enganação. Cara de Pau: Você ignora as penalidades numéricas ou desvantagens impostas ao realizar testes de Enganação para contar mentiras altamente implausíveis, absurdas ou difíceis de acreditar.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Enganação"
+      }
+    ]
   },
   {
     "nome": "Observador",
@@ -893,7 +1091,14 @@
     "prereq": "Intelecto 2, Treinado em Procurar",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua atenção aos detalhes e mente analítica permitem notar pistas visuais no ambiente e processá-las com extrema rapidez. Olhar Atento: Você recebe +2 em testes de Procurar. Dedução Apurada: Você soma o seu valor de Intelecto em testes de Intuição para interpretar pistas, identificar detalhes ocultos e ler o comportamento de alvos."
+    "efeito": "Sua atenção aos detalhes e mente analítica permitem notar pistas visuais no ambiente e processá-las com extrema rapidez. Olhar Atento: Você recebe +2 em testes de Procurar. Dedução Apurada: Você soma o seu valor de Intelecto em testes de Intuição para interpretar pistas, identificar detalhes ocultos e ler o comportamento de alvos.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Procurar"
+      }
+    ]
   },
   {
     "nome": "Pai de Pet",
@@ -901,7 +1106,14 @@
     "prereq": "Presença 2, Treinado em Adestramento",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu vínculo afetivo e dedicação ao cuidado de animais criaram uma forte conexão com um companheiro de estimação leal que o acompanha em suas missões. Empatia Animal: Você recebe +2 em testes de Adestramento. Companheiro Animal: Você possui um animal de estimação que atua como um Aliado. Ele concede +2 em duas perícias à sua escolha (exceto Luta e Pontaria, e desde que adequadas ao tipo de animal e aprovadas pelo Mestre)."
+    "efeito": "Seu vínculo afetivo e dedicação ao cuidado de animais criaram uma forte conexão com um companheiro de estimação leal que o acompanha em suas missões. Empatia Animal: Você recebe +2 em testes de Adestramento. Companheiro Animal: Você possui um animal de estimação que atua como um Aliado. Ele concede +2 em duas perícias à sua escolha (exceto Luta e Pontaria, e desde que adequadas ao tipo de animal e aprovadas pelo Mestre).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Adestramento"
+      }
+    ]
   },
   {
     "nome": "Palavras de Devoção",
@@ -909,7 +1121,14 @@
     "prereq": "Presença 2, Treinado em Religião",
     "custo": "Passivo / 2 SAN (Ação Completa)",
     "alcance": "Curto",
-    "efeito": "A força de suas convicções e o domínio dos ritos sagrados permitem canalizar palavras de conforto que blindam a mente dos seus aliados contra o terror e o desespero. Doutrina e Fé: Você recebe +2 em testes de Religião. Oração Protetora: Uma vez por cena, você pode gastar 2 SAN e uma Ação Completa para conduzir uma oração para um número de aliados até o dobro da sua Presença. Até o fim da cena, todos os participantes afetados recebem Resistência a Dano Mental 5."
+    "efeito": "A força de suas convicções e o domínio dos ritos sagrados permitem canalizar palavras de conforto que blindam a mente dos seus aliados contra o terror e o desespero. Doutrina e Fé: Você recebe +2 em testes de Religião. Oração Protetora: Uma vez por cena, você pode gastar 2 SAN e uma Ação Completa para conduzir uma oração para um número de aliados até o dobro da sua Presença. Até o fim da cena, todos os participantes afetados recebem Resistência a Dano Mental 5.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Religião"
+      }
+    ]
   },
   {
     "nome": "Pensamento Tático",
@@ -925,7 +1144,18 @@
     "prereq": "Intelecto 2, Treinado em Ocultismo",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua mente é naturally fascinada e sintonizada com os mistérios arcanos, símbolos antigos e forças ocultas. Mente Mística: Você recebe +2 em testes de Ocultismo. Reserva Esotérica: Sua familiaridade com o sobrenatural expande seus limites mentais, aumentando em +2 a sua Sanidade máxima e permitindo identificar a presença de objetos amaldiçoados ou vestígios de rituais com um olhar rápido."
+    "efeito": "Sua mente é naturally fascinada e sintonizada com os mistérios arcanos, símbolos antigos e forças ocultas. Mente Mística: Você recebe +2 em testes de Ocultismo. Reserva Esotérica: Sua familiaridade com o sobrenatural expande seus limites mentais, aumentando em +2 a sua Sanidade máxima e permitindo identificar a presença de objetos amaldiçoados ou vestígios de rituais com um olhar rápido.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Ocultismo"
+      },
+      {
+        "tipo": "san_max",
+        "valor": 2
+      }
+    ]
   },
   {
     "nome": "Persuasivo",
@@ -933,7 +1163,14 @@
     "prereq": "Presença 2, Treinado em Diplomacia",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua lábia refinada e postura diplomática permitem convencer alvos e contornar resistências até mesmo diante de pedidos arriscados ou desfavoráveis. Lábia Diplomática: Você recebe +2 em testes de Diplomacia. Argumentação Convincente: Ao realizar testes de Diplomacia para persuadir alguém, qualquer penalidade aplicada por fazer solicitações custosas, arriscadas ou desfavoráveis para o alvo é reduzida em 5."
+    "efeito": "Sua lábia refinada e postura diplomática permitem convencer alvos e contornar resistências até mesmo diante de pedidos arriscados ou desfavoráveis. Lábia Diplomática: Você recebe +2 em testes de Diplomacia. Argumentação Convincente: Ao realizar testes de Diplomacia para persuadir alguém, qualquer penalidade aplicada por fazer solicitações custosas, arriscadas ou desfavoráveis para o alvo é reduzida em 5.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Diplomacia"
+      }
+    ]
   },
   {
     "nome": "Pesquisador Científico",
@@ -941,7 +1178,14 @@
     "prereq": "Intelecto 2, Treinado em Ciências",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu rigor metodológico e amplo conhecimento acadêmico permitem analisar tanto o mundo natural quanto o inexplicável sob uma ótica estritamente racional e empírica. Rigor Acadêmico: Você recebe +2 em testes de Ciências. Análise Empírica: Você pode realizar testes de Ciências no lugar de Ocultismo para identificar a natureza, fraquezas ou comportamentos de criaturas sobrenaturais, e no lugar de Sobrevivência para identificar espécimes da fauna silvestre e animais."
+    "efeito": "Seu rigor metodológico e amplo conhecimento acadêmico permitem analisar tanto o mundo natural quanto o inexplicável sob uma ótica estritamente racional e empírica. Rigor Acadêmico: Você recebe +2 em testes de Ciências. Análise Empírica: Você pode realizar testes de Ciências no lugar de Ocultismo para identificar a natureza, fraquezas ou comportamentos de criaturas sobrenaturais, e no lugar de Sobrevivência para identificar espécimes da fauna silvestre e animais.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Ciências"
+      }
+    ]
   },
   {
     "nome": "Proativo",
@@ -949,7 +1193,14 @@
     "prereq": "Agilidade 2, Treinado em Iniciativa",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua prontidão extrema e capacidade de resposta instantânea permitem que você tome a frente da situação no primeiro sinal de ameaça. Prontidão de Ação: Você recebe +2 em testes de Iniciativa. Arrancada Proativa: Ao realizar um teste de Iniciativa, se pelo menos um dos dados do teste explodir (atingir o valor máximo natural impresso no dado), você recebe 1 Ação Padrão adicional no seu primeiro turno daquele confronto."
+    "efeito": "Sua prontidão extrema e capacidade de resposta instantânea permitem que você tome a frente da situação no primeiro sinal de ameaça. Prontidão de Ação: Você recebe +2 em testes de Iniciativa. Arrancada Proativa: Ao realizar um teste de Iniciativa, se pelo menos um dos dados do teste explodir (atingir o valor máximo natural impresso no dado), você recebe 1 Ação Padrão adicional no seu primeiro turno daquele confronto.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Iniciativa"
+      }
+    ]
   },
   {
     "nome": "Racionalidade Inflexível",
@@ -957,7 +1208,14 @@
     "prereq": "Intelecto 3, Treinado em Vontade",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Suas convicções e visão de mundo são fundamentadas em rigor lógico e análise empírica, permitindo que sua mente processe o trauma e o terror sob uma ótica estritamente racional. Convicção Lógica: Você recebe +2 em testes de Vontade. Lógica Inabalável: Você pode utilizar o seu atributo Intelecto no lugar de Presença para realizar testes da perícia Vontade."
+    "efeito": "Suas convicções e visão de mundo são fundamentadas em rigor lógico e análise empírica, permitindo que sua mente processe o trauma e o terror sob uma ótica estritamente racional. Convicção Lógica: Você recebe +2 em testes de Vontade. Lógica Inabalável: Você pode utilizar o seu atributo Intelecto no lugar de Presença para realizar testes da perícia Vontade.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Vontade"
+      }
+    ]
   },
   {
     "nome": "Rato de Computador",
@@ -965,7 +1223,14 @@
     "prereq": "Intelecto 2, Treinado em Tecnologia",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua familiaridade obsessiva com sistemas virtuais, hardwares e redes permite operar terminais, invadir bancos de dados e extrair informações em tempo recorde. Fluência Digital: Você recebe +2 em testes de Tecnologia. Invasão Acelerada: Você pode hackear painéis, operar sistemas eletrônicos ou extrair arquivos virtuais utilizando 1 Ação Completa durante cenas de combate ou ação direta (em vez de despender múltiplos turnos). Varredura Instantânea: Uma vez por cena de investigação, se tiver acesso a um computador, servidor ou rede local, você pode realizar um teste de Tecnologia para procurar pistas digitais sem consumir o tempo ou a rodada da cena."
+    "efeito": "Sua familiaridade obsessiva com sistemas virtuais, hardwares e redes permite operar terminais, invadir bancos de dados e extrair informações em tempo recorde. Fluência Digital: Você recebe +2 em testes de Tecnologia. Invasão Acelerada: Você pode hackear painéis, operar sistemas eletrônicos ou extrair arquivos virtuais utilizando 1 Ação Completa durante cenas de combate ou ação direta (em vez de despender múltiplos turnos). Varredura Instantânea: Uma vez por cena de investigação, se tiver acesso a um computador, servidor ou rede local, você pode realizar um teste de Tecnologia para procurar pistas digitais sem consumir o tempo ou a rodada da cena.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Tecnologia"
+      }
+    ]
   },
   {
     "nome": "Resposta Rápida",
@@ -973,7 +1238,14 @@
     "prereq": "Agilidade 2, Treinado em Reflexos",
     "custo": "Passivo / 2 SAN (Reação)",
     "alcance": "Pessoal",
-    "efeito": "Seus reflexos motores e instinto de sobrevivência reagem à ameaça antes mesmo que sua mente consciente consiga processar a presença do perigo. Esquiva Instintiva: Você recebe +2 em testes de Reflexos. Reação Involuntária: Ao falhar em um teste de Percepção ou Intuição para notar uma emboscada (evitando a condição Desprevenido ou Surpreendido no início da cena), você pode gastar 2 SAN como Reação para refazer o teste de resistência ou detecção utilizando a perícia Reflexos no lugar da perícia original."
+    "efeito": "Seus reflexos motores e instinto de sobrevivência reagem à ameaça antes mesmo que sua mente consciente consiga processar a presença do perigo. Esquiva Instintiva: Você recebe +2 em testes de Reflexos. Reação Involuntária: Ao falhar em um teste de Percepção ou Intuição para notar uma emboscada (evitando a condição Desprevenido ou Surpreendido no início da cena), você pode gastar 2 SAN como Reação para refazer o teste de resistência ou detecção utilizando a perícia Reflexos no lugar da perícia original.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Reflexos"
+      }
+    ]
   },
   {
     "nome": "Talentoso",
@@ -981,7 +1253,14 @@
     "prereq": "Presença 2, Treinado em Artes",
     "custo": "Passivo",
     "alcance": "Pessoal / Curto (9m)",
-    "efeito": "Sua inclinação natural e sensibilidade para todas as formas de expressão artística fascinam e impactam o público e seus aliados. Inspiração Artística: Você recebe +2 em testes de Artes. Performance Impactante: Ao realizar um teste de Artes para impressionar, cativar ou inspirar alvos em cenas sociais ou de Interlúdio, você concede um bônus base de +2 em testes de perícias Sociais (Diplomacia, Enganação, Intimidação) ou de Vontade aos indivíduos afetados. Para cada 5 pontos que o resultado do seu teste superar a DT da ação, este bônus aumenta em +1 (limitado a um bônus máximo total equivalente ao seu valor do atributo Presença)."
+    "efeito": "Sua inclinação natural e sensibilidade para todas as formas de expressão artística fascinam e impactam o público e seus aliados. Inspiração Artística: Você recebe +2 em testes de Artes. Performance Impactante: Ao realizar um teste de Artes para impressionar, cativar ou inspirar alvos em cenas sociais ou de Interlúdio, você concede um bônus base de +2 em testes de perícias Sociais (Diplomacia, Enganação, Intimidação) ou de Vontade aos indivíduos afetados. Para cada 5 pontos que o resultado do seu teste superar a DT da ação, este bônus aumenta em +1 (limitado a um bônus máximo total equivalente ao seu valor do atributo Presença).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Artes"
+      }
+    ]
   },
   {
     "nome": "Teimosia Obstinada",
@@ -989,7 +1268,14 @@
     "prereq": "Presença 2, Treinado em Vontade",
     "custo": "Passivo / 2 SAN (Declaração)",
     "alcance": "Pessoal",
-    "efeito": "Sua inflexibilidade comportamental e apego irrestrito às suas próprias convicções tornam sua mente uma fortaleza extremamente difícil de ser manipulada ou dobrada por forças externas. Espírito Indomável: Você recebe +2 em testes de Vontade. Resistência Inflexível: Ao realizar um teste de Vontade para resistir a qualquer efeito, ritual ou habilidade que inflija uma condição mental (como Apavorado, Confuso, Fascinado, Paralisado, Perturbado) ou tente alterar sua atitude e controle consciente (como rituais de coerção, dominação ou fascínio), você pode gastar 2 SAN para receber Vantagem (+1d12) naquele teste de resistência."
+    "efeito": "Sua inflexibilidade comportamental e apego irrestrito às suas próprias convicções tornam sua mente uma fortaleza extremamente difícil de ser manipulada ou dobrada por forças externas. Espírito Indomável: Você recebe +2 em testes de Vontade. Resistência Inflexível: Ao realizar um teste de Vontade para resistir a qualquer efeito, ritual ou habilidade que inflija uma condição mental (como Apavorado, Confuso, Fascinado, Paralisado, Perturbado) ou tente alterar sua atitude e controle consciente (como rituais de coerção, dominação ou fascínio), você pode gastar 2 SAN para receber Vantagem (+1d12) naquele teste de resistência.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Vontade"
+      }
+    ]
   },
   {
     "nome": "Tenacidade",
@@ -997,7 +1283,14 @@
     "prereq": "Vigor 2, Treinado em Fortitude",
     "custo": "Passivo / 2 SAN (Reação)",
     "alcance": "Pessoal",
-    "efeito": "Seu corpo desenvolveu uma resiliência biológica fora do comum, capaz de suportar impactos destrutivos e reter a consciência no limite da vida. Físico Calejado: Você recebe +2 em testes de Fortitude. Resistência Inextremis: Quando sofrer um golpe ou efeito que reduziria seus Pontos de Vida a 0 PV (entrando na condição Morrendo), você pode gastar 2 SAN como Reação para realizar um teste de Fortitude (DT igual ao dano sofrido no ataque ou DT 10+5 para cada uso anterior na mesma cena). Se for bem-sucedido, você ignora o excesso de dano e permanece firme com 1 PV, evitando cair inconsciente ou entrar no estado Morrendo."
+    "efeito": "Seu corpo desenvolveu uma resiliência biológica fora do comum, capaz de suportar impactos destrutivos e reter a consciência no limite da vida. Físico Calejado: Você recebe +2 em testes de Fortitude. Resistência Inextremis: Quando sofrer um golpe ou efeito que reduziria seus Pontos de Vida a 0 PV (entrando na condição Morrendo), você pode gastar 2 SAN como Reação para realizar um teste de Fortitude (DT igual ao dano sofrido no ataque ou DT 10+5 para cada uso anterior na mesma cena). Se for bem-sucedido, você ignora o excesso de dano e permanece firme com 1 PV, evitando cair inconsciente ou entrar no estado Morrendo.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Fortitude"
+      }
+    ]
   },
   {
     "nome": "Sentidos Aguçados",
@@ -1005,7 +1298,14 @@
     "prereq": "Presença 2, Treinado em Percepção",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Suas capacidades sensoriais (visão periférica, audição, olfato e tato) são extraordinariamente desenvolvidas, permitindo captar estímulos imperceptíveis para pessoas comuns. Percepção Apurada: Você recebe +2 em testes de Percepção. Alerta Sensorial: Você não fica a condição Desprevenido contra ataques de inimigos que não possa ver (como alvos invisíveis, ocultos em escuridão total ou camuflados). Foco Apurado: Sempre que errar um ataque devido à chance de falha decorrente de Camuflagem ou Ocultação do alvo (fumaça, penumbra, invisibilidade parcial), você pode rolar novamente o dado de verificação de camuflagem uma vez por ataque."
+    "efeito": "Suas capacidades sensoriais (visão periférica, audição, olfato e tato) são extraordinariamente desenvolvidas, permitindo captar estímulos imperceptíveis para pessoas comuns. Percepção Apurada: Você recebe +2 em testes de Percepção. Alerta Sensorial: Você não fica a condição Desprevenido contra ataques de inimigos que não possa ver (como alvos invisíveis, ocultos em escuridão total ou camuflados). Foco Apurado: Sempre que errar um ataque devido à chance de falha decorrente de Camuflagem ou Ocultação do alvo (fumaça, penumbra, invisibilidade parcial), você pode rolar novamente o dado de verificação de camuflagem uma vez por ataque.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Percepção"
+      }
+    ]
   },
   {
     "nome": "Sobrevivencialista",
@@ -1013,7 +1313,14 @@
     "prereq": "Intelecto 2, Treinado em Sobrevivência",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua vivência e treinamento em ambientes selvagens ou hostis ensinaram você a adaptar seu corpo e mente aos rigores da natureza extrema. Instinto Selvagem: Você recebe +2 em testes de Sobrevivência. Resistência Climática: Você recebe +2 em testes de resistência (Fortitude ou Vontade) para resistir a perigos ambientais e efeitos de clima extremo (como calor sufocante, frio congelante, fumaça, altitude e privação de água ou alimento). Passo Firme: Terreno difícil de origem natural (lama, neve, vegetação densa, pântano ou cascalho) não reduz seu deslocamento e não impede que você realize investidas ou ações de movimento acelerado."
+    "efeito": "Sua vivência e treinamento em ambientes selvagens ou hostis ensinaram você a adaptar seu corpo e mente aos rigores da natureza extrema. Instinto Selvagem: Você recebe +2 em testes de Sobrevivência. Resistência Climática: Você recebe +2 em testes de resistência (Fortitude ou Vontade) para resistir a perigos ambientais e efeitos de clima extremo (como calor sufocante, frio congelante, fumaça, altitude e privação de água ou alimento). Passo Firme: Terreno difícil de origem natural (lama, neve, vegetação densa, pântano ou cascalho) não reduz seu deslocamento e não impede que você realize investidas ou ações de movimento acelerado.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Sobrevivência"
+      }
+    ]
   },
   {
     "nome": "Sorrateiro",
@@ -1021,7 +1328,14 @@
     "prereq": "Agilidade 2, Treinado em Furtividade",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua facilidade em mover-se sem ruído e utilizar sombras e pontos cegos permite que você permaneça invisível mesmo em movimento contínuo ou cenários desfavoráveis. Passo Silencioso: Você recebe +2 em testes de Furtividade. Mobilidade Discreta: Você não sofre as penalidades padrão em testes de Furtividade ao mover-se com seu deslocamento normal. Além disso, você pode perseguir ou vigiar alvos em ambientes com pouca cobertura ou espaço aberto sem sofrer penalidades no teste por falta de esconderijos diretos."
+    "efeito": "Sua facilidade em mover-se sem ruído e utilizar sombras e pontos cegos permite que você permaneça invisível mesmo em movimento contínuo ou cenários desfavoráveis. Passo Silencioso: Você recebe +2 em testes de Furtividade. Mobilidade Discreta: Você não sofre as penalidades padrão em testes de Furtividade ao mover-se com seu deslocamento normal. Além disso, você pode perseguir ou vigiar alvos em ambientes com pouca cobertura ou espaço aberto sem sofrer penalidades no teste por falta de esconderijos diretos.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Furtividade"
+      }
+    ]
   },
   {
     "nome": "Vitalidade Reforçada",
@@ -1029,7 +1343,19 @@
     "prereq": "Vigor 2, Treinado em Fortitude",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu vigor biológico e constituição física permitem que você resista a traumas e ferimentos graves que derrubariam um indivíduo comum. Vigor Aprimorado: Você recebe +2 em testes de Fortitude. Reserva Vital: Seu limite máximo de Pontos de Vida (PV) aumenta em +1 PV para cada Nível de agente (este ganho é retroativo e se aplica automaticamente a cada novo nível alcançado)."
+    "efeito": "Seu vigor biológico e constituição física permitem que você resista a traumas e ferimentos graves que derrubariam um indivíduo comum. Vigor Aprimorado: Você recebe +2 em testes de Fortitude. Reserva Vital: Seu limite máximo de Pontos de Vida (PV) aumenta em +1 PV para cada Nível de agente (este ganho é retroativo e se aplica automaticamente a cada novo nível alcançado).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Fortitude"
+      },
+      {
+        "tipo": "pv_max",
+        "valor": 0,
+        "por_nivel": 1
+      }
+    ]
   },
   {
     "nome": "Vontade Inabalável",
@@ -1037,7 +1363,19 @@
     "prereq": "Presença 2, Treinado em Vontade",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua mente e disciplina psíquica foram temperadas para suportar a dor existencial, o terror e os traumas mais profundos sem se quebrar. Mente Temperada: Você recebe +2 em testes de Vontade. Reserva Psíquica: Seu limite máximo de Sanidade (SAN) aumenta em +1 SAN para cada Nível de agente (este ganho é retroativo e se aplica automaticamente a cada novo nível alcançado)."
+    "efeito": "Sua mente e disciplina psíquica foram temperadas para suportar a dor existencial, o terror e os traumas mais profundos sem se quebrar. Mente Temperada: Você recebe +2 em testes de Vontade. Reserva Psíquica: Seu limite máximo de Sanidade (SAN) aumenta em +1 SAN para cada Nível de agente (este ganho é retroativo e se aplica automaticamente a cada novo nível alcançado).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Vontade"
+      },
+      {
+        "tipo": "san_max",
+        "valor": 0,
+        "por_nivel": 1
+      }
+    ]
   },
   {
     "nome": "Cicatrizes Expostas",
@@ -1053,7 +1391,14 @@
     "prereq": "Intelecto 2, Treinado em Ocultismo",
     "custo": "Passivo / 2 SAN (Declaração)",
     "alcance": "Pessoal",
-    "efeito": "Seu fascínio obsessivo pelos mistérios do Paranormal e pela lógica por trás do inexplicável abriu novos caminhos em sua mente, permitindo utilizar seu conhecimento teórico para racionalizar e absorver o impacto do desconhecido. Mente Aberta: Você recebe +2 em testes de Ocultismo. Racionalização do Horror: Ao realizar um teste da perícia Vontade para resistir a um efeito, ritual, presença perturbadora ou entidade paranormal, você pode gastar 2 SAN para realizar a rolagem utilizando a perícia Ocultismo no lugar de Vontade."
+    "efeito": "Seu fascínio obsessivo pelos mistérios do Paranormal e pela lógica por trás do inexplicável abriu novos caminhos em sua mente, permitindo utilizar seu conhecimento teórico para racionalizar e absorver o impacto do desconhecido. Mente Aberta: Você recebe +2 em testes de Ocultismo. Racionalização do Horror: Ao realizar um teste da perícia Vontade para resistir a um efeito, ritual, presença perturbadora ou entidade paranormal, você pode gastar 2 SAN para realizar a rolagem utilizando a perícia Ocultismo no lugar de Vontade.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Ocultismo"
+      }
+    ]
   },
   {
     "nome": "Habilidade Aprimorada",
@@ -1069,7 +1414,14 @@
     "prereq": "Agilidade 2, Treinado em Crime",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua vivência na selva de concreto ensinou você a ler o ambiente urbano, antecipar rotas de fuga e reagir com malícia antes que a armadilha se feche. Instinto da Quebrada: Você recebe +2 em testes de Crime. Mapeamento de Saída: Ao entrar em uma cena em ambiente fechado, recinto ou área urbana restrita, você pode realizar um teste de Crime (DT 10) para analisar a estrutura topográfica do local. Rota Identificada: Se passar e o local possuir pontos de saída, você identifica a rota de fuga ideal. Caso decida abandonar a cena/combate, você recebe +1 Ação de Movimento extra na primeira rodada da fuga e +2 na Defesa Passiva e Esquiva até concluir a retirada da zona de perigo. Local Encurralado: Se passar e o ambiente não possuir saídas viáveis (ou for uma sala trancada/sem escapatória), a consciência de estar encurralado ativa sua postura defensiva de acossamento, concedendo +2 na Defesa Passiva e Esquiva enquanto permanecer combatendo naquele recinto."
+    "efeito": "Sua vivência na selva de concreto ensinou você a ler o ambiente urbano, antecipar rotas de fuga e reagir com malícia antes que a armadilha se feche. Instinto da Quebrada: Você recebe +2 em testes de Crime. Mapeamento de Saída: Ao entrar em uma cena em ambiente fechado, recinto ou área urbana restrita, você pode realizar um teste de Crime (DT 10) para analisar a estrutura topográfica do local. Rota Identificada: Se passar e o local possuir pontos de saída, você identifica a rota de fuga ideal. Caso decida abandonar a cena/combate, você recebe +1 Ação de Movimento extra na primeira rodada da fuga e +2 na Defesa Passiva e Esquiva até concluir a retirada da zona de perigo. Local Encurralado: Se passar e o ambiente não possuir saídas viáveis (ou for uma sala trancada/sem escapatória), a consciência de estar encurralado ativa sua postura defensiva de acossamento, concedendo +2 na Defesa Passiva e Esquiva enquanto permanecer combatendo naquele recinto.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Crime"
+      }
+    ]
   },
   {
     "nome": "Palpite Confiante",
@@ -1205,7 +1557,14 @@
     "prereq": "Agilidade 2",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Seu entusiasmo e domínio técnico sobre máquinas e automóveis transformam sua relação com veículos e pilotagem. Especialização em Pilotagem: Você recebe +2 de bônus nos seus testes de Pilotagem. Direção Defensiva: Qualquer teste realizado com o objetivo direto de garantir a integridade física ou a segurança do veículo sob seu comando (a critério do Mestre) recebe +2 de bônus. Regalia Adicional: Se estiver utilizando as regras de Veículos Operacionais, você pode adicionar 1 Regalia extra ao seu veículo principal. Esta regalia não conta para o limite máximo de regalias do veículo."
+    "efeito": "Seu entusiasmo e domínio técnico sobre máquinas e automóveis transformam sua relação com veículos e pilotagem. Especialização em Pilotagem: Você recebe +2 de bônus nos seus testes de Pilotagem. Direção Defensiva: Qualquer teste realizado com o objetivo direto de garantir a integridade física ou a segurança do veículo sob seu comando (a critério do Mestre) recebe +2 de bônus. Regalia Adicional: Se estiver utilizando as regras de Veículos Operacionais, você pode adicionar 1 Regalia extra ao seu veículo principal. Esta regalia não conta para o limite máximo de regalias do veículo.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Pilotagem"
+      }
+    ]
   },
   {
     "nome": "Desafiar o Ego",
@@ -1221,7 +1580,14 @@
     "prereq": "Agilidade 2 ou Treinado em Pilotagem",
     "custo": "Passivo",
     "alcance": "Pessoal / Veículo sob seu comando",
-    "efeito": "Seu senso de preservação e domínio ao volante garantem manobras evasivas que protegem o veículo e seus ocupantes durante perseguições e tiroteios. Treinamento Veicular: Você se torna Treinado na perícia Pilotagem. Se já for Treinado nesta perícia, recebe +2 de bônus nos seus testes de Pilotagem. Escudo Evasivo: Enquanto você estiver dirigindo um veículo, você e todos os passageiros a bordo recebem +2 de bônus na Defesa e +2 em todos os testes de resistência contra ameaças externas. Proteção Veicular: Se estiver utilizando as regras de Veículos Operacionais, o próprio veículo sob sua direção também recebe +2 de bônus na Defesa."
+    "efeito": "Seu senso de preservação e domínio ao volante garantem manobras evasivas que protegem o veículo e seus ocupantes durante perseguições e tiroteios. Treinamento Veicular: Você se torna Treinado na perícia Pilotagem. Se já for Treinado nesta perícia, recebe +2 de bônus nos seus testes de Pilotagem. Escudo Evasivo: Enquanto você estiver dirigindo um veículo, você e todos os passageiros a bordo recebem +2 de bônus na Defesa e +2 em todos os testes de resistência contra ameaças externas. Proteção Veicular: Se estiver utilizando as regras de Veículos Operacionais, o próprio veículo sob sua direção também recebe +2 de bônus na Defesa.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Pilotagem"
+      }
+    ]
   },
   {
     "nome": "Adaptação Climática",
@@ -1229,7 +1595,14 @@
     "prereq": "Vigor 2",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Através de condicionamento físico rigoroso e exposição controlada a temperaturas extremas, seu organismo desenvolveu alta tolerância ao estresse térmico ambiental. Resistência Física: Você recebe +2 de bônus em testes da perícia Fortitude. Imunidade Ambiental: Você se torna completamente imune a danos, penalidades e desgastes decorrentes de exposições a clima muito quente, muito frio, calor extremo ou frio extremo."
+    "efeito": "Através de condicionamento físico rigoroso e exposição controlada a temperaturas extremas, seu organismo desenvolveu alta tolerância ao estresse térmico ambiental. Resistência Física: Você recebe +2 de bônus em testes da perícia Fortitude. Imunidade Ambiental: Você se torna completamente imune a danos, penalidades e desgastes decorrentes de exposições a clima muito quente, muito frio, calor extremo ou frio extremo.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Fortitude"
+      }
+    ]
   },
   {
     "nome": "Especialista em Armas Improvisadas",
@@ -1245,7 +1618,14 @@
     "prereq": "Agilidade 2, Treinado em Furtividade",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Sua capacidade de ocultação e movimentação silenciosa é tão refinada que você se mescla ao ambiente de forma quase imperceptível. Especialização em Furtividade: Você recebe +2 de bônus em testes da perícia Furtividade. Ocultação Inicial: Ao início de uma cena de Furtividade com mecânica de Visibilidade, você rola 1d4 e reduz o resultado obtido do seu valor de Visibilidade inicial (podendo atingir valores negativos de detecção, como começar em -2)."
+    "efeito": "Sua capacidade de ocultação e movimentação silenciosa é tão refinada que você se mescla ao ambiente de forma quase imperceptível. Especialização em Furtividade: Você recebe +2 de bônus em testes da perícia Furtividade. Ocultação Inicial: Ao início de uma cena de Furtividade com mecânica de Visibilidade, você rola 1d4 e reduz o resultado obtido do seu valor de Visibilidade inicial (podendo atingir valores negativos de detecção, como começar em -2).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Furtividade"
+      }
+    ]
   },
   {
     "nome": "Combater com Duas Armas",
@@ -1309,7 +1689,19 @@
     "prereq": "Vigor 3",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Enquanto estiver Machucado (metade da vida ou menos), você recebe +2 na Defesa e Resistência a Dano 2 (RD 2) física. Ao chegar a 0 PV (Morrendo), você não fica Indefeso e pode continuar agindo normalmente no seu turno enquanto realiza os testes para se estabilizar."
+    "efeito": "Enquanto estiver Machucado (metade da vida ou menos), você recebe +2 na Defesa e Resistência a Dano 2 (RD 2) física. Ao chegar a 0 PV (Morrendo), você não fica Indefeso e pode continuar agindo normalmente no seu turno enquanto realiza os testes para se estabilizar.",
+    "regras": [
+      {
+        "tipo": "defesa",
+        "valor": 2,
+        "condicao": "machucado"
+      },
+      {
+        "tipo": "rd",
+        "valor": 2,
+        "condicao": "machucado"
+      }
+    ]
   },
   {
     "nome": "Chuva de Balas",
@@ -1333,7 +1725,14 @@
     "prereq": "Treinado em Medicina",
     "custo": "Nenhum",
     "alcance": "Toque / Pessoal",
-    "efeito": "Sua vivência e precisão cirúrgica em situações críticas garantem que qualquer intervenção médica sob sua responsabilidade tenha eficiência máxima. Tratamento Especializado: Você recebe +2 em testes de Medicina realizados para prestar primeiros socorros, estabilizar alvos ou aplicar tratamentos. Eficiência Medicamentosa: Cicatrizantes, medicamentos ou insumos aplicados por você têm seu efeito potencializado, recuperando +4 PV adicionais (ou concedendo +4 PV temporários adicionais). Resistência Aprimorada: Ao ter sucesso em um teste de Medicina para tratar uma doença ou veneno, o bônus concedido ao paciente no próximo teste de Fortitude contra essa condição aumenta em +2."
+    "efeito": "Sua vivência e precisão cirúrgica em situações críticas garantem que qualquer intervenção médica sob sua responsabilidade tenha eficiência máxima. Tratamento Especializado: Você recebe +2 em testes de Medicina realizados para prestar primeiros socorros, estabilizar alvos ou aplicar tratamentos. Eficiência Medicamentosa: Cicatrizantes, medicamentos ou insumos aplicados por você têm seu efeito potencializado, recuperando +4 PV adicionais (ou concedendo +4 PV temporários adicionais). Resistência Aprimorada: Ao ter sucesso em um teste de Medicina para tratar uma doença ou veneno, o bônus concedido ao paciente no próximo teste de Fortitude contra essa condição aumenta em +2.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Medicina"
+      }
+    ]
   },
   {
     "nome": "Equipe de Trauma",
@@ -1349,7 +1748,14 @@
     "prereq": "Presença 2",
     "custo": "2 SAN (escalonável)",
     "alcance": "Curto (9m)",
-    "efeito": "Com uma Ação Padrão, você profere palavras de incentivo, liderança e determinação para inflar o moral da equipe. Você e todos os seus aliados em alcance curto recebem +2 em todos os testes de perícia até o final da cena. Evolução por Nível: A partir do Nível 11, você pode gastar +1 SAN adicional (total 3 SAN) ao ativar esta habilidade para aumentar o bônus para +4 em testes de perícia."
+    "efeito": "Com uma Ação Padrão, você profere palavras de incentivo, liderança e determinação para inflar o moral da equipe. Você e todos os seus aliados em alcance curto recebem +2 em todos os testes de perícia até o final da cena. Evolução por Nível: A partir do Nível 11, você pode gastar +1 SAN adicional (total 3 SAN) ao ativar esta habilidade para aumentar o bônus para +4 em testes de perícia.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Diplomacia"
+      }
+    ]
   },
   {
     "nome": "Eu Conheço um Cara",
@@ -1413,7 +1819,14 @@
     "prereq": "Intelecto 3",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "O estudo rigoroso e o acúmulo de conhecimento expandiram a sua capacidade cognitiva e fortaleceram sua estrutura mental. Expansão Intelectual: Seu atributo Intelecto aumenta em +1. Fortalecimento Mental: Você soma o seu valor de Intelecto ao seu total máximo de Sanidade (SAN). Domínio Teórico: Escolha uma perícia qualquer. O atributo-base dessa perícia passa a ser Intelecto de forma permanente para você, sem a necessidade de gastar SAN para realizar a substituição."
+    "efeito": "O estudo rigoroso e o acúmulo de conhecimento expandiram a sua capacidade cognitiva e fortaleceram sua estrutura mental. Expansão Intelectual: Seu atributo Intelecto aumenta em +1. Fortalecimento Mental: Você soma o seu valor de Intelecto ao seu total máximo de Sanidade (SAN). Domínio Teórico: Escolha uma perícia qualquer. O atributo-base dessa perícia passa a ser Intelecto de forma permanente para você, sem a necessidade de gastar SAN para realizar a substituição.",
+    "regras": [
+      {
+        "tipo": "atributo",
+        "valor": 1,
+        "alvo": "Intelecto"
+      }
+    ]
   },
   {
     "nome": "Determinação Inquestionável",
@@ -1429,7 +1842,14 @@
     "prereq": "Intelecto 3",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "A sua engenharia avançada permite otimizar a estrutura de artefatos paranormais, extraindo o máximo de eficiência de componentes misteriosos e reduzindo drasticamente o tempo de manutenção. Mecânica Avançada: Você recebe +2 em testes de Mecânica (e testes de criação/manutenção de dispositivos). Produção Paranormal Otimizada: O tempo para criar ou consertar artefatos paranormais é reduzido: fabricar um item exige apenas 2 Ações de Interlúdio (em vez das 3 padrão), e consertar um item paranormal danificado consome metade de uma Ação de Interlúdio (ou pode ser feito como ação livre durante a fase de descanso). Sintonia Aprimorada: Dispositivos e itens paranormais montados ou recalibrados por você recebem um acabamento superior. Qualquer aliado que utilize um item paranormal preparado por você reduz em 1 SAN o custo de ativação do efeito do item (mínimo 1 SAN) ou recebe +2 no teste associado ao uso do artefato."
+    "efeito": "A sua engenharia avançada permite otimizar a estrutura de artefatos paranormais, extraindo o máximo de eficiência de componentes misteriosos e reduzindo drasticamente o tempo de manutenção. Mecânica Avançada: Você recebe +2 em testes de Mecânica (e testes de criação/manutenção de dispositivos). Produção Paranormal Otimizada: O tempo para criar ou consertar artefatos paranormais é reduzido: fabricar um item exige apenas 2 Ações de Interlúdio (em vez das 3 padrão), e consertar um item paranormal danificado consome metade de uma Ação de Interlúdio (ou pode ser feito como ação livre durante a fase de descanso). Sintonia Aprimorada: Dispositivos e itens paranormais montados ou recalibrados por você recebem um acabamento superior. Qualquer aliado que utilize um item paranormal preparado por você reduz em 1 SAN o custo de ativação do efeito do item (mínimo 1 SAN) ou recebe +2 no teste associado ao uso do artefato.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Mecânica"
+      }
+    ]
   },
   {
     "nome": "Achado Conveniente",
@@ -1517,7 +1937,24 @@
     "prereq": "Presença 3, Ocultismo",
     "custo": "Nenhum (passivo)",
     "alcance": "Pessoal",
-    "efeito": "A compreensão aprofundada da natureza do Outro Lado fortalece sua mente e corpo, tornando você menos suscetível às distorções da realidade. Resistência Paranormal: Você recebe +2 em testes de resistência (Vontade, Fortitude e Reflexos) contra quaisquer rituais, habilidades de criaturas ou efeitos de origem paranormal."
+    "efeito": "A compreensão aprofundada da natureza do Outro Lado fortalece sua mente e corpo, tornando você menos suscetível às distorções da realidade. Resistência Paranormal: Você recebe +2 em testes de resistência (Vontade, Fortitude e Reflexos) contra quaisquer rituais, habilidades de criaturas ou efeitos de origem paranormal.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Vontade"
+      },
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Fortitude"
+      },
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Reflexos"
+      }
+    ]
   },
   {
     "nome": "Gladiador Paranormal",
@@ -1749,7 +2186,14 @@
     "prereq": "Presença 3, Treinado em Diplomacia",
     "custo": "Passivo",
     "alcance": "Pessoal",
-    "efeito": "Em sua trajetória, você conquistou a lealdade inabalável de alguém disposto a acompanhá-lo e arriscar a própria vida ao seu lado. Empatia e Confiança: Você recebe +2 em testes de Diplomacia. Companheiro Leal: Você possui um aliado (um NPC) que o acompanha e o auxilia ativamente em suas missões. Você define o nome, a aparência e a personalidade dele. Em termos de jogo, ele funciona como um Aliado de um tipo à sua escolha (Combatente, Médico, Suporte, etc.). Vínculo e Substituição: Seu parceiro segue suas orientações e se arrisca por você, mas pode abandoná-lo se for cronicamente maltratado ou traído. Caso perca seu parceiro (morte, incapacidade ou abandono), você deve gastar 1 Ação de Folga/Intermissão para encontrar e integrar um novo aliado ao seu grupo."
+    "efeito": "Em sua trajetória, você conquistou a lealdade inabalável de alguém disposto a acompanhá-lo e arriscar a própria vida ao seu lado. Empatia e Confiança: Você recebe +2 em testes de Diplomacia. Companheiro Leal: Você possui um aliado (um NPC) que o acompanha e o auxilia ativamente em suas missões. Você define o nome, a aparência e a personalidade dele. Em termos de jogo, ele funciona como um Aliado de um tipo à sua escolha (Combatente, Médico, Suporte, etc.). Vínculo e Substituição: Seu parceiro segue suas orientações e se arrisca por você, mas pode abandoná-lo se for cronicamente maltratado ou traído. Caso perca seu parceiro (morte, incapacidade ou abandono), você deve gastar 1 Ação de Folga/Intermissão para encontrar e integrar um novo aliado ao seu grupo.",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Diplomacia"
+      }
+    ]
   },
   {
     "nome": "Provisões de Emergência",
@@ -1757,7 +2201,14 @@
     "prereq": "Intelecto 2, Treinado em Procurar",
     "custo": "Passivo / 1 Ação de Interlúdio",
     "alcance": "Pessoal",
-    "efeito": "Sua precaução e planejamento detalhado garantem a existência de esconderijos ocultos abastecidos com suprimentos e equipamentos para situações de crise. Faro de Recursos: Você recebe +2 em testes de Procurar. Esconderijo Tático: Uma vez por missão, durante uma Cena de Interlúdio, você pode gastar 1 Ação de Interlúdio para resgatar o conteúdo de um de seus esconderijos secretos (seja pessoalmente ou por meio de um contato). Ao fazê-lo, você realiza uma nova etapa de seleção de equipamentos e insumos exclusivamente para você, reabastecendo munições, consumíveis e ferramentas como se estivesse em uma nova fase de preparação de missão (respeitando sua capacidade de carga e Tiers de Proficiência)."
+    "efeito": "Sua precaução e planejamento detalhado garantem a existência de esconderijos ocultos abastecidos com suprimentos e equipamentos para situações de crise. Faro de Recursos: Você recebe +2 em testes de Procurar. Esconderijo Tático: Uma vez por missão, durante uma Cena de Interlúdio, você pode gastar 1 Ação de Interlúdio para resgatar o conteúdo de um de seus esconderijos secretos (seja pessoalmente ou por meio de um contato). Ao fazê-lo, você realiza uma nova etapa de seleção de equipamentos e insumos exclusivamente para você, reabastecendo munições, consumíveis e ferramentas como se estivesse em uma nova fase de preparação de missão (respeitando sua capacidade de carga e Tiers de Proficiência).",
+    "regras": [
+      {
+        "tipo": "pericia",
+        "valor": 2,
+        "alvo": "Procurar"
+      }
+    ]
   },
   {
     "nome": "Especialista Esotérico",
@@ -1821,7 +2272,19 @@
     "prereq": "Vigor 3 ou Força 3",
     "custo": "Nenhum",
     "alcance": "Pessoal",
-    "efeito": "Enquanto estiver vestindo uma Proteção Pesada, você recebe +2 na Defesa e +4 de Resistência a Dano (RD) física adicional."
+    "efeito": "Enquanto estiver vestindo uma Proteção Pesada, você recebe +2 na Defesa e +4 de Resistência a Dano (RD) física adicional.",
+    "regras": [
+      {
+        "tipo": "defesa",
+        "valor": 2,
+        "condicao": "protecao_pesada"
+      },
+      {
+        "tipo": "rd",
+        "valor": 4,
+        "condicao": "protecao_pesada"
+      }
+    ]
   },
   {
     "nome": "Técnica Sublime",
