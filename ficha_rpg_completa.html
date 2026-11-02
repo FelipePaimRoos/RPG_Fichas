@@ -2061,6 +2061,7 @@ function initPericias() {
       </div>
       <div class="pericia-bonus">
         <span>Bônus:</span><input type="number" id="bonus_p_${idx}" value="0" oninput="atualizarCalculos()">
+        <span id="bonus_hab_${idx}" style="font-size: 0.72rem; color: #4effb0; display: none;"></span>
       </div>
       <label class="pericia-ajudado"><input type="checkbox" id="ajudado_p_${idx}" onchange="atualizarDadoPericia(${idx})"> Ajudado</label>
       <div id="warn_${idx}" style="font-size: 0.75rem; color: #ff9999;"></div>
@@ -2082,6 +2083,36 @@ function atualizarDadoPericia(idx) {
   const ajudado = document.getElementById('ajudado_p_' + idx)?.checked;
   const indiceDado = dados.indexOf(dadoBase);
   badge.innerText = dados[Math.min(indiceDado + (ajudado ? 1 : 0), dados.length - 1)];
+}
+
+// Exibe, na linha da perícia, o bônus automático vindo de habilidades
+// (ex.: "+2 (Reflexos Rápidos)"). Não altera o campo manual de bônus.
+function atualizarBonusHabilidadesPericias() {
+  if (typeof calcularBonusHabilidades !== 'function') return;
+  const bonus = calcularBonusHabilidades().pericias;
+  PERICIAS_BASE.forEach((p, idx) => {
+    const span = document.getElementById('bonus_hab_' + idx);
+    if (!span) return;
+    const valor = bonus[p.nome] || 0;
+    if (valor) {
+      const origens = [];
+      (listas.habilidade || []).forEach(hab => {
+        const efeitos = REGRAS_HABILIDADES[typeof hab === 'string' ? hab : hab.nome];
+        if (!efeitos) return;
+        efeitos.forEach(e => {
+          if (e.tipo === 'pericia' && e.alvo === p.nome && (Number(e.valor) || 0) > 0) {
+            origens.push(`${hab.nome} +${e.valor}`);
+          }
+        });
+      });
+      span.textContent = `+${valor} (${origens.join(', ')})`;
+      span.title = origens.join('\n');
+      span.style.display = '';
+    } else {
+      span.textContent = '';
+      span.style.display = 'none';
+    }
+  });
 }
 
 function getDT(atrValor) {
@@ -2228,6 +2259,7 @@ function atualizarCalculos(valorEditado = false) {
   document.getElementById('esquiva').value = defAtual + valorMedioDadoReflexos;
   
   atualizarDeslocamentoBase();
+  atualizarBonusHabilidadesPericias();
 }
 
 
@@ -2588,9 +2620,17 @@ function renderCards(tipo) {
   listas[tipo].forEach((item, idx) => {
     const div = document.createElement('div');
     const classes = ['card-item'];
-    if (tipo === 'ritual' && !item.automatico) {
-      const elementoRitual = detectarElementoRitual(item);
-      if (elementoRitual) classes.push('power-card', `ritual-${elementoRitual}`);
+    // Cards "grandes" (power-card, com descrição), padrão dos rituais:
+    // aplica a rituais e a habilidades não-automáticas.
+    const cardGrande = tipo === 'ritual' || !item.automatico;
+    if (cardGrande && !item.automatico) {
+      if (tipo === 'ritual') {
+        const elementoRitual = detectarElementoRitual(item);
+        if (elementoRitual) classes.push('power-card', `ritual-${elementoRitual}`);
+        else classes.push('power-card');
+      } else {
+        classes.push('power-card');
+      }
     }
     div.className = classes.join(' ');
     div.onclick = (e) => {
@@ -2601,14 +2641,14 @@ function renderCards(tipo) {
         ? item.classificacao.startsWith('Habilidade de Origem')
           ? 'Origem'
           : `Arquétipo · Nível ${item.nivel_desbloqueio}`
-        : '',
+        : (item.classificacao || ''),
       item.custo ? `Custo: ${item.custo}` : ''
     ].filter(Boolean).join(' · ');
     div.innerHTML = `
       ${item.automatico ? '' : `<button class="btn-delete-card" onclick="removerItem('${tipo}', ${idx}, event)">X</button>`}
       <div class="card-title">${item.nome || '(Sem Nome)'}</div>
       <div class="card-subtitle">${subtitulo}</div>
-      ${tipo === 'ritual' && item.efeito ? `<div class="power-card-description">${escaparHTML(item.efeito)}</div>` : ''}
+      ${cardGrande && item.efeito ? `<div class="power-card-description">${escaparHTML(item.efeito)}</div>` : ''}
     `;
     container.appendChild(div);
   });
@@ -2703,6 +2743,7 @@ async function abrirModalNovaHabilidadeBase() {
       if (response.ok) {
         todasHabilidades = await response.json();
         _atualizarMapaRegrasHabilidades();
+        if (typeof atualizarCalculos === 'function') atualizarCalculos();
       }
     } catch (error) {
       console.error('Erro ao carregar habilidades:', error);
