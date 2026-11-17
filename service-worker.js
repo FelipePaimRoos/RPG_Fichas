@@ -1,8 +1,9 @@
-const CACHE_NAME = "rpg-fichas-v3";
+const CACHE_NAME = "rpg-fichas-v4";
 const APP_SHELL = ["/", "/manifest.webmanifest", "/icon.svg"];
 const CATALOGS = [
   "/api/perfis",
   "/api/origens",
+  "/api/progressao-niveis",
   "/api/poderes-paranormais",
   "/api/catalogo/habilidades",
   "/api/catalogo/rituais",
@@ -55,7 +56,7 @@ self.addEventListener("fetch", event => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     const isCatalog = url.pathname.startsWith("/api/catalogo/") ||
-      ["/api/perfis", "/api/origens", "/api/poderes-paranormais"].includes(url.pathname);
+      ["/api/perfis", "/api/origens", "/api/progressao-niveis", "/api/poderes-paranormais"].includes(url.pathname);
 
     try {
       const response = await fetch(request);

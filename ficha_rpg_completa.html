@@ -149,6 +149,35 @@
       outline-offset: 2px;
     }
 
+    .progressao-tabela-scroll {
+      max-width: 100%;
+      overflow-x: auto;
+      margin-top: 8px;
+    }
+
+    .progressao-tabela {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+    }
+
+    .progressao-tabela th,
+    .progressao-tabela td {
+      padding: 8px;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .progressao-tabela tr.nivel-atual {
+      background: rgba(255, 87, 87, 0.18);
+      font-weight: bold;
+    }
+
+    #progressao-niveis-container > summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     /* Atributos */
     .atributo-box {
       background: #16161a;
@@ -986,7 +1015,7 @@
     <div class="grid-3">
       <label>Nome do Personagem <input type="text" id="nomePersonagem"></label>
       <label>Jogador <input type="text" id="jogador"></label>
-      <label>Nível <input type="number" id="nivel" value="1" min="1" oninput="atualizarCalculos(); sincronizarHabilidadesPerfil()"></label>
+      <label>Nível <input type="number" id="nivel" value="1" min="1" max="20" oninput="atualizarCalculos(); sincronizarHabilidadesPerfil()"></label>
       <label>Conceito <input type="text" id="conceito"></label>
       <label>Origem
         <select id="origem" onchange="sincronizarOrigem(); atualizarCalculos(); sincronizarHabilidadesPerfil()">
@@ -1018,6 +1047,18 @@
         </div>
         <input type="hidden" id="impetoAtual" value="0">
       </div>
+      <details id="progressao-niveis-container" style="grid-column: 1 / -1;">
+        <summary>Progressão de nível (1 a 20)</summary>
+        <p id="progressao-nivel-resumo"></p>
+        <div class="progressao-tabela-scroll">
+          <table class="progressao-tabela">
+            <thead>
+              <tr><th>Nível</th><th>Categoria do recurso</th><th>Recurso obtido</th></tr>
+            </thead>
+            <tbody id="progressao-niveis-corpo"></tbody>
+          </table>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -1273,6 +1314,8 @@
     <h2 id="sec-habilidades">Habilidades</h2>
     <button type="button" onclick="abrirModalNovaHabilidade()">+ Nova Habilidade</button>
   </div>
+  <div id="contador-habilidades" style="margin-bottom: 10px;"></div>
+  <div id="aviso-limite-habilidades" style="display: none; color: #ff4d4d; margin-bottom: 10px;"></div>
   <div id="grid-habilidades" class="cards-grid"></div>
 </section>
 
@@ -1500,10 +1543,10 @@
       
       <!-- Filtros de Tier -->
       <div style="display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap;">
-        <button type="button" class="btn btn-sm" onclick="filtrarEExibirHabilidades('Tier I')">Tier I</button>
-        <button type="button" class="btn btn-sm" onclick="filtrarEExibirHabilidades('Tier II')">Tier II</button>
-        <button type="button" class="btn btn-sm" onclick="filtrarEExibirHabilidades('Tier III')">Tier III</button>
-        <button type="button" class="btn btn-sm" onclick="filtrarEExibirHabilidades('Tier IV')">Tier IV</button>
+        <button type="button" class="btn btn-sm" id="filtro-habilidade-tier-1" onclick="filtrarEExibirHabilidades('Tier I')">Tier I</button>
+        <button type="button" class="btn btn-sm" id="filtro-habilidade-tier-2" onclick="filtrarEExibirHabilidades('Tier II')">Tier II</button>
+        <button type="button" class="btn btn-sm" id="filtro-habilidade-tier-3" onclick="filtrarEExibirHabilidades('Tier III')">Tier III</button>
+        <button type="button" class="btn btn-sm" id="filtro-habilidade-tier-4" onclick="filtrarEExibirHabilidades('Tier IV')">Tier IV</button>
       </div>
 
       <!-- Campo de Busca -->
@@ -1848,7 +1891,9 @@ const PERICIAS_BASE = [
 
 let perfisPorNome = {};
 let origensPorNome = {};
+let progressaoNiveis = [];
 let chaveHabilidadesPerfil = null;
+const TIERS_HABILIDADE = ['Tier I', 'Tier II', 'Tier III', 'Tier IV'];
 
 function obterPerfilSelecionado() {
   return perfisPorNome[document.getElementById('perfil').value] || null;
@@ -1885,6 +1930,114 @@ function atualizarImpeto(espaco) {
   document.getElementById('impetoAtual').value =
     atual >= espaco ? espaco - 1 : espaco;
   renderImpeto();
+}
+
+function obterTierHabilidade(classificacao) {
+  const normalizada = String(classificacao || '').toLowerCase().replace(/\s+/g, '');
+  return {
+    tieri: 'Tier I',
+    tier1: 'Tier I',
+    tierii: 'Tier II',
+    tier2: 'Tier II',
+    tieriii: 'Tier III',
+    tier3: 'Tier III',
+    tieriv: 'Tier IV',
+    tier4: 'Tier IV'
+  }[normalizada] || null;
+}
+
+function recompensasHabilidadeAteNivel(nivel = Number(document.getElementById('nivel').value) || 1) {
+  return progressaoNiveis.filter(item =>
+    item.categoria === 'Habilidade' && item.nivel <= nivel
+  );
+}
+
+function contarHabilidadesPorTier(habilidades = listas.habilidade) {
+  const contagem = Object.fromEntries(TIERS_HABILIDADE.map(tier => [tier, 0]));
+  for (const habilidade of habilidades) {
+    if (habilidade.automatico) continue;
+    const tier = obterTierHabilidade(habilidade.classificacao);
+    if (tier) contagem[tier] += 1;
+  }
+  return contagem;
+}
+
+function problemasProgressaoHabilidades(
+  habilidades = listas.habilidade,
+  nivel = Number(document.getElementById('nivel').value) || 1
+) {
+  const manuais = habilidades.filter(habilidade => !habilidade.automatico);
+  const recompensas = recompensasHabilidadeAteNivel(nivel);
+  const problemas = [];
+  if (manuais.length > recompensas.length) {
+    problemas.push(`O nível ${nivel} permite ${recompensas.length} habilidade(s) manual(is).`);
+  }
+
+  const contagem = contarHabilidadesPorTier(manuais);
+  const habilidadesSemTier = manuais.filter(
+    habilidade => !obterTierHabilidade(habilidade.classificacao)
+  );
+  if (habilidadesSemTier.length) {
+    problemas.push('Toda habilidade manual precisa ter classificação Tier I, II, III ou IV.');
+  }
+
+  for (const tier of TIERS_HABILIDADE) {
+    const limite = recompensas.filter(item => item.tier === tier).length;
+    if (contagem[tier] > limite) {
+      problemas.push(`O nível ${nivel} permite até ${limite} habilidade(s) de ${tier}.`);
+    }
+  }
+  return problemas;
+}
+
+function tierHabilidadeDisponivel(tier) {
+  const recompensas = recompensasHabilidadeAteNivel();
+  const contagem = contarHabilidadesPorTier();
+  const limite = recompensas.filter(item => item.tier === tier).length;
+  const totalManual = listas.habilidade.filter(habilidade => !habilidade.automatico).length;
+  return totalManual < recompensas.length && contagem[tier] < limite;
+}
+
+function atualizarContadorHabilidades() {
+  const contador = document.getElementById('contador-habilidades');
+  if (!contador || !Array.isArray(listas.habilidade)) return;
+  const recompensas = recompensasHabilidadeAteNivel();
+  const manuais = listas.habilidade.filter(habilidade => !habilidade.automatico);
+  const contagem = contarHabilidadesPorTier(manuais);
+  contador.textContent = [
+    `Habilidades: ${manuais.length}/${recompensas.length} liberadas`,
+    ...TIERS_HABILIDADE.map(tier =>
+      `${tier}: ${contagem[tier]}/${recompensas.filter(item => item.tier === tier).length}`
+    )
+  ].join(' · ');
+
+  const problemas = problemasProgressaoHabilidades();
+  const aviso = document.getElementById('aviso-limite-habilidades');
+  aviso.style.display = problemas.length ? 'block' : 'none';
+  aviso.textContent = problemas.join(' ');
+
+}
+
+function atualizarResumoProgressao() {
+  const resumo = document.getElementById('progressao-nivel-resumo');
+  const corpo = document.getElementById('progressao-niveis-corpo');
+  if (!resumo || !corpo) return;
+
+  const nivel = Math.max(1, Math.min(20, Number(document.getElementById('nivel').value) || 1));
+  const linhaAtual = progressaoNiveis.find(item => item.nivel === nivel);
+  resumo.textContent = linhaAtual
+    ? `Nível ${nivel}: ${linhaAtual.categoria} — ${linhaAtual.recurso}`
+    : 'Carregando progressão...';
+  corpo.replaceChildren(...progressaoNiveis.map(item => {
+    const linha = document.createElement('tr');
+    if (item.nivel === nivel) linha.classList.add('nivel-atual');
+    [item.nivel, item.categoria, item.recurso].forEach(valor => {
+      const celula = document.createElement('td');
+      celula.textContent = String(valor);
+      linha.appendChild(celula);
+    });
+    return linha;
+  }));
 }
 
 function obterOrigemSelecionada() {
@@ -2052,8 +2205,10 @@ function limitePericiasTreinadas() {
 }
 
 function limitePericiasAprimoradas() {
-  const intelecto = Number(document.getElementById('atr_intelecto').value) || 0;
-  return Math.max(0, 3 + intelecto);
+  const nivel = Math.max(1, Number(document.getElementById('nivel').value) || 1);
+  return progressaoNiveis.filter(item =>
+    item.categoria === 'Perícia & Proficiência' && item.nivel <= nivel
+  ).length;
 }
 
 function contarPericiasPorGrau() {
@@ -2218,8 +2373,12 @@ function initDados() {
 }
 
 function atualizarCalculos(valorEditado = false) {
-  const nivel = Math.max(1, Number(document.getElementById('nivel').value) || 1);
-  const pontosDisponiveis = 4 + [4, 10, 16, 19].filter(nivelMarco => nivel >= nivelMarco).length;
+  const campoNivel = document.getElementById('nivel');
+  const nivel = Math.max(1, Math.min(20, Number(campoNivel.value) || 1));
+  campoNivel.value = nivel;
+  const pontosDisponiveis = 4 + progressaoNiveis.filter(item =>
+    item.categoria === 'Atributo' && item.nivel <= nivel
+  ).length;
   const pontosDistribuidos = ['forca', 'agilidade', 'intelecto', 'presenca', 'vigor']
     .reduce((total, atributo) => total + Math.max(0, (Number(document.getElementById(`atr_${atributo}`).value) || 1) - 1), 0);
   const pontosRestantes = pontosDisponiveis - pontosDistribuidos;
@@ -2235,6 +2394,8 @@ function atualizarCalculos(valorEditado = false) {
     statusPontos.style.color = 'var(--text-muted)';
   }
   atualizarResumoPerfil();
+  atualizarResumoProgressao();
+  atualizarContadorHabilidades();
   const forca = Number(document.getElementById('atr_forca').value) || 0;
   const agilidade = Number(document.getElementById('atr_agilidade').value) || 0;
   const intelecto = Number(document.getElementById('atr_intelecto').value) || 0;
@@ -2675,6 +2836,7 @@ function renderCards(tipo) {
     `;
     container.appendChild(div);
   });
+  if (tipo === 'habilidade') atualizarContadorHabilidades();
 }
 
 function abrirModalEdicao(tipo, index) {
@@ -2722,6 +2884,18 @@ function salvarModal() {
     alcance: document.getElementById('modal-alcance').value,
     efeito: document.getElementById('modal-efeito').value
   };
+
+  if (estadoModal.tipo === 'habilidade') {
+    const candidatas = [...listas.habilidade];
+    if (estadoModal.index === null) candidatas.push(novoItem);
+    else candidatas[estadoModal.index] = novoItem;
+    const problemas = problemasProgressaoHabilidades(candidatas);
+    if (problemas.length) {
+      document.getElementById('aviso-limite-habilidades').style.display = 'block';
+      document.getElementById('aviso-limite-habilidades').textContent = problemas.join(' ');
+      return;
+    }
+  }
   
   if (estadoModal.index === null) {
     listas[estadoModal.tipo].push(novoItem);
@@ -3448,6 +3622,11 @@ async function salvarNaApi() {
     statusEl.style.color = "#ff4d4d";
     return false;
   }
+  if (problemasProgressaoHabilidades().length) {
+    statusEl.innerText = problemasProgressaoHabilidades().join(' ');
+    statusEl.style.color = "#ff4d4d";
+    return false;
+  }
   if (problemasLimitePericias().length) {
     statusEl.innerText = "Ajuste a quantidade e os graus das perícias para respeitar os limites do nível.";
     statusEl.style.color = "#ff4d4d";
@@ -3861,7 +4040,7 @@ async function entrarModoLocal() {
           " O navegador pode remover dados locais automaticamente; mantenha cópias exportadas.";
       }
     }
-    await Promise.all([carregarPerfis(), carregarOrigens()]);
+    await Promise.all([carregarPerfis(), carregarOrigens(), carregarProgressaoNiveis()]);
     await carregarListaPersonagens();
   } catch (error) {
     console.error("Erro ao iniciar o modo local:", error);
@@ -3999,6 +4178,18 @@ async function carregarOrigens() {
     origensPorNome[origem.nome] = origem;
     select.add(new Option(origem.nome, origem.nome));
   }
+}
+
+async function carregarProgressaoNiveis() {
+  const { response, data } = await apiRequest("/api/progressao-niveis");
+  if (!response.ok) {
+    throw new Error(data.detail || "Não foi possível carregar a progressão de níveis.");
+  }
+  if (!Array.isArray(data) || data.length !== 20) {
+    throw new Error("A progressão de níveis recebida está em formato inválido.");
+  }
+  progressaoNiveis = data;
+  atualizarCalculos();
 }
 
 async function abrirFicha(characterId) {
@@ -4270,7 +4461,10 @@ function renderizarCardsCatalogo(lista) {
 
     window.habilidadesExibidas = lista;
 
-    container.innerHTML = lista.map((item, index) => `
+    container.innerHTML = lista.map((item, index) => {
+        const tier = obterTierHabilidade(item.tier || item.classificacao);
+        const disponivel = tier && tierHabilidadeDisponivel(tier);
+        return `
         <div style="background: #181818; border: 1px solid #333; padding: 10px; margin-bottom: 8px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; gap: 10px;">
             <div style="flex: 1;">
                 <strong style="color: #fff; font-size: 0.95em;">${item.nome}</strong> 
@@ -4279,16 +4473,22 @@ function renderizarCardsCatalogo(lista) {
                     <strong>Pré-req:</strong> ${item.prereq || 'Nenhum'} | <strong>Custo:</strong> ${item.custo || 'Nenhum'}
                 </p>
             </div>
-            <button type="button" class="btn btn-sm btn-success" onclick="selecionarHabilidadePorIndice(${index})" style="white-space: nowrap; padding: 4px 10px; font-size: 0.85em;">
-                Selecionar
+            <button type="button" class="btn btn-sm btn-success" onclick="selecionarHabilidadePorIndice(${index})" ${disponivel ? '' : 'disabled'} style="white-space: nowrap; padding: 4px 10px; font-size: 0.85em;">
+                ${disponivel ? 'Selecionar' : 'Indisponível'}
             </button>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 function selecionarHabilidadePorIndice(index) {
     const item = window.habilidadesExibidas[index];
     if (!item) return;
+    const tier = obterTierHabilidade(item.tier || item.classificacao);
+    if (!tier || !tierHabilidadeDisponivel(tier)) {
+      atualizarContadorHabilidades();
+      return;
+    }
 
     document.getElementById('modal-nome').value = item.nome || '';
     document.getElementById('modal-classificacao').value = item.tier || item.classificacao || '';

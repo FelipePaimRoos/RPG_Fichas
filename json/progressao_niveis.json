@@ -1,0 +1,115 @@
+[
+  {
+    "nivel": 1,
+    "categoria": "Inicial",
+    "recurso": "Habilidade Inicial de Perfil (Nível 1)"
+  },
+  {
+    "nivel": 2,
+    "categoria": "Habilidade",
+    "recurso": "1ª Habilidade (Tier I)",
+    "tier": "Tier I"
+  },
+  {
+    "nivel": 3,
+    "categoria": "Habilidade",
+    "recurso": "2ª Habilidade (Tier I)",
+    "tier": "Tier I"
+  },
+  {
+    "nivel": 4,
+    "categoria": "Atributo",
+    "recurso": "+1 Ponto em um Atributo à sua escolha"
+  },
+  {
+    "nivel": 5,
+    "categoria": "Habilidade",
+    "recurso": "3ª Habilidade (Tier I)",
+    "tier": "Tier I"
+  },
+  {
+    "nivel": 6,
+    "categoria": "Habilidade",
+    "recurso": "4ª Habilidade (Tier I)",
+    "tier": "Tier I"
+  },
+  {
+    "nivel": 7,
+    "categoria": "Perícia & Proficiência",
+    "recurso": "1ª Subida de Perícia (Veterano)"
+  },
+  {
+    "nivel": 8,
+    "categoria": "Habilidade",
+    "recurso": "5ª Habilidade (Tier II)",
+    "tier": "Tier II"
+  },
+  {
+    "nivel": 9,
+    "categoria": "Habilidade",
+    "recurso": "6ª Habilidade (Tier II)",
+    "tier": "Tier II"
+  },
+  {
+    "nivel": 10,
+    "categoria": "Atributo",
+    "recurso": "+1 Ponto em um Atributo à sua escolha"
+  },
+  {
+    "nivel": 11,
+    "categoria": "Habilidade",
+    "recurso": "7ª Habilidade (Tier II)",
+    "tier": "Tier II"
+  },
+  {
+    "nivel": 12,
+    "categoria": "Habilidade",
+    "recurso": "8ª Habilidade (Tier II)",
+    "tier": "Tier II"
+  },
+  {
+    "nivel": 13,
+    "categoria": "Perícia & Proficiência",
+    "recurso": "1ª Subida de Perícia (Veterano)"
+  },
+  {
+    "nivel": 14,
+    "categoria": "Habilidade",
+    "recurso": "9ª Habilidade (Tier III)",
+    "tier": "Tier III"
+  },
+  {
+    "nivel": 15,
+    "categoria": "Habilidade",
+    "recurso": "10ª Habilidade (Tier III)",
+    "tier": "Tier III"
+  },
+  {
+    "nivel": 16,
+    "categoria": "Atributo",
+    "recurso": "+1 Ponto em um Atributo à sua escolha"
+  },
+  {
+    "nivel": 17,
+    "categoria": "Habilidade",
+    "recurso": "11ª Habilidade (Tier III)",
+    "tier": "Tier III"
+  },
+  {
+    "nivel": 18,
+    "categoria": "Atributo",
+    "recurso": "+1 Ponto em um Atributo à sua escolha"
+  },
+  {
+    "nivel": 19,
+    "categoria": "Habilidade",
+    "recurso": "12ª Habilidade (Tier IV)",
+    "tier": "Tier IV"
+  },
+  {
+    "nivel": 20,
+    "categoria": "Habilidade",
+    "recurso": "13ª Habilidade (Tier IV)",
+    "tier": "Tier IV"
+  }
+]

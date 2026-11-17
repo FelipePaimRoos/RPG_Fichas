@@ -4,6 +4,7 @@ import hmac
 import os
 import secrets
 import time
+from collections import Counter
 from pathlib import Path
 from typing import Annotated, List, Optional
 
@@ -31,6 +32,7 @@ SERVICE_WORKER_PATH = Path(__file__).with_name("service-worker.js")
 PWA_ICON_PATH = Path(__file__).with_name("icon.svg")
 DATA_DIR = Path(__file__).with_name("json")
 PROFILES_PATH = DATA_DIR / "perfis.json"
+PROGRESSION_PATH = DATA_DIR / "progressao_niveis.json"
 ORIGINS_PATH = DATA_DIR / "origens.json"
 POWERS_PATH = DATA_DIR / "poderes paranormais.json"
 ABILITIES_PATH = DATA_DIR / "habilidades.json"
@@ -193,7 +195,7 @@ class PoderSchema(SchemaBase):
 class FichaCompletaSchema(SchemaBase):
     nome: str
     jogador: Optional[str] = ""
-    nivel: int = 1
+    nivel: int = Field(default=1, ge=1, le=20)
     conceito: Optional[str] = ""
     origem: Optional[str] = ""
     perfil: Optional[str] = ""
@@ -395,6 +397,128 @@ def _carregar_dados_perfis() -> list[dict]:
     ):
         raise HTTPException(status_code=500, detail="Formato inválido em perfis.json")
     return perfis
+
+
+def _carregar_progressao_niveis() -> list[dict]:
+    try:
+        progressao = json.loads(PROGRESSION_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise HTTPException(
+            status_code=500, detail="Não foi possível carregar progressao_niveis.json"
+        ) from exc
+    if not isinstance(progressao, list) or len(progressao) != 20:
+        raise HTTPException(status_code=500, detail="Formato inválido em progressao_niveis.json")
+    if any(not isinstance(linha, dict) for linha in progressao):
+        raise HTTPException(status_code=500, detail="Formato inválido em progressao_niveis.json")
+    niveis = [linha.get("nivel") for linha in progressao]
+    if (
+        any(not isinstance(nivel, int) or isinstance(nivel, bool) for nivel in niveis)
+        or sorted(niveis) != list(range(1, 21))
+        or any(
+            not isinstance(linha.get("categoria"), str)
+            or not isinstance(linha.get("recurso"), str)
+            or (
+                linha["categoria"] == "Habilidade"
+                and linha.get("tier") not in {"Tier I", "Tier II", "Tier III", "Tier IV"}
+            )
+            for linha in progressao
+        )
+    ):
+        raise HTTPException(status_code=500, detail="Formato inválido em progressao_niveis.json")
+    return progressao
+
+
+def _normalizar_tier_habilidade(classificacao: Optional[str]) -> Optional[str]:
+    valor = "".join((classificacao or "").lower().split())
+    return {
+        "tieri": "Tier I",
+        "tier1": "Tier I",
+        "tierii": "Tier II",
+        "tier2": "Tier II",
+        "tieriii": "Tier III",
+        "tier3": "Tier III",
+        "tieriv": "Tier IV",
+        "tier4": "Tier IV",
+    }.get(valor)
+
+
+def _validar_progressao_ficha(
+    nivel: int,
+    habilidades: list,
+    pericias: list,
+    atributos: Optional[list] = None,
+) -> None:
+    progressao = _carregar_progressao_niveis()
+    if atributos is not None:
+        pontos_gastos = sum(max(0, getattr(atributo, "valor", 1) - 1) for atributo in atributos)
+        pontos_disponiveis = 4 + sum(
+            linha["categoria"] == "Atributo" and linha["nivel"] <= nivel
+            for linha in progressao
+        )
+        if pontos_gastos > pontos_disponiveis:
+            raise HTTPException(
+                status_code=422,
+                detail=(
+                    f"O nível {nivel} permite {pontos_disponiveis} ponto(s) de atributo "
+                    f"além dos valores iniciais; a ficha usa {pontos_gastos}."
+                ),
+            )
+    recompensas_habilidade = [
+        linha
+        for linha in progressao
+        if linha["nivel"] <= nivel and linha["categoria"] == "Habilidade"
+    ]
+    habilidades_manuais = [
+        habilidade
+        for habilidade in habilidades
+        if not getattr(habilidade, "automatico", False)
+    ]
+    if len(habilidades_manuais) > len(recompensas_habilidade):
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                f"O nível {nivel} permite {len(recompensas_habilidade)} habilidades "
+                f"manuais; a ficha tem {len(habilidades_manuais)}."
+            ),
+        )
+
+    limite_por_tier = Counter(linha["tier"] for linha in recompensas_habilidade)
+    quantidade_por_tier = Counter(
+        _normalizar_tier_habilidade(getattr(habilidade, "classificacao", ""))
+        for habilidade in habilidades_manuais
+    )
+    if None in quantidade_por_tier:
+        raise HTTPException(
+            status_code=422,
+            detail="Toda habilidade manual precisa ter classificação Tier I, II, III ou IV.",
+        )
+    for tier, quantidade in quantidade_por_tier.items():
+        if quantidade > limite_por_tier[tier]:
+            raise HTTPException(
+                status_code=422,
+                detail=f"O nível {nivel} permite até {limite_por_tier[tier]} habilidade(s) de {tier}.",
+            )
+
+    limite_veterano = sum(
+        linha["categoria"] == "Perícia & Proficiência" and linha["nivel"] <= nivel
+        for linha in progressao
+    )
+    quantidade_veterano = sum(
+        getattr(pericia, "treinamento", "") in {"Veterano", "Expert"}
+        for pericia in pericias
+    )
+    quantidade_expert = sum(
+        getattr(pericia, "treinamento", "") == "Expert" for pericia in pericias
+    )
+    if quantidade_veterano > limite_veterano:
+        raise HTTPException(
+            status_code=422,
+            detail=f"O nível {nivel} permite {limite_veterano} perícia(s) Veterana(s) ou Expert.",
+        )
+    if quantidade_veterano and nivel < 7:
+        raise HTTPException(status_code=422, detail="Veterano só é liberado a partir do nível 7.")
+    if quantidade_expert and nivel < 14:
+        raise HTTPException(status_code=422, detail="Expert só é liberado a partir do nível 14.")
 
 
 def _carregar_dados_origens() -> list[dict]:
@@ -758,6 +882,11 @@ def listar_perfis():
     return _carregar_dados_perfis()
 
 
+@app.get("/api/progressao-niveis")
+def listar_progressao_niveis():
+    return _carregar_progressao_niveis()
+
+
 @app.get("/api/origens")
 def listar_origens(
     db: Session = Depends(database.get_db),
@@ -838,6 +967,10 @@ def salvar_ou_criar_personagem(
         )
         if not char:
             raise HTTPException(status_code=404, detail="Personagem não encontrado")
+
+    _validar_progressao_ficha(
+        dados.nivel, dados.habilidades, dados.pericias, dados.atributos
+    )
 
     if not char:
         char = models.PersonagemModel(owner_id=auth_session.usuario_id)
@@ -978,6 +1111,16 @@ def criar_habilidade_personagem(
     ).first()
     if not personagem:
         raise HTTPException(status_code=404, detail="Personagem não encontrado")
+
+    habilidades_existentes = db.query(models.HabilidadeDB).filter(
+        models.HabilidadeDB.personagem_id == personagem_id,
+        models.HabilidadeDB.automatico.is_(False),
+    ).all()
+    _validar_progressao_ficha(
+        personagem.nivel,
+        [*habilidades_existentes, dados],
+        [],
+    )
 
     nova_habilidade = models.HabilidadeDB(
         personagem_id=personagem_id,
