@@ -30,7 +30,7 @@ MANIFEST_PATH = Path(__file__).with_name("manifest.webmanifest")
 SERVICE_WORKER_PATH = Path(__file__).with_name("service-worker.js")
 PWA_ICON_PATH = Path(__file__).with_name("icon.svg")
 DATA_DIR = Path(__file__).with_name("json")
-ARCHETYPES_PATH = DATA_DIR / "arquetipos.json"
+PROFILES_PATH = DATA_DIR / "perfis.json"
 ORIGINS_PATH = DATA_DIR / "origens.json"
 POWERS_PATH = DATA_DIR / "poderes paranormais.json"
 ABILITIES_PATH = DATA_DIR / "habilidades.json"
@@ -196,7 +196,9 @@ class FichaCompletaSchema(SchemaBase):
     nivel: int = 1
     conceito: Optional[str] = ""
     origem: Optional[str] = ""
-    arquetipo: Optional[str] = ""
+    perfil: Optional[str] = ""
+    marcadores_analise: int = Field(default=0, ge=0, le=4)
+    impeto: int = Field(default=0, ge=0, le=5)
     vida_atual: int = 10
     vida_max: int = 10
     sanidade_atual: int = 10
@@ -376,31 +378,23 @@ def listar_personagens(
     ]
 
 
-def _carregar_dados_arquetipos() -> list[dict]:
+def _carregar_dados_perfis() -> list[dict]:
     try:
-        arquetipos = json.loads(ARCHETYPES_PATH.read_text(encoding="utf-8"))
+        perfis = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise HTTPException(
-            status_code=500, detail="Não foi possível carregar os arquétipos"
+            status_code=500, detail="Não foi possível carregar os perfis"
         ) from exc
-    if not isinstance(arquetipos, list) or any(
-        not isinstance(arquetipo, dict)
-        or not isinstance(arquetipo.get("nome"), str)
-        or not arquetipo["nome"].strip()
-        or not isinstance(arquetipo.get("habilidades", []), list)
-        or any(
-            not isinstance(habilidade, dict)
-            or not isinstance(habilidade.get("nome"), str)
-            or not habilidade["nome"].strip()
-            or type(habilidade.get("nivel")) is not int
-            or habilidade["nivel"] < 1
-            for habilidade in arquetipo.get("habilidades", [])
-        )
-        or not isinstance(arquetipo.get("bonus", {}), dict)
-        for arquetipo in arquetipos
+    if not isinstance(perfis, list) or any(
+        not isinstance(perfil, dict)
+        or not isinstance(perfil.get("nome"), str)
+        or not perfil["nome"].strip()
+        or not isinstance(perfil.get("efeito"), str)
+        or not perfil["efeito"].strip()
+        for perfil in perfis
     ):
-        raise HTTPException(status_code=500, detail="Formato inválido em arquetipos.json")
-    return arquetipos
+        raise HTTPException(status_code=500, detail="Formato inválido em perfis.json")
+    return perfis
 
 
 def _carregar_dados_origens() -> list[dict]:
@@ -720,45 +714,23 @@ def sincronizar_catalogo_origens_ao_iniciar() -> None:
     _sincronizar_catalogo_origens()
 
 
-def _habilidades_automaticas_arquetipo(
-    nome_arquetipo: Optional[str], nivel_personagem: int
-) -> list[dict]:
-    arquetipo = next(
-        (
-            item
-            for item in _carregar_dados_arquetipos()
-            if item["nome"] == nome_arquetipo
-        ),
+def _habilidade_automatica_perfil(nome_perfil: Optional[str]) -> Optional[dict]:
+    perfil = next(
+        (item for item in _carregar_dados_perfis() if item["nome"] == nome_perfil),
         None,
     )
-    if not arquetipo:
-        return []
-
-    habilidades = []
-    for habilidade in arquetipo.get("habilidades", []):
-        nivel_desbloqueio = habilidade["nivel"]
-        if nivel_personagem < nivel_desbloqueio:
-            continue
-
-        detalhes = []
-        if habilidade.get("gatilho"):
-            detalhes.append(f"Gatilho: {habilidade['gatilho']}")
-        if habilidade.get("acao"):
-            detalhes.append(f"Ação: {habilidade['acao']}")
-        if habilidade.get("efeito"):
-            detalhes.append(habilidade["efeito"])
-
-        habilidades.append({
-            "nome": habilidade.get("nome", ""),
-            "classificacao": f"Habilidade de Arquétipo ({nome_arquetipo})",
-            "prereq": habilidade.get("prereq", ""),
-            "custo": habilidade.get("custo", ""),
-            "alcance": habilidade.get("alcance", ""),
-            "efeito": "\n".join(detalhes),
-            "automatico": True,
-            "nivel_desbloqueio": nivel_desbloqueio,
-        })
-    return habilidades
+    if not perfil:
+        return None
+    return {
+        "nome": perfil["nome"],
+        "classificacao": f"Habilidade de Perfil ({perfil['nome']})",
+        "prereq": "",
+        "custo": "",
+        "alcance": "",
+        "efeito": perfil["efeito"],
+        "automatico": True,
+        "nivel_desbloqueio": None,
+    }
 
 
 def _habilidade_automatica_origem(
@@ -781,21 +753,9 @@ def _habilidade_automatica_origem(
     }
 
 
-@app.get("/api/arquetipos")
-def listar_arquetipos():
-    return [
-        {
-            **arquetipo,
-            "habilidades": [
-                {
-                    **habilidade,
-                    "nivel_desbloqueio": habilidade["nivel"],
-                }
-                for habilidade in arquetipo.get("habilidades", [])
-            ],
-        }
-        for arquetipo in _carregar_dados_arquetipos()
-    ]
+@app.get("/api/perfis")
+def listar_perfis():
+    return _carregar_dados_perfis()
 
 
 @app.get("/api/origens")
@@ -953,9 +913,14 @@ def salvar_ou_criar_personagem(
             maldicoes=json.dumps(arma.maldicoes, ensure_ascii=False),
             personagem_id=char.id,
         ))
-    habilidades_automaticas = _habilidades_automaticas_arquetipo(
-        dados.arquetipo, dados.nivel
-    )
+    if dados.perfil and dados.perfil not in {
+        perfil["nome"] for perfil in _carregar_dados_perfis()
+    }:
+        raise HTTPException(status_code=422, detail="Perfil inválido")
+    habilidades_automaticas = []
+    habilidade_perfil = _habilidade_automatica_perfil(dados.perfil)
+    if habilidade_perfil:
+        habilidades_automaticas.append(habilidade_perfil)
     habilidade_origem = _habilidade_automatica_origem(dados.origem, db)
     if habilidade_origem:
         habilidades_automaticas.append(habilidade_origem)

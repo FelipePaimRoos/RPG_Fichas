@@ -13,10 +13,22 @@ Base = declarative_base()
 def ensure_schema():
     Base.metadata.create_all(bind=engine)
     columns = {column["name"] for column in inspect(engine).get_columns("personagens")}
-    if "owner_id" not in columns:
-        with engine.begin() as connection:
+    with engine.begin() as connection:
+        if "owner_id" not in columns:
             connection.execute(text(
                 "ALTER TABLE personagens ADD COLUMN owner_id INTEGER REFERENCES usuarios(id)"
+            ))
+        if "perfil" not in columns:
+            connection.execute(text(
+                "ALTER TABLE personagens ADD COLUMN perfil VARCHAR DEFAULT ''"
+            ))
+        if "marcadores_analise" not in columns:
+            connection.execute(text(
+                "ALTER TABLE personagens ADD COLUMN marcadores_analise INTEGER NOT NULL DEFAULT 0"
+            ))
+        if "impeto" not in columns:
+            connection.execute(text(
+                "ALTER TABLE personagens ADD COLUMN impeto INTEGER NOT NULL DEFAULT 0"
             ))
     ability_columns = {
         column["name"] for column in inspect(engine).get_columns("habilidades")

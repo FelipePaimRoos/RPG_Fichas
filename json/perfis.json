@@ -1,0 +1,14 @@
+[
+  {
+    "nome": "Analista",
+    "efeito": "Mente Calculista: Você pode gastar uma ação para receber 2 marcadores de análise (máximo de 4). Ao fazer um teste, você pode gastar marcadores após a rolagem para mudar o resultado de um dado em +1 ou -1 por marcador gasto."
+  },
+  {
+    "nome": "Vigilante",
+    "efeito": "Sombra e Tempo: Uma vez por rodada, gasta 2 PD para rerrolar um dado (exceto 1) em um teste seu ou de um aliado em alcance curto. Em combates, pode escolher agir na fase normal ou em fases posteriores, após qualquer ação daquela fase já ter sido rolada."
+  },
+  {
+    "nome": "Executor",
+    "efeito": "Barra de Ímpeto: Possui uma barra de 5 espaços que preenche 1 espaço sempre que falha em um teste. Como ação livre, gasta espaços para receber benefícios: 1 espaço (+d4 em teste), 3 espaços (aumenta um atributo em um passo até o fim da cena) ou 3 espaços (ação extra em conflito)."
+  }
+]

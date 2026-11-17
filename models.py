@@ -33,6 +33,9 @@ class PersonagemModel(Base):
     conceito = Column(String)
     origem = Column(String)
     arquetipo = Column(String)
+    perfil = Column(String, default="")
+    marcadores_analise = Column(Integer, default=0)
+    impeto = Column(Integer, default=0)
 
     # Status e Vida
     vida_atual = Column(Integer, default=10)

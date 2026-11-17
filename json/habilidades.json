@@ -536,14 +536,6 @@
     "efeito": "Suas análises carregam uma carga mórbida que, embora desconfortável, força a mente do grupo a enxergar conexões sombrias que passariam despercebidas. Dedução Incisiva: Sempre que você realizar a ação de Compartilhar (informações/pistas) ou Recapitular em uma Cena de Investigação, você pode gastar 1 SAN para injetar teorias e hipóteses perturbadoras na discussão. Paranoia Produtiva: Os aliados voluntários que derem ouvidos à sua análise sofrem 1 de dano de Sanidade (SAN). Em contrapartida, a ação de Compartilhar ou Recapitular concede a você e a esses aliados um bônus de +2 em todos os testes realizados para avançar na investigação ou superar etapas do Desafio de Acesso até o fim da cena."
   },
   {
-    "nome": "Adepto do Escuro",
-    "classificacao": "Tier I",
-    "prereq": "Intelecto 2",
-    "custo": "Nenhum",
-    "alcance": "Pessoal",
-    "efeito": "Seus olhos e sentidos são altamente adaptados a locais com pouca iluminação, permitindo que você note detalhes e navegue no escuro onde outros só veem sombras. Visão nas Sombras: Você ignora as penalidades e os efeitos de Camuflagem (Leve ou Total) causados por escuridão natural ou penumbra. Atenção no Escuro: Você recebe +2 em testes de Percepção e Procurar realizados em ambientes com iluminação reduzida ou precária (como penumbra, salas iluminadas apenas por velas/lanternas, ao crepúsculo, etc.)."
-  },
-  {
     "nome": "Saudosista Hi-Tech",
     "classificacao": "Tier I",
     "prereq": "Intelecto 2, treinado em Tecnologia",
@@ -2014,5 +2006,317 @@
     "custo": "Nenhum (Exige a execução diária e definitiva da escarificação ritualística)",
     "alcance": "Pessoal",
     "efeito": "As escarificações são tão profundas que os rituais marcados dispensam qualquer comunicação para serem conjurados, entrando em um estado de efeito frequente que só terminará com a morte de seu portador. Essa deformação extrema faz com que a sua Presença seja reduzida permanentemente em mais 1, e a penalidade nas perícias sociais de Diplomacia, Enganação e Intuição salta de -5 para -10 dados de desvantagem. Agora, ao realizar a escarificação diária, você recupera 1d12 pontos de Sanidade (SAN) e, até o fim do dia, também recebe os efeitos passivos e definitivos descritos a seguir, conforme o seu elemento escolhido: CONHECIMENTO: A Verdade está marcada em seu corpo, esperando para ser lembrada; você foi aplicado aos Sigilos de Eloquência e tornou-se exatamente o que buscava, com a porta aberta e a conexão quase absoluta. Você recebe +1 ponto permanente em Intelecto, pode conjurar rituais de Conhecimento marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Conhecimento de 4º círculo à sua escolha. ENERGIA: Seu corpo vibra em cores e símbolos que se alternam rapidamente ao som de um ruído caótico que só você escuta, conectados simultaneamente. A porta está aberta e a conexão é quase absoluta. Você recebe +1 ponto permanente em Agilidade, pode conjurar rituais de Energia marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Energia de 4º círculo à sua escolha. SANGUE: Todos os sacrifícios foram feitos e você se tornou o próprio sacrifício, deleitando-se nos frutos de todas as suas dores após provar sua resiliência à Entidade. A porta está aberta e a conexão é quase absoluta. Você recebe +1 ponto permanente em Força, pode conjurar rituais de Sangue marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Sangue de 4º círculo à sua escolha. MORTE: A casca decrépita que um day chamou de corpo contém a infinitude de momentos em que você pôde parar mas não o fez, tornando-se a personificação do fim e da destruição inevitável. A porta está aberta e a conexão é quase absoluta. Você recebe +1 ponto permanente em Vigor, pode conjurar rituais de Morte marcados na pele sem a necessidade de fala, gestos e componentes, e aprende um ritual de Morte de 4º círculo à sua escolha."
-  }
+  },
+  {
+    "nome": "Técnica Letal",
+    "classificacao": "Tier I",
+    "prereq": "Forca 2, Treinado em Luta",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Você tem golpes mais poderosos que o normal. GOLPE DEVASTADOR: Você recebe +2 na Rolagem de Dano em todos os seus ataques corpo a corpo."
+  },
+  {
+    "nome": "Adepto do Escuro",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Furtividade",
+    "custo": "Passivo",
+    "alcance": "Pessoal",
+    "efeito": "Seus olhos e sentidos são altamente adaptados a locais com pouca iluminação, permitindo que você note detalhes e navegue no escuro onde outros só veem sombras. VISÃO NAS SOMBRAS: Você ignora as penalidades e os efeitos de Camuflagem (Leve ou Total) causados por escuridão natural ou penumbra. ATENÇÃO NO ESCURO: Você recebe +2 em testes de Percepção e Procurar realizados em ambientes com iluminação reduzida ou precária (como penumbra, salas iluminadas apenas por velas/lanternas, ao crepúsculo, etc.)."
+  },
+  {
+    "nome": "Aura de Confiança",
+    "classificacao": "Tier I",
+    "prereq": "Presenca 2, Treinado em Diplomacia",
+    "custo": "Passivo",
+    "alcance": "Médio",
+    "efeito": "Todos os seus aliados em alcance médio recebem +2 em testes de Iniciativa e +2 em testes de resistência contra Presença Perturbadora e efeitos de medo ou insanidade. Este bônus não afeta você."
+  },
+  {
+    "nome": "Paramédico",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto_ou_presenca 2",
+    "custo": "1 SAN (escalonável)",
+    "alcance": "Adjacente ou Pessoal",
+    "efeito": "Com uma Ação Padrão, você aplica procedimentos de atendimento médico de emergência em campo. Você gasta 1 SAN para restaurar 10 Pontos de Vida (PV) de si mesmo ou de um aliado adjacente. Nível 1 ao 4: Restaurar 10 PV (Custo: 1 SAN). Nível 5 ao 10: Restaurar 15 PV (Custo: 2 SAN). Nível 11 ao 16: Restaurar 20 PV (Custo: 3 SAN). Nível 17+: Restaurar 25 PV (Custo: 4 SAN)."
+  },
+  {
+    "nome": "Ataque Furtivo",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Furtividade",
+    "custo": "1 SAN (escalonável)",
+    "alcance": "Adjacente ou Curto",
+    "efeito": "Uma vez por rodada, ao acertar um ataque corpo a corpo ou em alcance curto com uma arma de disparo contra um alvo desprevenido ou que você esteja flanqueando, você pode gastar 1 SAN para causar +1d6 adicional do mesmo tipo da arma. Nível 1 ao 4: +1d6 de dano (Custo: 1 SAN). Nível 5 ao 10: +2d6 de dano (Custo: 2 SAN). Nível 11 ao 16: +3d6 de dano (Custo: 3 SAN). Nível 17+: +4d6 de dano (Custo: 4 SAN)."
+  },
+  {
+    "nome": "Valentão",
+    "classificacao": "Tier I",
+    "prereq": "Forca 2, Treinado em Intimidação",
+    "custo": "1 SAN",
+    "alcance": "Curto",
+    "efeito": "Uso de intimidação física e presença opressora. IMPOSIÇÃO FÍSICA: Você pode usar seu atributo Força no lugar de Presença para realizar testes da perícia Intimidação. GRITO DE AMEAÇA: Uma vez por cena, você pode gastar 1 SAN para realizar um teste de Intimidação para assustar ou abalar um inimigo em alcance curto como uma Ação Livre durante o seu turno."
+  },
+  {
+    "nome": "Estudar Fraquezas",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Sobrevivência ou Luta",
+    "custo": "Variável",
+    "alcance": "Variável",
+    "efeito": "Análise tática e dedução de pontos fracos de alvos. ANÁLISE BREVE: Ao estudar uma pista ligada a um ser, culto ou criatura específica durante um tempo de descanso ou preparação, o Mestre revela 1 informação vital sobre o alvo (como seu Elemento/Origem, Vulnerabilidade, RD, Fraqueza ou Habilidade Chave). VANTAGEM TÁTICA: Você e seus aliados que ouvirem o seu relatório recebem +2 em testes de perícia e testes de resistência diretamente relacionados àquele alvo até o final da missão."
+  },
+  {
+    "nome": "Sombra Fugaz",
+    "classificacao": "Tier I",
+    "prereq": "Agilidade 2, Treinado em Furtividade",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Ao realizar um ataque ou executar uma ação chamativa/ruidosa, você pode gastar 1 SAN para realizar um teste de Furtividade imediatamente para tentar se esconder (ou permanecer escondido) sem sofrer las penalidades normais por ter revelado sua posição."
+  },
+  {
+    "nome": "Camuflar Ocultismo",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Ocultismo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você oculta suas marcas rituais e canaliza o Paranormal sem denunciar sua presença. SIGILOS OCULTOS: Como uma Ação Livre, você torna seus símbolos e marcas invisíveis para outras pessoas. CONJURAÇÃO DISCRETA: Gastando 1 SAN ao conjurar um ritual, você ignora a necessidade de voz, gestos e componentes (podendo conjurar mesmo amordaçado ou preso), isso não diminui ações na hora de conjurar o ritual, só torna ele discreto. INFILTRAÇÃO MÍSTICA: O aumento de visibilidade ou a penalidade na Furtividade por conjurar um ritual durante uma cena de furtividade é reduzido em 1 nível."
+  },
+  {
+    "nome": "Saber Ampliado",
+    "classificacao": "Tier I",
+    "prereq": "Intelecto 2, Treinado em Ocultismo",
+    "custo": "Variável",
+    "alcance": "Pessoal",
+    "efeito": "Sua dedicação aos estudos do Paranormal expande sua mente, permitindo memorizar e canalizar mais manifestações do que a maioria dos praticantes. CRESCIMENTO MÍSTICO: Sempre que você passar a ter acesso a um novo Círculo de rituais, você aprende imediatamente 1 ritual adicional daquele novo Círculo. FORA DO LIMITE: Os rituais aprendidos por meio desta habilidade não contam no seu limite total de rituais conhecidos."
+  },
+  {
+    "nome": "Revidar",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2 ou Vigor 2, Treinado em Fortitude ou Reflexo e Luta",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Quando você Bloquear ou Esquivar com sucesso um ataque corpo a corpo de um inimigo. Você recebe imediatamente 1 Reação Adicional para realizar uma ação de Contra-Ataque contra o inimigo que o atacou."
+  },
+  {
+    "nome": "Resistir à Pressão",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2 ou Intelecto 2, Treinado em Investigar",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "A tensão e o relógio correndo contra a equipe aumentam o seu foco e a sua capacidade de coordenação. Uma vez por cena de investigação (ou cena com limite de tempo/urgência), você pode gastar 1 SAN para reorganizar a atuação do grupo. GANHO DE TEMPO: A urgência ou o limite de rodadas/turnos da investigação é estendido em +1 rodada. FOCO SOB TENSÃO: Durante essa rodada adicional ganha pela habilidade, você e todos os seus aliados em alcance curto recebem +2 em todos os testes de perícia."
+  },
+  {
+    "nome": "Vitalidade Sofrida",
+    "classificacao": "Tier II",
+    "prereq": "Vigor 2 ou Presença 2, Treinado em Fortitude ou Vontade",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Escolha entre PV ou SAN. A pontuação máxima da estatística escolhida aumenta em um valor igual ao seu Nível de Personagem (até o limite de +20). Esta habilidade não acumula com outros bônus de escalonamento por nível."
+  },
+  {
+    "nome": "Médico da Salvação",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Treinado em Medicina, Paramédico",
+    "custo": "Variável",
+    "alcance": "Toque",
+    "efeito": "Sua dedicação em preservar a vida em momentos críticos permite realizar procedimentos médicos complexos em uma fração do tempo e com máxima eficácia. CURA AMPLIADA: A eficiência dos seus primeiros socorros é aprimorada: o valor de cura da sua habilidade Paramédico +2 por nível da habilidade (cumulativo). SOCORRO AGILIZADO: Uma vez por rodada, ao utilizar a habilidade Paramédico, você pode gastar 1 SAN para realizar o atendimento como uma Ação de Movimento (em vez de uma Ação Padrão)."
+  },
+  {
+    "nome": "Gatuno",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2, Treinado Furtividade e Crime",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você possui agilidade e técnica superiores para infiltração, acrobacias e ladroagem. ESPECIALIZAÇÃO PRÁTICA: Você recebe +2 em testes de Furtividade e Crime. MOVIMENTAÇÃO SILENCIOSA: Você pode mover-se utilizando o seu deslocamento normal enquanto se esconde ou se desloca furtivamente, sem sofrer penalidades no seu teste de Furtividade."
+  },
+  {
+    "nome": "Eloquência",
+    "classificacao": "Tier II",
+    "prereq": "Presença 2, Treinado Diplomacia, Enganação ou Intimidação",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Com uma Ação Completa, você utiliza sua lábia e presença marcante para capturar a atenção das pessoas ao seu redor. Escolha alvos em alcance curto e faça um teste oposto de Diplomacia, Enganação ou Intimidação contra a Vontade de cada alvo: FASCÍNIO: Os alvos que falharem no teste ficam na condição Fascinado enquanto você mantiver a concentração (gastando uma Ação de Movimento a cada rodada). RESISTÊNCIA EM COMBATE: Criaturas ativamente hostis ou envolvidas em combate recebem Vantagem no teste de Vontade para resistir e têm direito a um novo teste no início de cada um dos turnos delas para encerrar o efeito. IMUNIDADE: Qualquer alvo que passe no teste de Vontade fica imune à sua Eloquência por 24 horas."
+  },
+  {
+    "nome": "Análise Combativa",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Treinado Luta ou Sobrevivência",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "ANÁLISE EM TEMPO REAL: Durante o combate, você pode gastar 1 SAN e uma Ação de Movimento para ler a postura e os padrões de uma ameaça visível. Você recebe +2 em testes de ataque e na Defesa contra aquele alvo até o final da cena. PREPARO PRÉVIO: Se você já tiver investigado, analisado ou enfrentado essa mesma ameaça em uma cena anterior, você recebe o bônus de +2 automaticamente desde o início do combate, sem precisar gastar Ação ou SAN."
+  },
+  {
+    "nome": "Disparo Letal",
+    "classificacao": "Tier II",
+    "prereq": "Agilidade 2, Treinado em Pontaria",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Ao realizar a ação de Mirar, você pode gastar 1 SAN para alinhar perfeitamente a trajetória do projétil na anatomia vulnerável do alvo. MIRA CIRÚRGICA: O seu próximo ataque à distância realizado até o final do seu próximo turno recebe +2 no teste de ataque e +4 no dano. TRANSPASSAR DEFESAS: O disparo ignora os benefícios de Cobertura Parcial do alvo e reduz em 2 pontos qualquer Resistência a Dano (RD) que ele possua contra este ataque."
+  },
+  {
+    "nome": "Acelerar Ritual",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Treinado em Ocultismo",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Sua velocidade e precisão ao traçar sigilos e manipular insumos reduzem drasticamente o tempo necessário para manifestar o Paranormal. ACELERAÇÃO MÍSTICA: Uma vez por ritual, ao conjurá-lo, você pode pagar +2 SAN adicionais para encurtar o seu tempo de execução, reduzindo a conjuração para 2 turnos. ACÚMULO LIMITADO: Este efeito acumula com a redução concedida por Afinidade, permitindo conjurar o ritual em apenas 1 turno. Esta habilidade não acumula com nenhuma outra fonte de redução de tempo de conjuração."
+  },
+  {
+    "nome": "Grimório Ritualístico",
+    "classificacao": "Tier II",
+    "prereq": "Intelecto 2, Treinado em Ocultismo",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Você confecciona um tomo místico repleto de anotações e diagramas complexos, permitindo consultar e conjurar rituais que ultrapassam a capacidade de memorização da sua mente. ACERVO EXTERNO: Seu grimório armazena uma quantidade de rituais adicionais igual ao seu Intelecto. Sempre que você passar a ter acesso a um novo Círculo de rituais, pode adicionar 1 ritual adicional desse novo Círculo ao grimório. Esses rituais não contam no seu limite total de rituais conhecidos. CONSULTA EM CAMPO: O grimório ocupa 1 Espaço no seu inventário e precisa ser empunhado para ser usado. Para conjurar um ritual armazenado nele, você deve gastar uma Ação de Movimento folheando o tomo para relembrar os sigilos antes de iniciar a conjuração. RECONSTRUÇÃO: Caso o grimório seja perdido ou destruído, você pode reescrever todas as suas anotações dedicando 2 Ações de Interlúdio."
+  },
+  {
+    "nome": "Força Opressora",
+    "classificacao": "Tier III",
+    "prereq": "Força 3, Veterano em Luta",
+    "custo": "1 SAN (Manobra) + 1 SAN opcional (Ataque Extra)",
+    "alcance": "Pessoal",
+    "efeito": "MANOBRA DEVASTADORA: Ao acertar o ataque, você pode gastar 1 SAN para realizar imediatamente qualquer manobra de combate (Derrubar, Empurrar, Desarmar, Agarrar) contra o mesmo alvo como Ação Livre. INÉRCIA DO IMPACTO: Você recebe +2 no teste da manobra para cada 5 pontos de dano causados pelo ataque inicial. PRESSIONAR O CAÍDO: Se a manobra escolhida for Derrubar e você vencer o teste oposto, pode gastar +1 SAN adicional para realizar 1 ataque corpo a corpo adicional contra o alvo derrubado."
+  },
+  {
+    "nome": "Fuga Obstinada",
+    "classificacao": "Tier III",
+    "prereq": "Agilidade 3, Veterano em Acrobacia",
+    "custo": "Variável",
+    "alcance": "Pessoal",
+    "efeito": "Sua capacidade de leitura de terreno e controle de ritmo permite que você cruze o campo de batalha com fluidez absoluta, tornando quase impossível encurralá-lo. MOBILIDADE FLUIDA: Você ignora Terreno Difícil, não provoca ataques de oportunidade ao se mover e seu deslocamento base aumenta em +3m. SUPERAR RESTRIÇÕES: Gastando 1 SAN como Ação Livre no seu turno, você rompe e se liberta instantaneamente de condições de restrição física de movimento (como agarro, enredamento ou lentidão)."
+  },
+  {
+    "nome": "Inabalável",
+    "classificacao": "Tier III",
+    "prereq": "Presença 3, Veterano em Vontade",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Sua mente tornou-se uma fortaleza inexpugnável diante dos horrores da Entidade e das manifestações do Outro Lado. FORTALEZA MENTAL: Você recebe 3 de Resistência a Dano (RD) contra dano mental e de origem paranormal. MENTE INABALÁVEL: Quando for alvo de um ritual ou efeito paranormal que permita um teste de Vontade para reduzir o dano à metade, você não sofre dano algum se passar no teste de resistência."
+  },
+  {
+    "nome": "Resgatar da Morte",
+    "classificacao": "Tier III",
+    "prereq": "Intelecto 3, Veterano em Medicina",
+    "custo": "1 SAN",
+    "alcance": "Toque",
+    "efeito": "Sob o seu comando, ninguém morre se você puder alcançar o corpo a tempo. Sua velocidade de reação e frieza cirúrgica em situações limite impedem o inevitável. INTERVENÇÃO CRÍTICA: Ao realizar um teste de Medicina para prestar Primeiros Socorros (estabilizar um aliado morrendo ou estancar uma hemorragia grave), você pode gastar 1 SAN para obter Sucesso Automático no teste, garantindo a estabilização imediata do alvo sem rolar dados. RESTRIÇÃO: Você só pode utilizar esta habilidade uma vez por cena no mesmo ser."
+  },
+  {
+    "nome": "Assassinato Furtivo",
+    "classificacao": "Tier III",
+    "prereq": "Agilidade 3, Veterano em Furtividade, Ataque Furtivo",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você possui conhecimento anatômico para atingir pontos vitais com precisão cirúrgica e mortalidade ampliada. PRECISÃO AMPLIADA: O dano bônus do seu Ataque Furtivo aumenta para +2d6, +4d6, +6d6, +8d6, respectivamente e a categoria do dado de dano da sua arma é elevada em um passo (ex: d6 passa a d8, d8 passa a d10)."
+  },
+  {
+    "nome": "O Sorriso",
+    "classificacao": "Tier III",
+    "prereq": "Presença 3, Veterano em Diplomacia ou Enganação",
+    "custo": "Variável",
+    "alcance": "Pessoal",
+    "efeito": "MÁSCARA INABALÁVEL: Você recebe +2 e Vantagem em todos os testes de Diplomacia e Enganação. Além disso, sua compostura é tão absoluta que você recebe +2 em testes de Vontade para resistir a efeitos de medo, insanidade e manipulação mental. DESARMAR HOSTILIDADE (REAÇÃO): Quando um inimigo visível declarar um ataque ou habilidade hostil contra você ou um aliado em alcance curto, você pode usar uma fala provocativa, um gesto frio ou um sorriso desarmante para congelar a ação. Faça um teste de Diplomacia ou Enganação contra a Vontade do oponente. Se vencer, a ação do inimigo é cancelada e desperdiçada, efeito de medo. COMPOSTURA CONTAGIOSA (AÇÃO LIVRE, 1X POR CENA): Você projeta uma aura de controle e serenidade inabalável. Ao ativar este efeito, você e todos os aliados em alcance curto recuperam 2 SAN e encerram imediatamente qualquer condição mental negativa, menos enlouquecendo."
+  },
+  {
+    "nome": "Estudar a Presa",
+    "classificacao": "Tier III",
+    "prereq": "Intelecto 3, Veterano em Luta ou Sobrevivência",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Ao gastar 1 SAN e 1 Ação de Movimento observando um inimigo em alcance médio, você analisa as brechas na postura dele e o marca como sua Presa até o final da cena (apenas uma Presa por vez). Benefícios contra a Presa: ATAQUE FOCADO: Você recebe Vantagem nos testes de ataque e +4 no dano contra a Presa. PERFURAR DEFESAS: Seus ataques contra a Presa ignoram até 5 pontos de RD (Resistência a Dano) do alvo. ANTECIPAÇÃO DEFENSIVA: Você recebe +2 na Defesa e em testes de resistência contra ataques e habilidades originados diretamente da Presa. CICLO DA CAÇA: Quando a Presa for reduzida a 0 PV, você recupera 1 SAN e pode transferir a marca para um novo alvo visível como Ação Livre, sem gastar SAN adicional."
+  },
+  {
+    "nome": "Especialista em Matar",
+    "classificacao": "Tier III",
+    "prereq": "Agilidade 3, Veterano em Pontaria",
+    "custo": "1 SAN",
+    "alcance": "Pessoal",
+    "efeito": "Você domina a arte de preparar ataques letais com extrema velocidade e frieza, explorando instantaneamente qualquer falha de posicionamento ou brecha na guarda do alvo. PREPARO RÁPIDO: Você reduz em um passo o custo de ação necessário para a ação Mirar (Ação de Movimento vira Ação Livre). GOLPE METICULOSO: Ao realizar um ataque após Mirar até o início do seu próximo turno, você pode gastar 1 SAN para escolher um dos seguintes efeitos naquele golpe: Análise Completa: Recebe +2 no teste de ataque e +4 na rolagem de dano; Foco Extremo: Concentra a execução para receber +4 no teste de ataque OU +6 na rolagem de dano; Ponto Vital: Aumenta em +1x o Multiplicador Crítico da arma para esse ataque (ex: x2 passa a x3)."
+  },
+  {
+    "nome": "Presença Poderosa",
+    "classificacao": "Tier III",
+    "prereq": "Presença 3, Veterano em Ocultismo",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Sua resiliência e força de vontade permitem extrair mais energia do Outro Lado, criando um escudo contra o desgaste mental de suas conjurações. RESERVA ESPIRITUAL: No início de cada cena, você recebe uma quantidade de SAN Temporária igual à sua Presença. USO RESTRITO: Esta SAN Temporária pode ser gasta exclusivamente para pagar o custo de conjuração de rituais. ISOLAMENTO MENTAL: Esta reserva não reduz ou absorve perdas de Sanidade causadas por dano mental, testes de Vontade ou presença perturbadora, e não altera a DT de seus rituais."
+  },
+  {
+    "nome": "Rituais Eficientes",
+    "classificacao": "Tier III",
+    "prereq": "Presença 3, Veterano em Ocultismo",
+    "custo": "Nenhum",
+    "alcance": "Pessoal",
+    "efeito": "Sua maestria no manuseio do Paranormal torna todas as suas manifestações místicas profundamente enraizadas na realidade, tornando-as extremamente difíceis de serem contidas. DOMÍNIO UNIVERSAL: A Dificuldade (DT) para resistir a qualquer ritual que você conjurar aumenta em +2. ACÚMULO: Este bônus é geral e acumula normalmente com aumentos específicos de DT concedidos por outras habilidades (como Especialista em Elemento ou Ritual Predileto)."
+  },
+  {
+    "nome": "Potência Máxima",
+    "classificacao": "Tier IV",
+    "prereq": "Força 4, Expert em Luta",
+    "custo": "3 SAN",
+    "alcance": "Pessoal",
+    "efeito": "INABALÁVEL: Você ignora completamente qualquer penalidade ou desvantagem aplicada ao seu teste de ataque. CONVERSÃO DE SUPREMACIA: Cada fonte de Desvantagem e Vantagem que você receberia no ataque é convertida em +5 no Teste de Ataque ou +5 na Rolagem de Dano (à sua escolha)."
+  },
+  {
+    "nome": "Só Mais um Passo…",
+    "classificacao": "Tier IV",
+    "prereq": "Vigor 4 ou Agilidade 4, Expert em Acrobacia ou Fortitude",
+    "custo": "2 SAN",
+    "alcance": "Pessoal",
+    "efeito": "O ápice do seu Vigor ou Agilidade. No momento em que seu corpo tombaria ou seria encurralado, seu instinto de sobrevivência assume o controle em uma arrancada salvadora. ARRANCADA DE EMERGÊNCIA: Uma vez por cena, ao sofrer dano que o deixaria morrendo ou quando for dano massivo, você pode gastar 2 SAN como Reação para realizar um deslocamento completo imediato. INVIOLABILIDADE EM TRÂNSITO: Durante este movimento de emergência, você atravessa o espaço ocupado por inimigos sem ser bloqueado e encerra o deslocamento recebendo +4 na Defesa/Esquiva até o início do seu próximo turno."
+  },
+  {
+    "nome": "A Sanidade Está Lá Fora",
+    "classificacao": "Tier IV",
+    "prereq": "Presença 4, Expert em Diplomacia",
+    "custo": "2 SAN",
+    "alcance": "Toque",
+    "efeito": "Sua maestria psiquiátrica e compreensão da mente diante do trauma espiritual permitem expurgar colapsos e paralias mentais instantaneamente. PURIFICAÇÃO PSÍQUICA: Ao gastar uma Ação de Movimento e 2 SAN, você remove todas as condições de medo ou mentais (como Abalado, Apavorado, Confuso, Fascinado ou Perturbado) ativas em você mesmo ou em um aliado voluntário adjacente ou recupera um aliado que está enlouquecendo sem precisar de teste. BARREIRA EMOCIONAL: O alvo afetado recebe imunidade a novas condições de medo e mentais até o início do seu próximo turno. RESTRIÇÃO: Você só pode utilizar esta habilidade uma vez por cena no mesmo ser."
+  },
+  {
+    "nome": "Veterano da Equipe de Trauma",
+    "classificacao": "Tier IV",
+    "prereq": "Intelecto 4, Expert em Medicina",
+    "custo": "Nenhum",
+    "alcance": "Toque",
+    "efeito": "Seu domínio sobre medicina de urgência e intervenção tática permite tratar múltiplos traumas físicos e mentais simultaneamente sob extrema pressão. TRATAMENTO AVANÇADO: Ao realizar um Primeiro Socorros, você remove todas as condições negativas ativas no alvo (como sangrando, abalado, fraco, cego, etc.), incluindo morrendo. RESTRIÇÃO: Você só pode utilizar esta habilidade uma vez por cena no mesmo ser."
+  },
+  {
+    "nome": "Assassinar",
+    "classificacao": "Tier IV",
+    "prereq": "Agilidade 4, Expert em Furtividade",
+    "custo": "2 SAN",
+    "alcance": "Curto",
+    "efeito": "O ápice da execução das sombras. Um único golpe desferido contra uma vítima desatenta é capaz de encerrar o combate antes mesmo que ele comece. GOLPE DE MISERICÓRDIA: Ao atacar um alvo totalmente Desprevenido a partir de Furtividade, você pode gastar 2 SAN para transformar a emboscada em uma tentativa de execução imediata. MULTIPLICADOR CRÍTICO: Se o ataque acertar, todo o dano final da rolagem (arma + dados furtivos) é dobrado. Além disso, o alvo deve passar em um teste de Fortitude (dt Furtividade) ou fica imediatamente inconsciente."
+  },
+  {
+    "nome": "Multifacetado",
+    "classificacao": "Tier IV",
+    "prereq": "Presença 4, Expert em Enganação",
+    "custo": "3 SAN",
+    "alcance": "Curto",
+    "efeito": "Você canaliza dezenas de identidades, treinamentos e memórias acumuladas, adaptando sua mente e corpo instantaneamente para qualquer situação impossível. Ao gastar 3 SAN, escolha dois dos seguintes benefícios até o final da cena: MENTE PLURAL (PERÍCIAS): Você é considerado Treinado em até três perícias que não possui ou recebe Vantagem e +2 em duas perícias nas quais já é Treinado. MAESTRIA IMPROVISADA (PODERES): Você recebe temporariamente os benefícios de um Poder Geral de até Tier III cujos pré-requisitos você cumpra. ADAPTAÇÃO REATIVA (TROCA FLUIDA): Uma vez durante a cena, você pode gastar 1 SAN como Reação para redefinir as escolhas feitas por esta habilidade, trocando as perícias ou poderes selecionados para responder a uma nova ameaça imediata."
+  },
+  {
+    "nome": "Predador Perfeito",
+    "classificacao": "Tier IV",
+    "prereq": "Intelecto 4, Expert em Luta ou Sobrevivência",
+    "custo": "2 SAN",
+    "alcance": "Curto",
+    "efeito": "PERSEGUIÇÃO ABSOLUTA: Ao ativar o poder, seu deslocamento é triplicado ao se mover em direção ao alvo escolhido. Durante esse movimento, você ignora terreno difícil, não provoca ataques de oportunidade e pode atravessar o espaço ocupado por outros inimigos. BOTE DE SANGUE-FRIO: Se ao final dessa movimentação você terminar ao alcance do alvo, pode gastar 2 SAN para realizar um ataque imediato contra ele. EXECUÇÃO LETAL: O ataque do Bote se resolve com Vantagem, e causa +2 dados de dano adicionais. Se o ataque acertar, o alvo fica Imobilizado até o final do próximo turno dele (incapaz de se mover ou usar ações de fuga)."
+  },
+  {
+    "nome": "Atirar para Matar",
+    "classificacao": "Tier IV",
+    "prereq": "Agilidade 4, Expert em Pontaria",
+    "custo": "2 SAN",
+    "alcance": "Curto",
+    "efeito": "O ápice da precisão letal com armas de fogo ou disparo. Um disparo sob análise cirúrgica encontra o ponto mais vulnerável do alvo, extraindo o máximo potencial de parada do projétil, escolha entre: DANO MAXIMIZADO: Ao obter um acerto crítico com uma arma de fogo, você pode gastar 2 SAN para infligir o dano máximo em todos os dados da rolagem, sem a necessidade de rolá-los. IMPACTO PERFURANTE: Ao obter um acerto crítico com uma arma de fogo, você pode gastar 2 SAN para ignorar qualquer Resistência a Dano (RD) física que o alvo possua. Se o ataque reduzir o alvo a 0 PV, a força do impacto permite que você realize um disparo imediato contra outro alvo válido no alcance como uma Ação Livre."
+  },
+  {
+    "nome": "Reprogramação Mental",
+    "classificacao": "Tier IV",
+    "prereq": "Presença 4, Expert em Diplomacia ou Enganação",
+    "custo": "3 SAN",
+    "alcance": "Toque",
+    "efeito": "Você utiliza técnicas de hipnose avançada, gatilhos psicológicos e indução mental para reescrever temporariamente os bloqueios e memórias de um aliado, despertando aptidões latentes. CONDICIONAMENTO NEURAL: Durante uma Cena de Interlúdio, você pode gastar 3 SAN e a Ação de Interlúdio de um aliado voluntário para reprogramar os padrões mentais do alvo. APTIDÃO ENXERTADA: Até a próxima Cena de Interlúdio (ou fim da missão), o aliado afetado ganha temporariamente o uso de 1 Habilidade de Tier I ou Tier II à escolha dele, acreditando genuinamente que sempre dominou aquela técnica. O aliado deve cumprir todos os pré-requisitos do poder escolhido. LIMITE PSÍQUICO: Um personagem só pode manter 1 habilidade temporária proveniente desta reprogramação por vez."
+  } 
 ]
