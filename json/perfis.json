@@ -5,7 +5,7 @@
   },
   {
     "nome": "Vigilante",
-    "efeito": "Sombra e Tempo: Uma vez por rodada, gasta 2 PD para rerrolar um dado (exceto 1) em um teste seu ou de um aliado em alcance curto. Em combates, pode escolher agir na fase normal ou em fases posteriores, após qualquer ação daquela fase já ter sido rolada."
+    "efeito": "Sombra e Tempo: Uma vez por rodada, gasta 1 SAN para rerrolar um dado (exceto 1) em um teste seu ou de um aliado em alcance curto. Em combates, pode escolher agir na fase normal ou em fases posteriores, após qualquer ação daquela fase já ter sido rolada."
   },
   {
     "nome": "Executor",
