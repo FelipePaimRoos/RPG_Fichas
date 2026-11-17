@@ -124,6 +124,31 @@
 
     .btn-danger { background: #a83232; }
 
+    .impeto-segmentos {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .impeto-segmento {
+      flex: 1;
+      min-width: 0;
+      min-height: 44px;
+      padding: 6px 4px;
+      background: #28282f;
+      border: 1px solid #4a4a54;
+    }
+
+    .impeto-segmento[aria-pressed="true"] {
+      background: #a83232;
+      border-color: #ff5757;
+    }
+
+    .impeto-segmento:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
     /* Atributos */
     .atributo-box {
       background: #16161a;
@@ -984,12 +1009,12 @@
       </div>
       <div id="perfil-impeto-container" style="display: none;">
         <strong>Ímpeto</strong>
-        <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-          <label><input type="checkbox" id="impeto_1" onchange="atualizarImpeto(1)"> 1</label>
-          <label><input type="checkbox" id="impeto_2" onchange="atualizarImpeto(2)"> 2</label>
-          <label><input type="checkbox" id="impeto_3" onchange="atualizarImpeto(3)"> 3</label>
-          <label><input type="checkbox" id="impeto_4" onchange="atualizarImpeto(4)"> 4</label>
-          <label><input type="checkbox" id="impeto_5" onchange="atualizarImpeto(5)"> 5</label>
+        <div class="impeto-segmentos">
+          <button type="button" class="impeto-segmento" id="impeto_1" aria-label="Ímpeto: espaço 1 de 5" aria-pressed="false" onclick="atualizarImpeto(1)">1</button>
+          <button type="button" class="impeto-segmento" id="impeto_2" aria-label="Ímpeto: espaço 2 de 5" aria-pressed="false" onclick="atualizarImpeto(2)">2</button>
+          <button type="button" class="impeto-segmento" id="impeto_3" aria-label="Ímpeto: espaço 3 de 5" aria-pressed="false" onclick="atualizarImpeto(3)">3</button>
+          <button type="button" class="impeto-segmento" id="impeto_4" aria-label="Ímpeto: espaço 4 de 5" aria-pressed="false" onclick="atualizarImpeto(4)">4</button>
+          <button type="button" class="impeto-segmento" id="impeto_5" aria-label="Ímpeto: espaço 5 de 5" aria-pressed="false" onclick="atualizarImpeto(5)">5</button>
         </div>
         <input type="hidden" id="impetoAtual" value="0">
       </div>
@@ -1848,7 +1873,10 @@ function atualizarPerfilFicha(resetarRecursos = false) {
 function renderImpeto() {
   const valor = Math.max(0, Math.min(5, Number(document.getElementById('impetoAtual').value) || 0));
   for (let espaco = 1; espaco <= 5; espaco += 1) {
-    document.getElementById(`impeto_${espaco}`).checked = espaco <= valor;
+    document.getElementById(`impeto_${espaco}`).setAttribute(
+      'aria-pressed',
+      String(espaco <= valor)
+    );
   }
 }
 
