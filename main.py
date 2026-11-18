@@ -29,6 +29,8 @@ FRONTEND_PATH = Path(__file__).with_name("ficha_rpg_completa.html")
 MANIFEST_PATH = Path(__file__).with_name("manifest.webmanifest")
 SERVICE_WORKER_PATH = Path(__file__).with_name("service-worker.js")
 PWA_ICON_PATH = Path(__file__).with_name("icon.svg")
+PWA_ICON_192_PATH = Path(__file__).with_name("icon-192.png")
+PWA_ICON_512_PATH = Path(__file__).with_name("icon-512.png")
 DATA_DIR = Path(__file__).with_name("json")
 PROFILES_PATH = DATA_DIR / "perfis.json"
 PROGRESSION_PATH = DATA_DIR / "progressao_niveis.json"
@@ -79,6 +81,16 @@ def servir_service_worker():
 @app.get("/icon.svg", include_in_schema=False)
 def servir_icone_pwa():
     return FileResponse(PWA_ICON_PATH, media_type="image/svg+xml")
+
+
+@app.get("/icon-192.png", include_in_schema=False)
+def servir_icone_pwa_192():
+    return FileResponse(PWA_ICON_192_PATH, media_type="image/png")
+
+
+@app.get("/icon-512.png", include_in_schema=False)
+def servir_icone_pwa_512():
+    return FileResponse(PWA_ICON_512_PATH, media_type="image/png")
 
 
 class SchemaBase(BaseModel):
