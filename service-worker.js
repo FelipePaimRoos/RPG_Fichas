@@ -1,5 +1,5 @@
-const CACHE_NAME = "rpg-fichas-v4";
-const APP_SHELL = ["/", "/manifest.webmanifest", "/icon.svg"];
+const CACHE_NAME = "rpg-fichas-v5";
+const APP_SHELL = ["/", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
 const CATALOGS = [
   "/api/perfis",
   "/api/origens",
