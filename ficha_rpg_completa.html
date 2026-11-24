@@ -1059,7 +1059,7 @@
     <div class="grid-3">
       <label>Nome do Personagem <input type="text" id="nomePersonagem"></label>
       <label>Jogador <input type="text" id="jogador"></label>
-      <label>Nível <input type="number" id="nivel" value="1" min="1" max="20" oninput="atualizarCalculos(); sincronizarHabilidadesPerfil()"></label>
+      <label>Nível <input type="number" id="nivel" value="1" min="1" max="20" oninput="atualizarNivelPersonagem(); sincronizarHabilidadesPerfil()"></label>
       <label>Conceito <input type="text" id="conceito"></label>
       <label>Origem
         <select id="origem" onchange="sincronizarOrigem(); atualizarCalculos(); sincronizarHabilidadesPerfil()">
@@ -1209,7 +1209,7 @@
             </div>
             <div class="bar-values">
               <input type="number" id="vidaAtual" value="10" oninput="renderBarras()"> /
-              <input type="number" id="vidaMax" value="10" oninput="atualizarCalculos(true)">
+              <input type="number" id="vidaMax" value="10" oninput="document.getElementById('autoVida').checked = false; atualizarCalculos(true)">
             </div>
             <div class="bar-btn-group">
               <button class="bar-btn" onclick="alterarStatus('vida', 1)">&gt;</button>
@@ -1252,7 +1252,7 @@
             </div>
             <div class="bar-values">
               <input type="number" id="sanidadeAtual" value="10" oninput="renderBarras()"> /
-              <input type="number" id="sanidadeMax" value="10" oninput="atualizarCalculos(true)">
+              <input type="number" id="sanidadeMax" value="10" oninput="document.getElementById('autoSanidade').checked = false; atualizarCalculos(true)">
             </div>
             <div class="bar-btn-group">
               <button class="bar-btn" onclick="alterarStatus('sanidade', 1)">&gt;</button>
@@ -1386,7 +1386,7 @@
       <h2 id="sec-inventario">Inventário</h2>
       <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
         <strong>Carga:</strong> <span id="cargaAtual">0</span> / 
-        <input type="number" id="cargaMaxima" value="5" style="width: 60px;" readonly>
+        <input type="number" id="cargaMaxima" value="5" min="0" step="1" style="width: 75px;" oninput="calcularCarga()">
         <span id="cargaMaxEfetivaTxt" style="font-size: 0.75rem; color: #ff9999;"></span>
       </div>
     </div>
@@ -1935,6 +1935,7 @@ const PERICIAS_BASE = [
 let perfisPorNome = {};
 let origensPorNome = {};
 let progressaoNiveis = [];
+let ultimoNivelCalculado = null;
 let chaveHabilidadesPerfil = null;
 
 function obterPerfilSelecionado() {
@@ -2330,6 +2331,29 @@ function initDados() {
   });
 }
 
+function atualizarNivelPersonagem() {
+  const nivelInput = document.getElementById('nivel');
+  const nivel = Math.max(1, Math.min(20, Number(nivelInput.value) || 1));
+  const nivelAnterior = ultimoNivelCalculado === null ? nivel : ultimoNivelCalculado;
+  const niveisGanhos = Math.max(0, nivel - nivelAnterior);
+  nivelInput.value = nivel;
+
+  if (niveisGanhos > 0) {
+    if (document.getElementById('autoVida').checked) {
+      const vidaAtual = document.getElementById('vidaAtual');
+      vidaAtual.value = (Number(vidaAtual.value) || 0) +
+        (Number(document.getElementById('atr_vigor').value) || 0) * niveisGanhos;
+    }
+    if (document.getElementById('autoSanidade').checked) {
+      const sanidadeAtual = document.getElementById('sanidadeAtual');
+      sanidadeAtual.value = (Number(sanidadeAtual.value) || 0) +
+        (Number(document.getElementById('atr_presenca').value) || 0) * niveisGanhos;
+    }
+  }
+
+  atualizarCalculos();
+}
+
 function atualizarCalculos(valorEditado = false) {
   const campoNivel = document.getElementById('nivel');
   const nivel = Math.max(1, Math.min(20, Number(campoNivel.value) || 1));
@@ -2368,24 +2392,34 @@ function atualizarCalculos(valorEditado = false) {
   document.getElementById('dt_vigor').innerText = getDT(vigor);
 
   const vidaCalculada = document.getElementById('autoVida').checked
-    ? 10 + vigor
+    ? 10 + vigor * nivel
     : null;
   const sanidadeCalculada = document.getElementById('autoSanidade').checked
-    ? 10 + presenca
+    ? 10 + presenca * nivel
     : null;
   const defesaCalculada = document.getElementById('autoDefesa').checked
     ? 5 + agilidade + bonusProt
     : null;
-  if (!valorEditado && vidaCalculada !== null) {
-    document.getElementById('vidaMax').value = vidaCalculada;
-  }
-  if (!valorEditado && sanidadeCalculada !== null) {
-    document.getElementById('sanidadeMax').value = sanidadeCalculada;
+  if (!valorEditado) {
+    [
+      ['vidaAtual', 'vidaMax', vidaCalculada],
+      ['sanidadeAtual', 'sanidadeMax', sanidadeCalculada]
+    ].forEach(([atualId, maxId, calculado]) => {
+      if (calculado === null) return;
+      const atual = document.getElementById(atualId);
+      const maximo = document.getElementById(maxId);
+      const estavaCheio = Number(atual.value) === Number(maximo.value);
+      maximo.value = calculado;
+      if (estavaCheio) {
+        atual.value = calculado;
+      } else if (Number(atual.value) > calculado) {
+        atual.value = calculado;
+      }
+    });
   }
   if (!valorEditado && defesaCalculada !== null) {
     document.getElementById('defesaAtual').value = defesaCalculada;
   }
-  document.getElementById('cargaMaxima').value = forca * 5;
   PERICIAS_BASE.forEach((_, idx) => atualizarDadoPericia(idx));
   renderBarras();
 
@@ -2408,6 +2442,7 @@ function atualizarCalculos(valorEditado = false) {
   document.getElementById('esquiva').value = defAtual + valorMedioDadoReflexos;
   
   atualizarDeslocamentoBase();
+  ultimoNivelCalculado = nivel;
 }
 
 
@@ -3743,7 +3778,10 @@ async function carregarDaApi() {
     document.getElementById('defesaAtual').value = d.defesa_atual || 10;
     document.getElementById('bonusProtecoes').value = d.bonus_protecoes || 0;
     document.getElementById('deslocamentoBaseMetros').value = d.deslocamento_base || 9;
-    document.getElementById('cargaMaxima').value = d.carga_maxima || 10;
+    if (d.carga_maxima !== null && d.carga_maxima !== undefined &&
+        Number.isFinite(Number(d.carga_maxima))) {
+      document.getElementById('cargaMaxima').value = Number(d.carga_maxima);
+    }
     document.getElementById('resistencias').value = d.resistencias || '';
     document.getElementById('proficiencias').value = d.proficiencias || '';
     document.getElementById('desc_aparencia').value = d.desc_aparencia || '';
