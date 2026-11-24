@@ -8,6 +8,14 @@
     "efeito": "Você escolhe 1 Poder Paranormal para o qual cumpra os pré-requisitos. Como consequência, você não ganha o aumento de Sanidade (SAN) máxima correspondente ao nível em que escolhe este poder e avança 1 passo no Elo Paranormal. Este poder pode ser escolhido múltiplas vezes."
   },
   {
+    "nome": "Aprender Ritual",
+    "classificacao": "Tier I",
+    "prereq": "Treinado em Ocultismo",
+    "custo": "-Presença de Sanidade Máxima",
+    "alcance": "Pessoal",
+    "efeito": "Ao se conectar com as memórias esotéricas de ocultistas do passado e com a essência das entidades, você assimila a fórmula mística de um novo ritual.\nConhecimento Místico: Você aprende e pode conjurar 1 ritual escolhido. O círculo máximo do ritual aprendido é determinado pelo seu treinamento em Ocultismo:\nNível Treinado: Rituais de 1º Círculo.\nNível Veterano: Rituais de até 2º Círculo.\nNível Expert: Rituais de até 3º Círculo.\nLimite de Conhecimento: Rituais aprendidos por este poder contam normalmente para o seu Limite de Rituais Conhecidos.\nCumulativo: Este poder pode ser escolhido múltiplas vezes."
+  },
+  {
     "nome": "Treinamento em Perícia",
     "classificacao": "Tier I",
     "prereq": "Nenhum",
@@ -21,7 +29,7 @@
     "prereq": "Nenhum",
     "custo": "1 SAN",
     "alcance": "Conforme a arma",
-    "efeito": "Ao declarar um ataque corpo a corpo, à distância ou de arremesso, você pode gastar 1 SAN para receber +2 no teste de ataque ou +2 na rolagem de dano. Pode gastar +1 SAN adicional no mesmo ataque para cada +2 de bônus adicional, distribuindo livremente entre o teste de ataque e o dano (respeitando o limite de SAN do seu patamar)."
+    "efeito": "Efeito: Antes de realizar um teste de ataque corpo a corpo, à distância ou de arremesso, você pode gastar 1 SAN para receber +2 no teste de ataque ou +2 na rolagem de dano. \nEvolução por Grau em Luta ou Pontaria: O limite máximo de Sanidade que você pode investir em um mesmo ataque depende do seu domínio na perícia utilizada, permitindo adicionar blocos extras de +2 (+1 SAN por bloco, distribuídos livremente entre acerto e dano): \nTreinado (d6): Até +2 no total (Custo máximo: 1 SAN). \nVeterano (d8): Até +4 no total (Custo máximo: 2 SAN). \nExpert (d10): Até +6 no total (Custo máximo: 3 SAN)." 
   },
   {
     "nome": "Artista Marcial",
@@ -296,21 +304,13 @@
     "efeito": "Em suas veias corre uma maldição paranormal que o corrompe lentamente, transformando-o em um monstro. Você se torna treinado na perícia Ocultismo (se já for treinado, em vez disso recebe um bônus de +2 nela). Você deve escolher um elemento paranormal entre Sangue, Morte, Conhecimento ou Energia. Uma vez por dia, você precisa executar uma etapa ritualística específica ligada a esse elemento para saciar a praga em seu corpo (beber sangue fresco para Sangue, inalar cinzas para Morte, tatuar palavras de medo para Conhecimento, ou receber choques elétricos para Energia). Se realizar o ritual diário, você recebe os efeitos descritos abaixo até o fim do dia; caso contrário, você sofre das condições de fome e sede naquele dia. Se adquirir afinidade com um elemento no futuro, deverá escolher obrigatoriamente o mesmo elemento selecionado aqui. Sangue: Suas presas ficam protuberantes e seus olhos vermelhos. Você recebe resistência a balístico e Sangue 5 e o sentido Faro. Quando faz um contra-ataque bem-sucedido, soma seu Vigor na rolagem de dano, mas sofre penalidade de -2 desvantagens em Ciências e Intuição. Morte: Você fica pálido e seu metabolismo desacelera. Você recebe resistência a perfuração e Morte 5, imunidade a fadiga e soma sua Força no seu total de Pontos de Vida (PV) máximos, mas sofre penalidade de -2 desvantagens em Diplomacia e Enganação. Conhecimento: Seus olhos são banhados em um dourado sobrenatural. Você recebe resistência a balístico e Conhecimento 5, Visão no Escuro e soma seu Intelecto na Defesa, mas sofre penalidade de -2 desvantagens em Atletismo e Acrobacia. Energia: Sua pele ganha cicatrizes de queimaduras elétricas multicoloridas. Você recebe resistência a corte, eletricidade, fogo e Energia 5 e soma sua Agilidade na RD recebida por um bloqueio bem-sucedido, mas sofre penalidade de -2 desvantagens em Procurar e Percepção."
   },
   {
-    "nome": "Eclético",
-    "classificacao": "Tier I",
-    "prereq": "Intelecto 2",
-    "custo": "1 SAN",
-    "alcance": "Pessoal",
-    "efeito": "Ao realizar um teste de qualquer perícia na qual não seja Treinado, você pode gastar 1 SAN para receber os benefícios de ser Treinado nessa perícia durante a resolução daquele teste."
-  },
-  {
     "nome": "Perito",
     "classificacao": "Tier I",
     "prereq": "Intelecto 2 ou Percepção 2",
     "custo": "1 SAN (escalonável)",
     "alcance": "Pessoal",
-    "efeito": "Escolha duas perícias nas quais você seja Treinado (exceto Luta e Pontaria). Ao realizar um teste de uma dessas perícias, você pode gastar 1 SAN para receber +2 no resultado do teste. Evolução de Nível (Limite de Gasto): O limite de Sanidade que você pode gastar no mesmo teste aumenta com o seu nível, permitindo somar blocos adicionais de +2 (+1 SAN por bloco): Nível 1 ao 4: Até +2 no teste (Custo máximo: 1 SAN). Nível 5 ao 10: Até +4 no teste (Custo máximo: 2 SAN). Nível 11 ao 16: Até +6 no teste (Custo máximo: 3 SAN). Nível 17+: Até +8 no teste (Custo máximo: 4 SAN)."
-  },
+    "efeito": "Escolha duas perícias nas quais você seja Treinado (exceto Luta e Pontaria). Ao realizar um teste de uma dessas perícias, você pode gastar 1 SAN para receber +2 no resultado do teste.\nEvolução por Grau de Treinamento: O limite máximo de Sanidade que você pode gastar no mesmo teste depende do seu grau de treinamento na perícia escolhida, permitindo somar blocos adicionais de +2 (+1 SAN por bloco):\nTreinado (d6): Até +2 no teste (Custo máximo: 1 SAN).\nVeterano (d8): Até +4 no teste (Custo máximo: 2 SAN).\nExpert (d10): Até +6 no teste (Custo máximo: 3 SAN)." 
+},
   {
     "nome": "Balística Avançada",
     "classificacao": "Tier I",
@@ -1880,6 +1880,14 @@
     "efeito": "Suas criações e artefatos de destruição agem de forma tão orgânica e ensaiada que parecem extensões diretas do seu próprio sistema nervoso. Você e qualquer aliado que esteja adjacente a você podem sacar qualquer explosivo autoral do inventário como uma ação livre. Além disso, o seu tempo de reação em campo de batalha se funde com a balística: você pode gastar 4 pontos de Sanidade (4 SAN) para sacar e arremessar (ou disparar por um lança-granadas) um explosivo autoral como uma única ação de movimento. O Dobro da Devastação: A engenharia dos seus engenhos explosivos atinge o ápice da sobrecarga térmica e cinética. Todos os seus explosivos autorais passam a causar o dobro dos dados de dano base (por exemplo, uma bomba que causava 6d6 passa a causar 12d6)."
   },
   {
+    "nome": "Aprendizado de 4° Círculo",
+    "classificacao": "Tier III",
+    "prereq": "Expert em Ocultismo e Afinidade com o Elemento Escolhido",
+    "custo": "Nenhum",
+    "alcance":"Nenhum",
+    "efeito": "Sua compreensão teórica fundiu-se à sua essência elementar, permitindo canalizar anomalias supremas. \nAcesso ao 4º Círculo: Você desbloqueia a capacidade de aprender e conjurar rituais de 4º Círculo pertencentes ao elemento da sua Afinidade. \nAprendizado Imediato: Ao adquirir esta habilidade, você aprende automaticamente 1 Ritual de 4º Círculo do seu elemento de Afinidade (contando normalmente no seu Limite de Rituais Conhecidos), sem precisar avançar uma casa adicional na Trilha por este aprendizado."
+  },
+  { 
     "nome": "Ser Expurgado",
     "classificacao": "Tier III",
     "prereq": "Habilidade Ser Testado (mesmo elemento escolhido) e NEX 70%",
@@ -2034,11 +2042,10 @@
   {
     "nome": "Paramédico",
     "classificacao": "Tier I",
-    "prereq": "Intelecto_ou_presenca 2",
+    "prereq": "Intelecto 2, Treinado em Medicina",
     "custo": "1 SAN (escalonável)",
     "alcance": "Adjacente ou Pessoal",
-    "efeito": "Com uma Ação Padrão, você aplica procedimentos de atendimento médico de emergência em campo. Você gasta 1 SAN para restaurar 10 Pontos de Vida (PV) de si mesmo ou de um aliado adjacente. Nível 1 ao 4: Restaurar 10 PV (Custo: 1 SAN). Nível 5 ao 10: Restaurar 15 PV (Custo: 2 SAN). Nível 11 ao 16: Restaurar 20 PV (Custo: 3 SAN). Nível 17+: Restaurar 25 PV (Custo: 4 SAN)."
-  },
+    "efeito": "Com uma Ação Padrão, você aplica curativos rápidos, torniquetes ou estimulantes de emergência em campo. Você gasta 1 SAN para restaurar 1d6 + Intelecto Pontos de Vida (PV) de si mesmo ou de um aliado adjacente. \nTrava de Tolerância: Um mesmo indivíduo só pode recuperar PV por meio desta habilidade uma vez por cena (aplicações repetidas no mesmo alvo durante a mesma cena não surtem efeito). \nEvolução por Nível: A eficiência da sua intervenção aumenta conforme o seu nível, permitindo gastar +1 SAN adicional por dado extra de cura: \nVeterano: Até 3d6 + Intelecto PV; \nExpert: Até 5d6 + Intelecto PV." },
   {
     "nome": "Ataque Furtivo",
     "classificacao": "Tier I",

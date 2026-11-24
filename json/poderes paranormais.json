@@ -1,14 +1,5 @@
 [
   {
-    "nome": "Aprender Ritual",
-    "elemento": "Variável (Corresponde ao Elemento do Ritual Escolhido)",
-    "prereq": "Elemento 1",
-    "custo": "Passivo (Reduz o ganho de SAN Máxima ao avançar de nível e avança 1 passo na Linha Paranormal do elemento escolhido)",
-    "alcance": "Pessoal",
-    "efeito": "Ao se conectar com as memórias esotéricas de ocultistas do passado e com a essência das entidades, você assimila a fórmula mística de um novo ritual. Conhecimento Místico: Você aprende e pode conjurar 1 ritual do elemento escolhido. O círculo máximo do ritual aprendido é determinado pelo seu Nível de Agente (Nível 1 a 8: 1º Círculo; Nível 9 a 14: até 2º Círculo; Nível 15 a 20: até 3º Círculo). Reciclagem Arcana: Sempre que escolher este poder (ou ao avançar de nível), você pode substituir 1 ritual que já conhece por outro do mesmo elemento e de círculo equivalente ao seu limite atual. Limite de Conhecimento: Rituais aprendidos por este poder contam normalmente para o seu Limite de Rituais Conhecidos. Cumulativo: Este poder pode ser escolhido múltiplas vezes. Cada seleção conta como 1 Poder Paranormal na Linha do Elemento associado ao ritual.",
-    "afinidade": null
-  },
-  {
     "nome": "Resistir a Elemento",
     "elemento": "Variável (Conhecimento, Energia, Morte ou Sangue)",
     "prereq": "Elemento 1",
