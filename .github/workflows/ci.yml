@@ -1,0 +1,95 @@
+# CI: análise estática, testes (Linux/Windows) e codegen do Drift.
+# Os catálogos JSON são validados pelos testes Dart (catalogs_test.dart).
+# Builds de plataforma ficam em build.yml (Windows, Linux e Android; sem Apple).
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preflight:
+    name: Preflight
+    runs-on: ubuntu-latest
+    outputs:
+      app_exists: ${{ steps.check.outputs.app_exists }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        shell: bash
+        run: |
+          if [ -f app_flutter/pubspec.yaml ]; then
+            echo "app_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "app_exists=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::app_flutter/pubspec.yaml ainda não existe; jobs do app serão pulados."
+          fi
+
+  analyze-test:
+    name: Analyze + test (${{ matrix.os }})
+    needs: preflight
+    if: needs.preflight.outputs.app_exists == 'true'
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Dependências
+        working-directory: app_flutter
+        run: flutter pub get
+
+      - name: Codegen do Drift
+        if: runner.os == 'Linux'
+        working-directory: app_flutter
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Conferir arquivos gerados
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          CHANGED="$(git status --porcelain -- app_flutter | grep -E '\.(g|freezed)\.dart$' || true)"
+          if [ -n "$CHANGED" ]; then
+            echo "::error::Arquivos gerados pelo Drift estão desatualizados. Rode build_runner e commit."
+            echo "$CHANGED"
+            exit 1
+          fi
+
+      - name: Analyze
+        working-directory: app_flutter
+        run: flutter analyze
+
+      - name: Testes com cobertura
+        if: runner.os == 'Linux'
+        working-directory: app_flutter
+        run: flutter test --coverage
+
+      - name: Testes
+        if: runner.os == 'Windows'
+        working-directory: app_flutter
+        run: flutter test
+
+      - name: Publicar cobertura
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: app_flutter/coverage/lcov.info
+          if-no-files-found: ignore
