@@ -1,0 +1,42 @@
+#!/bin/sh
+# Exige mensagens no padrão Conventional Commits.
+# Ativação (uma vez por clone): git config core.hooksPath .githooks
+# Para ignorar em um commit específico: git commit --no-verify
+
+msg_file="$1"
+[ -n "$msg_file" ] && [ -f "$msg_file" ] || exit 0
+
+# Primeira linha útil da mensagem (ignora comentários e linhas em branco).
+subject=$(sed -e 's/^[[:space:]]*//' -e '/^#/d' -e '/^[[:space:]]*$/d' "$msg_file" | head -n 1)
+
+# Mensagem vazia: o próprio Git já aborta.
+[ -z "$subject" ] && exit 0
+
+# Commits criados automaticamente pelo Git não seguem a convenção.
+case "$subject" in
+  "Merge "*|"Revert "*|"fixup! "*|"squash! "*|"amend! "*) exit 0 ;;
+esac
+
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([A-Za-z0-9._/-]+\))?!?: [^[:space:]].*$'
+
+printf '%s\n' "$subject" | grep -Eq "$pattern" && exit 0
+
+cat >&2 <<EOF
+
+  Mensagem de commit fora do padrão Conventional Commits:
+
+    $subject
+
+  Formato:  <tipo>(<escopo opcional>): <descrição>
+  Tipos:    feat fix docs style refactor perf test build ci chore revert
+  Exemplos: feat(ficha): adiciona cálculo automático de carga
+            fix(api): corrige validação de NEX negativo
+            docs: atualiza instruções de instalação offline
+
+  Quebra de compatibilidade: use "!" antes dos dois-pontos,
+  por exemplo: feat(api)!: remove o endpoint antigo
+
+  Para ignorar a validação: git commit --no-verify
+
+EOF
+exit 1

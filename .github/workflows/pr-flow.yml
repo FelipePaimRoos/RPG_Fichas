@@ -1,0 +1,61 @@
+# Fluxo de branches: feature/fix -> develop -> main.
+# Este check falha quando um PR tenta ir direto para main ou voltar de main para develop.
+# Para bloquear o merge de verdade, marque este check como obrigatório nas rulesets do GitHub.
+name: PR Flow
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: pr-flow-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  enforce-branch-flow:
+    name: Fluxo feature → develop → main
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Validar destino do PR
+        shell: bash
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "PR #$PR_NUMBER: $HEAD_REPO:$HEAD_REF -> $REPO:$BASE_REF"
+
+          {
+            echo "## Fluxo de branches"
+            echo ""
+            echo "- \`feature/*\`, \`fix/*\` → \`develop\`"
+            echo "- \`develop\` → \`main\`"
+            echo "- \`main\` → \`develop\` não é permitido"
+            echo ""
+            echo "Base deste PR: \`$BASE_REF\`"
+            echo "Origem deste PR: \`$HEAD_REPO:$HEAD_REF\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$BASE_REF" = "main" ]; then
+            if [ "$HEAD_REF" != "develop" ] || [ "$HEAD_REPO" != "$REPO" ]; then
+              echo "::error::PR para main só pode vir de develop do mesmo repositório. Recebido: $HEAD_REPO:$HEAD_REF."
+              exit 1
+            fi
+            echo "OK: promoção develop → main."
+          elif [ "$BASE_REF" = "develop" ]; then
+            if [ "$HEAD_REF" = "main" ]; then
+              echo "::error::Não abra PR de main para develop. O fluxo é feature/fix → develop → main."
+              exit 1
+            fi
+            echo "OK: integração em develop."
+          else
+            echo "::error::Destino inválido: $BASE_REF. Use develop para features/fixes; main só recebe develop."
+            exit 1
+          fi

@@ -1,0 +1,24 @@
+# <tipo>(<escopo opcional>): <descrição no imperativo, minúscula, sem ponto final>
+#
+# Tipos permitidos:
+#   feat     nova funcionalidade
+#   fix      correção de bug
+#   docs     apenas documentação
+#   style    formatação (não altera comportamento)
+#   refactor refatoração sem mudança de comportamento
+#   perf     melhoria de performance
+#   test     testes
+#   build    build e dependências
+#   ci       configuração de CI
+#   chore    tarefas gerais (sem código de produção)
+#   revert   reversão de commit anterior
+#
+# Exemplos:
+#   feat(ficha): adiciona cálculo automático de carga
+#   fix(api): corrige validação de NEX negativo
+#   docs: atualiza instruções de instalação offline
+#
+# Quebra de compatibilidade: use "!" antes dos dois-pontos,
+# por exemplo: feat(api)!: remove o endpoint antigo
+#
+# Corpo (opcional) e rodapé (opcional) entram após uma linha em branco.
